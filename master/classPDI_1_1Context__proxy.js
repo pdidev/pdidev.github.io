@@ -15,5 +15,6 @@ var classPDI_1_1Context__proxy =
     [ "add_init_callback", "classPDI_1_1Context__proxy.html#a94129d996ddab4f8e6a315936e5f89a7", null ],
     [ "add_data_callback", "classPDI_1_1Context__proxy.html#a4d931c5439ec18260fe2fdcab55bdf44", null ],
     [ "add_event_callback", "classPDI_1_1Context__proxy.html#ac6679915d7732185ea1d04656753f4b5", null ],
-    [ "add_empty_desc_access_callback", "classPDI_1_1Context__proxy.html#ad53ab286ae45a953c24145cfa889b099", null ]
+    [ "add_empty_desc_access_callback", "classPDI_1_1Context__proxy.html#ad53ab286ae45a953c24145cfa889b099", null ],
+    [ "finalize_and_exit", "classPDI_1_1Context__proxy.html#a9c5cec5bf707ad67e38e30a4ee12329b", null ]
 ];

@@ -18,5 +18,6 @@ var classPDI_1_1Context =
     [ "add_init_callback", "classPDI_1_1Context.html#a3dab913bcf429835da411aed665fbaf5", null ],
     [ "add_data_callback", "classPDI_1_1Context.html#ac665503fccb2a848e7e85d5b2aa49ed5", null ],
     [ "add_event_callback", "classPDI_1_1Context.html#a8aad7d27ce647a616bee1c911e274154", null ],
-    [ "add_empty_desc_access_callback", "classPDI_1_1Context.html#ac6e3712ecd0a4d9863fadb5f4a18283c", null ]
+    [ "add_empty_desc_access_callback", "classPDI_1_1Context.html#ac6e3712ecd0a4d9863fadb5f4a18283c", null ],
+    [ "finalize_and_exit", "classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb", null ]
 ];

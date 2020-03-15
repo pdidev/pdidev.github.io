@@ -1,7 +1,7 @@
 var index =
 [
     [ "Documentation", "index.html#autotoc_md0", null ],
-    [ "Get help", "index.html#autotoc_md1", null ],
+    [ "Get support", "index.html#autotoc_md1", null ],
     [ "Join the team", "index.html#autotoc_md2", null ],
     [ "Installation", "Installation.html", [
       [ "Default PDI installation", "Installation.html#autotoc_md3", null ],
