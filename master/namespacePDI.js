@@ -10,6 +10,7 @@ var namespacePDI =
     [ "Expression", "classPDI_1_1Expression.html", "classPDI_1_1Expression" ],
     [ "Paraconf_wrapper", "structPDI_1_1Paraconf__wrapper.html", "structPDI_1_1Paraconf__wrapper" ],
     [ "Plugin", "classPDI_1_1Plugin.html", "classPDI_1_1Plugin" ],
+    [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html", "classPDI_1_1Pointer__datatype" ],
     [ "Record_datatype", "classPDI_1_1Record__datatype.html", "classPDI_1_1Record__datatype" ],
     [ "Ref_any", "classPDI_1_1Ref__any.html", "classPDI_1_1Ref__any" ],
     [ "Ref_base", "classPDI_1_1Ref__base.html", "classPDI_1_1Ref__base" ],
