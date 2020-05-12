@@ -1,16 +1,16 @@
 var Plugins =
 [
     [ "The Decl'HDF5 plugin", "Decl_HDF5_plugin.html", [
-      [ "Configuration grammar", "Decl_HDF5_plugin.html#autotoc_md27", [
-        [ "`FILE_DESC`", "Decl_HDF5_plugin.html#autotoc_md28", null ],
-        [ "`DATA_SECTION`", "Decl_HDF5_plugin.html#autotoc_md29", null ],
-        [ "`DATA_IO_DESC`", "Decl_HDF5_plugin.html#autotoc_md30", null ],
-        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md31", null ]
+      [ "Configuration grammar", "Decl_HDF5_plugin.html#autotoc_md17", [
+        [ "`FILE_DESC`", "Decl_HDF5_plugin.html#autotoc_md18", null ],
+        [ "`DATA_SECTION`", "Decl_HDF5_plugin.html#autotoc_md19", null ],
+        [ "`DATA_IO_DESC`", "Decl_HDF5_plugin.html#autotoc_md20", null ],
+        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md21", null ]
       ] ],
-      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md32", null ]
+      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md22", null ]
     ] ],
     [ "The FlowVR plugin", "FlowVR_plugin.html", [
-      [ "Configuration elements", "FlowVR_plugin.html#configuration", [
+      [ "Reading and writing data examples", "FlowVR_plugin.html#c_api", [
         [ "FlowVR plugin tree", "FlowVR_plugin.html#flowvr_tree", [
           [ "component", "FlowVR_plugin.html#component_node", null ],
           [ "wait_on_data", "FlowVR_plugin.html#wait_on_data_node", null ],
@@ -31,9 +31,7 @@ var Plugins =
         [ "Chunk payload", "FlowVR_plugin.html#chunks_payload", null ],
         [ "Event button payload", "FlowVR_plugin.html#button_payload", null ],
         [ "Event mouse payload", "FlowVR_plugin.html#mouse_payload", null ],
-        [ "Stamp", "FlowVR_plugin.html#stamp", null ]
-      ] ],
-      [ "Reading and writing data examples", "FlowVR_plugin.html#c_api", [
+        [ "Stamp", "FlowVR_plugin.html#stamp", null ],
         [ "Read data from FlowVR message by access the shared memory", "FlowVR_plugin.html#read_shared", null ],
         [ "Write data from FlowVR message by access the shared memory", "FlowVR_plugin.html#write_shared", null ],
         [ "Read data from FlowVR message by copy from the shared memory", "FlowVR_plugin.html#read_copy", null ],
@@ -77,8 +75,27 @@ var Plugins =
       ] ],
       [ "Specification tree example", "user_code_plugin.html#full_spec_tree_example_node", null ]
     ] ],
+    [ "FTI plugin", "FTI_plugin.html", null ],
     [ "How to create a plugin", "how_to_create_plugin.html", [
       [ "Plugin class", "how_to_create_plugin.html#plugin_class", [
+        [ "Features and requirements", "FTI_plugin.html#autotoc_md25", [
+          [ "Dependencies", "FTI_plugin.html#autotoc_md26", null ],
+          [ "Initialization", "FTI_plugin.html#autotoc_md27", null ],
+          [ "Predefined descriptors", "FTI_plugin.html#autotoc_md28", null ]
+        ] ],
+        [ "Configuration grammar", "FTI_plugin.html#autotoc_md29", [
+          [ "`checkpoint`", "FTI_plugin.html#autotoc_md30", null ],
+          [ "`communicator`", "FTI_plugin.html#autotoc_md31", null ],
+          [ "`config_file`", "FTI_plugin.html#autotoc_md32", null ],
+          [ "`dataset`", "FTI_plugin.html#autotoc_md33", null ],
+          [ "`init_on`", "FTI_plugin.html#autotoc_md34", null ],
+          [ "`recover_on`", "FTI_plugin.html#autotoc_md35", null ],
+          [ "`recover_var`", "FTI_plugin.html#autotoc_md36", null ],
+          [ "`send_file`", "FTI_plugin.html#autotoc_md37", null ],
+          [ "`snapshot_on`", "FTI_plugin.html#autotoc_md38", null ],
+          [ "`status`", "FTI_plugin.html#autotoc_md39", null ]
+        ] ],
+        [ "full configuration example", "FTI_plugin.html#autotoc_md40", null ],
         [ "Example plugin", "how_to_create_plugin.html#example_plugin", null ],
         [ "Adding a callback", "how_to_create_plugin.html#adding_callback", null ],
         [ "Reading and writing data", "how_to_create_plugin.html#rw_data", null ],
