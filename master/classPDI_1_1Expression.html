@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-04-29-11_32</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-05-12-09_07</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -46,7 +46,6 @@ $(document).ready(function(){initNavTree('classPDI_1_1Expression.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classPDI_1_1Expression-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PDI::Expression Class Reference</div>  </div>
@@ -76,6 +75,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac50f0bacc50fc655e276a08aafe9ebe0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#ac50f0bacc50fc655e276a08aafe9ebe0">Expression</a> (double expr)</td></tr>
 <tr class="memdesc:ac50f0bacc50fc655e276a08aafe9ebe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an expression that represents a float.  <a href="#ac50f0bacc50fc655e276a08aafe9ebe0">More...</a><br /></td></tr>
 <tr class="separator:ac50f0bacc50fc655e276a08aafe9ebe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6912462c0531a1fcfd26003f338145"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#aea6912462c0531a1fcfd26003f338145">Expression</a> (PC_tree_t expr)</td></tr>
+<tr class="memdesc:aea6912462c0531a1fcfd26003f338145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an expression that is parsed from PC_tree_t.  <a href="#aea6912462c0531a1fcfd26003f338145">More...</a><br /></td></tr>
+<tr class="separator:aea6912462c0531a1fcfd26003f338145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6016ad74b6693eaa5de08bd07a5d91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#ada6016ad74b6693eaa5de08bd07a5d91">~Expression</a> ()</td></tr>
 <tr class="memdesc:ada6016ad74b6693eaa5de08bd07a5d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys an expression.  <a href="#ada6016ad74b6693eaa5de08bd07a5d91">More...</a><br /></td></tr>
 <tr class="separator:ada6016ad74b6693eaa5de08bd07a5d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,15 +102,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aead164aacf3e97ec8ecb343bbd23d886"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#aead164aacf3e97ec8ecb343bbd23d886">to_ref</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx) const</td></tr>
 <tr class="memdesc:aead164aacf3e97ec8ecb343bbd23d886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates an expression as a data reference.  <a href="#aead164aacf3e97ec8ecb343bbd23d886">More...</a><br /></td></tr>
 <tr class="separator:aead164aacf3e97ec8ecb343bbd23d886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:aee24c43b9029c5fba6fb8747c948c0da"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a></td></tr>
-<tr class="separator:aee24c43b9029c5fba6fb8747c948c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c18c3cd517df995e6622120a8ee55ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#a6c18c3cd517df995e6622120a8ee55ab">to_ref</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, const <a class="el" href="classPDI_1_1Datatype.html">Datatype</a> &amp;type) const</td></tr>
+<tr class="memdesc:a6c18c3cd517df995e6622120a8ee55ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates an expression as a data reference.  <a href="#a6c18c3cd517df995e6622120a8ee55ab">More...</a><br /></td></tr>
+<tr class="separator:a6c18c3cd517df995e6622120a8ee55ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a293023f0af1aae062d79ec60ff08f923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a293023f0af1aae062d79ec60ff08f923">&#9670;&nbsp;</a></span>Expression() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a293023f0af1aae062d79ec60ff08f923">&#9670;&nbsp;</a></span>Expression() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="aea47980bd0571cb2e31acbe414007e6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea47980bd0571cb2e31acbe414007e6d">&#9670;&nbsp;</a></span>Expression() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aea47980bd0571cb2e31acbe414007e6d">&#9670;&nbsp;</a></span>Expression() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +154,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="acccc3e0d18b2b64e3eefd871f19dba2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acccc3e0d18b2b64e3eefd871f19dba2a">&#9670;&nbsp;</a></span>Expression() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acccc3e0d18b2b64e3eefd871f19dba2a">&#9670;&nbsp;</a></span>Expression() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +180,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="abb55fe61cfcc9fc60e587d1b8b5e87de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb55fe61cfcc9fc60e587d1b8b5e87de">&#9670;&nbsp;</a></span>Expression() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb55fe61cfcc9fc60e587d1b8b5e87de">&#9670;&nbsp;</a></span>Expression() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +207,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="aae081e99d001eb73cdd42e33da3cddd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae081e99d001eb73cdd42e33da3cddd9">&#9670;&nbsp;</a></span>Expression() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae081e99d001eb73cdd42e33da3cddd9">&#9670;&nbsp;</a></span>Expression() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +234,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="aaa33f7fe56738e334e629c1258408e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa33f7fe56738e334e629c1258408e4c">&#9670;&nbsp;</a></span>Expression() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa33f7fe56738e334e629c1258408e4c">&#9670;&nbsp;</a></span>Expression() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +260,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="ac50f0bacc50fc655e276a08aafe9ebe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50f0bacc50fc655e276a08aafe9ebe0">&#9670;&nbsp;</a></span>Expression() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50f0bacc50fc655e276a08aafe9ebe0">&#9670;&nbsp;</a></span>Expression() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,6 +279,32 @@ Friends</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>the flaot value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea6912462c0531a1fcfd26003f338145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6912462c0531a1fcfd26003f338145">&#9670;&nbsp;</a></span>Expression() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PDI::Expression::Expression </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds an expression that is parsed from PC_tree_t. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>the PC_tree_t value </td></tr>
   </table>
   </dd>
 </dl>
@@ -443,7 +469,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="aead164aacf3e97ec8ecb343bbd23d886"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aead164aacf3e97ec8ecb343bbd23d886">&#9670;&nbsp;</a></span>to_ref()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aead164aacf3e97ec8ecb343bbd23d886">&#9670;&nbsp;</a></span>to_ref() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,30 +485,51 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluates an expression as a data reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>the context in which to evaluate the expression </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>the data reference </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="aee24c43b9029c5fba6fb8747c948c0da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee24c43b9029c5fba6fb8747c948c0da">&#9670;&nbsp;</a></span>Impl</h2>
+<a id="a6c18c3cd517df995e6622120a8ee55ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c18c3cd517df995e6622120a8ee55ab">&#9670;&nbsp;</a></span>to_ref() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend struct Impl</td>
+          <td class="memname"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a> PDI::Expression::to_ref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPDI_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPDI_1_1Datatype.html">Datatype</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Evaluates an expression as a data reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>the context in which to evaluate the expression </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the created Ref </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the data reference </dd></dl>
 
 </div>
 </div>

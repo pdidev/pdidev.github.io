@@ -7,6 +7,7 @@ var classPDI_1_1Expression =
     [ "Expression", "classPDI_1_1Expression.html#aae081e99d001eb73cdd42e33da3cddd9", null ],
     [ "Expression", "classPDI_1_1Expression.html#aaa33f7fe56738e334e629c1258408e4c", null ],
     [ "Expression", "classPDI_1_1Expression.html#ac50f0bacc50fc655e276a08aafe9ebe0", null ],
+    [ "Expression", "classPDI_1_1Expression.html#aea6912462c0531a1fcfd26003f338145", null ],
     [ "~Expression", "classPDI_1_1Expression.html#ada6016ad74b6693eaa5de08bd07a5d91", null ],
     [ "operator=", "classPDI_1_1Expression.html#a8fcc62d5d6bc65960611fb6cad896e89", null ],
     [ "operator=", "classPDI_1_1Expression.html#ad89c2782099fdb3e3b981a17a5f83378", null ],
@@ -15,5 +16,5 @@ var classPDI_1_1Expression =
     [ "to_double", "classPDI_1_1Expression.html#a76a28980b2c1eac09892416b77aa30a2", null ],
     [ "to_string", "classPDI_1_1Expression.html#a77c2950c5e679224b2d6d5a63f96c1f6", null ],
     [ "to_ref", "classPDI_1_1Expression.html#aead164aacf3e97ec8ecb343bbd23d886", null ],
-    [ "Impl", "classPDI_1_1Expression.html#aee24c43b9029c5fba6fb8747c948c0da", null ]
+    [ "to_ref", "classPDI_1_1Expression.html#a6c18c3cd517df995e6622120a8ee55ab", null ]
 ];

@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-04-29-11_32</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-05-12-09_07</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -163,6 +163,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aa688c9ec982e85d785aee1d8115514d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#aa688c9ec982e85d785aee1d8115514d7">to_bool</a> (PC_tree_t tree, bool dflt)</td></tr>
 <tr class="memdesc:aa688c9ec982e85d785aee1d8115514d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of a scalar node.  <a href="#aa688c9ec982e85d785aee1d8115514d7">More...</a><br /></td></tr>
 <tr class="separator:aa688c9ec982e85d785aee1d8115514d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06633db186ab479dbb26d5933a6a43bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a06633db186ab479dbb26d5933a6a43bc">is_list</a> (PC_tree_t tree)</td></tr>
+<tr class="memdesc:a06633db186ab479dbb26d5933a6a43bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the tree is a list.  <a href="#a06633db186ab479dbb26d5933a6a43bc">More...</a><br /></td></tr>
+<tr class="separator:a06633db186ab479dbb26d5933a6a43bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fb4c3a71e29599a21350e00cbba655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a86fb4c3a71e29599a21350e00cbba655">is_map</a> (PC_tree_t tree)</td></tr>
+<tr class="memdesc:a86fb4c3a71e29599a21350e00cbba655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the tree is a map.  <a href="#a86fb4c3a71e29599a21350e00cbba655">More...</a><br /></td></tr>
+<tr class="separator:a86fb4c3a71e29599a21350e00cbba655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14a52d54a9db1a67744827fb1d1eaa4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#ad14a52d54a9db1a67744827fb1d1eaa4">is_scalar</a> (PC_tree_t tree)</td></tr>
+<tr class="memdesc:ad14a52d54a9db1a67744827fb1d1eaa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the tree is a scalar.  <a href="#ad14a52d54a9db1a67744827fb1d1eaa4">More...</a><br /></td></tr>
+<tr class="separator:ad14a52d54a9db1a67744827fb1d1eaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa497f0078e25af462c413eafea53a138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#aa497f0078e25af462c413eafea53a138">each</a> (PC_tree_t tree, std::function&lt; void(PC_tree_t)&gt; operation)</td></tr>
 <tr class="memdesc:aa497f0078e25af462c413eafea53a138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates and apply the provided function to all elements of a PC list.  <a href="#aa497f0078e25af462c413eafea53a138">More...</a><br /></td></tr>
 <tr class="separator:aa497f0078e25af462c413eafea53a138"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -694,6 +703,87 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the boolean value of the scalar node </dd></dl>
+
+</div>
+</div>
+<a id="a06633db186ab479dbb26d5933a6a43bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06633db186ab479dbb26d5933a6a43bc">&#9670;&nbsp;</a></span>is_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PDI::is_list </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the tree is a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>the node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if tree is a list, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a86fb4c3a71e29599a21350e00cbba655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fb4c3a71e29599a21350e00cbba655">&#9670;&nbsp;</a></span>is_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PDI::is_map </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the tree is a map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>the node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if tree is a map, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad14a52d54a9db1a67744827fb1d1eaa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14a52d54a9db1a67744827fb1d1eaa4">&#9670;&nbsp;</a></span>is_scalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PDI::is_scalar </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the tree is a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>the node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if tree is a scalar, false otherwise </dd></dl>
 
 </div>
 </div>
