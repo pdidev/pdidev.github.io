@@ -13,6 +13,6 @@ var namespacePDI =
     [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html", "classPDI_1_1Pointer__datatype" ],
     [ "Record_datatype", "classPDI_1_1Record__datatype.html", "classPDI_1_1Record__datatype" ],
     [ "Ref_any", "classPDI_1_1Ref__any.html", "classPDI_1_1Ref__any" ],
-    [ "Ref_base", "classPDI_1_1Ref__base.html", "classPDI_1_1Ref__base" ],
+    [ "Reference_base", "classPDI_1_1Reference__base.html", "classPDI_1_1Reference__base" ],
     [ "Scalar_datatype", "classPDI_1_1Scalar__datatype.html", "classPDI_1_1Scalar__datatype" ]
 ];

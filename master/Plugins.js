@@ -10,7 +10,7 @@ var Plugins =
       [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md22", null ]
     ] ],
     [ "The FlowVR plugin", "FlowVR_plugin.html", [
-      [ "Reading and writing data examples", "FlowVR_plugin.html#c_api", [
+      [ "Configuration elements", "FlowVR_plugin.html#configuration", [
         [ "FlowVR plugin tree", "FlowVR_plugin.html#flowvr_tree", [
           [ "component", "FlowVR_plugin.html#component_node", null ],
           [ "wait_on_data", "FlowVR_plugin.html#wait_on_data_node", null ],
@@ -31,7 +31,9 @@ var Plugins =
         [ "Chunk payload", "FlowVR_plugin.html#chunks_payload", null ],
         [ "Event button payload", "FlowVR_plugin.html#button_payload", null ],
         [ "Event mouse payload", "FlowVR_plugin.html#mouse_payload", null ],
-        [ "Stamp", "FlowVR_plugin.html#stamp", null ],
+        [ "Stamp", "FlowVR_plugin.html#stamp", null ]
+      ] ],
+      [ "Reading and writing data examples", "FlowVR_plugin.html#c_api", [
         [ "Read data from FlowVR message by access the shared memory", "FlowVR_plugin.html#read_shared", null ],
         [ "Write data from FlowVR message by access the shared memory", "FlowVR_plugin.html#write_shared", null ],
         [ "Read data from FlowVR message by copy from the shared memory", "FlowVR_plugin.html#read_copy", null ],

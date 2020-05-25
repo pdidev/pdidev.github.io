@@ -460,7 +460,6 @@ function toggleSyncButton(relpath)
 
 function initNavTree(toroot,relpath)
 {
-  NAVTREE[0][1] = ''
   var o = new Object();
   o.toroot = toroot;
   o.node = new Object();

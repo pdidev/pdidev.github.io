@@ -12,28 +12,11 @@ var index =
       [ "Specification tree", "Concepts.html#Specification_tree", null ],
       [ "Conclusion", "Concepts.html#Conclusion", null ]
     ] ],
-    [ "Installation", "Installation.html", [
-      [ "Downloading PDI distribution", "Installation.html#downloading_distribution", null ],
+    [ "Installation of PDI source distribution", "Installation.html", [
+      [ "Downloading PDI source distribution", "Installation.html#downloading_distribution", null ],
       [ "Default installation", "Installation.html#default_installation", null ],
-      [ "Configuration", "Installation.html#configuration", [
-        [ "PDI compilation flags", "Installation.html#list_of_compilation_flags", [
-          [ "User profile plugin flags", "Installation.html#user_profile_plugin_flags", null ],
-          [ "User profile other flags", "Installation.html#user_profile_other_flags", null ],
-          [ "Dependency inclusion options", "Installation.html#user_dependency_flags", null ],
-          [ "PDI dependencies", "Installation.html#pdi_dependecies", null ],
-          [ "Fortran support", "Installation.html#fortan_support", null ],
-          [ "Python support", "Installation.html#python_support", null ]
-        ] ],
-        [ "Decl'HDF5 plugin", "Installation.html#decl_hdf5_plugin", null ],
-        [ "MPI plugin", "Installation.html#mpi_plugin", null ],
-        [ "FlowVR plugin", "Installation.html#flowvr_plugin", null ],
-        [ "FTI plugin", "Installation.html#fti_plugin", null ],
-        [ "Pycall plugin", "Installation.html#pycall_plugin", null ],
-        [ "Decl'SION plugin", "Installation.html#decl_sion_plugin", null ],
-        [ "Tests", "Installation.html#tests_dependencies", null ],
-        [ "Documentation", "Installation.html#documentation_dependencies", null ],
-        [ "PDI configuration validation tool", "Installation.html#pdiconf_validator", null ]
-      ] ]
+      [ "Configuration", "Installation.html#cmake_config", null ],
+      [ "List of dependencies", "Installation.html#dependecies", null ]
     ] ],
     [ "First steps with PDI", "First_steps.html", [
       [ "Yaml language", "First_steps.html#Yaml", null ],
