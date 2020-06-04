@@ -1,13 +1,13 @@
 var Plugins =
 [
     [ "The Decl'HDF5 plugin", "Decl_HDF5_plugin.html", [
-      [ "Configuration grammar", "Decl_HDF5_plugin.html#autotoc_md17", [
-        [ "`FILE_DESC`", "Decl_HDF5_plugin.html#autotoc_md18", null ],
-        [ "`DATA_SECTION`", "Decl_HDF5_plugin.html#autotoc_md19", null ],
-        [ "`DATA_IO_DESC`", "Decl_HDF5_plugin.html#autotoc_md20", null ],
-        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md21", null ]
+      [ "Configuration grammar", "Decl_HDF5_plugin.html#autotoc_md16", [
+        [ "`FILE_DESC`", "Decl_HDF5_plugin.html#autotoc_md17", null ],
+        [ "`DATA_SECTION`", "Decl_HDF5_plugin.html#autotoc_md18", null ],
+        [ "`DATA_IO_DESC`", "Decl_HDF5_plugin.html#autotoc_md19", null ],
+        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md20", null ]
       ] ],
-      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md22", null ]
+      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md21", null ]
     ] ],
     [ "The FlowVR plugin", "FlowVR_plugin.html", [
       [ "Configuration elements", "FlowVR_plugin.html#configuration", [
@@ -80,24 +80,24 @@ var Plugins =
     [ "FTI plugin", "FTI_plugin.html", null ],
     [ "How to create a plugin", "how_to_create_plugin.html", [
       [ "Plugin class", "how_to_create_plugin.html#plugin_class", [
-        [ "Features and requirements", "FTI_plugin.html#autotoc_md25", [
-          [ "Dependencies", "FTI_plugin.html#autotoc_md26", null ],
-          [ "Initialization", "FTI_plugin.html#autotoc_md27", null ],
-          [ "Predefined descriptors", "FTI_plugin.html#autotoc_md28", null ]
+        [ "Features and requirements", "FTI_plugin.html#autotoc_md24", [
+          [ "Dependencies", "FTI_plugin.html#autotoc_md25", null ],
+          [ "Initialization", "FTI_plugin.html#autotoc_md26", null ],
+          [ "Predefined descriptors", "FTI_plugin.html#autotoc_md27", null ]
         ] ],
-        [ "Configuration grammar", "FTI_plugin.html#autotoc_md29", [
-          [ "`checkpoint`", "FTI_plugin.html#autotoc_md30", null ],
-          [ "`communicator`", "FTI_plugin.html#autotoc_md31", null ],
-          [ "`config_file`", "FTI_plugin.html#autotoc_md32", null ],
-          [ "`dataset`", "FTI_plugin.html#autotoc_md33", null ],
-          [ "`init_on`", "FTI_plugin.html#autotoc_md34", null ],
-          [ "`recover_on`", "FTI_plugin.html#autotoc_md35", null ],
-          [ "`recover_var`", "FTI_plugin.html#autotoc_md36", null ],
-          [ "`send_file`", "FTI_plugin.html#autotoc_md37", null ],
-          [ "`snapshot_on`", "FTI_plugin.html#autotoc_md38", null ],
-          [ "`status`", "FTI_plugin.html#autotoc_md39", null ]
+        [ "Configuration grammar", "FTI_plugin.html#autotoc_md28", [
+          [ "`checkpoint`", "FTI_plugin.html#autotoc_md29", null ],
+          [ "`communicator`", "FTI_plugin.html#autotoc_md30", null ],
+          [ "`config_file`", "FTI_plugin.html#autotoc_md31", null ],
+          [ "`dataset`", "FTI_plugin.html#autotoc_md32", null ],
+          [ "`init_on`", "FTI_plugin.html#autotoc_md33", null ],
+          [ "`recover_on`", "FTI_plugin.html#autotoc_md34", null ],
+          [ "`recover_var`", "FTI_plugin.html#autotoc_md35", null ],
+          [ "`send_file`", "FTI_plugin.html#autotoc_md36", null ],
+          [ "`snapshot_on`", "FTI_plugin.html#autotoc_md37", null ],
+          [ "`status`", "FTI_plugin.html#autotoc_md38", null ]
         ] ],
-        [ "full configuration example", "FTI_plugin.html#autotoc_md40", null ],
+        [ "full configuration example", "FTI_plugin.html#autotoc_md39", null ],
         [ "Example plugin", "how_to_create_plugin.html#example_plugin", null ],
         [ "Adding a callback", "how_to_create_plugin.html#adding_callback", null ],
         [ "Reading and writing data", "how_to_create_plugin.html#rw_data", null ],

@@ -4,6 +4,12 @@ var index =
     [ "Developer documentation", "index.html#autotoc_md1", null ],
     [ "Get support", "index.html#autotoc_md2", null ],
     [ "Join the team", "index.html#autotoc_md3", null ],
+    [ "Installation of PDI source distribution", "Installation.html", [
+      [ "Downloading PDI source distribution", "Installation.html#downloading_distribution", null ],
+      [ "Default installation", "Installation.html#default_installation", null ],
+      [ "Configuration", "Installation.html#cmake_config", null ],
+      [ "List of dependencies", "Installation.html#dependecies", null ]
+    ] ],
     [ "Core Concepts", "Concepts.html", [
       [ "Philosophy of PDI", "Concepts.html#pdi_philosophy", null ],
       [ "PDI description", "Concepts.html#PDI_description", null ],
@@ -11,12 +17,6 @@ var index =
       [ "Event subsystem", "Concepts.html#Event_subsystem", null ],
       [ "Specification tree", "Concepts.html#Specification_tree", null ],
       [ "Conclusion", "Concepts.html#Conclusion", null ]
-    ] ],
-    [ "Installation of PDI source distribution", "Installation.html", [
-      [ "Downloading PDI source distribution", "Installation.html#downloading_distribution", null ],
-      [ "Default installation", "Installation.html#default_installation", null ],
-      [ "Configuration", "Installation.html#cmake_config", null ],
-      [ "List of dependencies", "Installation.html#dependecies", null ]
     ] ],
     [ "First steps with PDI", "First_steps.html", [
       [ "Yaml language", "First_steps.html#Yaml", null ],
@@ -30,7 +30,6 @@ var index =
       [ "Heat algorithm", "PDI_example.html#heat_algorithm", null ],
       [ "PDI integration", "PDI_example.html#pdi_integration", null ]
     ] ],
-    [ "Plugins", "Plugins.html", "Plugins" ],
     [ "Specification tree Reference", "Specification_tree_ref.html", [
       [ "specification tree root", "Specification_tree_ref.html#root_node", null ],
       [ "array_type", "Specification_tree_ref.html#array_type_node", null ],
@@ -57,6 +56,7 @@ var index =
       [ "record_type", "Specification_tree_ref.html#record_type_node", null ],
       [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ]
     ] ],
+    [ "Plugins", "Plugins.html", "Plugins" ],
     [ "How to create a plugin", "how_to_create_plugin.html", [
       [ "Plugin class", "how_to_create_plugin.html#plugin_class", [
         [ "Example plugin", "how_to_create_plugin.html#example_plugin", null ],

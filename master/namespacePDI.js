@@ -1,5 +1,18 @@
 var namespacePDI =
 [
+    [ "Setup", "Hands_on.html#autotoc_md4", null ],
+    [ "Tutorial", "Hands_on.html#autotoc_md5", [
+      [ "Ex1. Getting started", "Hands_on.html#autotoc_md6", null ],
+      [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md7", null ],
+      [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md8", null ],
+      [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md9", null ],
+      [ "Ex5. Introducing events", "Hands_on.html#autotoc_md10", null ],
+      [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md11", null ],
+      [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md12", null ],
+      [ "Ex8. Writing an advanced selection", "Hands_on.html#autotoc_md13", null ],
+      [ "Ex9. Going parallel", "Hands_on.html#autotoc_md14", null ]
+    ] ],
+    [ "What next ?", "Hands_on.html#autotoc_md15", null ],
     [ "Array_datatype", "classPDI_1_1Array__datatype.html", "classPDI_1_1Array__datatype" ],
     [ "Context", "classPDI_1_1Context.html", "classPDI_1_1Context" ],
     [ "Context_proxy", "classPDI_1_1Context__proxy.html", "classPDI_1_1Context__proxy" ],
