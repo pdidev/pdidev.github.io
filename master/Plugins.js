@@ -78,8 +78,8 @@ var Plugins =
       [ "Specification tree example", "user_code_plugin.html#full_spec_tree_example_node", null ]
     ] ],
     [ "FTI plugin", "FTI_plugin.html", null ],
-    [ "How to create a plugin", "how_to_create_plugin.html", [
-      [ "Plugin class", "how_to_create_plugin.html#plugin_class", [
+    [ "Pycall plugin", "pycall_plugin.html", [
+      [ "Configuration", "pycall_plugin.html#pycall_configuration", [
         [ "Features and requirements", "FTI_plugin.html#autotoc_md24", [
           [ "Dependencies", "FTI_plugin.html#autotoc_md25", null ],
           [ "Initialization", "FTI_plugin.html#autotoc_md26", null ],
@@ -98,6 +98,14 @@ var Plugins =
           [ "`status`", "FTI_plugin.html#autotoc_md38", null ]
         ] ],
         [ "full configuration example", "FTI_plugin.html#autotoc_md39", null ],
+        [ "Plugin tree", "pycall_plugin.html#pycall_plugin_tree", null ],
+        [ "on_event", "pycall_plugin.html#pycall_on_event", null ],
+        [ "on_data", "pycall_plugin.html#pycall_on_data", null ]
+      ] ],
+      [ "Examples", "pycall_plugin.html#pycall_ex", null ]
+    ] ],
+    [ "How to create a plugin", "how_to_create_plugin.html", [
+      [ "Plugin class", "how_to_create_plugin.html#plugin_class", [
         [ "Example plugin", "how_to_create_plugin.html#example_plugin", null ],
         [ "Adding a callback", "how_to_create_plugin.html#adding_callback", null ],
         [ "Reading and writing data", "how_to_create_plugin.html#rw_data", null ],
