@@ -77,6 +77,24 @@ var Plugins =
       ] ],
       [ "Specification tree example", "user_code_plugin.html#full_spec_tree_example_node", null ]
     ] ],
+    [ "Set_value plugin", "set_value_plugin.html", [
+      [ "Configuration grammar", "set_value_plugin.html#set_value_configuration", [
+        [ "on_init", "set_value_plugin.html#on_init_list_node", null ],
+        [ "on_event", "set_value_plugin.html#on_event_map_node", null ],
+        [ "on_data", "set_value_plugin.html#on_data_map_node", null ],
+        [ "value operation", "set_value_plugin.html#value_operation", null ],
+        [ "value list", "set_value_plugin.html#value_list", null ],
+        [ "scalar value", "set_value_plugin.html#scalar_value", null ],
+        [ "array value", "set_value_plugin.html#array_value", null ],
+        [ "record value", "set_value_plugin.html#record_value", null ]
+      ] ],
+      [ "full configuration example", "set_value_plugin.html#full_config", null ],
+      [ "Using old values to set new", "set_value_plugin.html#old_to_new", [
+        [ "Increment value", "set_value_plugin.html#increment", null ],
+        [ "Getting old value", "set_value_plugin.html#increment_in_array", null ],
+        [ "Getting new value", "set_value_plugin.html#update_array_after_scalar", null ]
+      ] ]
+    ] ],
     [ "FTI plugin", "FTI_plugin.html", null ],
     [ "Pycall plugin", "pycall_plugin.html", [
       [ "Configuration", "pycall_plugin.html#pycall_configuration", [
