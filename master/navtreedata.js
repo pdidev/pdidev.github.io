@@ -13,7 +13,7 @@ var NAVTREEINDEX =
 [
 ".html",
 "classPDI_1_1Plugin.html#ad3e4b6e124dac600ca050c679b1e9abc",
-"user_code_plugin.html#hello_world_node"
+"user_code_plugin.html#function_param_list_node"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

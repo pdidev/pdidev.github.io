@@ -2,6 +2,7 @@ var classPDI_1_1Pointer__datatype =
 [
     [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a7184035bbd0f5d98b0f0461001ced1ad", null ],
     [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a6a8510fd399b23da60a52cf0f88e438b", null ],
+    [ "subtype", "classPDI_1_1Pointer__datatype.html#ad4d74aa9866dfaf02d8c17b5dcf35424", null ],
     [ "clone", "classPDI_1_1Pointer__datatype.html#af594a11c6575131d709a7792f7c0f28e", null ],
     [ "clone_type", "classPDI_1_1Pointer__datatype.html#a4ea685b28d9be745718e1d4715a6c544", null ],
     [ "densify", "classPDI_1_1Pointer__datatype.html#a52d14b97faf1ace6fda56c6763e05adc", null ],

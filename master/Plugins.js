@@ -77,6 +77,9 @@ var Plugins =
       ] ],
       [ "Specification tree example", "user_code_plugin.html#full_spec_tree_example_node", null ]
     ] ],
+    [ "Serialize plugin", "serialize_plugin.html", [
+      [ "Configuration grammar", "serialize_plugin.html#serialize_configuration", null ]
+    ] ],
     [ "Set_value plugin", "set_value_plugin.html", [
       [ "Configuration grammar", "set_value_plugin.html#set_value_configuration", [
         [ "on_init", "set_value_plugin.html#on_init_list_node", null ],
