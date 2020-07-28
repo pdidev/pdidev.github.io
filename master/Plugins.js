@@ -9,6 +9,27 @@ var Plugins =
       ] ],
       [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md21", null ]
     ] ],
+    [ "The Decl'NetCDF plugin", "Decl_NetCDF_plugin.html", [
+      [ "Configuration elements", "Decl_NetCDF_plugin.html#decl_netcdf_configuration", [
+        [ "file subtree", "Decl_NetCDF_plugin.html#decl_netcdf_file", null ],
+        [ "communicator subtree", "Decl_NetCDF_plugin.html#decl_netcdf_comm", null ],
+        [ "on_event subtree", "Decl_NetCDF_plugin.html#decl_netcdf_on_event", null ],
+        [ "when subtree", "Decl_NetCDF_plugin.html#decl_netcdf_when", null ],
+        [ "groups subtree", "Decl_NetCDF_plugin.html#decl_netcdf_groups", [
+          [ "group name subtree", "Decl_NetCDF_plugin.html#decl_netcdf_groups_name", null ]
+        ] ],
+        [ "variables subtree", "Decl_NetCDF_plugin.html#decl_netcdf_variables", [
+          [ "variable definition subtree", "Decl_NetCDF_plugin.html#decl_netcdf_variables_value", null ],
+          [ "attribute subtree", "Decl_NetCDF_plugin.html#decl_netcdf_attr", null ]
+        ] ],
+        [ "write subtree", "Decl_NetCDF_plugin.html#decl_netcdf_write", [
+          [ "subtree", "Decl_NetCDF_plugin.html#decl_netcdf_var_selection", null ],
+          [ "read/write when subtree", "Decl_NetCDF_plugin.html#decl_netcdf_io_when", null ]
+        ] ],
+        [ "read subtree", "Decl_NetCDF_plugin.html#decl_netcdf_read", null ],
+        [ "Full yaml example", "Decl_NetCDF_plugin.html#decl_netcdf_full_config", null ]
+      ] ]
+    ] ],
     [ "The FlowVR plugin", "FlowVR_plugin.html", [
       [ "Configuration elements", "FlowVR_plugin.html#configuration", [
         [ "FlowVR plugin tree", "FlowVR_plugin.html#flowvr_tree", [
