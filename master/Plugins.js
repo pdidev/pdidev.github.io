@@ -128,16 +128,16 @@ var Plugins =
           [ "Predefined descriptors", "FTI_plugin.html#autotoc_md27", null ]
         ] ],
         [ "Configuration grammar", "FTI_plugin.html#autotoc_md28", [
-          [ "`checkpoint`", "FTI_plugin.html#autotoc_md29", null ],
-          [ "`communicator`", "FTI_plugin.html#autotoc_md30", null ],
-          [ "`config_file`", "FTI_plugin.html#autotoc_md31", null ],
-          [ "`dataset`", "FTI_plugin.html#autotoc_md32", null ],
-          [ "`init_on`", "FTI_plugin.html#autotoc_md33", null ],
-          [ "`recover_on`", "FTI_plugin.html#autotoc_md34", null ],
-          [ "`recover_var`", "FTI_plugin.html#autotoc_md35", null ],
-          [ "`send_file`", "FTI_plugin.html#autotoc_md36", null ],
-          [ "`snapshot_on`", "FTI_plugin.html#autotoc_md37", null ],
-          [ "`status`", "FTI_plugin.html#autotoc_md38", null ]
+          [ "checkpoint", "FTI_plugin.html#autotoc_md29", null ],
+          [ "communicator", "FTI_plugin.html#autotoc_md30", null ],
+          [ "config_file", "FTI_plugin.html#autotoc_md31", null ],
+          [ "dataset", "FTI_plugin.html#autotoc_md32", null ],
+          [ "init_on", "FTI_plugin.html#autotoc_md33", null ],
+          [ "recover_on", "FTI_plugin.html#autotoc_md34", null ],
+          [ "recover_var", "FTI_plugin.html#autotoc_md35", null ],
+          [ "send_file", "FTI_plugin.html#autotoc_md36", null ],
+          [ "snapshot_on", "FTI_plugin.html#autotoc_md37", null ],
+          [ "status", "FTI_plugin.html#autotoc_md38", null ]
         ] ],
         [ "full configuration example", "FTI_plugin.html#autotoc_md39", null ],
         [ "Plugin tree", "pycall_plugin.html#pycall_plugin_tree", null ],
