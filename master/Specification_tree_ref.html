@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-07-29-09_48</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-07-30-12_43</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -156,7 +156,8 @@ datatype</h1>
 <li>a <a class="el" href="Specification_tree_ref.html#logical_type_node">logical_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#real_type_node">real_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a>,</li>
-<li>a <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>.</li>
+<li>a <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a>.</li>
 </ul>
 <p>Amongst these, <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a> is the only scalar. All others are dictionaries with a <code>type</code> key used for disambiguation between them. Plugins can add new options that follow the same pattern.</p>
 <p>A <em>datatype</em> represents the memory layout and interpretation for data exposed by the user in the <a class="el" href="Concepts.html#Data_store">data store</a>.</p>
@@ -301,15 +302,30 @@ logical_type</h1>
 </table>
 <p>A <em>logical_type</em> represents the Fortran <code>logical</code> datatype. The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>logical(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</p>
 <p><b>Examples:</b></p>
-<div class="fragment"><div class="line">type: logical</div></div><!-- fragment --><div class="fragment"><div class="line">type: logical</div><div class="line">kind: 1</div></div><!-- fragment --><h1><a class="anchor" id="member_desc_node"></a>
-member_desc</h1>
-<p>A <em>member_desc</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<div class="fragment"><div class="line">type: logical</div></div><!-- fragment --><div class="fragment"><div class="line">type: logical</div><div class="line">kind: 1</div></div><!-- fragment --><h1><a class="anchor" id="struct_member_desc_node"></a>
+struct_member_desc</h1>
+<p>A <em>struct_member_desc</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"type"</code></td><td align="left">a <code>scalar</code>, <code>array</code>, <code>record</code> or <code>struct</code> </td></tr>
+<tr>
+<td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left"><em>anything</em> </td></tr>
+</table>
+<ul>
+<li>the value associated to the <code>type</code> key identifies the <a class="el" href="Specification_tree_ref.html#datatype_node">type</a> of this member, all other keys required for this <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> must be present.</li>
+</ul>
+<p><b>Examples:</b></p>
+<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  my_char: char</div></div><!-- fragment --><div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  my_long: int64</div><div class="line">  my_array:</div><div class="line">    type: array</div><div class="line">    subtype: int64</div><div class="line">    size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for more examples.</p>
+<h1><a class="anchor" id="record_member_desc_node"></a>
+record_member_desc</h1>
+<p>A <em>record_member_desc</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
 <tr>
 <th align="left">key</th><th align="left">value  </th></tr>
 <tr>
 <td align="left"><code>"disp"</code></td><td align="left">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a> </td></tr>
 <tr>
-<td align="left"><code>"type"</code></td><td align="left">a <code>scalar</code>, <code>array</code> or <code>record</code> </td></tr>
+<td align="left"><code>"type"</code></td><td align="left">a <code>scalar</code>, <code>array</code>, <code>record</code> or <code>struct</code> </td></tr>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left"><em>anything</em> </td></tr>
 </table>
@@ -318,14 +334,26 @@ member_desc</h1>
 <li>the value associated to the <code>type</code> key identifies the <a class="el" href="Specification_tree_ref.html#datatype_node">type</a> of this record, all other keys required for this <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> must be present.</li>
 </ul>
 <p><b>Examples:</b></p>
-<div class="fragment"><div class="line">my_char:</div><div class="line">      disp: 0</div><div class="line">      type: int64</div></div><!-- fragment --><div class="fragment"><div class="line">my_array:</div><div class="line">  disp: 8</div><div class="line">  type: array</div><div class="line">  subtype: int64</div><div class="line">  size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> for more examples.</p>
-<h1><a class="anchor" id="members_map_node"></a>
-members_map</h1>
-<p>A <em>members_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<div class="fragment"><div class="line">type: record</div><div class="line">buffersize: 1</div><div class="line">members:</div><div class="line">  my_char:</div><div class="line">        disp: 0</div><div class="line">        type: char</div></div><!-- fragment --><div class="fragment"><div class="line">type: record</div><div class="line">buffersize: 808 </div><div class="line">members:</div><div class="line">  my_long:</div><div class="line">    disp: 0</div><div class="line">    type: int64</div><div class="line">  my_array:</div><div class="line">    disp: 8</div><div class="line">    type: array</div><div class="line">    subtype: int64</div><div class="line">    size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> for more examples.</p>
+<h1><a class="anchor" id="struct_members_map_node"></a>
+struct_members_map</h1>
+<p>A <em>struct_members_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
 <tr>
 <th align="left">key</th><th align="left">value  </th></tr>
 <tr>
-<td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#member_desc_node">member_desc</a> </td></tr>
+<td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#struct_member_desc_node">struct_member_desc</a> </td></tr>
+</table>
+<ul>
+<li>each key identifies the name of a member of the struct and the value associated to it describes the member itself.</li>
+</ul>
+<p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for an example.</p>
+<h1><a class="anchor" id="record_members_map_node"></a>
+record_members_map</h1>
+<p>A <em>record_members_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#record_member_desc_node">record_member_desc</a> </td></tr>
 </table>
 <ul>
 <li>each key identifies the name of a member of the record and the value associated to it describes the member itself.</li>
@@ -357,7 +385,20 @@ real_type</h1>
 </table>
 <p>A <em>real_type</em> represents the Fortran <code>real</code> datatype. The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>real(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</p>
 <p><b>Examples:</b></p>
-<div class="fragment"><div class="line">type: real</div></div><!-- fragment --><div class="fragment"><div class="line">type: real</div><div class="line">kind: 8</div></div><!-- fragment --><h1><a class="anchor" id="record_type_node"></a>
+<div class="fragment"><div class="line">type: real</div></div><!-- fragment --><div class="fragment"><div class="line">type: real</div><div class="line">kind: 8</div></div><!-- fragment --><h1><a class="anchor" id="struct_type_node"></a>
+struct_type</h1>
+<p>A <em>struct_type</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"type"</code></td><td align="left"><code>"struct"</code> </td></tr>
+<tr>
+<td align="left"><code>"members"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#struct_members_map_node">struct_members_map</a> </td></tr>
+</table>
+<p>A <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> represents a "struct", <em>aka</em> C "struct", C++ "class". Buffersize and members displacemnts will be calculated by the PDI.</p>
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  first_int: int32</div><div class="line">  seconf_int: int32</div></div><!-- fragment --><h1><a class="anchor" id="record_type_node"></a>
 record_type</h1>
 <p>A <em>record_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">
@@ -368,11 +409,11 @@ record_type</h1>
 <tr>
 <td align="left"><code>"buffersize"</code></td><td align="left">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a> </td></tr>
 <tr>
-<td align="left"><code>"members"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#members_map_node">members_map</a> </td></tr>
+<td align="left"><code>"members"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#record_members_map_node">record_members_map</a> </td></tr>
 </table>
-<p>A <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> represents a "record", <em>aka</em> C "struct", C++ "class", Fortran "derived type" where:</p><ul>
+<p>A <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> represents a "record" where:</p><ul>
 <li>the value associated to the <code>buffersize</code> key represents the overall size of the record, including potential padding,</li>
-<li>the value associated to the <code>members</code> key lists all members of the record.</li>
+<li>the value associated to the <code>members</code> key lists all members of the record with given displacements.</li>
 </ul>
 <p><b>Example:</b></p>
 <div class="fragment"><div class="line">type: record</div><div class="line">buffersize: 8</div><div class="line">members:</div><div class="line">  first_int:</div><div class="line">    disp: 0</div><div class="line">    type: int32</div><div class="line">  seconf_int:</div><div class="line">    disp: 4</div><div class="line">    type: int32</div></div><!-- fragment --><h1><a class="anchor" id="simple_datatype_node"></a>
