@@ -57,7 +57,8 @@ var index =
       [ "real_type", "Specification_tree_ref.html#real_type_node", null ],
       [ "struct_type", "Specification_tree_ref.html#struct_type_node", null ],
       [ "record_type", "Specification_tree_ref.html#record_type_node", null ],
-      [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ]
+      [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ],
+      [ "plugin_path", "Specification_tree_ref.html#plugin_path_map_node", null ]
     ] ],
     [ "Plugins", "Plugins.html", "Plugins" ],
     [ "How to create a plugin", "how_to_create_plugin.html", [

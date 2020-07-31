@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-07-31-07_20</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-07-31-09_16</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -82,6 +82,8 @@ specification tree root</h1>
 <td align="left"><code>"metadata"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#data_map_node">data_map</a> </td></tr>
 <tr>
 <td align="left"><code>"plugins"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#plugin_map_node">plugin_map</a> </td></tr>
+<tr>
+<td align="left"><code>"plugin_path"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#plugin_path_map_node">plugin_path</a> </td></tr>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left"><em>anything</em> </td></tr>
 </table>
@@ -420,7 +422,11 @@ record_type</h1>
 simple_datatype</h1>
 <p>A <em>simple_datatype</em> is a <b>scalar</b>.</p>
 <p>It is interpreted as a shortcut for a mapping with a single key <code>type</code> whose value is the provided scalar and therefore another <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>.</p>
-<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;my_type&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">{ type: &quot;my_type&quot; }</div></div><!-- fragment --> </div></div><!-- contents -->
+<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;my_type&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">{ type: &quot;my_type&quot; }</div></div><!-- fragment --><h1><a class="anchor" id="plugin_path_map_node"></a>
+plugin_path</h1>
+<p>A path to directory where PDI should search for plugins. It can be single path:</p>
+<div class="fragment"><div class="line">plugin_path: &quot;/home/user123/plugins&quot;</div></div><!-- fragment --><p>or array of paths (PDI will take first match):</p>
+<div class="fragment"><div class="line">plugin_path: [&quot;/home/user123/plugins&quot;, &quot;/usr/lib/pdi/plugins&quot;]</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 </body>
 </html>

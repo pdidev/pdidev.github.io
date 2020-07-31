@@ -135,6 +135,7 @@ var NAVTREEINDEX0 =
 "Specification_tree_ref.html#intexpr_seq_node":[0,8,15],
 "Specification_tree_ref.html#logical_type_node":[0,8,17],
 "Specification_tree_ref.html#plugin_map_node":[0,8,22],
+"Specification_tree_ref.html#plugin_path_map_node":[0,8,27],
 "Specification_tree_ref.html#real_type_node":[0,8,23],
 "Specification_tree_ref.html#record_member_desc_node":[0,8,19],
 "Specification_tree_ref.html#record_members_map_node":[0,8,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classPDI_1_1Error.html#a96f2da1344848f7862d6d4227ba7c82a":[4,0,10,3],
 "classPDI_1_1Error.html#aa35ec710a94e89b80540a7030296774b":[4,0,10,1],
 "classPDI_1_1Expression.html":[4,0,11],
-"classPDI_1_1Expression.html#a293023f0af1aae062d79ec60ff08f923":[4,0,11,0],
-"classPDI_1_1Expression.html#a6c18c3cd517df995e6622120a8ee55ab":[4,0,11,16]
+"classPDI_1_1Expression.html#a293023f0af1aae062d79ec60ff08f923":[4,0,11,0]
 };
