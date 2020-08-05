@@ -14,6 +14,7 @@ var namespacePDI =
     ] ],
     [ "What next ?", "Hands_on.html#autotoc_md15", null ],
     [ "Array_datatype", "classPDI_1_1Array__datatype.html", "classPDI_1_1Array__datatype" ],
+    [ "Callbacks", "classPDI_1_1Callbacks.html", "classPDI_1_1Callbacks" ],
     [ "Config_error", "structPDI_1_1Config__error.html", "structPDI_1_1Config__error" ],
     [ "Context", "classPDI_1_1Context.html", "classPDI_1_1Context" ],
     [ "Context_proxy", "classPDI_1_1Context__proxy.html", "classPDI_1_1Context__proxy" ],

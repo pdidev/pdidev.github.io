@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-03-11_07</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-05-12_33</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -93,7 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3099171edab8110340cac24447187164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns local logger.  <a href="#a3099171edab8110340cac24447187164">More...</a><br /></td></tr>
 <tr class="separator:a3099171edab8110340cac24447187164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23624a98f533a9da2b1584dfac18ad8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a23624a98f533a9da2b1584dfac18ad8f">pdi_core_logger</a> () const</td></tr>
-<tr class="memdesc:a23624a98f533a9da2b1584dfac18ad8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320">Context::logger</a> proxy for plugins.  <a href="#a23624a98f533a9da2b1584dfac18ad8f">More...</a><br /></td></tr>
+<tr class="memdesc:a23624a98f533a9da2b1584dfac18ad8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320" title="Logger getter. ">Context::logger</a> proxy for plugins.  <a href="#a23624a98f533a9da2b1584dfac18ad8f">More...</a><br /></td></tr>
 <tr class="separator:a23624a98f533a9da2b1584dfac18ad8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71f62967880f5bcd0fe095f17b3de4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#ac71f62967880f5bcd0fe095f17b3de4f">datatype</a> (PC_tree_t node) override</td></tr>
 <tr class="memdesc:ac71f62967880f5bcd0fe095f17b3de4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b" title="Creates a new datatype template from a paraconf-style config. ">Context::datatype</a> proxy for plugins.  <a href="#ac71f62967880f5bcd0fe095f17b3de4f">More...</a><br /></td></tr>
@@ -101,19 +101,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab24dac03f6faddd05bd83b734cd1ca56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#ab24dac03f6faddd05bd83b734cd1ca56">add_datatype</a> (const std::string &amp;name, <a class="el" href="classPDI_1_1Context.html#a69e61f140cdf5555c635e160f85f3c86">Datatype_template_parser</a> parser) override</td></tr>
 <tr class="memdesc:ab24dac03f6faddd05bd83b734cd1ca56"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6" title="Adds new datatype parser to the context. ">Context::add_datatype</a> proxy for plugins.  <a href="#ab24dac03f6faddd05bd83b734cd1ca56">More...</a><br /></td></tr>
 <tr class="separator:ab24dac03f6faddd05bd83b734cd1ca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94129d996ddab4f8e6a315936e5f89a7"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a94129d996ddab4f8e6a315936e5f89a7">add_init_callback</a> (const std::function&lt; void()&gt; &amp;callback) override</td></tr>
-<tr class="memdesc:a94129d996ddab4f8e6a315936e5f89a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new init callback to context.  <a href="#a94129d996ddab4f8e6a315936e5f89a7">More...</a><br /></td></tr>
-<tr class="separator:a94129d996ddab4f8e6a315936e5f89a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d931c5439ec18260fe2fdcab55bdf44"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a4d931c5439ec18260fe2fdcab55bdf44">add_data_callback</a> (const std::function&lt; void(const std::string &amp;, <a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>)&gt; &amp;callback, const std::string &amp;name={}) override</td></tr>
-<tr class="memdesc:a4d931c5439ec18260fe2fdcab55bdf44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new data callback to context.  <a href="#a4d931c5439ec18260fe2fdcab55bdf44">More...</a><br /></td></tr>
-<tr class="separator:a4d931c5439ec18260fe2fdcab55bdf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6679915d7732185ea1d04656753f4b5"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#ac6679915d7732185ea1d04656753f4b5">add_event_callback</a> (const std::function&lt; void(const std::string &amp;)&gt; &amp;callback, const std::string &amp;name={}) override</td></tr>
-<tr class="memdesc:ac6679915d7732185ea1d04656753f4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new event callback to context.  <a href="#ac6679915d7732185ea1d04656753f4b5">More...</a><br /></td></tr>
-<tr class="separator:ac6679915d7732185ea1d04656753f4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad53ab286ae45a953c24145cfa889b099"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#ad53ab286ae45a953c24145cfa889b099">add_empty_desc_access_callback</a> (const std::function&lt; void(const std::string &amp;)&gt; &amp;callback, const std::string &amp;name={}) override</td></tr>
-<tr class="memdesc:ad53ab286ae45a953c24145cfa889b099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new empty desc access callback to context.  <a href="#ad53ab286ae45a953c24145cfa889b099">More...</a><br /></td></tr>
-<tr class="separator:ad53ab286ae45a953c24145cfa889b099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e691045f02436bfa36aeeb2b8cb7495"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a9e691045f02436bfa36aeeb2b8cb7495">callbacks</a> () override</td></tr>
+<tr class="memdesc:a9e691045f02436bfa36aeeb2b8cb7495"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20" title="Callbacks of the context. ">Context::callbacks</a> proxy for plugins.  <a href="#a9e691045f02436bfa36aeeb2b8cb7495">More...</a><br /></td></tr>
+<tr class="separator:a9e691045f02436bfa36aeeb2b8cb7495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c5cec5bf707ad67e38e30a4ee12329b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a9c5cec5bf707ad67e38e30a4ee12329b">finalize_and_exit</a> () override</td></tr>
+<tr class="memdesc:a9c5cec5bf707ad67e38e30a4ee12329b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes <a class="el" href="namespacePDI.html">PDI</a> and exits application.  <a href="#a9c5cec5bf707ad67e38e30a4ee12329b">More...</a><br /></td></tr>
 <tr class="separator:a9c5cec5bf707ad67e38e30a4ee12329b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classPDI_1_1Context"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPDI_1_1Context')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPDI_1_1Context.html">PDI::Context</a></td></tr>
 <tr class="memitem:a9a1eb26d8ff1d5b7b458b704a3cb26a8 inherit pub_methods_classPDI_1_1Context"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a9a1eb26d8ff1d5b7b458b704a3cb26a8">~Context</a> ()</td></tr>
@@ -419,7 +411,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320">Context::logger</a> proxy for plugins. </p>
+<p><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320" title="Logger getter. ">Context::logger</a> proxy for plugins. </p>
 
 </div>
 </div>
@@ -493,8 +485,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a94129d996ddab4f8e6a315936e5f89a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94129d996ddab4f8e6a315936e5f89a7">&#9670;&nbsp;</a></span>add_init_callback()</h2>
+<a id="a9e691045f02436bfa36aeeb2b8cb7495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e691045f02436bfa36aeeb2b8cb7495">&#9670;&nbsp;</a></span>callbacks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,10 +495,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::function&lt;void()&gt; PDI::Context_proxy::add_init_callback </td>
+          <td class="memname"><a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a>&amp; PDI::Context_proxy::callbacks </td>
           <td>(</td>
-          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -517,160 +508,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds new init callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when data and metadata are loaded</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
+<p><a class="el" href="classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20" title="Callbacks of the context. ">Context::callbacks</a> proxy for plugins. </p>
 
-<p>Implements <a class="el" href="classPDI_1_1Context.html#a3dab913bcf429835da411aed665fbaf5">PDI::Context</a>.</p>
-
-</div>
-</div>
-<a id="a4d931c5439ec18260fe2fdcab55bdf44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d931c5439ec18260fe2fdcab55bdf44">&#9670;&nbsp;</a></span>add_data_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::function&lt;void()&gt; PDI::Context_proxy::add_data_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;, <a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new data callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when data is being available </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the data on which call the callback, if not specified it's called on any data</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implements <a class="el" href="classPDI_1_1Context.html#ac665503fccb2a848e7e85d5b2aa49ed5">PDI::Context</a>.</p>
-
-</div>
-</div>
-<a id="ac6679915d7732185ea1d04656753f4b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6679915d7732185ea1d04656753f4b5">&#9670;&nbsp;</a></span>add_event_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::function&lt;void()&gt; PDI::Context_proxy::add_event_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new event callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when event is called </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the event on which call the callback, if not specified it's called on any event</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implements <a class="el" href="classPDI_1_1Context.html#a8aad7d27ce647a616bee1c911e274154">PDI::Context</a>.</p>
-
-</div>
-</div>
-<a id="ad53ab286ae45a953c24145cfa889b099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad53ab286ae45a953c24145cfa889b099">&#9670;&nbsp;</a></span>add_empty_desc_access_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::function&lt;void()&gt; PDI::Context_proxy::add_empty_desc_access_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new empty desc access callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when event is called </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the data on which call the callback, if not specified it's called on any data</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implements <a class="el" href="classPDI_1_1Context.html#ac6e3712ecd0a4d9863fadb5f4a18283c">PDI::Context</a>.</p>
+<p>Implements <a class="el" href="classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20">PDI::Context</a>.</p>
 
 </div>
 </div>
@@ -696,6 +536,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Finalizes <a class="el" href="namespacePDI.html">PDI</a> and exits application. </p>
 
 <p>Implements <a class="el" href="classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb">PDI::Context</a>.</p>
 

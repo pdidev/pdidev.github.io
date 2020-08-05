@@ -12,9 +12,6 @@ var classPDI_1_1Context__proxy =
     [ "pdi_core_logger", "classPDI_1_1Context__proxy.html#a23624a98f533a9da2b1584dfac18ad8f", null ],
     [ "datatype", "classPDI_1_1Context__proxy.html#ac71f62967880f5bcd0fe095f17b3de4f", null ],
     [ "add_datatype", "classPDI_1_1Context__proxy.html#ab24dac03f6faddd05bd83b734cd1ca56", null ],
-    [ "add_init_callback", "classPDI_1_1Context__proxy.html#a94129d996ddab4f8e6a315936e5f89a7", null ],
-    [ "add_data_callback", "classPDI_1_1Context__proxy.html#a4d931c5439ec18260fe2fdcab55bdf44", null ],
-    [ "add_event_callback", "classPDI_1_1Context__proxy.html#ac6679915d7732185ea1d04656753f4b5", null ],
-    [ "add_empty_desc_access_callback", "classPDI_1_1Context__proxy.html#ad53ab286ae45a953c24145cfa889b099", null ],
+    [ "callbacks", "classPDI_1_1Context__proxy.html#a9e691045f02436bfa36aeeb2b8cb7495", null ],
     [ "finalize_and_exit", "classPDI_1_1Context__proxy.html#a9c5cec5bf707ad67e38e30a4ee12329b", null ]
 ];

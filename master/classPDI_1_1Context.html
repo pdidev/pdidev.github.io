@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-03-11_07</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-05-12_33</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -105,26 +105,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afb530384d29404ab88a3c4210d03f19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a <a class="el" href="namespacePDI.html">PDI</a> "event".  <a href="#afb530384d29404ab88a3c4210d03f19d">More...</a><br /></td></tr>
 <tr class="separator:afb530384d29404ab88a3c4210d03f19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e78992507def6399403ab6fe3704320"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320">logger</a> () const =0</td></tr>
+<tr class="memdesc:a5e78992507def6399403ab6fe3704320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logger getter.  <a href="#a5e78992507def6399403ab6fe3704320">More...</a><br /></td></tr>
 <tr class="separator:a5e78992507def6399403ab6fe3704320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1739cf4e3bfde11d5271b305fa17e20"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20">callbacks</a> ()=0</td></tr>
+<tr class="memdesc:ab1739cf4e3bfde11d5271b305fa17e20"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> of the context.  <a href="#ab1739cf4e3bfde11d5271b305fa17e20">More...</a><br /></td></tr>
+<tr class="separator:ab1739cf4e3bfde11d5271b305fa17e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af30302419766a7e4d302663c5d91636b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b">datatype</a> (PC_tree_t node)=0</td></tr>
 <tr class="memdesc:af30302419766a7e4d302663c5d91636b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype template from a paraconf-style config.  <a href="#af30302419766a7e4d302663c5d91636b">More...</a><br /></td></tr>
 <tr class="separator:af30302419766a7e4d302663c5d91636b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6">add_datatype</a> (const std::string &amp;name, <a class="el" href="classPDI_1_1Context.html#a69e61f140cdf5555c635e160f85f3c86">Datatype_template_parser</a> parser)=0</td></tr>
 <tr class="memdesc:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new datatype parser to the context.  <a href="#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6">More...</a><br /></td></tr>
 <tr class="separator:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dab913bcf429835da411aed665fbaf5"><td class="memItemLeft" align="right" valign="top">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a3dab913bcf429835da411aed665fbaf5">add_init_callback</a> (const std::function&lt; void()&gt; &amp;callback)=0</td></tr>
-<tr class="memdesc:a3dab913bcf429835da411aed665fbaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new init callback to context.  <a href="#a3dab913bcf429835da411aed665fbaf5">More...</a><br /></td></tr>
-<tr class="separator:a3dab913bcf429835da411aed665fbaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac665503fccb2a848e7e85d5b2aa49ed5"><td class="memItemLeft" align="right" valign="top">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#ac665503fccb2a848e7e85d5b2aa49ed5">add_data_callback</a> (const std::function&lt; void(const std::string &amp;, <a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>)&gt; &amp;callback, const std::string &amp;name={})=0</td></tr>
-<tr class="memdesc:ac665503fccb2a848e7e85d5b2aa49ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new data callback to context.  <a href="#ac665503fccb2a848e7e85d5b2aa49ed5">More...</a><br /></td></tr>
-<tr class="separator:ac665503fccb2a848e7e85d5b2aa49ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aad7d27ce647a616bee1c911e274154"><td class="memItemLeft" align="right" valign="top">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a8aad7d27ce647a616bee1c911e274154">add_event_callback</a> (const std::function&lt; void(const std::string &amp;)&gt; &amp;callback, const std::string &amp;name={})=0</td></tr>
-<tr class="memdesc:a8aad7d27ce647a616bee1c911e274154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new event callback to context.  <a href="#a8aad7d27ce647a616bee1c911e274154">More...</a><br /></td></tr>
-<tr class="separator:a8aad7d27ce647a616bee1c911e274154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e3712ecd0a4d9863fadb5f4a18283c"><td class="memItemLeft" align="right" valign="top">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#ac6e3712ecd0a4d9863fadb5f4a18283c">add_empty_desc_access_callback</a> (const std::function&lt; void(const std::string &amp;)&gt; &amp;callback, const std::string &amp;name={})=0</td></tr>
-<tr class="memdesc:ac6e3712ecd0a4d9863fadb5f4a18283c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new empty desc access callback to context.  <a href="#ac6e3712ecd0a4d9863fadb5f4a18283c">More...</a><br /></td></tr>
-<tr class="separator:ac6e3712ecd0a4d9863fadb5f4a18283c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad376dfd90c9699fe8513b3bab0765ebb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb">finalize_and_exit</a> ()=0</td></tr>
+<tr class="memdesc:ad376dfd90c9699fe8513b3bab0765ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes <a class="el" href="namespacePDI.html">PDI</a> and exits application.  <a href="#ad376dfd90c9699fe8513b3bab0765ebb">More...</a><br /></td></tr>
 <tr class="separator:ad376dfd90c9699fe8513b3bab0765ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -471,7 +464,40 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Logger getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>logger </dd></dl>
+
 <p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a3099171edab8110340cac24447187164">PDI::Context_proxy</a>.</p>
+
+</div>
+</div>
+<a id="ab1739cf4e3bfde11d5271b305fa17e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1739cf4e3bfde11d5271b305fa17e20">&#9670;&nbsp;</a></span>callbacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a>&amp; PDI::Context::callbacks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> of the context. </p>
+<dl class="section return"><dt>Returns</dt><dd>context callbacks </dd></dl>
+
+<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a9e691045f02436bfa36aeeb2b8cb7495">PDI::Context_proxy</a>.</p>
 
 </div>
 </div>
@@ -559,187 +585,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3dab913bcf429835da411aed665fbaf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dab913bcf429835da411aed665fbaf5">&#9670;&nbsp;</a></span>add_init_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::function&lt;void()&gt; PDI::Context::add_init_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new init callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when data and metadata are loaded</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a94129d996ddab4f8e6a315936e5f89a7">PDI::Context_proxy</a>.</p>
-
-</div>
-</div>
-<a id="ac665503fccb2a848e7e85d5b2aa49ed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac665503fccb2a848e7e85d5b2aa49ed5">&#9670;&nbsp;</a></span>add_data_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::function&lt;void()&gt; PDI::Context::add_data_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;, <a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new data callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when data is being available </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the data on which call the callback, if not specified it's called on any data</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a4d931c5439ec18260fe2fdcab55bdf44">PDI::Context_proxy</a>.</p>
-
-</div>
-</div>
-<a id="a8aad7d27ce647a616bee1c911e274154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aad7d27ce647a616bee1c911e274154">&#9670;&nbsp;</a></span>add_event_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::function&lt;void()&gt; PDI::Context::add_event_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new event callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when event is called </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the event on which call the callback, if not specified it's called on any event</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#ac6679915d7732185ea1d04656753f4b5">PDI::Context_proxy</a>.</p>
-
-</div>
-</div>
-<a id="ac6e3712ecd0a4d9863fadb5f4a18283c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6e3712ecd0a4d9863fadb5f4a18283c">&#9670;&nbsp;</a></span>add_empty_desc_access_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::function&lt;void()&gt; PDI::Context::add_empty_desc_access_callback </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const std::string &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds new empty desc access callback to context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>function to call when event is called </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the data on which call the callback, if not specified it's called on any data</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>function that removes callback </dd></dl>
-
-<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#ad53ab286ae45a953c24145cfa889b099">PDI::Context_proxy</a>.</p>
-
-</div>
-</div>
 <a id="ad376dfd90c9699fe8513b3bab0765ebb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad376dfd90c9699fe8513b3bab0765ebb">&#9670;&nbsp;</a></span>finalize_and_exit()</h2>
 
@@ -762,6 +607,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Finalizes <a class="el" href="namespacePDI.html">PDI</a> and exits application. </p>
 
 <p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a9c5cec5bf707ad67e38e30a4ee12329b">PDI::Context_proxy</a>.</p>
 

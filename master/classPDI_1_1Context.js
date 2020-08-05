@@ -13,11 +13,8 @@ var classPDI_1_1Context =
     [ "end", "classPDI_1_1Context.html#ac987d27496498d563359f97ea9ec5416", null ],
     [ "event", "classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d", null ],
     [ "logger", "classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320", null ],
+    [ "callbacks", "classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20", null ],
     [ "datatype", "classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b", null ],
     [ "add_datatype", "classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6", null ],
-    [ "add_init_callback", "classPDI_1_1Context.html#a3dab913bcf429835da411aed665fbaf5", null ],
-    [ "add_data_callback", "classPDI_1_1Context.html#ac665503fccb2a848e7e85d5b2aa49ed5", null ],
-    [ "add_event_callback", "classPDI_1_1Context.html#a8aad7d27ce647a616bee1c911e274154", null ],
-    [ "add_empty_desc_access_callback", "classPDI_1_1Context.html#ac6e3712ecd0a4d9863fadb5f4a18283c", null ],
     [ "finalize_and_exit", "classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb", null ]
 ];
