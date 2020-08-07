@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-07-07_40</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-07-14_26</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -90,6 +90,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad89c2782099fdb3e3b981a17a5f83378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#ad89c2782099fdb3e3b981a17a5f83378">operator=</a> (<a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;&amp;expr)</td></tr>
 <tr class="memdesc:ad89c2782099fdb3e3b981a17a5f83378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an expression.  <a href="#ad89c2782099fdb3e3b981a17a5f83378">More...</a><br /></td></tr>
 <tr class="separator:ad89c2782099fdb3e3b981a17a5f83378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb6f1feaa14945c1a23f43aad3f9f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#a9eb6f1feaa14945c1a23f43aad3f9f83">operator+</a> (const <a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;expr)</td></tr>
+<tr class="memdesc:a9eb6f1feaa14945c1a23f43aad3f9f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summation operator of an expression.  <a href="#a9eb6f1feaa14945c1a23f43aad3f9f83">More...</a><br /></td></tr>
+<tr class="separator:a9eb6f1feaa14945c1a23f43aad3f9f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8bc939a58a904a74968048addf33d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#a0a8bc939a58a904a74968048addf33d5">operator*</a> (const <a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;expr)</td></tr>
+<tr class="memdesc:a0a8bc939a58a904a74968048addf33d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication operator of an expression.  <a href="#a0a8bc939a58a904a74968048addf33d5">More...</a><br /></td></tr>
+<tr class="separator:a0a8bc939a58a904a74968048addf33d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac406cb8e9c649432865496b3c89a1154"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#ac406cb8e9c649432865496b3c89a1154">operator bool</a> () const</td></tr>
 <tr class="memdesc:ac406cb8e9c649432865496b3c89a1154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether this is an empty expression.  <a href="#ac406cb8e9c649432865496b3c89a1154">More...</a><br /></td></tr>
 <tr class="separator:ac406cb8e9c649432865496b3c89a1154"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,6 +391,60 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>*this </dd></dl>
+
+</div>
+</div>
+<a id="a9eb6f1feaa14945c1a23f43aad3f9f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb6f1feaa14945c1a23f43aad3f9f83">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPDI_1_1Expression.html">Expression</a> PDI::Expression::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Summation operator of an expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the expression to add </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classPDI_1_1Expression.html">Expression</a> as a result of sum </dd></dl>
+
+</div>
+</div>
+<a id="a0a8bc939a58a904a74968048addf33d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8bc939a58a904a74968048addf33d5">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPDI_1_1Expression.html">Expression</a> PDI::Expression::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPDI_1_1Expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplication operator of an expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the expression to multiply </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classPDI_1_1Expression.html">Expression</a> as a result of multiplication </dd></dl>
 
 </div>
 </div>

@@ -11,6 +11,8 @@ var classPDI_1_1Expression =
     [ "~Expression", "classPDI_1_1Expression.html#ada6016ad74b6693eaa5de08bd07a5d91", null ],
     [ "operator=", "classPDI_1_1Expression.html#a8fcc62d5d6bc65960611fb6cad896e89", null ],
     [ "operator=", "classPDI_1_1Expression.html#ad89c2782099fdb3e3b981a17a5f83378", null ],
+    [ "operator+", "classPDI_1_1Expression.html#a9eb6f1feaa14945c1a23f43aad3f9f83", null ],
+    [ "operator*", "classPDI_1_1Expression.html#a0a8bc939a58a904a74968048addf33d5", null ],
     [ "operator bool", "classPDI_1_1Expression.html#ac406cb8e9c649432865496b3c89a1154", null ],
     [ "to_long", "classPDI_1_1Expression.html#ad9d3e46ca89e7fb439ff94e1b159e182", null ],
     [ "to_double", "classPDI_1_1Expression.html#a76a28980b2c1eac09892416b77aa30a2", null ],
