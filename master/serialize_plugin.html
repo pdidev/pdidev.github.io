@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-05-13_57</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-08-07-07_40</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -52,7 +52,12 @@ $(document).ready(function(){initNavTree('serialize_plugin.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Serialize plugin allows to serialize shared data. The plugin will convert all arrays from sparse to dense and dereference all pointers.</p>
-<dl class="section warning"><dt>Warning</dt><dd>For now the plugin will only <code>expose</code> serialized data. This unables to use the plugin with <code>PDI_multiexpose</code>. This will be implemented in future updates.</dd></dl>
+<p>The serialized data will be shared as long the user data is shared.</p>
+<ol type="1">
+<li>In case of the share with <code>PDI_OUT</code>: plugin will serialize and share serialized data on <code>PDI_share</code> of given descriptor.</li>
+<li>In case of the share with <code>PDI_IN</code>: plugin will deserialize data on <code>PDI_reclaim</code> of given descriptor (to be sure that the serialized data have been writen to buffer by other plugin (e.g. done on event)).</li>
+<li>In case of the share with <code>PDI_INOUT</code>: plugin will do step 1. on <code>PDI_share</code> and step 2. on <code>PDI_reclaim</code>.</li>
+</ol>
 <h1><a class="anchor" id="serialize_configuration"></a>
 Configuration grammar</h1>
 <p>The serialize configuration is made of only:</p>
@@ -63,7 +68,7 @@ Configuration grammar</h1>
 <td align="left">data name to serialize </td><td align="left">serialized data name </td></tr>
 </table>
 <p>Here is an example:</p>
-<div class="fragment"><div class="line">data:</div><div class="line">  sparse_array:</div><div class="line">    type: array</div><div class="line">    subtype: int</div><div class="line">    size: 8</div><div class="line">    start: 2</div><div class="line">    subsize: 4</div><div class="line">plugins:</div><div class="line">  serialize:</div><div class="line">    sparse_array: dense_array</div></div><!-- fragment --><p> On each <code>sparse_array</code> data share, the plugin will expose serialized data under the <code>dense_array</code> name. The <code>dense_array</code> will be of type: </p><div class="fragment"><div class="line">type: array</div><div class="line">subtype: int</div><div class="line">size: 4</div></div><!-- fragment --><p>Another example: </p><div class="fragment"><div class="line">data:</div><div class="line">  pointer_to_sparse_array:</div><div class="line">    type: pointer</div><div class="line">    subtype:</div><div class="line">      type: array</div><div class="line">      subtype: int</div><div class="line">      size: 8</div><div class="line">      start: 2</div><div class="line">      subsize: 4</div><div class="line">plugins:</div><div class="line">  serialize:</div><div class="line">    pointer_to_sparse_array: dense_array</div></div><!-- fragment --><p> On each <code>pointer_to_sparse_array</code> data share, the plugin will expose serialized data under the <code>dense_array</code> name. The <code>dense_array</code> again will be of type: </p><div class="fragment"><div class="line">type: array</div><div class="line">subtype: int</div><div class="line">size: 4</div></div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"><div class="line">data:</div><div class="line">  sparse_array:</div><div class="line">    type: array</div><div class="line">    subtype: int</div><div class="line">    size: 8</div><div class="line">    start: 2</div><div class="line">    subsize: 4</div><div class="line">plugins:</div><div class="line">  serialize:</div><div class="line">    sparse_array: dense_array</div></div><!-- fragment --><p> On each <code>sparse_array</code> data share, the plugin will share serialized data under the <code>dense_array</code> name. The <code>dense_array</code> will be of type: </p><div class="fragment"><div class="line">type: array</div><div class="line">subtype: int</div><div class="line">size: 4</div></div><!-- fragment --><p>Another example: </p><div class="fragment"><div class="line">data:</div><div class="line">  pointer_to_sparse_array:</div><div class="line">    type: pointer</div><div class="line">    subtype:</div><div class="line">      type: array</div><div class="line">      subtype: int</div><div class="line">      size: 8</div><div class="line">      start: 2</div><div class="line">      subsize: 4</div><div class="line">plugins:</div><div class="line">  serialize:</div><div class="line">    pointer_to_sparse_array: dense_array</div></div><!-- fragment --><p> On each <code>pointer_to_sparse_array</code> data share, the plugin will share serialized data under the <code>dense_array</code> name. The <code>dense_array</code> again will be of type: </p><div class="fragment"><div class="line">type: array</div><div class="line">subtype: int</div><div class="line">size: 4</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 </body>
 </html>
