@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-10-09-13_52</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-10-12-14_33</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -177,7 +177,7 @@ write subtree</h2>
 <p>The <code>write</code> subtree can have 2 definitions:</p>
 <ol type="1">
 <li><p class="startli">Just a name of descriptor to write or the list of descriptors names to write to file. In this case the name of NetCDF variable will be the same as the name of the descriptor and have the same type and no attributes.</p>
-<p class="startli">Configuration examples: </p><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    write: data_name</div></div><!-- fragment --><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    write: [data_name_1, data_name_2]</div></div><!-- fragment --></li>
+<p class="startli">Configuration examples: </p><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    write: data_name</div><div class="line">#-------------------------------------</div><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    write: [data_name_1, data_name_2]</div></div><!-- fragment --></li>
 <li>Dictionary, with key as descriptor name and value as following subtree:</li>
 </ol>
 <table class="doxtable">
@@ -186,7 +186,7 @@ write subtree</h2>
 <tr>
 <td align="left"><code>when</code> </td><td align="left"><a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_io_when">read/write when subtree</a> </td><td>*optional* </td></tr>
 <tr>
-<td align="left"><code>variable</code> </td><td align="left">variable name to write (may be defined in decl_netcdf_variable) </td><td>*optional* </td></tr>
+<td align="left"><code>variable</code> </td><td align="left">variable name to write (may be defined in <a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_variables">variables subtree</a>)</td><td>*optional* </td></tr>
 <tr>
 <td align="left"><code>variable_selection</code> </td><td align="left"><a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_var_selection">subtree</a> </td><td>*optional* </td></tr>
 </table>
@@ -215,7 +215,7 @@ read subtree</h2>
 <p>The <code>read</code> subtree can have 2 definitions:</p>
 <ol type="1">
 <li><p class="startli">Just a name of descriptor to read or the list of descriptors names to read to file. In this case the name of NetCDF variable must be the same as the name of the descriptor and have the same type and no attributes will be read.</p>
-<p class="startli">Configuration examples: </p><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    read: data_name</div></div><!-- fragment --><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    read: [data_name_1, data_name_2]</div></div><!-- fragment --></li>
+<p class="startli">Configuration examples: </p><div class="fragment"><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    read: data_name</div><div class="line">#-------------------------------------</div><div class="line">plugins:</div><div class="line">  decl_netcdf:</div><div class="line">    file: &quot;file_name.nc&quot;</div><div class="line">    read: [data_name_1, data_name_2]</div></div><!-- fragment --></li>
 <li>Dictionary, with key as descriptor name and value as following subtree:</li>
 </ol>
 <table class="doxtable">
@@ -224,7 +224,7 @@ read subtree</h2>
 <tr>
 <td align="left"><code>when</code> </td><td align="left"><a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_io_when">read/write when subtree</a> </td><td>*optional* </td></tr>
 <tr>
-<td align="left"><code>variable</code> </td><td align="left">variable name to read (may be defined in decl_netcdf_variable) </td><td>*optional* </td></tr>
+<td align="left"><code>variable</code> </td><td align="left">variable name to read (may be defined in <a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_variables">variables subtree</a>) </td><td>*optional* </td></tr>
 <tr>
 <td align="left"><code>variable_selection</code> </td><td align="left"><a class="el" href="Decl_NetCDF_plugin.html#decl_netcdf_var_selection">subtree</a> </td><td>*optional* </td></tr>
 </table>
