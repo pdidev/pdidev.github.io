@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-10-20-14_30</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-10-20-15_15</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -51,11 +51,17 @@ $(document).ready(function(){initNavTree('Hands_on.html','');});
 <div class="title">Hands-on tutorial </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>You need to <a href="Installation.html">install</a> PDI before proceeding with this tutorial.</dd></dl>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md7"></a>
+Setup</h1>
+<dl class="section warning"><dt>Warning</dt><dd>You need to <a href="Installation.html">install</a> PDI before proceeding with this tutorial.</dd></dl>
 <p>After PDI <a href="Installation.html">is installed</a>, you can proceed with getting the sources for the hands-on tutorial from <a href="https://github.com/pdidev/tutorial">github</a>.</p>
 <div class="fragment"><div class="line">git clone https://github.com/pdidev/tutorial.git</div></div><!-- fragment --><p>Before compilation, configure the tutorial by detecting all dependencies: </p><div class="fragment"><div class="line">cd tutorial</div><div class="line">pdirun cmake .</div></div><!-- fragment --><p>Now you're ready to work, <b>good luck</b>!</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Tutorial</h1>
 <p>For each exercise, once you've modified it, you can compile it by running the following command: </p><div class="fragment"><div class="line">Ex4. Writing some real data</div><div class="line">make ex?</div></div><!-- fragment --><p> Where <code>?</code> is the number of the exercise.</p>
 <p>Then, you can run it with the following command: </p><div class="fragment"><div class="line">pdirun mpirun -n 1 ./ex?</div></div><!-- fragment --><p> Where <code>?</code> is again the number of the exercise.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Ex1. Getting started</h2>
 <p>Ex1. implements a simple heat equation solver using an explicit forward finite difference scheme parallelized with MPI as described in the <a href="PDI_example.html">PDI example</a>. If you want to better understand what's going on, you should read this description before continuing.</p>
 <p>In the exercises however, PDI will only be used to decouple I/O operations. There is no need to fully dive in the core of the solver implemented in the <code>iter</code> and <code>exchange</code> functions. The specification tree in the <code>.yml</code> files and the <code>main</code> function are the locations where all the I/O-related aspects will be handled and the only ones you will actually need to fully understand or modify.</p>
 <ul>
@@ -66,11 +72,15 @@ $(document).ready(function(){initNavTree('Hands_on.html','');});
 <li>Play with and understand the code parameters in <code>ex1.yml</code>.</li>
 <li>Set values in <code>ex1.yml</code> to be able to run the code with 3 MPI processes.</li>
 </ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Ex2. Now with some PDI</h2>
 <p>Ex2. is the same code as ex1. with PDI calls added in main function. The PDI <a href="tra`PDIce_plugin.html">Trace plugin</a> is used to trace PDI calls.</p>
 <ul>
 <li>Add the required <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code> and <code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> calls to match the output of <code>ex2.log</code> file. Change only the <code>ex2.c</code> file. The calls for now don't need to make any logic, just match output to the <code>ex2.log</code>.</li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>Notice that some share/reclaim pairs come one after the other while others are interlaced. Is one better than the other? If you do not know the answer to this question, please wait until Ex5. :)</dd></dl>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Ex3. HDF5 through PDI</h2>
 <p>Let's take the code from ex2. and make it output some HDF5 data. No need to touch the C code here, the PDI yaml file should be enough. The <a href="trace_plugin.html">Trace plugin</a> was replaced by the <a href="Decl_HDF5_plugin.html">Dec'HDF5 plugin</a>.</p>
 <p>Fill 2 sections in the yaml file:</p><ol type="1">
 <li>The <code>data</code> section to indicate to PDI the type of the fields that are exposed.</li>
@@ -78,12 +88,16 @@ $(document).ready(function(){initNavTree('Hands_on.html','');});
 </ol>
 <p>Only <code>dsize</code> is written as of now, let's add <code>psize</code> and <code>pcoord</code> to match the content expected described in <code>ex3.href 5dump</code> (use <code>h5dump</code> command to see content of HDF5 file).</p>
 <dl class="section warning"><dt>Warning</dt><dd>If you rerun the exercise, remember to delete your old <code>ex3.h5</code> file, because the data will not be overwritten.</dd></dl>
+<h2><a class="anchor" id="autotoc_md12"></a>
+Ex4. Writing some real data</h2>
 <p>In this exercise each MPI process will write its local matrix to separete HDF5 files. Touch only the yaml file again.</p>
 <p>This time write the real 2D data contained in <code>main_field</code> using 2 MPI processes.</p>
 <p>Notice that a list to write multiple files was used in the decl_hdf5 section instead of a single mapping as before.</p>
 <p>Unlike the other fields manipulated until now, the type of <code>main_field</code> is not fully known, its size is dynamic. By moving other fields in the <code>metadata</code> section, you can reference them from "$ expressions" in the configuration file. This can be used to specify a dynamic size for <code>main_field</code>.</p>
 <p>Unlike the other fields manipulated until now, <code>main_field</code> is exposed multiple times. In order not to overwrite it every time it is exposed, you can add a <code>when</code> condition to restrict its output. Only write <code>main_field</code> at the second iteration (when <code>ii==1</code>).</p>
 <p>Set the parallelism degree to 2 in height and try to match the expected content described in <code>ex4.h5dump</code>.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Ex5. Introducing events</h2>
 <p>In ex4, there were 2 pieces of data to <code>ex4-data*.h5</code>, but the file is opened and closed for each and every write. Since Decl'HDF5 only sees the data appear one after the other, it does not keep the file open. Since <code>ii</code> and <code>main_field</code> are shared in an interlaced way, they are both available at the same time and could be written without opening the file twice. You have to use events for that.</p>
 <p>There are 3 main tasks in this exercise:</p>
 <ol type="1">
@@ -92,11 +106,15 @@ $(document).ready(function(){initNavTree('Hands_on.html','');});
 <li>Also notice the extended syntax that make it possible to write data to a dataset with a name different from the data in PDI. Use this mechanism to write main_field at iterations 1 and 2, in two distinct groups <code>iter1</code> and <code>iter2</code>.</li>
 </ol>
 <p>Match the content as expected in <code>ex5.h5dump</code>.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Ex6. Simplifying the code</h2>
 <p>As you can notice, the PDI code is quite redundant. In this exercise, you will use <code><a class="el" href="group__hl__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI. ">PDI_expose</a></code> and <code><a class="el" href="group__hl__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code> to simplify the code while keeping the exact same behaviour.</p>
 <p>There are lots of matched <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> in the code. Replace these by <code><a class="el" href="group__hl__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI. ">PDI_expose</a></code> that is the exact equivalent of a <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code> followed by a matching <code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code>.</p>
 <p>This replacement is not possible for interlaced <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> with events in the middle. This case is however handled by <code><a class="el" href="group__hl__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code> call that exposes all data, then triggers an event and finally does all the reclaim in reverse order. Replace the remaining <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> by <code><a class="el" href="group__hl__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI. ">PDI_expose</a></code>s and <code><a class="el" href="group__hl__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code>s. There is one <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> you can not replace.</p>
 <p>Touch only the C file in this exercise.</p>
 <p>Ensure that your code keeps the exact same behaviour by comparing its trace to <code>ex6.log</code>.</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Ex7. Writing a selection</h2>
 <p>In this exercise, you will only write a selection (part) of the data to the HDF5 file.</p>
 <p>As you can notice, now the dataset is independantly described in the file. Use two directives to specify a selection from the data to write and a selection in the dataset where to write.</p>
 <ul>
@@ -111,6 +129,8 @@ $(document).ready(function(){initNavTree('Hands_on.html','');});
 <img src="PDI_hdf5_selection.jpg" alt="PDI_hdf5_selection.jpg"/>
 <div class="caption">
 graphical representation</div></div>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Ex8. Writing an advanced selection</h2>
 <p>You can also add dimensions, write the 2D array excluding ghosts as a slab of a 3D dataset including a dimension for the time-iteration. Write iterations 1 to 3 inclusive into dimensions 0 to 2.</p>
 <p>Touch only the yaml file in this exercise.</p>
 <p>Match the expected output described in <code>ex8.h5dump</code>.</p>
@@ -119,6 +139,8 @@ graphical representation</div></div>
 <img src="PDI_hdf5_selection_advanced.jpg" alt="PDI_hdf5_selection_advanced.jpg"/>
 <div class="caption">
 graphical representation</div></div>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Ex9. Going parallel</h2>
 <p>Running the current code in parallel should already work and yield one file per process containing the local data block. In this exercise you will write one single file with parallel HDF5 whose content should be independent from the number of processes used.</p>
 <p>The <code>mpi plugin</code> was loaded to make sharing MPI communicators possible.</p>
 <p>There are several tasks in this exercise:</p><ol type="1">
@@ -134,6 +156,8 @@ graphical representation</div></div>
 <img src="PDI_hdf5_parallel.jpg" alt="PDI_hdf5_parallel.jpg"/>
 <div class="caption">
 graphical representation of the parallel I/O</div></div>
+<h1><a class="anchor" id="autotoc_md18"></a>
+What next ?</h1>
 <p>You can experiment with other <a href="Plugins.html">plugins</a>. Have a look at the <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/tree/master/example">PDI examples</a>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
