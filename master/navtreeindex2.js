@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"structPDI_1_1Reference__base_1_1Referenced__buffer.html#a3d2fb5f1e7caedaffc0f38655fe47b85":[5,0,17,0,8],
+"structPDI_1_1Reference__base_1_1Referenced__buffer.html#a5c171e64cf6c7eeae34df3a64e559591":[5,0,17,0,3],
+"structPDI_1_1Reference__base_1_1Referenced__buffer.html#a76599d8ea1917313f00676f99841fa32":[5,0,17,0,7],
 "structPDI_1_1Reference__base_1_1Referenced__buffer.html#aa5dcb284264bb6fe02328cf1dea994b0":[5,0,17,0,5],
 "structPDI_1_1Reference__base_1_1Referenced__buffer.html#ab25d44bd84fba7cb66590cc2b8778268":[5,0,17,0,6],
 "structPDI_1_1Reference__base_1_1Referenced__buffer.html#ab37085f14d84b20f38540cf8f26cdaf7":[5,0,17,0,0],
