@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-05-10_33</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-09-13_18</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -174,6 +174,31 @@ Configuration</h1>
 <td align="left"><code>USE_spdlog</code> </td><td align="left"><code>AUTO</code> </td><td align="left">the <a href="https://github.com/gabime/spdlog">spdlog</a> library. </td></tr>
 <tr>
 <td align="left"><code>USE_yaml</code> </td><td align="left"><code>AUTO</code> </td><td align="left">the <a href="https://github.com/jbigot/zpp">yaml</a> library. </td></tr>
+</table>
+<p>The following flags define where to install PDI, those prefixed with <code>CMAKE_</code> are provided and documented by the <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a> cmake module.</p>
+<table class="doxtable">
+<tr>
+<th align="left">Flag </th><th align="left">Default </th><th align="left">Description  </th></tr>
+<tr>
+<td align="left"><code>INSTALL_CMAKEDIR</code></td><td align="left"><code>PDIDATADIR/cmake</code></td><td align="left">Cmake modules. </td></tr>
+<tr>
+<td align="left"><code>INSTALL_FMODDIR</code></td><td align="left"><code>LIBDIR/pdi/finclude/${COMPILER_VERSION}</code></td><td align="left">Fortran modules </td></tr>
+<tr>
+<td align="left"><code>INSTALL_PDIDATADIR</code></td><td align="left"><code>DATADIR/pdi</code></td><td align="left"><a class="el" href="namespacePDI.html">PDI</a> data </td></tr>
+<tr>
+<td align="left"><code>INSTALL_PDIPLUGINDIR</code></td><td align="left"><code>LIBDIR/pdi/plugins_${PDI_VERSION}</code></td><td align="left"><a class="el" href="namespacePDI.html">PDI</a> plugins </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_BINDIR</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a></td><td align="left">user executables </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_DATADIR</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a></td><td align="left">read-only architecture-independent data </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_DOCDIR</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a></td><td align="left">documentation root </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_INCLUDEDIR</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a></td><td align="left">C header files </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_LIBDIR</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a></td><td align="left">object code libraries </td></tr>
+<tr>
+<td align="left"><code>CMAKE_INSTALL_PREFIX</code></td><td align="left">see <a href="https://cmake.org/cmake/help/v3.19/variable/CMAKE_INSTALL_PREFIX.html">CMake doc</a></td><td align="left">Installation base </td></tr>
 </table>
 <h1><a class="anchor" id="dependecies"></a>
 List of dependencies</h1>
