@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-16-13_56</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-16-14_42</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -49,6 +49,7 @@ $(document).ready(function(){initNavTree('classPDI_1_1Error.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPDI_1_1Error-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PDI::Error Class Reference</div>  </div>
@@ -60,39 +61,46 @@ Inheritance diagram for PDI::Error:</div>
  <div class="center">
   <img src="classPDI_1_1Error.png" usemap="#PDI::Error_map" alt=""/>
   <map id="PDI::Error_map" name="PDI::Error_map">
-<area href="structPDI_1_1Config__error.html" alt="PDI::Config_error" shape="rect" coords="150,112,290,136"/>
-<area href="structPDI_1_1Impl__error.html" alt="PDI::Impl_error" shape="rect" coords="150,168,290,192"/>
-<area href="structPDI_1_1Plugin__error.html" alt="PDI::Plugin_error" shape="rect" coords="150,224,290,248"/>
-<area href="structPDI_1_1Right__error.html" alt="PDI::Right_error" shape="rect" coords="150,280,290,304"/>
-<area href="structPDI_1_1State__error.html" alt="PDI::State_error" shape="rect" coords="150,336,290,360"/>
-<area href="structPDI_1_1System__error.html" alt="PDI::System_error" shape="rect" coords="150,392,290,416"/>
-<area href="structPDI_1_1Type__error.html" alt="PDI::Type_error" shape="rect" coords="150,448,290,472"/>
-<area href="structPDI_1_1Unavailable__error.html" alt="PDI::Unavailable_error" shape="rect" coords="150,504,290,528"/>
-<area href="structPDI_1_1Value__error.html" alt="PDI::Value_error" shape="rect" coords="150,560,290,584"/>
+<area href="classPDI_1_1Config__error.html" alt="PDI::Config_error" shape="rect" coords="150,112,290,136"/>
+<area href="classPDI_1_1Impl__error.html" alt="PDI::Impl_error" shape="rect" coords="150,168,290,192"/>
+<area href="classPDI_1_1Plugin__error.html" alt="PDI::Plugin_error" shape="rect" coords="150,224,290,248"/>
+<area href="classPDI_1_1Right__error.html" alt="PDI::Right_error" shape="rect" coords="150,280,290,304"/>
+<area href="classPDI_1_1State__error.html" alt="PDI::State_error" shape="rect" coords="150,336,290,360"/>
+<area href="classPDI_1_1System__error.html" alt="PDI::System_error" shape="rect" coords="150,392,290,416"/>
+<area href="classPDI_1_1Type__error.html" alt="PDI::Type_error" shape="rect" coords="150,448,290,472"/>
+<area href="classPDI_1_1Unavailable__error.html" alt="PDI::Unavailable_error" shape="rect" coords="150,504,290,528"/>
+<area href="classPDI_1_1Value__error.html" alt="PDI::Value_error" shape="rect" coords="150,560,290,584"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d98d265473ba642fcdb5e7c68fea962"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a2d98d265473ba642fcdb5e7c68fea962"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#a2d98d265473ba642fcdb5e7c68fea962">Error</a> (<a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> errcode, const char *fmt, const Args &amp;... args)</td></tr>
-<tr class="memdesc:a2d98d265473ba642fcdb5e7c68fea962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="namespacePDI.html">PDI</a> error.  <a href="#a2d98d265473ba642fcdb5e7c68fea962">More...</a><br /></td></tr>
-<tr class="separator:a2d98d265473ba642fcdb5e7c68fea962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e4c878e44bbc4dcfef01dac96bd3b3"><td class="memTemplParams" colspan="2">template&lt;typename S , typename... Args&gt; </td></tr>
+<tr class="memitem:a82e4c878e44bbc4dcfef01dac96bd3b3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#a82e4c878e44bbc4dcfef01dac96bd3b3">Error</a> (<a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> errcode, const S &amp;format_str, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a82e4c878e44bbc4dcfef01dac96bd3b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="namespacePDI.html">PDI</a> error.  <a href="#a82e4c878e44bbc4dcfef01dac96bd3b3">More...</a><br /></td></tr>
+<tr class="separator:a82e4c878e44bbc4dcfef01dac96bd3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa35ec710a94e89b80540a7030296774b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#aa35ec710a94e89b80540a7030296774b">Error</a> (<a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> errcode, const char *fmt)</td></tr>
 <tr class="separator:aa35ec710a94e89b80540a7030296774b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0286a35d8013e918c27f44d199c42aba"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#a0286a35d8013e918c27f44d199c42aba">what</a> () const noexcept override</td></tr>
 <tr class="separator:a0286a35d8013e918c27f44d199c42aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96f2da1344848f7862d6d4227ba7c82a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#a96f2da1344848f7862d6d4227ba7c82a">status</a> () const noexcept</td></tr>
 <tr class="separator:a96f2da1344848f7862d6d4227ba7c82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a408c9d5f10d28fd02f9af730378952d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#a408c9d5f10d28fd02f9af730378952d5">m_status</a></td></tr>
+<tr class="separator:a408c9d5f10d28fd02f9af730378952d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b3d1b801c1e865ed19b80bf5447602"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Error.html#af9b3d1b801c1e865ed19b80bf5447602">m_what</a></td></tr>
+<tr class="separator:af9b3d1b801c1e865ed19b80bf5447602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2d98d265473ba642fcdb5e7c68fea962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d98d265473ba642fcdb5e7c68fea962">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
+<a id="a82e4c878e44bbc4dcfef01dac96bd3b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e4c878e44bbc4dcfef01dac96bd3b3">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename... Args&gt; </div>
+template&lt;typename S , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -106,13 +114,13 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fmt</em>, </td>
+          <td class="paramtype">const S &amp;&#160;</td>
+          <td class="paramname"><em>format_str</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Args &amp;...&#160;</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
@@ -132,7 +140,7 @@ template&lt;typename... Args&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">errcode</td><td>the error code of the error to create </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>an errror message as a python-style format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format_str</td><td>an errror message as a python-style format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>the python-style parameters for the message </td></tr>
   </table>
   </dd>
@@ -214,6 +222,51 @@ template&lt;typename... Args&gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a408c9d5f10d28fd02f9af730378952d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408c9d5f10d28fd02f9af730378952d5">&#9670;&nbsp;</a></span>m_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> PDI::Error::m_status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9b3d1b801c1e865ed19b80bf5447602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b3d1b801c1e865ed19b80bf5447602">&#9670;&nbsp;</a></span>m_what</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string PDI::Error::m_what</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
