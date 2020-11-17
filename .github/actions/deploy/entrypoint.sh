@@ -36,7 +36,7 @@ cat << EOF > "${WORK_DIR}/public/index.html"
 EOF
 
 INERROR=true
-for TAG in $(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}')
+for TAG in $(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | sort -rVu)
 do
     cd "${WORK_DIR}"
     mkdir -p "${TAG}"
