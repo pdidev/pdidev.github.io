@@ -1,5 +1,6 @@
 var classPDI_1_1Pointer__datatype =
 [
+    [ "Accessor", "classPDI_1_1Pointer__datatype_1_1Accessor.html", "classPDI_1_1Pointer__datatype_1_1Accessor" ],
     [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a7184035bbd0f5d98b0f0461001ced1ad", null ],
     [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a6a8510fd399b23da60a52cf0f88e438b", null ],
     [ "subtype", "classPDI_1_1Pointer__datatype.html#ad4d74aa9866dfaf02d8c17b5dcf35424", null ],
@@ -14,6 +15,7 @@ var classPDI_1_1Pointer__datatype =
     [ "simple", "classPDI_1_1Pointer__datatype.html#ab34ae78cae3a944fb741bf49c1538d4f", null ],
     [ "data_to_dense_copy", "classPDI_1_1Pointer__datatype.html#ab5522e3a7663533a0b422a22228427f0", null ],
     [ "data_from_dense_copy", "classPDI_1_1Pointer__datatype.html#ae467c732de6a9922c0a770a133ca8a37", null ],
+    [ "subaccess_by_iterators", "classPDI_1_1Pointer__datatype.html#aac709d8a8c1a8a07d5e53402b707bdfa", null ],
     [ "destroy_data", "classPDI_1_1Pointer__datatype.html#a1b1c55a87cf7f8642729751cf36d30b6", null ],
     [ "debug_string", "classPDI_1_1Pointer__datatype.html#a6aa1ae90b69129fec7e148547d262836", null ],
     [ "operator==", "classPDI_1_1Pointer__datatype.html#a7baec7ae29e45f331653b7dad44d2ba1", null ],

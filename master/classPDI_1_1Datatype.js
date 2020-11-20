@@ -1,5 +1,6 @@
 var classPDI_1_1Datatype =
 [
+    [ "Accessor_base", "structPDI_1_1Datatype_1_1Accessor__base.html", "structPDI_1_1Datatype_1_1Accessor__base" ],
     [ "~Datatype", "classPDI_1_1Datatype.html#ad2e19537809ba143ab9130c95b237dc2", null ],
     [ "clone_type", "classPDI_1_1Datatype.html#af42770105e821dea4ca30f0992f2274c", null ],
     [ "operator==", "classPDI_1_1Datatype.html#a8cdf8ed0c21b40519239290171252a5b", null ],
@@ -12,6 +13,9 @@ var classPDI_1_1Datatype =
     [ "simple", "classPDI_1_1Datatype.html#ae5f85834cbae56fca2b4cf7e7fbd0df3", null ],
     [ "data_to_dense_copy", "classPDI_1_1Datatype.html#a988bab02472c4dc4206b40cd093030c3", null ],
     [ "data_from_dense_copy", "classPDI_1_1Datatype.html#a00559b1afaf47436b64a26841b486a14", null ],
+    [ "subaccess", "classPDI_1_1Datatype.html#ad4024bdf06ac96b061577e33a09f830a", null ],
+    [ "subaccess", "classPDI_1_1Datatype.html#a31158d9e5ae7ff4b1de65b4f37d092da", null ],
+    [ "subaccess_by_iterators", "classPDI_1_1Datatype.html#a3740eae7647609ba33d8a0cae065a994", null ],
     [ "destroy_data", "classPDI_1_1Datatype.html#a73bcba3fb827468daeda6ab0a4fd92b5", null ],
     [ "debug_string", "classPDI_1_1Datatype.html#aff4be6868c49816ef432098357ab5789", null ]
 ];

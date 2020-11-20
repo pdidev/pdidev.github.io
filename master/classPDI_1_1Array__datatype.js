@@ -1,5 +1,7 @@
 var classPDI_1_1Array__datatype =
 [
+    [ "Index_accessor", "classPDI_1_1Array__datatype_1_1Index__accessor.html", "classPDI_1_1Array__datatype_1_1Index__accessor" ],
+    [ "Slice_accessor", "classPDI_1_1Array__datatype_1_1Slice__accessor.html", "classPDI_1_1Array__datatype_1_1Slice__accessor" ],
     [ "Array_datatype", "classPDI_1_1Array__datatype.html#a5a7e92c1dac8a64f6bca955475b0332d", null ],
     [ "Array_datatype", "classPDI_1_1Array__datatype.html#a3c318ef5108efc7bc593cdee7505ad8a", null ],
     [ "subtype", "classPDI_1_1Array__datatype.html#a2a49fe56a6a6946f0fa55bd504b956f7", null ],
@@ -17,6 +19,7 @@ var classPDI_1_1Array__datatype =
     [ "simple", "classPDI_1_1Array__datatype.html#a9ba8909f75de2d4f18749fe9362a28d2", null ],
     [ "data_to_dense_copy", "classPDI_1_1Array__datatype.html#acda82205a6bd87bf953f72d0d03c2f38", null ],
     [ "data_from_dense_copy", "classPDI_1_1Array__datatype.html#a03d7af4898203df8615f69f79b7e9e9e", null ],
+    [ "subaccess_by_iterators", "classPDI_1_1Array__datatype.html#afb640e015cd7a2679e9354dca0444808", null ],
     [ "destroy_data", "classPDI_1_1Array__datatype.html#ac4160324349cf4dd13bd36e8894a61cd", null ],
     [ "debug_string", "classPDI_1_1Array__datatype.html#ae1fa60769b6a03ff0d6b5f0b82523fec", null ],
     [ "operator==", "classPDI_1_1Array__datatype.html#a0ca6cf15fda5ca1406b24328e5571652", null ]
