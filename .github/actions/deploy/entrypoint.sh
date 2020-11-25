@@ -59,7 +59,7 @@ do
             mv public "${TAG}"
             mv "${TAG}" "${WORK_DIR}/public/"
         fi
-        echo "<li><a href='${TAG}/'>release $(echo "${TAG} | sed 's/\.[0-9]*$//') (${TAG})</a>" >> "${WORK_DIR}/public/index.html"
+        echo "<li><a href='${TAG}/'>version $(echo "${TAG}" | sed 's/\.[0-9]*$//')</a>" >> "${WORK_DIR}/public/index.html"
     fi
     cd "${WORK_DIR}"
     rm -rf "${WORK_DIR}/${TAG}"
