@@ -39,30 +39,35 @@ INERROR=true
 ALLTAGS="$(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
 for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
 do
-    TAG="$(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu | head -n 1)"
-    cd "${WORK_DIR}"
-    mkdir -p "${TAG}"
-    cd "${TAG}"
-    if curl -fso artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
-    then
-        INERROR=false
-        unzip -o artifacts.zip
-        rm artifacts.zip
-        if [ -d "public/${TAG}" ]
+    for TAG in $(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu
+    do
+        cd "${WORK_DIR}"
+        mkdir -p "${TAG}"
+        cd "${TAG}"
+        if curl -fso artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
         then
-            mv "public/${TAG}" "${WORK_DIR}/public/"
-        elif [ -d "${TAG}" ]
-        then
-            mv "${TAG}" "${WORK_DIR}/public/"
-        elif [ -d "public" ]
-        then
-            mv public "${TAG}"
-            mv "${TAG}" "${WORK_DIR}/public/"
+            INERROR=false
+            unzip -o artifacts.zip
+            rm artifacts.zip
+            if [ -d "public/${TAG}" ]
+            then
+                mv "public/${TAG}" "${WORK_DIR}/public/"
+            elif [ -d "${TAG}" ]
+            then
+                mv "${TAG}" "${WORK_DIR}/public/"
+            elif [ -d "public" ]
+            then
+                mv public "${TAG}"
+                mv "${TAG}" "${WORK_DIR}/public/"
+            fi
+            echo "<li><a href='${TAG}/'>version $(echo "${TAG}" | sed 's/\.[0-9]*$//')</a>" >> "${WORK_DIR}/public/index.html"
+            cd "${WORK_DIR}"
+            rm -rf "${WORK_DIR}/${TAG}"
+            break
         fi
-        echo "<li><a href='${TAG}/'>version $(echo "${TAG}" | sed 's/\.[0-9]*$//')</a>" >> "${WORK_DIR}/public/index.html"
-    fi
-    cd "${WORK_DIR}"
-    rm -rf "${WORK_DIR}/${TAG}"
+        cd "${WORK_DIR}"
+        rm -rf "${WORK_DIR}/${TAG}"
+    done
 done
 
 
