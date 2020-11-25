@@ -36,8 +36,10 @@ cat << EOF > "${WORK_DIR}/public/index.html"
 EOF
 
 INERROR=true
-for TAG in $(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | sort -rVu)
+ALLTAGS="$(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
+for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
 do
+    TAG="$(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu | head -n 1 
     cd "${WORK_DIR}"
     mkdir -p "${TAG}"
     cd "${TAG}"
