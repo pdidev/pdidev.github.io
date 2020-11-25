@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 if [ $# -ne 3 ]
 then
@@ -39,7 +39,7 @@ INERROR=true
 ALLTAGS="$(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
 for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
 do
-    for TAG in $(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu
+    for TAG in $(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu)
     do
         cd "${WORK_DIR}"
         mkdir -p "${TAG}"
