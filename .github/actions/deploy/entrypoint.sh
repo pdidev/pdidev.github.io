@@ -39,7 +39,7 @@ INERROR=true
 ALLTAGS="$(curl -fs "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
 for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
 do
-    TAG="$(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu | head -n 1 
+    TAG="$(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu | head -n 1)"
     cd "${WORK_DIR}"
     mkdir -p "${TAG}"
     cd "${TAG}"
@@ -59,7 +59,7 @@ do
             mv public "${TAG}"
             mv "${TAG}" "${WORK_DIR}/public/"
         fi
-        echo "<li><a href='${TAG}/'>release ${TAG}</a>" >> "${WORK_DIR}/public/index.html"
+        echo "<li><a href='${TAG}/'>release $(echo "${TAG} | sed 's/\.[0-9]*$//') (${TAG})</a>" >> "${WORK_DIR}/public/index.html"
     fi
     cd "${WORK_DIR}"
     rm -rf "${WORK_DIR}/${TAG}"
