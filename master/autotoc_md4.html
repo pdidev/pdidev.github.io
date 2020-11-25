@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-24-14_48</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-25-08_39</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -51,13 +51,35 @@ $(document).ready(function(){initNavTree('autotoc_md4.html','');});
 <div class="title">Checklists </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>When making a new release.</p>
-<ul>
+<div class="textblock"><p>To publish a small fix as a patch release:</p><ul>
+<li>make your changes based on the version branch (<code>v${X}.${Y}</code>)</li>
 <li>change the version in <code>pdi/VERSION</code></li>
 <li>change the version in <code>pdi/docs/Installation.md</code></li>
+<li>commit (or better, make a MR) in the version branch</li>
+<li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
+<li>merge the version branch into master</li>
+<li>in the merge commit:<ul>
+<li>keep the content of <code>pdi/VERSION</code> from master (next with <code>-git</code> suffix)</li>
+<li>keep the content of <code>pdi/VERSION</code> from master except with the version updated to the just released one</li>
 </ul>
-<p>When changing the list of dependencies or just the version of one dependency.</p>
-<ul>
+</li>
+<li>push all that</li>
+</ul>
+<p>To publish a new minor or major release:</p><ul>
+<li>start from the master branch</li>
+<li>change the version in <code>pdi/VERSION</code></li>
+<li>change the version in <code>pdi/docs/Installation.md</code></li>
+<li>commit these changes into a new version branch (<code>v${X}.${Y}</code>)</li>
+<li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
+<li>merge the version branch into master</li>
+<li>in the merge commit:<ul>
+<li>change the version in <code>pdi/VERSION</code> to the next one with the <code>-git</code> suffix</li>
+<li>change the version in <code>pdi/docs/Installation.md</code> to the just released one</li>
+</ul>
+</li>
+<li>push all that</li>
+</ul>
+<p>When changing the list of dependencies or just the version of one dependency:</p><ul>
 <li>update <code>pdi/docs/Installation.md</code>,</li>
 <li>update <a class="el" href="namespacePDI.html">PDI</a> distribution CMakeLists.txt as well as all CMakeLists.txt actually using it,</li>
 <li>update the dockerfiles used for tests,</li>
