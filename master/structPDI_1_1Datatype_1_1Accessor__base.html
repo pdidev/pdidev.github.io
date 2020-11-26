@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-25-11_33</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-26-09_17</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -82,6 +82,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b32013b5c6833635e9ffba27d435ab8"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a5b32013b5c6833635e9ffba27d435ab8">access_kind</a> () const =0</td></tr>
 <tr class="memdesc:a5b32013b5c6833635e9ffba27d435ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access kind as string.  <a href="#a5b32013b5c6833635e9ffba27d435ab8">More...</a><br /></td></tr>
 <tr class="separator:a5b32013b5c6833635e9ffba27d435ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f98066b0435daefa3622e4c86d68960"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a6f98066b0435daefa3622e4c86d68960">clone</a> () const =0</td></tr>
+<tr class="memdesc:a6f98066b0435daefa3622e4c86d68960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns clone of accessor.  <a href="#a6f98066b0435daefa3622e4c86d68960">More...</a><br /></td></tr>
+<tr class="separator:a6f98066b0435daefa3622e4c86d68960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9767354c67b2ed725ba090c482ef54cc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a9767354c67b2ed725ba090c482ef54cc">~Accessor_base</a> ()=default</td></tr>
 <tr class="memdesc:a9767354c67b2ed725ba090c482ef54cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the accessor.  <a href="#a9767354c67b2ed725ba090c482ef54cc">More...</a><br /></td></tr>
 <tr class="separator:a9767354c67b2ed725ba090c482ef54cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,6 +327,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns access kind as string. </p>
 <dl class="section return"><dt>Returns</dt><dd>string that inform what access is made </dd></dl>
+
+</div>
+</div>
+<a id="a6f98066b0435daefa3622e4c86d68960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f98066b0435daefa3622e4c86d68960">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a>&gt; PDI::Datatype::Accessor_base::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and returns clone of accessor. </p>
+<dl class="section return"><dt>Returns</dt><dd>clone of accessor </dd></dl>
+
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype_1_1Slice__accessor.html#aae5a3c00a545427320c1b98b22583ccb">PDI::Array_datatype::Slice_accessor</a>, and <a class="el" href="classPDI_1_1Array__datatype_1_1Index__accessor.html#adc5f73ff875ddff5d7c60f483abde452">PDI::Array_datatype::Index_accessor</a>.</p>
 
 </div>
 </div>

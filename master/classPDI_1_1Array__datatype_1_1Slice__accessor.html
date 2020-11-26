@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-25-11_33</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-26-09_17</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -75,6 +75,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a905ec67743849105ebdbfde00da94d8e"><td class="memItemLeft" align="right" valign="top">std::pair&lt; void *, <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Array__datatype_1_1Slice__accessor.html#a905ec67743849105ebdbfde00da94d8e">access</a> (const <a class="el" href="classPDI_1_1Array__datatype.html">Array_datatype</a> &amp;array_type, void *from, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_begin, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_end) const override</td></tr>
 <tr class="memdesc:a905ec67743849105ebdbfde00da94d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access function for array datatype.  <a href="#a905ec67743849105ebdbfde00da94d8e">More...</a><br /></td></tr>
 <tr class="separator:a905ec67743849105ebdbfde00da94d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5a3c00a545427320c1b98b22583ccb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Array__datatype_1_1Slice__accessor.html#aae5a3c00a545427320c1b98b22583ccb">clone</a> () const override</td></tr>
+<tr class="memdesc:aae5a3c00a545427320c1b98b22583ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns clone of accessor.  <a href="#aae5a3c00a545427320c1b98b22583ccb">More...</a><br /></td></tr>
+<tr class="separator:aae5a3c00a545427320c1b98b22583ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structPDI_1_1Datatype_1_1Accessor__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structPDI_1_1Datatype_1_1Accessor__base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">PDI::Datatype::Accessor_base</a></td></tr>
 <tr class="memitem:a0e8775e1f15b2a1244f94b136ce8a1ae inherit pub_methods_structPDI_1_1Datatype_1_1Accessor__base"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; void *, <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a0e8775e1f15b2a1244f94b136ce8a1ae">access</a> (const <a class="el" href="classPDI_1_1Pointer__datatype.html">Pointer_datatype</a> &amp;type, void *from, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_begin, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_end) const</td></tr>
 <tr class="memdesc:a0e8775e1f15b2a1244f94b136ce8a1ae inherit pub_methods_structPDI_1_1Datatype_1_1Accessor__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access function for pointer datatype.  <a href="structPDI_1_1Datatype_1_1Accessor__base.html#a0e8775e1f15b2a1244f94b136ce8a1ae">More...</a><br /></td></tr>
@@ -186,6 +189,36 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>string that inform what access is made </dd></dl>
 
 <p>Reimplemented from <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a58065cbf4bf7e3f98237a6ec3708df3b">PDI::Datatype::Accessor_base</a>.</p>
+
+</div>
+</div>
+<a id="aae5a3c00a545427320c1b98b22583ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5a3c00a545427320c1b98b22583ccb">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a>&gt; PDI::Array_datatype::Slice_accessor::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and returns clone of accessor. </p>
+<dl class="section return"><dt>Returns</dt><dd>clone of accessor </dd></dl>
+
+<p>Implements <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a6f98066b0435daefa3622e4c86d68960">PDI::Datatype::Accessor_base</a>.</p>
 
 </div>
 </div>
