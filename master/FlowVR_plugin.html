@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-11-26-12_33</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">0.7.0-pre_date-2020-12-04-16_08</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -57,7 +57,7 @@ Configuration elements</h1>
 <h2><a class="anchor" id="flowvr_tree"></a>
 FlowVR plugin tree</h2>
 <p>The root of FlowVR plugin configuration (named <code>flowvr</code>), is a dictionary that contains the following keys:</p><ul>
-<li><a class="el" href="FlowVR_plugin.html#component_node">component</a></li>
+<li><a class="el" href="FlowVR_plugin.html#component_node">component</a> (<em>optional</em>)</li>
 <li><a class="el" href="FlowVR_plugin.html#wait_on_data_node">wait_on_data</a> (<em>recommended</em>)</li>
 <li><a class="el" href="FlowVR_plugin.html#wait_on_node">wait_on</a> (<em>optional</em>)</li>
 <li><a class="el" href="FlowVR_plugin.html#status_node">status</a> (<em>optional</em>)</li>
@@ -68,7 +68,7 @@ FlowVR plugin tree</h2>
 </ul>
 <h3><a class="anchor" id="component_node"></a>
 component</h3>
-<p>For now only available component is <code>module</code>, but this can be expanded to <code>filter</code> and <code>synchronizer</code> in the future. Configuration example:</p>
+<p>For now, only available component is <code>module</code> and this is a default value, but this can be expanded to <code>filter</code> and <code>synchronizer</code> in the future. Configuration example:</p>
 <div class="fragment"><div class="line">plugins:</div><div class="line">  flowvr:</div><div class="line">    component: module</div></div><!-- fragment --><h3><a class="anchor" id="wait_on_data_node"></a>
 wait_on_data</h3>
 <p>The plugin will call <code>wait</code> funciton every time given descriptors will be shared with <code>PDI_IN</code> access direction. This descriptor must be an integer type and the status returned from this call will be written as a response. Configuration example:</p>
