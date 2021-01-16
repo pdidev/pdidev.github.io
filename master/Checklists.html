@@ -43,7 +43,7 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('autotoc_md4.html','');});
+$(document).ready(function(){initNavTree('Checklists.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
@@ -51,7 +51,9 @@ $(document).ready(function(){initNavTree('autotoc_md4.html','');});
 <div class="title">Checklists </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>To publish a small fix as a patch release:</p><ul>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
+New patch release</h1>
+<p>To publish a small fix as a patch release:</p><ul>
 <li>make your changes based on the version branch (<code>v${X}.${Y}</code>)</li>
 <li>change the version in <code>pdi/VERSION</code></li>
 <li>change the version in <code>pdi/docs/Installation.md</code></li>
@@ -65,6 +67,8 @@ $(document).ready(function(){initNavTree('autotoc_md4.html','');});
 </li>
 <li>push all that</li>
 </ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
+New minor or major release</h1>
 <p>To publish a new minor or major release:</p><ul>
 <li>start from the master branch</li>
 <li>change the version in <code>pdi/VERSION</code></li>
@@ -79,6 +83,8 @@ $(document).ready(function(){initNavTree('autotoc_md4.html','');});
 </li>
 <li>push all that</li>
 </ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Dependency change</h1>
 <p>When changing the list of dependencies or just the version of one dependency:</p><ul>
 <li>update <code>pdi/docs/Installation.md</code>,</li>
 <li>update <a class="el" href="namespacePDI.html">PDI</a> distribution CMakeLists.txt as well as all CMakeLists.txt actually using it,</li>
