@@ -10,6 +10,20 @@ var index =
       [ "Configuration", "Installation.html#cmake_config", null ],
       [ "List of dependencies", "Installation.html#dependecies", null ]
     ] ],
+    [ "PDI usage", "PDI_usage.html", [
+      [ "Preparing the environment", "PDI_usage.html#preparing_the_environment", [
+        [ "PDI was installed in default location", "PDI_usage.html#pdi_in_default_location", null ],
+        [ "PDI was installed in custom location", "PDI_usage.html#pdi_not_in_default_location", null ]
+      ] ],
+      [ "Compilation of an application", "PDI_usage.html#compilation_of__app", [
+        [ "Compiling by hand", "PDI_usage.html#compiling_by_hand", null ],
+        [ "Compiling with cmake", "PDI_usage.html#compiling_with_cmake", [
+          [ "C/C++ compilation", "PDI_usage.html#c_cpp_compiling_with_cmake_application", null ],
+          [ "Fortran compilation", "PDI_usage.html#fortan_compiling_by_cmake_application", null ]
+        ] ]
+      ] ],
+      [ "Running an application", "PDI_usage.html#running_app", null ]
+    ] ],
     [ "Core Concepts", "Concepts.html", [
       [ "Philosophy of PDI", "Concepts.html#pdi_philosophy", null ],
       [ "PDI description", "Concepts.html#PDI_description", null ],
@@ -25,6 +39,21 @@ var index =
         [ "Hello Access", "First_steps.html#fs_access", null ],
         [ "Hello multi expose", "First_steps.html#fs_multiexpose", null ]
       ] ]
+    ] ],
+    [ "Hands-on tutorial", "Hands_on.html", [
+      [ "Setup", "Hands_on.html#autotoc_md7", null ],
+      [ "Tutorial", "Hands_on.html#autotoc_md8", [
+        [ "Ex1. Getting started", "Hands_on.html#autotoc_md9", null ],
+        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md10", null ],
+        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md11", null ],
+        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md12", null ],
+        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md13", null ],
+        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md14", null ],
+        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md15", null ],
+        [ "Ex8. Writing an advanced selection", "Hands_on.html#autotoc_md16", null ],
+        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md17", null ]
+      ] ],
+      [ "What next ?", "Hands_on.html#autotoc_md18", null ]
     ] ],
     [ "PDI example", "PDI_example.html", [
       [ "Heat algorithm", "PDI_example.html#heat_algorithm", null ],
