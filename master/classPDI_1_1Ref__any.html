@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0-alpha.2021-01-18</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0-alpha.2021-01-19</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -95,8 +95,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a218fe4417d8f0a3dbe26ced3803ac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a5a218fe4417d8f0a3dbe26ced3803ac4">~Ref_any</a> ()</td></tr>
 <tr class="memdesc:a5a218fe4417d8f0a3dbe26ced3803ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a5a218fe4417d8f0a3dbe26ced3803ac4">More...</a><br /></td></tr>
 <tr class="separator:a5a218fe4417d8f0a3dbe26ced3803ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accdee708edbe126e188f225c6d1ded34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#accdee708edbe126e188f225c6d1ded34">operator=</a> (<a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;&amp;other) const noexcept</td></tr>
-<tr class="separator:accdee708edbe126e188f225c6d1ded34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420b981a23df941ba265945fdf0ef01c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a420b981a23df941ba265945fdf0ef01c">operator=</a> (<a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a420b981a23df941ba265945fdf0ef01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee978e5f25bf6ae3de60a2f4012fd6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a8ee978e5f25bf6ae3de60a2f4012fd6e">operator=</a> (const <a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a> &amp;other) const noexcept</td></tr>
 <tr class="separator:a8ee978e5f25bf6ae3de60a2f4012fd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaba9dfd510ac25c7bafd7a25d96da0c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#aaba9dfd510ac25c7bafd7a25d96da0c2">operator==</a> (const <a class="el" href="classPDI_1_1Reference__base.html">Reference_base</a> &amp;o) const noexcept</td></tr>
@@ -132,6 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48997acb1054747c1e80b7c6a0a4ed52"><td class="memItemLeft" align="right" valign="top">Ref_access&lt; R, W &gt;::<a class="el" href="classPDI_1_1Reference__base.html#a281fb6b0fae3cfb5781af75858831131">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a48997acb1054747c1e80b7c6a0a4ed52">get</a> (std::nothrow_t) const noexcept</td></tr>
 <tr class="memdesc:a48997acb1054747c1e80b7c6a0a4ed52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offers access to the referenced raw data, returns null for null references.  <a href="#a48997acb1054747c1e80b7c6a0a4ed52">More...</a><br /></td></tr>
 <tr class="separator:a48997acb1054747c1e80b7c6a0a4ed52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fc10e2cd338d4fba521bd5d6c4d44e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac1fc10e2cd338d4fba521bd5d6c4d44e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#ac1fc10e2cd338d4fba521bd5d6c4d44e">scalar_value</a> ()</td></tr>
+<tr class="memdesc:ac1fc10e2cd338d4fba521bd5d6c4d44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a scalar value of type T taken from the data buffer.  <a href="#ac1fc10e2cd338d4fba521bd5d6c4d44e">More...</a><br /></td></tr>
+<tr class="separator:ac1fc10e2cd338d4fba521bd5d6c4d44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a8812a5a112ce01f0f776688d95c80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a28a8812a5a112ce01f0f776688d95c80">operator bool</a> () const noexcept</td></tr>
 <tr class="memdesc:a28a8812a5a112ce01f0f776688d95c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether this is a null reference.  <a href="#a28a8812a5a112ce01f0f776688d95c80">More...</a><br /></td></tr>
 <tr class="separator:a28a8812a5a112ce01f0f776688d95c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -526,8 +530,8 @@ template&lt;bool R, bool W&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="accdee708edbe126e188f225c6d1ded34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accdee708edbe126e188f225c6d1ded34">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a420b981a23df941ba265945fdf0ef01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420b981a23df941ba265945fdf0ef01c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -542,7 +546,7 @@ template&lt;bool R, bool W&gt; </div>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a>&lt; R, W &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -986,6 +990,38 @@ template&lt;bool R, bool W&gt; </div>
 
 <p>Offers access to the referenced raw data, returns null for null references. </p>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the referenced raw data </dd></dl>
+
+</div>
+</div>
+<a id="ac1fc10e2cd338d4fba521bd5d6c4d44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fc10e2cd338d4fba521bd5d6c4d44e">&#9670;&nbsp;</a></span>scalar_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool R, bool W&gt; </div>
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any</a>&lt; R, W &gt;::scalar_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a scalar value of type T taken from the data buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>value taken from the data buffer </dd></dl>
 
 </div>
 </div>

@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0-alpha.2021-01-18</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0-alpha.2021-01-19</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -68,7 +68,7 @@ $(document).ready(function(){initNavTree('classPDI_1_1Ref__any.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#af640649a7aadf5deb73a403371b4db86">operator!=</a>(const Reference_base &amp;o) const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#acde4af4cc40aae6374179bd27cd55363">operator&lt;</a>(const Reference_base &amp;o) const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#af3143f822cfb5c609f05310c4c6e6c79">operator&lt;=</a>(const Reference_base &amp;o) const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#accdee708edbe126e188f225c6d1ded34">operator=</a>(Ref_any &amp;&amp;other) const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#a420b981a23df941ba265945fdf0ef01c">operator=</a>(Ref_any &amp;&amp;other) noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#a8ee978e5f25bf6ae3de60a2f4012fd6e">operator=</a>(const Ref_any &amp;other) const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html#af43d8420c97de3cf419d02e3394a06b2">PDI::Reference_base::operator=</a>(const Reference_base &amp;)=delete</td><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html">PDI::Reference_base</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html#ac2a7ccba4099db8a24c6ab061c868053">PDI::Reference_base::operator=</a>(Reference_base &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html">PDI::Reference_base</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -91,8 +91,9 @@ $(document).ready(function(){initNavTree('classPDI_1_1Ref__any.html','');});
   <tr><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html#a3c1d3117976f72d8d001ed9e59299a18">Reference_base</a>(Reference_base &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html">PDI::Reference_base</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#a2f653ad7b6152b4c1f027ed155c12e25">release</a>() noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#aeffec00c8b23f6d5edadd3af1a651e5d">reset</a>() noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html#a281fb6b0fae3cfb5781af75858831131">type</a>() const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html">PDI::Reference_base</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#a5a218fe4417d8f0a3dbe26ced3803ac4">~Ref_any</a>()</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#ac1fc10e2cd338d4fba521bd5d6c4d44e">scalar_value</a>()</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html#a281fb6b0fae3cfb5781af75858831131">type</a>() const noexcept</td><td class="entry"><a class="el" href="classPDI_1_1Reference__base.html">PDI::Reference_base</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html#a5a218fe4417d8f0a3dbe26ced3803ac4">~Ref_any</a>()</td><td class="entry"><a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt; R, W &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </body>

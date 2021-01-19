@@ -17,7 +17,7 @@ var NAVTREEINDEX =
 [
 ".html",
 "classPDI_1_1Data__descriptor.html#a76adf3a628997299a690852078ffe9d3",
-"group__init__final.html#ga3dc660be40c93c169337e3d2692b2ed0"
+"group__init__final.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
