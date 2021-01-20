@@ -154,9 +154,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a42e9ee1648fdf7f23e961974261fc480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a42e9ee1648fdf7f23e961974261fc480">configure_logger</a> (PC_tree_t config, const std::string &amp;name)</td></tr>
-<tr class="memdesc:a42e9ee1648fdf7f23e961974261fc480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads configuration tree and sets up the logger.  <a href="#a42e9ee1648fdf7f23e961974261fc480">More...</a><br /></td></tr>
-<tr class="separator:a42e9ee1648fdf7f23e961974261fc480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56b08f5ec22c41bb5fb2dbb5590033b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#ad56b08f5ec22c41bb5fb2dbb5590033b">configure_logger</a> (PC_tree_t config, const std::string &amp;name, spdlog::level::level_enum level=spdlog::level::info)</td></tr>
+<tr class="memdesc:ad56b08f5ec22c41bb5fb2dbb5590033b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads configuration tree and sets up the logger.  <a href="#ad56b08f5ec22c41bb5fb2dbb5590033b">More...</a><br /></td></tr>
+<tr class="separator:ad56b08f5ec22c41bb5fb2dbb5590033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f2173a7fb0dc37655e9e39756e135e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a00f2173a7fb0dc37655e9e39756e135e">len</a> (PC_tree_t tree)</td></tr>
 <tr class="memdesc:a00f2173a7fb0dc37655e9e39756e135e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a node.  <a href="#a00f2173a7fb0dc37655e9e39756e135e">More...</a><br /></td></tr>
 <tr class="separator:a00f2173a7fb0dc37655e9e39756e135e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -347,8 +347,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a42e9ee1648fdf7f23e961974261fc480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42e9ee1648fdf7f23e961974261fc480">&#9670;&nbsp;</a></span>configure_logger()</h2>
+<a id="ad56b08f5ec22c41bb5fb2dbb5590033b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56b08f5ec22c41bb5fb2dbb5590033b">&#9670;&nbsp;</a></span>configure_logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +363,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">spdlog::level::level_enum&#160;</td>
+          <td class="paramname"><em>level</em> = <code>spdlog::level::info</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -378,6 +384,7 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>configuration tree from config file </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>name of the module (e.g. global, test, decl_hdf5) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>default level of the logger </td></tr>
   </table>
   </dd>
 </dl>
