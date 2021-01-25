@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0-alpha.2021-01-20</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-01-25</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -99,6 +99,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gab21d59fd8d6532f6b8d7a4ac69a2388b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__annotation.html#gab21d59fd8d6532f6b8d7a4ac69a2388b">PDI_event</a> (const char *event)</td></tr>
 <tr class="memdesc:gab21d59fd8d6532f6b8d7a4ac69a2388b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a <a class="el" href="namespacePDI.html">PDI</a> "event".  <a href="#gab21d59fd8d6532f6b8d7a4ac69a2388b">More...</a><br /></td></tr>
 <tr class="separator:gab21d59fd8d6532f6b8d7a4ac69a2388b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf3f81774644eff9a3cf511e57273454"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454">PDI_expose</a> (const char *name, void *data, <a class="el" href="group__annotation.html#ga7c857647f7a8077648c28db634eeb805">PDI_inout_t</a> access)</td></tr>
+<tr class="memdesc:gabf3f81774644eff9a3cf511e57273454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortly exposes some data to <a class="el" href="namespacePDI.html">PDI</a>.  <a href="#gabf3f81774644eff9a3cf511e57273454">More...</a><br /></td></tr>
+<tr class="separator:gabf3f81774644eff9a3cf511e57273454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5c670b378e423e3083122f62c1f0a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59">PDI_multi_expose</a> (const char *event_name, const char *name, void *data, <a class="el" href="group__annotation.html#ga7c857647f7a8077648c28db634eeb805">PDI_inout_t</a> access,...)</td></tr>
+<tr class="memdesc:gae5c670b378e423e3083122f62c1f0a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multiple exposes at once.  <a href="#gae5c670b378e423e3083122f62c1f0a59">More...</a><br /></td></tr>
+<tr class="separator:gae5c670b378e423e3083122f62c1f0a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The code annotation API is the main interface to use in the code. </p>
@@ -312,6 +318,112 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>the event name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an error status </dd></dl>
+
+</div>
+</div>
+<a id="gabf3f81774644eff9a3cf511e57273454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf3f81774644eff9a3cf511e57273454">&#9670;&nbsp;</a></span>PDI_expose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> PDI_expose </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__annotation.html#ga7c857647f7a8077648c28db634eeb805">PDI_inout_t</a>&#160;</td>
+          <td class="paramname"><em>access</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shortly exposes some data to <a class="el" href="namespacePDI.html">PDI</a>. </p>
+<p>Equivalent to PDI_share + PDI_reclaim. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the data name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>the exposed data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>whether the data can be accessed for read or write by <a class="el" href="namespacePDI.html">PDI</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an error status </dd></dl>
+
+</div>
+</div>
+<a id="gae5c670b378e423e3083122f62c1f0a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5c670b378e423e3083122f62c1f0a59">&#9670;&nbsp;</a></span>PDI_multi_expose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__error.html#ga838ed1a4a5ca21c0d3ef790afbf61b74">PDI_status_t</a> PDI_multi_expose </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>event_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__annotation.html#ga7c857647f7a8077648c28db634eeb805">PDI_inout_t</a>&#160;</td>
+          <td class="paramname"><em>access</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs multiple exposes at once. </p>
+<p>All the data is shared in order they were specified and reclaimed in reversed order after an event is triggered.</p>
+<p>NULL argument indicates an end of the list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event_name</td><td>the name of the event that will be triggered when all data become available </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the data name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>the exposed data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>whether the data can be accessed for read or write by <a class="el" href="namespacePDI.html">PDI</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>(additional arguments) additional list of data to expose, each should contain name, data and access, NULL argument inidactes an end of the list. </td></tr>
   </table>
   </dd>
 </dl>
