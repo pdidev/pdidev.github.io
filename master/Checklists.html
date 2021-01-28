@@ -58,6 +58,7 @@ New patch release</h1>
 <li>make your changes based on the version branch (<code>v${X}.${Y}</code>)</li>
 <li>change the version in <code>pdi/VERSION</code></li>
 <li>change the version in <code>pdi/docs/Installation.md</code></li>
+<li>go over all <code>CHANGELOG.md</code> files and mark the just released version</li>
 <li>commit (or better, make a MR) in the version branch</li>
 <li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
 <li>merge the version branch into master</li>
@@ -74,6 +75,7 @@ New minor or major release</h1>
 <li>start from the master branch</li>
 <li>change the version in <code>pdi/VERSION</code></li>
 <li>change the version in <code>pdi/docs/Installation.md</code></li>
+<li>go over all <code>CHANGELOG.md</code> files and mark the just released version</li>
 <li>commit these changes into a new version branch (<code>v${X}.${Y}</code>)</li>
 <li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
 <li>merge the version branch into master</li>
