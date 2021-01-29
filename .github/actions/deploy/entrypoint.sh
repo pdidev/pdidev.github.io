@@ -47,20 +47,20 @@ do
         if curl -fso artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
         then
             INERROR=false
+            STAG="$(echo "${TAG}" | sed 's/\.[0-9]*$//')"
             unzip -o artifacts.zip
             rm artifacts.zip
             if [ -d "public/${TAG}" ]
             then
-                mv "public/${TAG}" "${WORK_DIR}/public/"
+                mv "public/${TAG}" "${WORK_DIR}/public/${STAG}"
             elif [ -d "${TAG}" ]
             then
-                mv "${TAG}" "${WORK_DIR}/public/"
+                mv "${TAG}" "${WORK_DIR}/public/${STAG}"
             elif [ -d "public" ]
             then
-                mv public "${TAG}"
-                mv "${TAG}" "${WORK_DIR}/public/"
+                mv public "${WORK_DIR}/public/${STAG}"
             fi
-            echo "<li><a href='${TAG}/'>version $(echo "${TAG}" | sed 's/\.[0-9]*$//')</a>" >> "${WORK_DIR}/public/index.html"
+            echo "<li><a href='${STAG}/'>version ${STAG}</a>" >> "${WORK_DIR}/public/index.html"
             cd "${WORK_DIR}"
             rm -rf "${WORK_DIR}/${TAG}"
             break
