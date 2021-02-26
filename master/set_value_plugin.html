@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-26.4a4f894</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-26.0b72a1c</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -53,10 +53,13 @@ $(document).ready(function(){initNavTree('set_value_plugin.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The Set_value plugin allows setting values to data and metadata descriptors from the yaml file.</p>
-<p>There are 3 main features:</p><ol type="1">
+<p>Here are main features of the plugins:</p>
+<ol type="1">
 <li>Share data - plugin will share new allocated data with given values</li>
+<li>Release data - plugin will release shared data</li>
 <li>Expose data - plugin will expose new allocated data with given values</li>
 <li>Set data - plugin will set given values to the already shared data</li>
+<li>Calling an event - plugin will call an event</li>
 </ol>
 <h1><a class="anchor" id="set_value_configuration"></a>
 Configuration grammar</h1>
@@ -70,11 +73,13 @@ Configuration grammar</h1>
 <td align="left"><code>"on_event"</code> (<em>optional</em>)</td><td align="left">an <a class="el" href="set_value_plugin.html#on_event_map_node">on_event</a> </td></tr>
 <tr>
 <td align="left"><code>"on_data"</code> (<em>optional</em>)</td><td align="left">an <a class="el" href="set_value_plugin.html#on_data_map_node">on_data</a> </td></tr>
+<tr>
+<td align="left"><code>"on_finalize"</code> (<em>optional</em>)</td><td align="left">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> </td></tr>
 </table>
 <h2><a class="anchor" id="on_init_list_node"></a>
 on_init</h2>
 <p>Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga3dc660be40c93c169337e3d2692b2ed0">PDI_init</a> function. <code>on_init</code> is a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> s.</p>
-<div class="fragment"><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_init:</div><div class="line">      - set: ... # value_list</div><div class="line">      - share: ... # value_list</div><div class="line">      - expose: ... # value_list</div></div><!-- fragment --><h2><a class="anchor" id="on_event_map_node"></a>
+<div class="fragment"><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_init:</div><div class="line">      - set: ... # value_list</div><div class="line">      - share: ... # value_list</div><div class="line">      - expose: ... # value_list</div><div class="line">      - release: ... # value_list</div><div class="line">      - event: ... # value</div></div><!-- fragment --><h2><a class="anchor" id="on_event_map_node"></a>
 on_event</h2>
 <p>Specifies a map of events that will trigger the values set. <code>on_event</code> is a map with event name as a key and <a class="el" href="set_value_plugin.html#value_operation">value operation</a> list as map value.</p>
 <table class="doxtable">
@@ -83,7 +88,7 @@ on_event</h2>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> </td></tr>
 </table>
-<div class="fragment"><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_event:</div><div class="line">      event_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">      event_2_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div></div><!-- fragment --><h2><a class="anchor" id="on_data_map_node"></a>
+<div class="fragment"><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_event:</div><div class="line">      event_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">        - release: ... # value_list</div><div class="line">        - event: ... # value</div><div class="line">      event_2_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">        - release: ... # value_list</div><div class="line">        - event: ... # value</div></div><!-- fragment --><h2><a class="anchor" id="on_data_map_node"></a>
 on_data</h2>
 <p>Specifies a map of data that on share will trigger the values set. <code>on_data</code> is a map with data/metadata name as a key and <a class="el" href="set_value_plugin.html#value_operation">value operation</a> as map value.</p>
 <table class="doxtable">
@@ -92,9 +97,12 @@ on_data</h2>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> </td></tr>
 </table>
-<div class="fragment"><div class="line">metadata:</div><div class="line">  metadata_1_name: ... # metadata_type</div><div class="line">data:</div><div class="line">  data_1_name: ...  # data_type</div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_data:</div><div class="line">      data_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">      metadata_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div></div><!-- fragment --><h2><a class="anchor" id="value_operation"></a>
+<div class="fragment"><div class="line">metadata:</div><div class="line">  metadata_1_name: ... # metadata_type</div><div class="line">data:</div><div class="line">  data_1_name: ...  # data_type</div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_data:</div><div class="line">      data_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">        - release: ... # value_list</div><div class="line">        - event: ... # value</div><div class="line">      metadata_1_name:</div><div class="line">        - set: ... # value_list</div><div class="line">        - share: ... # value_list</div><div class="line">        - expose: ... # value_list</div><div class="line">        - release: ... # value_list</div><div class="line">        - event: ... # value</div></div><!-- fragment --><h2><a class="anchor" id="on_finalize_list_node"></a>
+on_finalize</h2>
+<p>Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga7995fbda2099950ed4ffc7fd4c0bb969">PDI_finalize</a> function. <code>on_finalize</code> is a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> s.</p>
+<div class="fragment"><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_finalize:</div><div class="line">      - set: ... # value_list</div><div class="line">      - share: ... # value_list</div><div class="line">      - expose: ... # value_list</div><div class="line">      - release: ... # value_list</div><div class="line">      - event: ... # value</div></div><!-- fragment --><h2><a class="anchor" id="value_operation"></a>
 value operation</h2>
-<p>Defines what operation to do with given <a class="el" href="set_value_plugin.html#value_list">value list</a>. The order of the operation is important and will be called in the same order as defined in yaml file.</p>
+<p>A value operation is specified as a key-value pair (a <b>mapping</b> whose content is a single key-value pair). It defines an operation to execute inside a <a class="el" href="set_value_plugin.html#value_list">value list</a>.</p>
 <table class="doxtable">
 <tr>
 <th align="left">key</th><th align="left">value  </th></tr>
@@ -104,9 +112,13 @@ value operation</h2>
 <td align="left"><code>"share"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="set_value_plugin.html#value_list">value list</a> </td></tr>
 <tr>
 <td align="left"><code>"expose"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="set_value_plugin.html#value_list">value list</a> </td></tr>
+<tr>
+<td align="left"><code>"release"</code> (<em>optional</em>)</td><td align="left">a list with data to release </td></tr>
+<tr>
+<td align="left"><code>"event"</code> (<em>optional</em>)</td><td align="left">an event name to call </td></tr>
 </table>
 <p><b>Share warning</b></p>
-<p>Share is always done with read and write rights. Plugin allocates memory by <code>malloc</code>. If you reclaim the data, you should free it with <code>free</code> instruction. If you don't reclaim or release data, plugin will try to release all descriptors that has shared before (failure is not an error, so user can reclaim the shared data).</p>
+<p>Share is always done with read and write rights. Plugin allocates memory by <code>malloc</code>. If you reclaim the data, you should free it with <code>free</code> instruction.</p>
 <h2><a class="anchor" id="value_list"></a>
 value list</h2>
 <p>Is a list of the</p><ul>
@@ -144,12 +156,12 @@ record value</h2>
 </table>
 <div class="fragment"><div class="line">metadata:</div><div class="line">  record_name:</div><div class="line">    type: record</div><div class="line">    buffersize: 16</div><div class="line">    members:</div><div class="line">      member_1:</div><div class="line">        disp: 0</div><div class="line">        type: array</div><div class="line">        size: 3</div><div class="line">        subtype: int</div><div class="line">      member_2:</div><div class="line">        disp: 12</div><div class="line">        type: int</div><div class="line"></div><div class="line">set_value:</div><div class="line">  on_init:</div><div class="line">    - expose:</div><div class="line">      - record_name:</div><div class="line">          member_2: 3 # int member</div><div class="line">          member_1: [1, 2, 3] # array of ints member</div></div><!-- fragment --><h1><a class="anchor" id="full_config"></a>
 full configuration example</h1>
-<div class="fragment"><div class="line">metadata:</div><div class="line">  array_size: int64</div><div class="line"></div><div class="line">data:</div><div class="line">  record_data:</div><div class="line">    type: record</div><div class="line">    buffersize: 36</div><div class="line">    members:</div><div class="line">      scalar_data: </div><div class="line">        disp: 0</div><div class="line">        type: int</div><div class="line">      array_data:</div><div class="line">        disp: 4</div><div class="line">        type: array</div><div class="line">        size: $array_size</div><div class="line">        subtype: int</div><div class="line"></div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_init:</div><div class="line">      - expose:</div><div class="line">        - array_size: 3</div><div class="line">      - share:</div><div class="line">        - record_data:</div><div class="line">          - scalar_data: 0</div><div class="line">          - array_data: [0, 0, 0]</div><div class="line">    on_event:</div><div class="line">      event_1_name:</div><div class="line">        - set:</div><div class="line">          - record_data:</div><div class="line">            - scalar_data: 3</div><div class="line">            - array_data: [1, 2, 3]</div></div><!-- fragment --><h1><a class="anchor" id="old_to_new"></a>
+<div class="fragment"><div class="line">metadata:</div><div class="line">  array_size: int64</div><div class="line"></div><div class="line">data:</div><div class="line">  record_data:</div><div class="line">    type: record</div><div class="line">    buffersize: 36</div><div class="line">    members:</div><div class="line">      scalar_data: </div><div class="line">        disp: 0</div><div class="line">        type: int</div><div class="line">      array_data:</div><div class="line">        disp: 4</div><div class="line">        type: array</div><div class="line">        size: $array_size</div><div class="line">        subtype: int</div><div class="line"></div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_init:</div><div class="line">      - expose:</div><div class="line">        - array_size: 3</div><div class="line">      - share:</div><div class="line">        - record_data:</div><div class="line">          - scalar_data: 0</div><div class="line">          - array_data: [0, 0, 0]</div><div class="line">    on_event:</div><div class="line">      event_1_name:</div><div class="line">        - set:</div><div class="line">          - record_data:</div><div class="line">            - scalar_data: 3</div><div class="line">            - array_data: [1, 2, 3]</div><div class="line">    on_finalize:</div><div class="line">      - release: [record_data]</div></div><!-- fragment --><h1><a class="anchor" id="old_to_new"></a>
 Using old values to set new</h1>
 <h2><a class="anchor" id="increment"></a>
 Increment value</h2>
 <p>The set_value plugin allows to use the old values to set new values, you can use even the same descriptor, for example to increment a scalar.</p>
-<div class="fragment"><div class="line">data:</div><div class="line">  value_int:</div><div class="line">    type: int</div><div class="line">  int_array:</div><div class="line">    size: 3</div><div class="line">    subtype: int</div><div class="line">    type: array</div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_event:</div><div class="line">      init:</div><div class="line">        - share:</div><div class="line">          - value_int: 0</div><div class="line">          - int_array: [1, 2, 3]</div><div class="line">      increment:</div><div class="line">        - set:</div><div class="line">          - value_int: &quot;$value_int + 1&quot;</div><div class="line">          - int_array: [&quot;$int_array[0] + 1&quot;, &quot;$int_array[1] + 1&quot;, &quot;$int_array[2] + 1&quot;]</div></div><!-- fragment --><p> After calling <code>init</code> and <code>increment</code> event, <code>value_int</code> will be equal 1, and <code>int_array</code> to [2, 3, 4].</p>
+<div class="fragment"><div class="line">data:</div><div class="line">  value_int:</div><div class="line">    type: int</div><div class="line">  int_array:</div><div class="line">    size: 3</div><div class="line">    subtype: int</div><div class="line">    type: array</div><div class="line">plugins:</div><div class="line">  set_value:</div><div class="line">    on_event:</div><div class="line">      init:</div><div class="line">        - share:</div><div class="line">          - value_int: 0</div><div class="line">          - int_array: [1, 2, 3]</div><div class="line">      increment:</div><div class="line">        - set:</div><div class="line">          - value_int: &quot;$value_int + 1&quot;</div><div class="line">          - int_array: [&quot;$int_array[0] + 1&quot;, &quot;$int_array[1] + 1&quot;, &quot;$int_array[2] + 1&quot;]</div><div class="line">    on_finalize:</div><div class="line">      - release: [value_int, int_array]</div></div><!-- fragment --><p> After calling <code>init</code> and <code>increment</code> event, <code>value_int</code> will be equal 1, and <code>int_array</code> to [2, 3, 4].</p>
 <h2><a class="anchor" id="increment_in_array"></a>
 Getting old value</h2>
 <p>The new value is set at the end of processing the whole descriptors. This means, that if you want to update the array element depending on other element, the old value will be set:</p>

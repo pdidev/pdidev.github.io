@@ -106,6 +106,7 @@ var Plugins =
         [ "on_init", "set_value_plugin.html#on_init_list_node", null ],
         [ "on_event", "set_value_plugin.html#on_event_map_node", null ],
         [ "on_data", "set_value_plugin.html#on_data_map_node", null ],
+        [ "on_finalize", "set_value_plugin.html#on_finalize_list_node", null ],
         [ "value operation", "set_value_plugin.html#value_operation", null ],
         [ "value list", "set_value_plugin.html#value_list", null ],
         [ "scalar value", "set_value_plugin.html#scalar_value", null ],
