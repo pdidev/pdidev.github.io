@@ -157,7 +157,7 @@ var NAVTREEINDEX0 =
 "Specification_tree_ref.html#root_node":[0,10,0],
 "Specification_tree_ref.html#simple_datatype_node":[0,10,26],
 "Specification_tree_ref.html#struct_member_desc_node":[0,10,18],
-"Specification_tree_ref.html#struct_members_map_node":[0,10,20],
+"Specification_tree_ref.html#struct_members_omap_node":[0,10,20],
 "Specification_tree_ref.html#struct_type_node":[0,10,24],
 "annotated.html":[3],
 "classPDI_1_1Array__datatype.html":[3,0,0],

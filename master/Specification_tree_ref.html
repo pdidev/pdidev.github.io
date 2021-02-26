@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-26.b3e0644</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-26.4a4f894</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -52,12 +52,13 @@ $(document).ready(function(){initNavTree('Specification_tree_ref.html','');});
 <div class="title">Specification tree Reference </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The PDI specification tree is expressed in <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>. As such, it is a tree that contains 3 distinct kinds of nodes:</p><ul>
+<div class="textblock"><p>The PDI specification tree is expressed in <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>. It is a tree that contains the following distinct kinds of nodes:</p><ul>
 <li>scalars,</li>
 <li>sequences,</li>
-<li>mappings.</li>
+<li>mappings,</li>
+<li>ordered mappings.</li>
 </ul>
-<p>A <b>scalar</b> is a leaf in the tree, represented as a string. Some form of scalars can be interpreted as a boolean, integer or floating-point valued. Simple examples of scalars include for example (see the <a href="https://yaml.org/spec/1.2/spec.html#id2760844">YAML specification</a> for the complete syntax):</p><ul>
+<p>A <b>scalar</b> is a leaf in the tree, represented as a string. Some forms of scalars can be interpreted as boolean, integer or floating-point valued. Simple examples of scalars include (see the <a href="https://yaml.org/spec/1.2/spec.html#id2760844">YAML specification</a> for the complete syntax):</p><ul>
 <li><code>"hello"</code>,</li>
 <li><code>world</code>,</li>
 <li><code>3</code>,</li>
@@ -70,6 +71,10 @@ $(document).ready(function(){initNavTree('Specification_tree_ref.html','');});
 <p>A <b>mapping</b> is an unordered list of key-value pairs (whose elements can themselves be scalars, sequences or mappings). Two main syntaxes are available for mapping (see the <a href="https://yaml.org/spec/1.2/spec.html#id2759963">YAML specification</a> for the complete syntax).</p><ul>
 <li>in-line mapping: <code>{1: one, 2: "two", "three": 3}</code></li>
 <li>multi-line mapping: <div class="fragment"><div class="line">1: one</div><div class="line">2: two</div><div class="line">&quot;three&quot;: 3</div></div><!-- fragment --></li>
+</ul>
+<p>An <b>ordered mapping</b> is represented as a sequence of mappings containing a single key-value pair each. There can be no duplicates in the keys. The sub-nodes can be scalars, sequences or mappings. Unlike in a normal mapping, the order of elements in an ordered mapping is meaningful. Two main syntaxes are available for ordered mapping (see the <a href="https://yaml.org/spec/1.2/spec.html#id2759963">YAML specification</a> for the complete syntax).</p><ul>
+<li>in-line ordered mapping: <code>[{1: one}, {2: "two"}, {"three": 3}]</code></li>
+<li>multi-line ordered mapping: <div class="fragment"><div class="line">- 1: one</div><div class="line">- 2: two</div><div class="line">- &quot;three&quot;: 3</div></div><!-- fragment --></li>
 </ul>
 <h1><a class="anchor" id="root_node"></a>
 specification tree root</h1>
@@ -322,7 +327,7 @@ struct_member_desc</h1>
 <li>the value associated to the <code>type</code> key identifies the <a class="el" href="Specification_tree_ref.html#datatype_node">type</a> of this member, all other keys required for this <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> must be present.</li>
 </ul>
 <p><b>Examples:</b></p>
-<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  my_char: char</div></div><!-- fragment --><div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  my_long: int64</div><div class="line">  my_array:</div><div class="line">    type: array</div><div class="line">    subtype: int64</div><div class="line">    size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for more examples.</p>
+<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  - my_char: char</div></div><!-- fragment --><div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  - my_long: int64</div><div class="line">  - my_array:</div><div class="line">      type: array</div><div class="line">      subtype: int64</div><div class="line">      size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for more examples.</p>
 <h1><a class="anchor" id="record_member_desc_node"></a>
 record_member_desc</h1>
 <p>A <em>record_member_desc</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
@@ -341,16 +346,16 @@ record_member_desc</h1>
 </ul>
 <p><b>Examples:</b></p>
 <div class="fragment"><div class="line">type: record</div><div class="line">buffersize: 1</div><div class="line">members:</div><div class="line">  my_char:</div><div class="line">        disp: 0</div><div class="line">        type: char</div></div><!-- fragment --><div class="fragment"><div class="line">type: record</div><div class="line">buffersize: 808 </div><div class="line">members:</div><div class="line">  my_long:</div><div class="line">    disp: 0</div><div class="line">    type: int64</div><div class="line">  my_array:</div><div class="line">    disp: 8</div><div class="line">    type: array</div><div class="line">    subtype: int64</div><div class="line">    size: [10, 10]</div></div><!-- fragment --><p>See <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> for more examples.</p>
-<h1><a class="anchor" id="struct_members_map_node"></a>
-struct_members_map</h1>
-<p>A <em>struct_members_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<h1><a class="anchor" id="struct_members_omap_node"></a>
+struct_members_omap</h1>
+<p>A <em>struct_members_omap</em> is an <b>ordered mapping</b> that contains the following keys: </p><table class="doxtable">
 <tr>
 <th align="left">key</th><th align="left">value  </th></tr>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#struct_member_desc_node">struct_member_desc</a> </td></tr>
 </table>
 <ul>
-<li>each key identifies the name of a member of the struct and the value associated to it describes the member itself.</li>
+<li>each key identifies the name of a member and the value associated to it describes the member itself.</li>
 </ul>
 <p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for an example.</p>
 <h1><a class="anchor" id="record_members_map_node"></a>
@@ -400,11 +405,11 @@ struct_type</h1>
 <tr>
 <td align="left"><code>"type"</code></td><td align="left"><code>"struct"</code> </td></tr>
 <tr>
-<td align="left"><code>"members"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#struct_members_map_node">struct_members_map</a> </td></tr>
+<td align="left"><code>"members"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#struct_members_omap_node">struct_members_omap</a> </td></tr>
 </table>
 <p>A <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> represents a "struct", <em>aka</em> C "struct", C++ "class". Buffersize and members displacemnts will be calculated by the PDI.</p>
 <p><b>Example:</b></p>
-<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  first_int: int32</div><div class="line">  seconf_int: int32</div></div><!-- fragment --><h1><a class="anchor" id="record_type_node"></a>
+<div class="fragment"><div class="line">type: struct</div><div class="line">members:</div><div class="line">  - first_int: int32</div><div class="line">  - seconf_int: int32</div></div><!-- fragment --><h1><a class="anchor" id="record_type_node"></a>
 record_type</h1>
 <p>A <em>record_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">
