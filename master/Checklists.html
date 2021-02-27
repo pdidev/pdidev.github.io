@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-26.0b72a1c</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-02-27.451b353</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -58,13 +58,14 @@ New patch release</h1>
 <li>make your changes based on the version branch (<code>v${X}.${Y}</code>)</li>
 <li>change the version in <code>pdi/VERSION</code></li>
 <li>change the version in <code>pdi/docs/Installation.md</code></li>
+<li>change the version in <code>README.md</code></li>
 <li>go over all <code>CHANGELOG.md</code> files and mark the just released version</li>
 <li>commit (or better, make a MR) in the version branch</li>
 <li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
 <li>merge the version branch into master</li>
 <li>in the merge commit:<ul>
-<li>keep the content of <code>pdi/VERSION</code> from master (next with <code>-git</code> suffix)</li>
-<li>keep the content of <code>pdi/docs/Installation.md</code> from master except with the version updated to the just released one</li>
+<li>keep the content of <code>pdi/VERSION</code> from master (next with <code>-alpha</code> suffix)</li>
+<li>keep the content of <code>README.md</code> and <code>pdi/docs/Installation.md</code> from master except with the version updated to the just released one</li>
 </ul>
 </li>
 <li>push all that</li>
