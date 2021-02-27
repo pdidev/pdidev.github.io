@@ -80,7 +80,7 @@ var index =
       [ "logical_type", "Specification_tree_ref.html#logical_type_node", null ],
       [ "struct_member_desc", "Specification_tree_ref.html#struct_member_desc_node", null ],
       [ "record_member_desc", "Specification_tree_ref.html#record_member_desc_node", null ],
-      [ "struct_members_map", "Specification_tree_ref.html#struct_members_map_node", null ],
+      [ "struct_members_omap", "Specification_tree_ref.html#struct_members_omap_node", null ],
       [ "record_members_map", "Specification_tree_ref.html#record_members_map_node", null ],
       [ "plugin_map", "Specification_tree_ref.html#plugin_map_node", null ],
       [ "real_type", "Specification_tree_ref.html#real_type_node", null ],

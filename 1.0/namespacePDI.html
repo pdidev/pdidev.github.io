@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.0</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.0.1</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -205,6 +205,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4ccde59299bca1abcd53672d0d43c0e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a4ccde59299bca1abcd53672d0d43c0e4">each</a> (PC_tree_t tree, std::function&lt; void(PC_tree_t, PC_tree_t)&gt; operation)</td></tr>
 <tr class="memdesc:a4ccde59299bca1abcd53672d0d43c0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates and apply the provided function to all elements of a PC mapping.  <a href="#a4ccde59299bca1abcd53672d0d43c0e4">More...</a><br /></td></tr>
 <tr class="separator:a4ccde59299bca1abcd53672d0d43c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9da4bf561ac6b2004fb74172d4ab14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a5a9da4bf561ac6b2004fb74172d4ab14">each_in_omap</a> (PC_tree_t tree, std::function&lt; void(PC_tree_t, PC_tree_t)&gt; operation)</td></tr>
+<tr class="memdesc:a5a9da4bf561ac6b2004fb74172d4ab14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates and apply the provided function to all elements of a PC ordered mapping.  <a href="#a5a9da4bf561ac6b2004fb74172d4ab14">More...</a><br /></td></tr>
+<tr class="separator:a5a9da4bf561ac6b2004fb74172d4ab14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a597784fcd3cb355d817d3d4e28dd3ce6"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a597784fcd3cb355d817d3d4e28dd3ce6">plugin_api_version</a> (unsigned long expected_version=0)</td></tr>
 <tr class="memdesc:a597784fcd3cb355d817d3d4e28dd3ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks compatibility with a plugin API.  <a href="#a597784fcd3cb355d817d3d4e28dd3ce6">More...</a><br /></td></tr>
 <tr class="separator:a597784fcd3cb355d817d3d4e28dd3ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -922,6 +925,43 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree</td><td>the tree containing the mapping </td></tr>
+    <tr><td class="paramname">operation</td><td>the operation to apply to each element of the tree </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a9da4bf561ac6b2004fb74172d4ab14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9da4bf561ac6b2004fb74172d4ab14">&#9670;&nbsp;</a></span>each_in_omap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PDI::each_in_omap </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(PC_tree_t, PC_tree_t)&gt;&#160;</td>
+          <td class="paramname"><em>operation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterates and apply the provided function to all elements of a PC ordered mapping. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>the tree containing the ordered mapping </td></tr>
     <tr><td class="paramname">operation</td><td>the operation to apply to each element of the tree </td></tr>
   </table>
   </dd>
