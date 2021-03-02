@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-01.d35947c</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-02.211eb9d</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -54,25 +54,25 @@ $(document).ready(function(){initNavTree('FTI_plugin.html','');});
 <div class="contents">
 <div class="textblock"><p><b>WARNING</b> This documentation is a work in progress and does not reflect the full FTI plugin potential.</p>
 <p>The FTI plugin enables one to perform checkpoints using FTI. FTI plugin does not support the full FTI feature set but offers a simple declarative interface to access a large subset of it.</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 Features and requirements</h1>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Dependencies</h2>
 <p>FTI plugin uses a <code>MPI_Comm</code> datatype and <code>MPI_COMM_WORLD</code> descriptor, which are defined in <code>mpi</code> plugin. For now it must be loaded alongside FTI plugin (as shown below).</p>
-<div class="fragment"><div class="line">pdi:</div><div class="line">   ...</div><div class="line"></div><div class="line">   plugins:</div><div class="line">      mpi:</div><div class="line">      fti:</div><div class="line">         ...</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
+<div class="fragment"><div class="line">pdi:</div><div class="line">   ...</div><div class="line"></div><div class="line">   plugins:</div><div class="line">      mpi:</div><div class="line">      fti:</div><div class="line">         ...</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
 Initialization</h2>
 <p>FTI initialization in FTI plugin is based on several rules:</p><ul>
 <li>if <code>init_on</code> is specified, FTI plugin will initialize FTI on that exact event and expects the communicator and file name to be correctly available or fail otherwise,</li>
 <li>if <code>init_on</code> is not specified and the communicator is available on plugin initialization (e.g. when using <code>MPI_COMM_WORLD</code> predefine from <code>mpi</code> plugin), FTI plugin will try to initialize FTI (on plugin initialization) and expects file name to be correctly available or fail otherwise,</li>
 <li>if <code>init_on</code> is not specified and the communicator is not available on plugin initialization, FTI plugin will try to initialize FTI on communicators descriptor exposure and expects file name to be correctly available or fail otherwise.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Predefined descriptors</h2>
 <p>FTI plugin loads a predefined descriptor named <code>FTI_COMM_WORLD</code> (<code>FTI_COMM_WORLD_F</code> for Fortran) after a successfull initialization of FTI. This descriptor is treated as metadata. Its content can be accessed using <code>PDI_access</code>.</p>
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 Configuration grammar</h1>
 <p>At its root, the FTI configuration is made of several nodes: <code>checkpoint</code>, <code>communicator</code>, <code>config_file</code>, <code>dataset</code>, <code>init_on</code>, <code>recover_on</code>, <code>recover_var</code>, <code>send_file</code>, <code>snapshot_on</code> and <code>status</code>.</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 checkpoint</h2>
 <p>A <code>checkpoint</code> specifies a list of checkpoints to execute. It is specified by a key/value map that may contain following keys: <code>L1_on</code>, <code>L2_on</code>, <code>L3_on</code>, <code>L4_on</code>. Each of the keys specifies events names that trigger a specified checkpoint. Value of this key can be either string or a list of strings:</p><ul>
 <li><code>L1_on</code>: executes FTI L1 checkpoint on specified <a class="el" href="namespacePDI.html">PDI</a> events,</li>
@@ -80,22 +80,22 @@ checkpoint</h2>
 <li><code>L3_on</code>: executes FTI L3 checkpoint on specified <a class="el" href="namespacePDI.html">PDI</a> events,</li>
 <li><code>L4_on</code>: executes FTI L4 checkpoint on specified <a class="el" href="namespacePDI.html">PDI</a> events.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 communicator</h2>
 <p>A <code>communicator</code> is a string, which specifies name of descriptor containing a MPI communicator to use for FTI initialization. Additionally, FTI plugin can write <code>FTI_COMM_WORLD</code> into this descriptor, if it is shared with write access right. It defaults to <code>MPI_COMM_WORLD</code>, which is a predefined descriptor from <code>mpi</code> plugin.</p>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 config_file</h2>
 <p>A <code>config_file</code> is a string that can contain $-expressions. Specifies the name of the FTI configuration file.</p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 dataset</h2>
 <p>A <code>dataset</code> is a key/value map, which keys are integers that specify datasets ids in FTI and values are names of protected descriptors. Alternatively, the map may contain a map with keys <code>name</code> and <code>size</code>, where <code>name</code> is a name of protected descriptor and <code>size</code> is a descriptor where FTI plugin will write size of the protected descriptor when shared with write access right.</p>
-<div class="fragment"><div class="line">dataset:</div><div class="line">  0: {name: variable, size: variable_size}</div><div class="line">  1: variable2</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+<div class="fragment"><div class="line">dataset:</div><div class="line">  0: {name: variable, size: variable_size}</div><div class="line">  1: variable2</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md43"></a>
 init_on</h2>
 <p>A <code>init_on</code> is a string or a list of strings that specifies the names of the <a class="el" href="namespacePDI.html">PDI</a> events that executes recovery of FTI.</p>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 recover_on</h2>
 <p>A <code>recover_on</code> is a string or a list of strings that specifies the names of the <a class="el" href="namespacePDI.html">PDI</a> events that executes recovery of FTI.</p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 recover_var</h2>
 <p>A <code>recover_var</code> is a list of maps with keys:</p><ul>
 <li><code>on_event</code></li>
@@ -103,15 +103,15 @@ recover_var</h2>
 </ul>
 <p><code>on_event</code> defines on which events the variable recovery should be done (single event or list of events)</p>
 <p><code>var</code> defines IDs of variables to recover (single ID or list of IDs)</p>
-<div class="fragment"><div class="line">plugins:</div><div class="line">  fti:</div><div class="line">    recover_var:</div><div class="line">      - on_event: recover_test</div><div class="line">        var: 2</div><div class="line">      - on_event: [recover_arrays, dummy_event]</div><div class="line">        var: [0, 1]</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
+<div class="fragment"><div class="line">plugins:</div><div class="line">  fti:</div><div class="line">    recover_var:</div><div class="line">      - on_event: recover_test</div><div class="line">        var: 2</div><div class="line">      - on_event: [recover_arrays, dummy_event]</div><div class="line">        var: [0, 1]</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
 send_file</h2>
-<p>A <code>send_file</code> is a key/value map or a list of key/value maps describing source and destination paths of files to send, event or list of events to trigger on and optionally name of descriptor, where will be stored status information when exposed. Example: </p><div class="fragment"><div class="line">send_file:</div><div class="line">  on_even: event</div><div class="line">  file:</div><div class="line">    src: source_path</div><div class="line">    dest: destination_path</div><div class="line">    status: status_descriptor</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
+<p>A <code>send_file</code> is a key/value map or a list of key/value maps describing source and destination paths of files to send, event or list of events to trigger on and optionally name of descriptor, where will be stored status information when exposed. Example: </p><div class="fragment"><div class="line">send_file:</div><div class="line">  on_even: event</div><div class="line">  file:</div><div class="line">    src: source_path</div><div class="line">    dest: destination_path</div><div class="line">    status: status_descriptor</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md47"></a>
 snapshot_on</h2>
 <p>A <code>snapshot_on</code> is a string or a list of strings that specifies the names of the <a class="el" href="namespacePDI.html">PDI</a> events that executes FTI_Snapshot.</p>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 status</h2>
 <p>A <code>status</code> is a string that specifies the name of a descriptor to which FTI will write FTI_Status code when shared.</p>
-<h1><a class="anchor" id="autotoc_md42"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 full configuration example</h1>
 <div class="fragment"><div class="line">pdi:</div><div class="line">  metadata: # type of small values for which PDI keeps a copy</div><div class="line">    iter: int</div><div class="line">    size:  { size: 2, type: int }</div><div class="line">  data: # type of values for which PDI does not keep a copy</div><div class="line">    fti_status: int</div><div class="line">    array_size: int64</div><div class="line">    file_name: {size: 64, type: array, subtype: char}</div><div class="line">    file_status: int</div><div class="line">    file1_status: int</div><div class="line">    file2_status: int</div><div class="line">    main_array: { size: [&#39;$size[0]&#39;, &#39;$size[1]&#39;], type: array, subtype: double }</div><div class="line"></div><div class="line">  plugins:</div><div class="line">    mpi:</div><div class="line">    fti:</div><div class="line">      config_file: fti_config.ini</div><div class="line">      communicator: MPI_COMM_WORLD</div><div class="line">      init_on: fti_init_event</div><div class="line">      status: fti_status</div><div class="line">      dataset:</div><div class="line">        0: {name: main_array, size: array_size}</div><div class="line">        1: iter</div><div class="line">      snapshot_on: snapshot_event</div><div class="line">      recover_on: recover_event</div><div class="line">      checkpoint:</div><div class="line">        L1_on: ckpt_l1_event</div><div class="line">        L2_on: [ckpt_l2_1_event, ckpt_l2_2_event]</div><div class="line">        L3_on: [ckpt_l3_1_event, ckpt_l3_2_event]</div><div class="line">        L4_on: ckpt_l4_event</div><div class="line">      send_file:</div><div class="line">        - on_event: send_one_file</div><div class="line">          file:</div><div class="line">            src: ./$file_name</div><div class="line">            dest: ./somewhere_else/$file_name</div><div class="line">            status: file_status</div><div class="line">        - on_event: [send_two_files_first_event, send_two_files_second_event]</div><div class="line">          file:</div><div class="line">            - src: ./file1</div><div class="line">              dest: ./somewhere_else/file1</div><div class="line">              status: file1_status</div><div class="line">            - src: ./file2</div><div class="line">              dest: ./somewhere_else/file2</div><div class="line">              status: file2_status</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->

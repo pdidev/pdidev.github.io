@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="generator" content="Doxygen 1.8.13"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>PDI: PDI example</title>
+	<title>PDI: PDI examples</title>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="dynsections.js"></script>
 	<script type="text/javascript" src="navtreedata.js"></script>
@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-01.d35947c</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-02.211eb9d</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -49,17 +49,16 @@ $(document).ready(function(){initNavTree('PDI_example.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">PDI example </div>  </div>
+<div class="title">PDI examples </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>PDI example application can be found in repository in the <code>example</code> directory. The source code is written in C, Fortran and Python.</p>
-<p>The example has a single source file (for each supported programming language), but specification tree to each plugin. Just by replacing the configuration file, the example program will use different libraries and different I/O operations.</p>
-<p>The example implements simple <a href="https://en.wikipedia.org/wiki/Heat_equation">Heat equation</a> algorithm in 2 dimensional space.</p>
+<div class="textblock"><p>The example is made of a single source file (one version in each supported programming language), this file loads its configuration and PDI specification tree from a <a class="el" href="YAML.html">YAML</a> file specified on the command line. Just by replacing the configuration file, the example program will use different PDI plugins, different libraries and different I/O operations.</p>
+<p>The example implements implements a simple <a href="https://en.wikipedia.org/wiki/Heat_equation">Heat equation</a> solver using an explicit forward finite difference scheme parallelized with MPI in 2 dimensions.</p>
 <h1><a class="anchor" id="heat_algorithm"></a>
-Heat algorithm</h1>
-<p>Each element in a matrix is a point with temperature. In each iteration every cell is calculated by an weighted average of itself and neighbour cells (top, bottom, left and right):</p>
-<div class="fragment"><div class="line">matrix[i][j] = 0.500 * matrix[i][j] + </div><div class="line">               0.125 * matrix[i-1][j] +</div><div class="line">               0.125 * matrix[i+1][j] +</div><div class="line">               0.125 * matrix[i][j-1] +</div><div class="line">               0.125 * matrix[i][j+1]; </div></div><!-- fragment --><p> To not override the cells while processing we need to create temporary matrix to save results and then move result to original matrix (<code>cur</code> and <code>next</code> in source file). Above calculations are written in <code>iter</code> function.</p>
-<p>Now we can add a MPI to our algorithm. Let's split that matrix by MPI processes. Each process will compute part of global matrix.</p>
+Code algorithm</h1>
+<p>The data is stored in a 2D array in which each point represents the temperature. In every iteration, the value at the next iteration of each cell is computed by applying a cross stencil using the values of the cell and of its neighbours (top, bottom, left and right) at the current iteration:</p>
+<div class="fragment"><div class="line">data[i][j] = 0.500 * data[i][j]</div><div class="line">           + 0.125 * data[i-1][j]</div><div class="line">           + 0.125 * data[i+1][j]</div><div class="line">           + 0.125 * data[i][j-1]</div><div class="line">           + 0.125 * data[i][j+1];</div></div><!-- fragment --><p>In order not to override the cells while processing we use two arrays to store the values, one for the current iteration (<code>cur</code> in the code) and one for the next iteration (<code>next</code> in the code). These computations are written in the <code>iter</code> function.</p>
+<p>This code is parallelized with MPI . Let's split that matrix by MPI processes. Each process will compute part of global matrix.</p>
 <p>For example: matrix 16 x 16 integers and 16 MPI processes gives submatrices of 4 x 4 integers for every process. We have to add to our global matrix one row above and below, column to the left and right to be able to compute border cells. In our example row on the top has some value (”x”) bigger than 0 (representing source of heat):</p>
 <div class="image">
 <img src="heat_global_matrix.jpg" alt="heat_global_matrix.jpg"/>

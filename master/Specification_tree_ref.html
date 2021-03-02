@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-01.d35947c</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-02.211eb9d</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -52,30 +52,7 @@ $(document).ready(function(){initNavTree('Specification_tree_ref.html','');});
 <div class="title">Specification tree Reference </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The PDI specification tree is expressed in <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>. It is a tree that contains the following distinct kinds of nodes:</p><ul>
-<li>scalars,</li>
-<li>sequences,</li>
-<li>mappings,</li>
-<li>ordered mappings.</li>
-</ul>
-<p>A <b>scalar</b> is a leaf in the tree, represented as a string. Some forms of scalars can be interpreted as boolean, integer or floating-point valued. Simple examples of scalars include (see the <a href="https://yaml.org/spec/1.2/spec.html#id2760844">YAML specification</a> for the complete syntax):</p><ul>
-<li><code>"hello"</code>,</li>
-<li><code>world</code>,</li>
-<li><code>3</code>,</li>
-<li><code>5.7</code>.</li>
-</ul>
-<p>A <b>sequence</b> is an ordered list of sub-nodes (that can themselves be scalars, sequences or mappings). Two main syntaxes are available for sequences (see the <a href="https://yaml.org/spec/1.2/spec.html#id2759963">YAML specification</a> for the complete syntax).</p><ul>
-<li>in-line sequence: <code>[1, 2, 3, hello, "world"]</code></li>
-<li>multi-line sequence: <div class="fragment"><div class="line">- 1</div><div class="line">- 2</div><div class="line">- 3</div><div class="line">- hello</div><div class="line">- world</div></div><!-- fragment --></li>
-</ul>
-<p>A <b>mapping</b> is an unordered list of key-value pairs (whose elements can themselves be scalars, sequences or mappings). Two main syntaxes are available for mapping (see the <a href="https://yaml.org/spec/1.2/spec.html#id2759963">YAML specification</a> for the complete syntax).</p><ul>
-<li>in-line mapping: <code>{1: one, 2: "two", "three": 3}</code></li>
-<li>multi-line mapping: <div class="fragment"><div class="line">1: one</div><div class="line">2: two</div><div class="line">&quot;three&quot;: 3</div></div><!-- fragment --></li>
-</ul>
-<p>An <b>ordered mapping</b> is represented as a sequence of mappings containing a single key-value pair each. There can be no duplicates in the keys. The sub-nodes can be scalars, sequences or mappings. Unlike in a normal mapping, the order of elements in an ordered mapping is meaningful. Two main syntaxes are available for ordered mapping (see the <a href="https://yaml.org/spec/1.2/spec.html#id2759963">YAML specification</a> for the complete syntax).</p><ul>
-<li>in-line ordered mapping: <code>[{1: one}, {2: "two"}, {"three": 3}]</code></li>
-<li>multi-line ordered mapping: <div class="fragment"><div class="line">- 1: one</div><div class="line">- 2: two</div><div class="line">- &quot;three&quot;: 3</div></div><!-- fragment --></li>
-</ul>
+<div class="textblock"><p>The PDI specification tree is expressed in <a class="el" href="YAML.html">YAML</a>.</p>
 <h1><a class="anchor" id="root_node"></a>
 specification tree root</h1>
 <p>The <em>specification tree root</em> is a <b>mapping</b> that contains the following keys:</p>
