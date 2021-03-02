@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-03-02.f30a1e4</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-03-02.617808f</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -62,11 +62,11 @@ PDI Installation</h2>
 Setup the hands-on tutorial</h2>
 <p>Once PDI is installed, you can proceed with getting the sources for the hands-on tutorial from <a href="https://github.com/pdidev/tutorial">github</a>: </p><div class="fragment"><div class="line">git clone https://github.com/pdidev/tutorial.git</div><div class="line">cd tutorial</div></div><!-- fragment --><p>On Juwels, you can just copy the content from <code>${PROJECT_training2022}/PDI_tutorial</code>: </p><div class="fragment"><div class="line">cp -R ${PROJECT_training2022}/PDI_tutorial .</div><div class="line">cd PDI_tutorial</div></div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 compilation</h2>
-<p>Before compilation, configure the tutorial by detecting all dependencies: </p><div class="fragment"><div class="line">cmake -B build .</div></div><!-- fragment --><p>For each exercise, once you've modified it, you can compile it by running the following command: </p><div class="fragment"><div class="line">make ex?</div></div><!-- fragment --><p> Where <code>?</code> is the number of the exercise.</p>
+<p>Before compilation, configure the tutorial by detecting all dependencies: </p><div class="fragment"><div class="line">cmake .</div></div><!-- fragment --><p>For each exercise, once you've modified it, you can compile it by running the following command: </p><div class="fragment"><div class="line">make ex?</div></div><!-- fragment --><p> Where <code>?</code> is the number of the exercise.</p>
 <h2><a class="anchor" id="autotoc_md18"></a>
 Execution</h2>
-<p>In order to speedup the execution on Juwels, it's a good idea to use <code>salloc</code> to reserve one node: </p><div class="fragment"><div class="line">salloc --reservation=parallel-io-day2 -N 1</div></div><!-- fragment --><p>You can run each exercise with the following command: </p><div class="fragment"><div class="line">srun -n 4 ./ex?</div></div><!-- fragment --><p> Where <code>?</code> is the number of the exercise and 4 represents the number of MPI processes to use.</p>
-<p>Now you're ready to work, <b>good luck</b>!</p>
+<p>In order to speedup the execution on Juwels, it's a good idea to use <code>salloc</code> to reserve one node: </p><div class="fragment"><div class="line">salloc --reservation=parallel-io-day3 -N 1</div></div><!-- fragment --><p>You can run each exercise with the following command: </p><div class="fragment"><div class="line">srun -n 4 ./ex?</div></div><!-- fragment --><p> Where <code>?</code> is the number of the exercise and 4 represents the number of MPI processes to use.</p>
+<p>In order to generate clean logs into a file however, the command should be expanded as follow (for example for ex2.): </p><div class="fragment"><div class="line">UCX_LOG_LEVEL=error srun -n 1 -o ex2.juwels.log -e all ./ex2</div></div><!-- fragment --><p>Now you're ready to work, <b>good luck</b>!</p>
 <h1><a class="anchor" id="autotoc_md19"></a>
 PDI-free code</h1>
 <h2><a class="anchor" id="autotoc_md20"></a>
@@ -98,7 +98,7 @@ Ex2. Now with some PDI</h2>
 <p>Ex2. is the same code as that of ex1. with PDI calls added in <code>main</code> function. In our YAML file (<code>ex2.yml</code>), a new sub-tree has been added under the <code>pdi</code> key. This sub-tree is the PDI specification tree passed to PDI at initialization. Here, the PDI <a class="el" href="trace_plugin.html">Trace plugin</a> is used to trace PDI calls.</p>
 <ul>
 <li>Examine the source code, compile it and run it.</li>
-<li>Add the required <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code> and <code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> calls to match the output of <code>ex2.log</code> file. Change only the <code>ex2.c</code> file. The calls for now don't need to make any logic, just match output to the <code>ex2.log</code>.</li>
+<li>Add the required <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code> and <code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> calls to match the output of <code>ex2.log</code> file (only the lines matching <code>[Trace-plugin]</code> have been kept). You only need to change the <code>ex2.c</code> file.</li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>Notice that some share/reclaim pairs come one after the other while others are interlaced. Is one better than the other? If you do not know the answer to this question, just wait until Ex5. :)</dd></dl>
 <h1><a class="anchor" id="autotoc_md23"></a>
@@ -127,6 +127,7 @@ Ex4. Writing some real data</h2>
 <ul>
 <li>Examine the YAML file, compile the code and run it.</li>
 </ul>
+<p>Look at the number of blocks, you will have to use the correct number of MPI ranks to run the example.</p>
 <p>Notice that in the YAML file, a list was used in the <code>decl_hdf5</code> section with multiple write blocks instead of a single one as before in order to write to multiple files.</p>
 <p>Also notice that this example now runs in parallel with two processes. Therefore it uses "$-expressions" to specify the file names and ensure we do not write to the same file from distinct ranks.</p>
 <p>Unlike the other fields manipulated until now, the type of <code>main_field</code> is not fully known, its size is dynamic. By moving other fields in the <code>metadata</code> section, you can reference them from "$-expressions" in the configuration file.</p>
@@ -142,7 +143,7 @@ Ex5. Introducing events</h2>
 <p>In ex4., two variables were written to <code>ex4-data*.h5</code>, but the file was opened and closed for each and every write. Since Decl'HDF5 only sees the data appear one after the other, it does not keep the file open. Since <code>ii</code> and <code>main_field</code> are shared in an interlaced way, they are both available to PDI at the same time and could be written without opening the file twice. You have to use events for that, you will modify both the C and YAML file.</p>
 <ul>
 <li>Examine the YAML file and source code, compile and run.</li>
-<li>In the C file, trigger a PDI event named <code>loop</code> when both <code>ii</code> and <code>main_field</code> are shared. With the <a class="el" href="trace_plugin.html">Trace plugin</a>, check that the event is indeed triggered at the expected time as described in <code>ex5.log</code>.</li>
+<li>In the C file, trigger a PDI event named <code>loop</code> when both <code>ii</code> and <code>main_field</code> are shared. With the <a class="el" href="trace_plugin.html">Trace plugin</a>, check that the event is indeed triggered at the expected time as described in <code>ex5.log</code> (only the lines matching <code>[Trace-plugin]</code> have been kept).</li>
 <li>Use the <code>on_event</code> mechanism to trigger the write of <code>ii</code> and <code>main_field</code>. This mechanism can be combined with a <code>when</code> directive, in that case the write is only executed when both mechanisms agree.</li>
 <li>Also notice the extended syntax that make it possible to write data to a dataset whose name differs from the PDI variable name. Use this mechanism to write <code>main_field</code> at iterations 1 and 2, in two distinct groups <code>iter1</code> and <code>iter2</code>. Your output should match the content described in <code>ex5.h5dump</code>.</li>
 </ul>
@@ -158,7 +159,7 @@ Ex6. Simplifying the code</h2>
 </ul>
 <p>This replacement is not possible for interlaced <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> with events in the middle. This case is however handled by <code><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code> call that exposes all data, then triggers an event and finally does all the reclaim in reverse order.</p>
 <ul>
-<li>Replace the remaining <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> by <code><a class="el" href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI. ">PDI_expose</a></code>s and <code><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code>s and ensure that your code keeps the exact same behaviour by comparing its trace to <code>ex6.log</code>.</li>
+<li>Replace the remaining <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI. ">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI. ">PDI_reclaim</a></code> by <code><a class="el" href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI. ">PDI_expose</a></code>s and <code><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once. ">PDI_multi_expose</a></code>s and ensure that your code keeps the exact same behaviour by comparing its trace to <code>ex6.log</code> (only the lines matching <code>[Trace-plugin]</code> have been kept).</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md28"></a>
 Ex7. Writing a selection</h2>
@@ -213,7 +214,7 @@ graphical representation of the parallel I/O</div></div>
 Pycall</h1>
 <h2><a class="anchor" id="autotoc_md33"></a>
 Ex10. Post-processing the data in python</h2>
-<p>In this exercise, you will once again modify the YAML file only and use python to post-process the data in situ before writing it to HDF5. Here, you will write the exponential of the raw data to HDF5 instead of the data itself.</p>
+<p>In this exercise, you will once again modify the YAML file only and use python to post-process the data in situ before writing it to HDF5. Here, you will write the square root of the raw data to HDF5 instead of the data itself.</p>
 <ul>
 <li>Examine the YAML file, compile the code and run it.</li>
 </ul>
