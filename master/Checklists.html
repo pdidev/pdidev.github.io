@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.1.0-alpha.2021-03-02.89b4038</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-03-02.f30a1e4</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -68,6 +68,10 @@ New patch release</h1>
 <li>keep the content of <code>README.md</code> and <code>pdi/docs/Installation.md</code> from master except with the version updated to the just released one</li>
 </ul>
 </li>
+<li>make a new commit in the version branch (<code>v${X}.${Y}</code>)<ul>
+<li>change the version in <code>pdi/VERSION</code> by increasing the patch and add the <code>-alpha</code> suffix</li>
+</ul>
+</li>
 <li>push all that</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md5"></a>
@@ -82,8 +86,12 @@ New minor or major release</h1>
 <li>tag the new release: <code>git tag -m "PDI release ${VERSION}" -s "${VERSION}"</code></li>
 <li>merge the version branch into master</li>
 <li>in the merge commit:<ul>
-<li>change the version in <code>pdi/VERSION</code> to the next one with the <code>-alpha</code> suffix</li>
+<li>change the version in <code>pdi/VERSION</code> by increasing the minor and add the <code>-alpha</code> suffix</li>
 <li>add an <code>[Unreleased]</code> section at the top of all <code>CHANGELOG.md</code> files</li>
+</ul>
+</li>
+<li>make a new commit in the version branch (<code>v${X}.${Y}</code>)<ul>
+<li>change the version in <code>pdi/VERSION</code> by increasing the patch and add the <code>-alpha</code> suffix</li>
 </ul>
 </li>
 <li>push all that</li>
