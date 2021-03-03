@@ -43,7 +43,7 @@ var index =
       [ "Setup", "Hands_on.html#autotoc_md14", [
         [ "PDI Installation", "Hands_on.html#autotoc_md15", null ],
         [ "Setup the hands-on tutorial", "Hands_on.html#autotoc_md16", null ],
-        [ "compilation", "Hands_on.html#autotoc_md17", null ],
+        [ "Compilation", "Hands_on.html#autotoc_md17", null ],
         [ "Execution", "Hands_on.html#autotoc_md18", null ]
       ] ],
       [ "PDI-free code", "Hands_on.html#autotoc_md19", [
