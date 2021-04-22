@@ -19,7 +19,9 @@ jobs:
         gitlab-url:  https://gitlab.maisondelasimulation.fr
         project-name:  pdidev%2Fpdi
     - name: Add CNAME
-      run: 'echo pdi.julien-bigot.fr > CNAME'
+      run: |
+        echo pdi.julien-bigot.fr > CNAME
+        echo "google-site-verification: googleb7e4372583e95220.html" > googleb7e4372583e95220.html
     - name: Push
       run: |
         git config user.name "${GITHUB_ACTOR}"
