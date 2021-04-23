@@ -1,6 +1,0 @@
-<map id="PDI::Datatype" name="PDI::Datatype">
-<area shape="rect" id="node3" href="$classPDI_1_1Array__datatype.html" title="an Array_datatype is a Datatype that represents an array: i.e storage of multiple elements of the sam..." alt="" coords="5,491,204,847"/>
-<area shape="rect" id="node4" href="$classPDI_1_1Record__datatype.html" title="A Record_datatype is a Datatype that represents a fixed number of elements of potentially different t..." alt="" coords="228,520,427,817"/>
-<area shape="rect" id="node5" href="$classPDI_1_1Scalar__datatype.html" title="{PDI::Scalar_datatype\n||+ Scalar_datatype()\l+ Scalar_datatype()\l+ Scalar_datatype()\l+ kind()\l+ clone()\l+ clone_type()\l+ densify()\l+ evaluate()\l+ dense()\l+ datasize()\l+ buffersize()\l+ alignment()\l+ simple()\l+ data_to_dense_copy()\l+ data_from_dense_copy()\l+ destroy_data()\l+ debug_string()\l+ operator==()\l}" alt="" coords="451,505,649,832"/>
-<area shape="rect" id="node2" href="$classPDI_1_1Datatype__template.html" title="{PDI::Datatype_template\n||+ ~Datatype_template()\l+ clone()\l+ evaluate()\l+ load_basic_datatypes()\l}" alt="" coords="233,5,421,127"/>
-</map>

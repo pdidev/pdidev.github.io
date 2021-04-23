@@ -2,30 +2,33 @@ name: Deploy
 on:
   repository_dispatch: ~
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout master
       uses: actions/checkout@v2
+      with: { fetch-depth: 0 }
+    - name: Checkout gh-pages
+      run: git worktree add -B gh-pages public remotes/origin/gh-pages
     - name: Clean previous
       run: |
-        rm -rf *
+        find public -mindepth 1 -maxdepth 1 '!' -name .git -exec rm -rf '{}' '+'
     - name: Build site
       uses: pdidev/pdidev.github.io/.github/actions/deploy@master
       with:
-        output-directory: .
+        output-directory: public
         gitlab-url:  https://gitlab.maisondelasimulation.fr
         project-name:  pdidev%2Fpdi
     - name: Add CNAME
       run: |
-        echo pdi.julien-bigot.fr > CNAME
-        echo "google-site-verification: googleb7e4372583e95220.html" > googleb7e4372583e95220.html
+        find data -mindepth 1 -maxdepth 1 -exec cp -r '{}' public ';'
     - name: Push
       run: |
+        cd public
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@noreply.example.com"
         git add -A .
-        git commit --allow-empty -m "New version deployed by ${GITHUB_EVENT_NAME} ${GITHUB_RUN_NUMBER}"
+        git commit -a -m "Update to match ${GITHUB_SHA} by ${GITHUB_EVENT_NAME} ${GITHUB_RUN_NUMBER}"
         git push -f
