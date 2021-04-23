@@ -35,8 +35,8 @@ var index =
     [ "First steps with PDI", "First_steps.html", [
       [ "Hello Event", "First_steps.html#fs_hello_event", null ],
       [ "Hello Data", "First_steps.html#fs_hello_data", null ],
-      [ "Hello Access", "First_steps.html#fs_access", null ],
-      [ "Hello multi expose", "First_steps.html#fs_multiexpose", null ]
+      [ "Hello Access", "First_steps.html#fs_hello_access", null ],
+      [ "Hello multi expose", "First_steps.html#fs_hello_multi_expose", null ]
     ] ],
     [ "Hands-on tutorial", "Hands_on.html", [
       [ "Setup", "Hands_on.html#autotoc_md14", [
