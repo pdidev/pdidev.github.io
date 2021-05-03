@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-04-22.cb73696</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-04-23.5fb3efc</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -60,6 +60,8 @@ specification tree root</h1>
 <tr>
 <th align="left">key</th><th align="left">value  </th></tr>
 <tr>
+<td align="left"><code>"types"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#types_map_node">types_map</a> </td></tr>
+<tr>
 <td align="left"><code>"data"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#data_map_node">data_map</a> </td></tr>
 <tr>
 <td align="left"><code>"metadata"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#data_map_node">data_map</a> </td></tr>
@@ -71,6 +73,7 @@ specification tree root</h1>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left"><em>anything</em> </td></tr>
 </table>
 <ul>
+<li>the <code>types</code> section specifies user-defined datatypes</li>
 <li>the <code>data</code> and <code>metadata</code> sections specify the type of the data in buffers exposed by the application; for <code>metadata</code>, PDI keeps a copy while it only keeps references for <code>data</code>,</li>
 <li>the <code>plugin</code> section specifies the list of plugins to load and their configuration,</li>
 <li>additional sections are ignored.</li>
@@ -142,7 +145,8 @@ datatype</h1>
 <li>a <a class="el" href="Specification_tree_ref.html#real_type_node">real_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>,</li>
-<li>a <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a>.</li>
+<li>a <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a>,</li>
+<li>any user-defined datatype name.</li>
 </ul>
 <p>Amongst these, <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a> is the only scalar. All others are dictionaries with a <code>type</code> key used for disambiguation between them. Plugins can add new options that follow the same pattern.</p>
 <p>A <em>datatype</em> represents the memory layout and interpretation for data exposed by the user in the <a class="el" href="Concepts.html#Data_store">data store</a>.</p>
@@ -335,6 +339,17 @@ struct_members_omap</h1>
 <li>each key identifies the name of a member and the value associated to it describes the member itself.</li>
 </ul>
 <p>See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for an example.</p>
+<h1><a class="anchor" id="types_map_node"></a>
+types_map</h1>
+<p>A <em>types_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> </td></tr>
+</table>
+<ul>
+<li>each key identifies the name of new user-defined datatype and the value associated to it describes the type</li>
+</ul>
 <h1><a class="anchor" id="record_members_map_node"></a>
 record_members_map</h1>
 <p>A <em>record_members_map</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">

@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-04-22.cb73696</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.2.0-alpha.2021-04-23.5fb3efc</span></h1>
 	<h2 id="projectbrief">Data exchange made easy</h2>
 </header>
 <nav id="tabs"><ul>
@@ -87,6 +87,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa539eee3b7312a7f1be7fd85b64b5c85"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#aa539eee3b7312a7f1be7fd85b64b5c85">load_basic_datatypes</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx)</td></tr>
 <tr class="memdesc:aa539eee3b7312a7f1be7fd85b64b5c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the context the basic Array, Record, C and Fortran datatypes.  <a href="#aa539eee3b7312a7f1be7fd85b64b5c85">More...</a><br /></td></tr>
 <tr class="separator:aa539eee3b7312a7f1be7fd85b64b5c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ffc14e8bad3f21ce30027671055f1b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#ae5ffc14e8bad3f21ce30027671055f1b">load_user_datatypes</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, PC_tree_t types_tree)</td></tr>
+<tr class="memdesc:ae5ffc14e8bad3f21ce30027671055f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the context the user defined datatypes.  <a href="#ae5ffc14e8bad3f21ce30027671055f1b">More...</a><br /></td></tr>
+<tr class="separator:ae5ffc14e8bad3f21ce30027671055f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8722c4b873d42931d8e159abaa62ff27"></a>
@@ -212,6 +215,51 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>the context where to add the datatypes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5ffc14e8bad3f21ce30027671055f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ffc14e8bad3f21ce30027671055f1b">&#9670;&nbsp;</a></span>load_user_datatypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void PDI::Datatype_template::load_user_datatypes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPDI_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>types_tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds to the context the user defined datatypes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>the context where to add the datatypes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>with defined types </td></tr>
   </table>
   </dd>
 </dl>
