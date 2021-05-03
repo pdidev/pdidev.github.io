@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd "$1"
+
+export DATE="$(date -Iseconds)"
+
+cat <<EOF > sitemap.xml
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+EOF
+
+find . -type d        -exec bash -c 'PATH="$(echo "$0" | sed -e "s%^\\.%%")"; echo "  <url><loc>https://pdi.julien-bigot.fr${PATH}/</loc><lastmod>${DATE}</lastmod></url>" >> sitemap.xml' '{}' ';'
+find . -name '*.html' -exec bash -c 'PATH="$(echo "$0" | sed -e "s%^\\.%%")"; echo "  <url><loc>https://pdi.julien-bigot.fr${PATH}</loc><lastmod>${DATE}</lastmod></url>" >> sitemap.xml' '{}' ';'
+
+echo "</urlset>" >> sitemap.xml

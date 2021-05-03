@@ -21,9 +21,12 @@ jobs:
         output-directory: public
         gitlab-url:  https://gitlab.maisondelasimulation.fr
         project-name:  pdidev%2Fpdi
-    - name: Add CNAME
+    - name: Add static data
       run: |
         find data -mindepth 1 -maxdepth 1 -exec cp -r '{}' public ';'
+    - name: Add sitemap
+      run: |
+        ./gen_sitemap public
     - name: Push
       run: |
         cd public
