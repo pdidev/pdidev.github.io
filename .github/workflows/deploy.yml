@@ -16,7 +16,7 @@ jobs:
       run: |
         find public -mindepth 1 -maxdepth 1 '!' -name .git -exec rm -rf '{}' '+'
     - name: Build site
-      uses: pdidev/pdidev.github.io/.github/actions/deploy@master
+      uses: pdidev/pdidev.github.io/.github/actions/deploy@main
       with:
         output-directory: public
         gitlab-url:  https://gitlab.maisondelasimulation.fr
