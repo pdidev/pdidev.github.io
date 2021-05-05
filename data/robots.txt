@@ -1,0 +1,4 @@
+User-agent: *
+
+Sitemap: https://pdi.julien-bigot.fr/sitemap.xml
+Sitemap: https://pdi.julien-bigot.fr/new-site/sitemap.xml
