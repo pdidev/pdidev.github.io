@@ -64,7 +64,7 @@ On other distributions, in case you do not have root acces, or if you want a mor
 </ul>
 <h1><a class="anchor" id="downloading_distribution"></a>
 Downloading PDI source distribution</h1>
-<p>To download the sources, have a look at the list of all releases at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/tags">https://gitlab.maisondelasimulation.fr/pdidev/pdi/tags</a></p>
+<p>To download the sources, have a look at the list of all releases at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a></p>
 <p>For example, release 1.2.0 can be downloaded from <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.2.0/pdi-1.2.0.tar.bz2">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.2.0/pdi-1.2.0.tar.bz2</a></p>
 <h1><a class="anchor" id="default_installation"></a>
 Default installation</h1>
@@ -78,7 +78,7 @@ Default installation</h1>
 <li>a <a href="https://www.mpi-forum.org/">MPI</a> 2 implementation.</li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>This list of dependecies can be further reduced by limiting the set of features compiled.</dd></dl>
-<p>For example, release 1.2.0 can be installed by following these instructions (but look for the latest release at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/tags">https://gitlab.maisondelasimulation.fr/pdidev/pdi/tags</a>):</p>
+<p>For example, release 1.2.0 can be installed by following these instructions (but look for the latest release at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a> ):</p>
 <div class="fragment"><div class="line">wget https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.2.0/pdi-1.2.0.tar.bz2</div><div class="line">tar -xjf pdi-1.2.0.tar.bz2</div><div class="line">mkdir pdi-1.2.0/build</div><div class="line">cd pdi-1.2.0/build</div><div class="line">cmake -DCMAKE_INSTALL_PREFIX=&quot;${HOME}/.local/&quot; ..   # configuration</div><div class="line">make install   # compilation and installation</div></div><!-- fragment --><dl class="section attention"><dt>Attention</dt><dd>The <code>cmake</code> command must be followed by the path to the <code>pdi</code> directory, here <code>..</code> because we have just created and moved to the <code>build</code> subdirectory.</dd>
 <dd>
 The <code>-DCMAKE_INSTALL_PREFIX="${HOME}/.local/"</code> flag is used to specify where to install the distribution, flags are <a class="el" href="Installation.html#cmake_config">discussed in more detail below</a>.</dd></dl>
