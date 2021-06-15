@@ -3,11 +3,6 @@ var NAVTREE =
   [ "PDI", "index.html", [
     [ "About", "index.html", "index" ],
     [ "C API Reference", "modules.html", "modules" ],
-    [ "Checklists", "Checklists.html", [
-      [ "New patch release", "Checklists.html#autotoc_md4", null ],
-      [ "New minor or major release", "Checklists.html#autotoc_md5", null ],
-      [ "Dependency change", "Checklists.html#autotoc_md6", null ]
-    ] ],
     [ "Plugin API reference", "annotated.html", "annotated" ]
   ] ]
 ];
@@ -15,8 +10,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classPDI_1_1Context__proxy.html#a3099171edab8110340cac24447187164",
-"group__error.html#ga9807c58ccf192137c930993273a31cf9"
+"classPDI_1_1Context__proxy.html#a687e53457726aa6a3f3208694b9119b5",
+"group__error.html#gga838ed1a4a5ca21c0d3ef790afbf61b74a3f8ad0c92399f5fd4d03a69bf5cc1eb7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
