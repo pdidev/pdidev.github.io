@@ -39,33 +39,33 @@ var index =
       [ "Hello multi expose", "First_steps.html#fs_hello_multi_expose", null ]
     ] ],
     [ "Hands-on tutorial", "Hands_on.html", [
-      [ "Setup", "Hands_on.html#autotoc_md11", [
-        [ "PDI installation", "Hands_on.html#autotoc_md12", null ],
-        [ "Hands-on tutorial setup", "Hands_on.html#autotoc_md13", null ],
-        [ "Compilation", "Hands_on.html#autotoc_md14", null ],
-        [ "Execution", "Hands_on.html#autotoc_md15", null ]
+      [ "Setup", "Hands_on.html#autotoc_md15", [
+        [ "PDI installation", "Hands_on.html#autotoc_md16", null ],
+        [ "Hands-on tutorial setup", "Hands_on.html#autotoc_md17", null ],
+        [ "Compilation", "Hands_on.html#autotoc_md18", null ],
+        [ "Execution", "Hands_on.html#autotoc_md19", null ]
       ] ],
-      [ "PDI-free code", "Hands_on.html#autotoc_md16", [
-        [ "Ex1. Getting started", "Hands_on.html#autotoc_md17", null ]
+      [ "PDI-free code", "Hands_on.html#autotoc_md20", [
+        [ "Ex1. Getting started", "Hands_on.html#autotoc_md21", null ]
       ] ],
-      [ "PDI core & trace plugin", "Hands_on.html#autotoc_md18", [
-        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md19", null ]
+      [ "PDI core & trace plugin", "Hands_on.html#autotoc_md22", [
+        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md23", null ]
       ] ],
-      [ "Decl'HDF5 plugin", "Hands_on.html#autotoc_md20", [
-        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md21", null ],
-        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md22", null ],
-        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md23", null ],
-        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md24", null ],
-        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md25", null ],
-        [ "Ex8. Selecting on the dataset size", "Hands_on.html#autotoc_md26", null ]
+      [ "Decl'HDF5 plugin", "Hands_on.html#autotoc_md24", [
+        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md25", null ],
+        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md26", null ],
+        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md27", null ],
+        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md28", null ],
+        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md29", null ],
+        [ "Ex8. Selecting on the dataset size", "Hands_on.html#autotoc_md30", null ]
       ] ],
-      [ "parallel Decl'HDF5", "Hands_on.html#autotoc_md27", [
-        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md28", null ]
+      [ "parallel Decl'HDF5", "Hands_on.html#autotoc_md31", [
+        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md32", null ]
       ] ],
-      [ "Pycall", "Hands_on.html#autotoc_md29", [
-        [ "Ex10. Post-processing the data in python", "Hands_on.html#autotoc_md30", null ]
+      [ "Pycall", "Hands_on.html#autotoc_md33", [
+        [ "Ex10. Post-processing the data in python", "Hands_on.html#autotoc_md34", null ]
       ] ],
-      [ "What next ?", "Hands_on.html#autotoc_md31", null ]
+      [ "What next ?", "Hands_on.html#autotoc_md35", null ]
     ] ],
     [ "PDI examples", "PDI_example.html", [
       [ "Code algorithm", "PDI_example.html#heat_algorithm", null ],

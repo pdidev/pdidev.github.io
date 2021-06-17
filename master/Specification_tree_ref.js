@@ -30,14 +30,14 @@ var Specification_tree_ref =
     [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ],
     [ "plugin_path", "Specification_tree_ref.html#plugin_path_map_node", null ],
     [ "YAML", "YAML.html", [
-      [ "YAML Format", "YAML.html#autotoc_md4", [
-        [ "Scalar element", "YAML.html#autotoc_md5", null ],
-        [ "Sequence sub-tree", "YAML.html#autotoc_md6", null ],
-        [ "Mapping sub-tree", "YAML.html#autotoc_md7", null ],
-        [ "YAML advanced elements", "YAML.html#autotoc_md8", [
-          [ "Ordered mapping sub-tree", "YAML.html#autotoc_md9", null ]
+      [ "YAML Format", "YAML.html#autotoc_md8", [
+        [ "Scalar element", "YAML.html#autotoc_md9", null ],
+        [ "Sequence sub-tree", "YAML.html#autotoc_md10", null ],
+        [ "Mapping sub-tree", "YAML.html#autotoc_md11", null ],
+        [ "YAML advanced elements", "YAML.html#autotoc_md12", [
+          [ "Ordered mapping sub-tree", "YAML.html#autotoc_md13", null ]
         ] ]
       ] ],
-      [ "YAML Parsing with Paraconf", "YAML.html#autotoc_md10", null ]
+      [ "YAML Parsing with Paraconf", "YAML.html#autotoc_md14", null ]
     ] ]
 ];
