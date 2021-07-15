@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-15.13dc080</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-15.71a7d47</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -150,7 +150,9 @@ datatype</h1>
 </ul>
 <p>Amongst these, <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a> is the only scalar. All others are dictionaries with a <code>type</code> key used for disambiguation between them. Plugins can add new options that follow the same pattern.</p>
 <p>A <em>datatype</em> represents the memory layout and interpretation for data exposed by the user in the <a class="el" href="Concepts.html#Data_store">data store</a>.</p>
-<h1><a class="anchor" id="data_map_node"></a>
+<p>Optional attributes can be added to any <em>datatype</em>. An attribute is identified by a key that starts with the <code>+</code> character. The value can be anything(<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</p>
+<p>Example:</p>
+<div class="fragment"><div class="line">...</div><div class="line">  data_name:</div><div class="line">    type: int</div><div class="line">    +first_attr: attr_value_1</div><div class="line">    +second_attr: [attr, value]</div><div class="line">    +third_attr: {key_0: 0, key_1: 1}</div><div class="line">...</div></div><!-- fragment --><h1><a class="anchor" id="data_map_node"></a>
 data_map</h1>
 <p>A <em>data_map</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">

@@ -1,8 +1,8 @@
 var classPDI_1_1Pointer__datatype =
 [
     [ "Accessor", "classPDI_1_1Pointer__datatype_1_1Accessor.html", "classPDI_1_1Pointer__datatype_1_1Accessor" ],
-    [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a7184035bbd0f5d98b0f0461001ced1ad", null ],
-    [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a6a8510fd399b23da60a52cf0f88e438b", null ],
+    [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a88b5c4b688efd2d7ab6e7c2b0bb14605", null ],
+    [ "Pointer_datatype", "classPDI_1_1Pointer__datatype.html#a9a8dd9ded5ebcb11831e5f4c504655f6", null ],
     [ "subtype", "classPDI_1_1Pointer__datatype.html#ad4d74aa9866dfaf02d8c17b5dcf35424", null ],
     [ "clone", "classPDI_1_1Pointer__datatype.html#af594a11c6575131d709a7792f7c0f28e", null ],
     [ "clone_type", "classPDI_1_1Pointer__datatype.html#a4ea685b28d9be745718e1d4715a6c544", null ],

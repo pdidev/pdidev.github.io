@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-15.13dc080</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-15.71a7d47</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -51,6 +51,7 @@ $(document).ready(function(){initNavTree('classPDI_1_1Datatype__template.html','
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPDI_1_1Datatype__template-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PDI::Datatype_template Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -72,6 +73,12 @@ Inheritance diagram for PDI::Datatype_template:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad2690d41caa281e6f3410dff7caa6c7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#ad2690d41caa281e6f3410dff7caa6c7d">Datatype_template</a> (const <a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a> &amp;<a class="el" href="classPDI_1_1Datatype__template.html#a51c966ec93d9ba7848bc379b41729566">attributes</a>={})</td></tr>
+<tr class="memdesc:ad2690d41caa281e6f3410dff7caa6c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates datatype template with given attributes.  <a href="#ad2690d41caa281e6f3410dff7caa6c7d">More...</a><br /></td></tr>
+<tr class="separator:ad2690d41caa281e6f3410dff7caa6c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4901d777744faf3d9a1ac190ac4706b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a4901d777744faf3d9a1ac190ac4706b0">Datatype_template</a> (PC_tree_t datatype_tree)</td></tr>
+<tr class="memdesc:a4901d777744faf3d9a1ac190ac4706b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates datatype template.  <a href="#a4901d777744faf3d9a1ac190ac4706b0">More...</a><br /></td></tr>
+<tr class="separator:a4901d777744faf3d9a1ac190ac4706b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8722c4b873d42931d8e159abaa62ff27"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a8722c4b873d42931d8e159abaa62ff27">~Datatype_template</a> ()</td></tr>
 <tr class="memdesc:a8722c4b873d42931d8e159abaa62ff27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the template.  <a href="#a8722c4b873d42931d8e159abaa62ff27">More...</a><br /></td></tr>
 <tr class="separator:a8722c4b873d42931d8e159abaa62ff27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -81,6 +88,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a31b2c6cd579c3100c6b03bf195aa0e80"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a31b2c6cd579c3100c6b03bf195aa0e80">evaluate</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx) const =0</td></tr>
 <tr class="memdesc:a31b2c6cd579c3100c6b03bf195aa0e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype by resolving the value of all metadata references.  <a href="#a31b2c6cd579c3100c6b03bf195aa0e80">More...</a><br /></td></tr>
 <tr class="separator:a31b2c6cd579c3100c6b03bf195aa0e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa92bd9faeee96f232c694c92be41efe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#afa92bd9faeee96f232c694c92be41efe">attribute</a> (const std::string &amp;attribute_name) const</td></tr>
+<tr class="memdesc:afa92bd9faeee96f232c694c92be41efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns attribute of given name as <a class="el" href="classPDI_1_1Expression.html">Expression</a>.  <a href="#afa92bd9faeee96f232c694c92be41efe">More...</a><br /></td></tr>
+<tr class="separator:afa92bd9faeee96f232c694c92be41efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c966ec93d9ba7848bc379b41729566"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a51c966ec93d9ba7848bc379b41729566">attributes</a> () const</td></tr>
+<tr class="memdesc:a51c966ec93d9ba7848bc379b41729566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all attributes as a unordered map.  <a href="#a51c966ec93d9ba7848bc379b41729566">More...</a><br /></td></tr>
+<tr class="separator:a51c966ec93d9ba7848bc379b41729566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -90,8 +103,66 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5ffc14e8bad3f21ce30027671055f1b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#ae5ffc14e8bad3f21ce30027671055f1b">load_user_datatypes</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, PC_tree_t types_tree)</td></tr>
 <tr class="memdesc:ae5ffc14e8bad3f21ce30027671055f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the context the user defined datatypes.  <a href="#ae5ffc14e8bad3f21ce30027671055f1b">More...</a><br /></td></tr>
 <tr class="separator:ae5ffc14e8bad3f21ce30027671055f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7cbd797b3fc189c60350f80fb0b43b47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a7cbd797b3fc189c60350f80fb0b43b47">m_attributes</a></td></tr>
+<tr class="separator:a7cbd797b3fc189c60350f80fb0b43b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad2690d41caa281e6f3410dff7caa6c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2690d41caa281e6f3410dff7caa6c7d">&#9670;&nbsp;</a></span>Datatype_template() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PDI::Datatype_template::Datatype_template </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a> &amp;&#160;</td>
+          <td class="paramname"><em>attributes</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates datatype template with given attributes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attributes</td><td>attributes of datatype template </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4901d777744faf3d9a1ac190ac4706b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4901d777744faf3d9a1ac190ac4706b0">&#9670;&nbsp;</a></span>Datatype_template() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PDI::Datatype_template::Datatype_template </td>
+          <td>(</td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>datatype_tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates datatype template. </p>
+<p>If attributes are defined in datatype_tree, they will be included in datatype template</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datatype_tree</td><td>datatype tree </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8722c4b873d42931d8e159abaa62ff27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8722c4b873d42931d8e159abaa62ff27">&#9670;&nbsp;</a></span>~Datatype_template()</h2>
 
@@ -146,7 +217,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Creates a new datatype as an exact copy of this one. </p>
 <dl class="section return"><dt>Returns</dt><dd>the dense type that is produced </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a524b1fe42651c90a8cfb3b66eadf9fb4">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a400a1d29c9727f494a00315fe21451f4">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Pointer__datatype.html#af594a11c6575131d709a7792f7c0f28e">PDI::Pointer_datatype</a>, and <a class="el" href="classPDI_1_1Scalar__datatype.html#a8f929d17ea26d91d1de5b17aa3654b38">PDI::Scalar_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a524b1fe42651c90a8cfb3b66eadf9fb4">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a400a1d29c9727f494a00315fe21451f4">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a8f929d17ea26d91d1de5b17aa3654b38">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#af594a11c6575131d709a7792f7c0f28e">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -183,7 +254,54 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the evaluated type that is produced </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae6d1fdc3128dd1bb1d61442c33416917">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a974a5b925407ade93a7f2b96a0ffd528">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Pointer__datatype.html#a0c5618604492b253bce03f9a6d6c9161">PDI::Pointer_datatype</a>, and <a class="el" href="classPDI_1_1Scalar__datatype.html#afffe6f77d615f1d570607758a62722bd">PDI::Scalar_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae6d1fdc3128dd1bb1d61442c33416917">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a974a5b925407ade93a7f2b96a0ffd528">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#afffe6f77d615f1d570607758a62722bd">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a0c5618604492b253bce03f9a6d6c9161">PDI::Pointer_datatype</a>.</p>
+
+</div>
+</div>
+<a id="afa92bd9faeee96f232c694c92be41efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa92bd9faeee96f232c694c92be41efe">&#9670;&nbsp;</a></span>attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPDI_1_1Expression.html">Expression</a> PDI::Datatype_template::attribute </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>attribute_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns attribute of given name as <a class="el" href="classPDI_1_1Expression.html">Expression</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attribute_key</td><td>attribute to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value of attribute as <a class="el" href="classPDI_1_1Expression.html">Expression</a> </dd></dl>
+
+</div>
+</div>
+<a id="a51c966ec93d9ba7848bc379b41729566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c966ec93d9ba7848bc379b41729566">&#9670;&nbsp;</a></span>attributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a>&amp; PDI::Datatype_template::attributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all attributes as a unordered map. </p>
+<dl class="section return"><dt>Returns</dt><dd>all attributes as a unordered map </dd></dl>
 
 </div>
 </div>
@@ -263,6 +381,29 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7cbd797b3fc189c60350f80fb0b43b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cbd797b3fc189c60350f80fb0b43b47">&#9670;&nbsp;</a></span>m_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a> PDI::Datatype_template::m_attributes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -2,8 +2,8 @@ var classPDI_1_1Array__datatype =
 [
     [ "Index_accessor", "classPDI_1_1Array__datatype_1_1Index__accessor.html", "classPDI_1_1Array__datatype_1_1Index__accessor" ],
     [ "Slice_accessor", "classPDI_1_1Array__datatype_1_1Slice__accessor.html", "classPDI_1_1Array__datatype_1_1Slice__accessor" ],
-    [ "Array_datatype", "classPDI_1_1Array__datatype.html#a5a7e92c1dac8a64f6bca955475b0332d", null ],
-    [ "Array_datatype", "classPDI_1_1Array__datatype.html#a3c318ef5108efc7bc593cdee7505ad8a", null ],
+    [ "Array_datatype", "classPDI_1_1Array__datatype.html#ab689aa32d01015cf83bf5ef6e401ce03", null ],
+    [ "Array_datatype", "classPDI_1_1Array__datatype.html#a1664d75b96bc6d15c3cdeadfaed21b70", null ],
     [ "subtype", "classPDI_1_1Array__datatype.html#a2a49fe56a6a6946f0fa55bd504b956f7", null ],
     [ "size", "classPDI_1_1Array__datatype.html#a26b0a7a4a180e1135846627372ed9589", null ],
     [ "start", "classPDI_1_1Array__datatype.html#ac8bc6acc7335a71d63e1a19f2227d2f9", null ],

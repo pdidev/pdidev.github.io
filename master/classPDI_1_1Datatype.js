@@ -1,6 +1,7 @@
 var classPDI_1_1Datatype =
 [
     [ "Accessor_base", "structPDI_1_1Datatype_1_1Accessor__base.html", "structPDI_1_1Datatype_1_1Accessor__base" ],
+    [ "Datatype", "classPDI_1_1Datatype.html#a78f397bb00153aedd4823091e7403b3e", null ],
     [ "~Datatype", "classPDI_1_1Datatype.html#ad2e19537809ba143ab9130c95b237dc2", null ],
     [ "clone_type", "classPDI_1_1Datatype.html#af42770105e821dea4ca30f0992f2274c", null ],
     [ "operator==", "classPDI_1_1Datatype.html#a8cdf8ed0c21b40519239290171252a5b", null ],
