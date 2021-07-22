@@ -5,9 +5,10 @@ var Plugins =
         [ "`FILE_DESC`", "Decl_HDF5_plugin.html#autotoc_md37", null ],
         [ "`DATA_SECTION`", "Decl_HDF5_plugin.html#autotoc_md38", null ],
         [ "`DATA_IO_DESC`", "Decl_HDF5_plugin.html#autotoc_md39", null ],
-        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md40", null ]
+        [ "`SELECTION_DESC`", "Decl_HDF5_plugin.html#autotoc_md40", null ],
+        [ "`COLLISION_POLICY`", "Decl_HDF5_plugin.html#autotoc_md41", null ]
       ] ],
-      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md41", null ]
+      [ "full configuration example", "Decl_HDF5_plugin.html#autotoc_md42", null ]
     ] ],
     [ "The Decl'NetCDF plugin", "Decl_NetCDF_plugin.html", [
       [ "Configuration elements", "Decl_NetCDF_plugin.html#decl_netcdf_configuration", [
@@ -121,24 +122,24 @@ var Plugins =
       ] ]
     ] ],
     [ "FTI plugin", "FTI_plugin.html", [
-      [ "Features and requirements", "FTI_plugin.html#autotoc_md44", [
-        [ "Dependencies", "FTI_plugin.html#autotoc_md45", null ],
-        [ "Initialization", "FTI_plugin.html#autotoc_md46", null ],
-        [ "Predefined descriptors", "FTI_plugin.html#autotoc_md47", null ]
+      [ "Features and requirements", "FTI_plugin.html#autotoc_md45", [
+        [ "Dependencies", "FTI_plugin.html#autotoc_md46", null ],
+        [ "Initialization", "FTI_plugin.html#autotoc_md47", null ],
+        [ "Predefined descriptors", "FTI_plugin.html#autotoc_md48", null ]
       ] ],
-      [ "Configuration grammar", "FTI_plugin.html#autotoc_md48", [
-        [ "checkpoint", "FTI_plugin.html#autotoc_md49", null ],
-        [ "communicator", "FTI_plugin.html#autotoc_md50", null ],
-        [ "config_file", "FTI_plugin.html#autotoc_md51", null ],
-        [ "dataset", "FTI_plugin.html#autotoc_md52", null ],
-        [ "init_on", "FTI_plugin.html#autotoc_md53", null ],
-        [ "recover_on", "FTI_plugin.html#autotoc_md54", null ],
-        [ "recover_var", "FTI_plugin.html#autotoc_md55", null ],
-        [ "send_file", "FTI_plugin.html#autotoc_md56", null ],
-        [ "snapshot_on", "FTI_plugin.html#autotoc_md57", null ],
-        [ "status", "FTI_plugin.html#autotoc_md58", null ]
+      [ "Configuration grammar", "FTI_plugin.html#autotoc_md49", [
+        [ "checkpoint", "FTI_plugin.html#autotoc_md50", null ],
+        [ "communicator", "FTI_plugin.html#autotoc_md51", null ],
+        [ "config_file", "FTI_plugin.html#autotoc_md52", null ],
+        [ "dataset", "FTI_plugin.html#autotoc_md53", null ],
+        [ "init_on", "FTI_plugin.html#autotoc_md54", null ],
+        [ "recover_on", "FTI_plugin.html#autotoc_md55", null ],
+        [ "recover_var", "FTI_plugin.html#autotoc_md56", null ],
+        [ "send_file", "FTI_plugin.html#autotoc_md57", null ],
+        [ "snapshot_on", "FTI_plugin.html#autotoc_md58", null ],
+        [ "status", "FTI_plugin.html#autotoc_md59", null ]
       ] ],
-      [ "full configuration example", "FTI_plugin.html#autotoc_md59", null ]
+      [ "full configuration example", "FTI_plugin.html#autotoc_md60", null ]
     ] ],
     [ "Pycall plugin", "pycall_plugin.html", [
       [ "Configuration", "pycall_plugin.html#pycall_configuration", [
