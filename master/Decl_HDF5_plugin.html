@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-22.1973ec6</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-23.5e78c33</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -68,6 +68,8 @@ Configuration grammar</h1>
 <li><code>communicator</code>: a $-expression referencing a MPI communicator to use for HDF5 parallel synchronized reads and writes. It defaults to MPI_COMM_SELF which stands for sequential writes. In case of data-triggered (vs. event-triggered) reads and writes, this can be replaced inside the <code>DATA_SECTION</code>.</li>
 <li><code>datasets</code>: a key-value map associating a <a class="el" href="namespacePDI.html">PDI</a> type to string keys. Each string is the name of a dataset to create in the file on first access, with the type described in the value.</li>
 <li><code>collision_policy</code>: a string identifying a COLLISION_POLICY</li>
+<li><code>deflate</code>: an integer value (from 0 to 9) defining the default deflate (GNU gzip) compression level to use for datasets created in this file. This can be overriden on a per dataset basis. By default, the deflate filter is deactivated. See <a href="https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetDeflate">https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetDeflate</a> for more information.</li>
+<li><code>fletcher</code>: an integer value interpreted as a boolean (0 is false, non 0 values are true) that defines whether to activate the Fletcher32 checksum filter by default for datasets created in this file. This can be overriden on a per dataset basis. By default, the Fletcher32 checksum filter is deactivated. See <a href="https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetFletcher32">https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetFletcher32</a> for more information.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md38"></a>
 `DATA_SECTION`</h2>
@@ -92,6 +94,9 @@ Configuration grammar</h1>
 <li><code>dataset_selection</code>: a <code>SELECTION_DESC</code> specifying the selection of data in the file data to write or read. This is only valid if the</li>
 <li><code>attributes</code>: a key-value map specifying the set of attributes to read from (respectively, write to) the file when the associated dataset is read (respectively, written). Each key is the name of an attribute of the dataset. Each value is a $-expression (evaluated when the dataset is accessed) specifying the value to the attribute.</li>
 <li><code>collision_policy</code>: a string identifying a COLLISION_POLICY.</li>
+<li><code>chunking</code>: a intexpr_or_seq that defines the size of the chunks used to the dataset in a chunked layout. The intexpr_or_seq must have the same dimension as the dataset type. This can be overriden by the <code>decl_hdf5.chunking</code> attribute in the dataset type. By default, no chunking is activated. See <a href="https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetChunk">https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetChunk</a> for more information.</li>
+<li><code>deflate</code>: an integer value (from 0 to 9) defining the deflate (GNU gzip) compression level to use or <code>-1</code> for no filter for datasets created by this I/O. This can be overriden by the <code>decl_hdf5.deflate</code> attribute in the dataset type. By default, the deflate filter is deactivated. See <a href="https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetDeflate">https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetDeflate</a> for more information.</li>
+<li><code>fletcher</code>: an integer value interpreted as a boolean (0 is false, non 0 values are true) that defines whether to activate the Fletcher32 checksum filter by default for datasets created in this file. This can be overriden by the <code>decl_hdf5.fletcher</code> attribute in the dataset type. By default, the Fletcher32 checksum filter is deactivated. See <a href="https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetFletcher32">https://support.hdfgroup.org/HDF5/doc/RM/RM_H5P.html#Property-SetFletcher32</a> for more information.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md40"></a>
 `SELECTION_DESC`</h2>
