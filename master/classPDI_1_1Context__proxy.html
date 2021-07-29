@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-27.4dc9fa8</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-29.a8e61e8</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -67,8 +67,15 @@ Inheritance diagram for PDI::Context_proxy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6b3641274f499c62348e00890c2efc0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a6b3641274f499c62348e00890c2efc0f">Context_proxy</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, std::string plugin_name, PC_tree_t logging_tree)</td></tr>
-<tr class="separator:a6b3641274f499c62348e00890c2efc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e4fb8e50fe8b88e01c19082abb1d43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a28e4fb8e50fe8b88e01c19082abb1d43">Context_proxy</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx)</td></tr>
+<tr class="memdesc:a28e4fb8e50fe8b88e01c19082abb1d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classPDI_1_1Context.html">Context</a> proxy without plugin logger.  <a href="#a28e4fb8e50fe8b88e01c19082abb1d43">More...</a><br /></td></tr>
+<tr class="separator:a28e4fb8e50fe8b88e01c19082abb1d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae61827c42a717817eabbd39be12f78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a3ae61827c42a717817eabbd39be12f78">Context_proxy</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, const std::string &amp;logger_name, PC_tree_t logging_tree)</td></tr>
+<tr class="memdesc:a3ae61827c42a717817eabbd39be12f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classPDI_1_1Context.html">Context</a> proxy.  <a href="#a3ae61827c42a717817eabbd39be12f78">More...</a><br /></td></tr>
+<tr class="separator:a3ae61827c42a717817eabbd39be12f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2346984133263dfc4b72aa8f45fde8cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a2346984133263dfc4b72aa8f45fde8cc">setup_logger</a> (const std::string &amp;logger_name, PC_tree_t logging_tree)</td></tr>
+<tr class="memdesc:a2346984133263dfc4b72aa8f45fde8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up logger.  <a href="#a2346984133263dfc4b72aa8f45fde8cc">More...</a><br /></td></tr>
+<tr class="separator:a2346984133263dfc4b72aa8f45fde8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a468a90eb7a0e0dbc88522b51688e9ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Data__descriptor.html">Data_descriptor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a468a90eb7a0e0dbc88522b51688e9ed8">desc</a> (const std::string &amp;name) override</td></tr>
 <tr class="memdesc:a468a90eb7a0e0dbc88522b51688e9ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#ad9cc865b0a004cf218c2633d3907e231" title="Accesses the descriptor for a specific name. ">Context::desc</a> proxy for plugins.  <a href="#a468a90eb7a0e0dbc88522b51688e9ed8">More...</a><br /></td></tr>
 <tr class="separator:a468a90eb7a0e0dbc88522b51688e9ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,12 +97,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a687e53457726aa6a3f3208694b9119b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a687e53457726aa6a3f3208694b9119b5">event</a> (const char *name) override</td></tr>
 <tr class="memdesc:a687e53457726aa6a3f3208694b9119b5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d" title="Triggers a PDI &quot;event&quot;. ">Context::event</a> proxy for plugins.  <a href="#a687e53457726aa6a3f3208694b9119b5">More...</a><br /></td></tr>
 <tr class="separator:a687e53457726aa6a3f3208694b9119b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3099171edab8110340cac24447187164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a3099171edab8110340cac24447187164">logger</a> () const override</td></tr>
-<tr class="memdesc:a3099171edab8110340cac24447187164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns local logger.  <a href="#a3099171edab8110340cac24447187164">More...</a><br /></td></tr>
-<tr class="separator:a3099171edab8110340cac24447187164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23624a98f533a9da2b1584dfac18ad8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a23624a98f533a9da2b1584dfac18ad8f">pdi_core_logger</a> () const</td></tr>
-<tr class="memdesc:a23624a98f533a9da2b1584dfac18ad8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320" title="Logger getter. ">Context::logger</a> proxy for plugins.  <a href="#a23624a98f533a9da2b1584dfac18ad8f">More...</a><br /></td></tr>
-<tr class="separator:a23624a98f533a9da2b1584dfac18ad8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958bd856522f1ffb57e0755f99ae7524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Logger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#a958bd856522f1ffb57e0755f99ae7524">logger</a> () override</td></tr>
+<tr class="memdesc:a958bd856522f1ffb57e0755f99ae7524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns plugin logger.  <a href="#a958bd856522f1ffb57e0755f99ae7524">More...</a><br /></td></tr>
+<tr class="separator:a958bd856522f1ffb57e0755f99ae7524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7db24594108164bd74c6337e7d3336"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPDI_1_1Logger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#aae7db24594108164bd74c6337e7d3336">pdi_core_logger</a> ()</td></tr>
+<tr class="memdesc:aae7db24594108164bd74c6337e7d3336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pdi core logger.  <a href="#aae7db24594108164bd74c6337e7d3336">More...</a><br /></td></tr>
+<tr class="separator:aae7db24594108164bd74c6337e7d3336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71f62967880f5bcd0fe095f17b3de4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context__proxy.html#ac71f62967880f5bcd0fe095f17b3de4f">datatype</a> (PC_tree_t node) override</td></tr>
 <tr class="memdesc:ac71f62967880f5bcd0fe095f17b3de4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b" title="Creates a new datatype template from a paraconf-style config. ">Context::datatype</a> proxy for plugins.  <a href="#ac71f62967880f5bcd0fe095f17b3de4f">More...</a><br /></td></tr>
 <tr class="separator:ac71f62967880f5bcd0fe095f17b3de4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,8 +132,34 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af014d0db0aa036bdaae6aa860a3a6b0b inherit pro_methods_classPDI_1_1Context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6b3641274f499c62348e00890c2efc0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b3641274f499c62348e00890c2efc0f">&#9670;&nbsp;</a></span>Context_proxy()</h2>
+<a id="a28e4fb8e50fe8b88e01c19082abb1d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e4fb8e50fe8b88e01c19082abb1d43">&#9670;&nbsp;</a></span>Context_proxy() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PDI::Context_proxy::Context_proxy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPDI_1_1Context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classPDI_1_1Context.html">Context</a> proxy without plugin logger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>context to make a proxy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ae61827c42a717817eabbd39be12f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae61827c42a717817eabbd39be12f78">&#9670;&nbsp;</a></span>Context_proxy() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,8 +173,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>plugin_name</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>logger_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -157,9 +190,56 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates <a class="el" href="classPDI_1_1Context.html">Context</a> proxy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>context to make a proxy </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">logger_name</td><td>name of the logger (will be used in logger pattern) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">logging_tree</td><td>logging yaml tree of the plugin </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2346984133263dfc4b72aa8f45fde8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2346984133263dfc4b72aa8f45fde8cc">&#9670;&nbsp;</a></span>setup_logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PDI::Context_proxy::setup_logger </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>logger_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PC_tree_t&#160;</td>
+          <td class="paramname"><em>logging_tree</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets up logger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">logger_name</td><td>name of the logger (will be used in logger pattern) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">logging_tree</td><td>logging yaml tree of the plugin </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a468a90eb7a0e0dbc88522b51688e9ed8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a468a90eb7a0e0dbc88522b51688e9ed8">&#9670;&nbsp;</a></span>desc() <span class="overload">[1/2]</span></h2>
 
@@ -363,13 +443,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d" title="Triggers a PDI &quot;event&quot;. ">Context::event</a> proxy for plugins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>name of the event </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d">PDI::Context</a>.</p>
 
 </div>
 </div>
-<a id="a3099171edab8110340cac24447187164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3099171edab8110340cac24447187164">&#9670;&nbsp;</a></span>logger()</h2>
+<a id="a958bd856522f1ffb57e0755f99ae7524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958bd856522f1ffb57e0755f99ae7524">&#9670;&nbsp;</a></span>logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,10 +464,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a> PDI::Context_proxy::logger </td>
+          <td class="memname"><a class="el" href="classPDI_1_1Logger.html">Logger</a>* PDI::Context_proxy::logger </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -391,28 +477,30 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns local logger. </p>
+<p>Returns plugin logger. </p>
+<dl class="section return"><dt>Returns</dt><dd>plugin logger </dd></dl>
 
-<p>Implements <a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320">PDI::Context</a>.</p>
+<p>Implements <a class="el" href="classPDI_1_1Context.html#a99fd5e999858e5462c3bd1f846b35992">PDI::Context</a>.</p>
 
 </div>
 </div>
-<a id="a23624a98f533a9da2b1584dfac18ad8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23624a98f533a9da2b1584dfac18ad8f">&#9670;&nbsp;</a></span>pdi_core_logger()</h2>
+<a id="aae7db24594108164bd74c6337e7d3336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7db24594108164bd74c6337e7d3336">&#9670;&nbsp;</a></span>pdi_core_logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacePDI.html#a9c906943ee4d374699c804e1d94facd2">Logger_sptr</a> PDI::Context_proxy::pdi_core_logger </td>
+          <td class="memname"><a class="el" href="classPDI_1_1Logger.html">Logger</a>* PDI::Context_proxy::pdi_core_logger </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classPDI_1_1Context.html#a5e78992507def6399403ab6fe3704320" title="Logger getter. ">Context::logger</a> proxy for plugins. </p>
+<p>Returns pdi core logger. </p>
+<dl class="section return"><dt>Returns</dt><dd>pdi core logger </dd></dl>
 
 </div>
 </div>

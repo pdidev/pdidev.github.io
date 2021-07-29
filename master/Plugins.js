@@ -32,53 +32,53 @@ var Plugins =
       ] ]
     ] ],
     [ "The FlowVR plugin", "FlowVR_plugin.html", [
-      [ "Configuration elements", "FlowVR_plugin.html#configuration", [
+      [ "Configuration elements", "FlowVR_plugin.html#flowvr_configuration", [
         [ "FlowVR plugin tree", "FlowVR_plugin.html#flowvr_tree", [
-          [ "component", "FlowVR_plugin.html#component_node", null ],
-          [ "wait_on_data", "FlowVR_plugin.html#wait_on_data_node", null ],
-          [ "wait_on", "FlowVR_plugin.html#wait_on_node", null ],
-          [ "status", "FlowVR_plugin.html#status_node", null ],
-          [ "abort_on", "FlowVR_plugin.html#abort_on_node", null ],
-          [ "init_on", "FlowVR_plugin.html#init_on_node", null ],
-          [ "parallel", "FlowVR_plugin.html#parallel_node", null ],
-          [ "Several modules", "FlowVR_plugin.html#several_modules", null ]
+          [ "component", "FlowVR_plugin.html#flowvr_component_node", null ],
+          [ "wait_on_data", "FlowVR_plugin.html#flowvr_wait_on_data_node", null ],
+          [ "wait_on", "FlowVR_plugin.html#flowvr_wait_on_node", null ],
+          [ "status", "FlowVR_plugin.html#flowvr_status_node", null ],
+          [ "abort_on", "FlowVR_plugin.html#flowvr_abort_on_node", null ],
+          [ "init_on", "FlowVR_plugin.html#flowvr_init_on_node", null ],
+          [ "parallel", "FlowVR_plugin.html#flowvr_parallel_node", null ],
+          [ "Several modules", "FlowVR_plugin.html#flowvr_several_modules", null ]
         ] ],
-        [ "Ports", "FlowVR_plugin.html#ports", [
-          [ "input_ports", "FlowVR_plugin.html#input_ports", null ],
-          [ "output_ports", "FlowVR_plugin.html#output_ports", null ]
+        [ "Ports", "FlowVR_plugin.html#flowvr_ports", [
+          [ "input_ports", "FlowVR_plugin.html#flowvr_input_ports", null ],
+          [ "output_ports", "FlowVR_plugin.html#flowvr_output_ports", null ]
         ] ],
-        [ "Message", "FlowVR_plugin.html#message", [
-          [ "Data payload", "FlowVR_plugin.html#data_payload", null ]
+        [ "Message", "FlowVR_plugin.html#flowvr_message", [
+          [ "Data payload", "FlowVR_plugin.html#flowvr_data_payload", null ]
         ] ],
-        [ "Chunk payload", "FlowVR_plugin.html#chunks_payload", null ],
-        [ "Event button payload", "FlowVR_plugin.html#button_payload", null ],
-        [ "Event mouse payload", "FlowVR_plugin.html#mouse_payload", null ],
-        [ "Stamp", "FlowVR_plugin.html#stamp", null ]
+        [ "Chunk payload", "FlowVR_plugin.html#flowvr_chunks_payload", null ],
+        [ "Event button payload", "FlowVR_plugin.html#flowvr_button_payload", null ],
+        [ "Event mouse payload", "FlowVR_plugin.html#flowvr_mouse_payload", null ],
+        [ "Stamp", "FlowVR_plugin.html#flowvr_stamp", null ]
       ] ],
-      [ "Reading and writing data examples", "FlowVR_plugin.html#c_api", [
-        [ "Read data from FlowVR message by access the shared memory", "FlowVR_plugin.html#read_shared", null ],
-        [ "Write data from FlowVR message by access the shared memory", "FlowVR_plugin.html#write_shared", null ],
-        [ "Read data from FlowVR message by copy from the shared memory", "FlowVR_plugin.html#read_copy", null ],
-        [ "Write data to FlowVR message by copy to the shared memory", "FlowVR_plugin.html#write_copy", null ],
-        [ "Write data to FlowVR message by copy the subset of data to the shared memory", "FlowVR_plugin.html#wrtie_sparse", null ]
+      [ "Reading and writing data examples", "FlowVR_plugin.html#flowvr_c_api", [
+        [ "Read data from FlowVR message by access the shared memory", "FlowVR_plugin.html#flowvr_read_shared", null ],
+        [ "Write data from FlowVR message by access the shared memory", "FlowVR_plugin.html#flowvr_write_shared", null ],
+        [ "Read data from FlowVR message by copy from the shared memory", "FlowVR_plugin.html#flowvr_read_copy", null ],
+        [ "Write data to FlowVR message by copy to the shared memory", "FlowVR_plugin.html#flowvr_write_copy", null ],
+        [ "Write data to FlowVR message by copy the subset of data to the shared memory", "FlowVR_plugin.html#flowvr_wrtie_sparse", null ]
       ] ],
-      [ "and writing stamps examples", "FlowVR_plugin.html#Reading", [
-        [ "Read stamp from FlowVR message", "FlowVR_plugin.html#read_stamp", null ],
-        [ "Write stamp from FlowVR message", "FlowVR_plugin.html#write_stamp", null ]
+      [ "Reading and writing stamps examples", "FlowVR_plugin.html#flowvr_reading_writing_stamps", [
+        [ "Read stamp from FlowVR message", "FlowVR_plugin.html#flowvr_read_stamp", null ],
+        [ "Write stamp from FlowVR message", "FlowVR_plugin.html#flowvr_write_stamp", null ]
       ] ],
-      [ "Reading and writing mouse and button event examples", "FlowVR_plugin.html#mouse_button_event", [
-        [ "Write mouse event from FlowVR message", "FlowVR_plugin.html#write_mouse", null ],
-        [ "Read mouse event from FlowVR message", "FlowVR_plugin.html#read_mouse", null ],
-        [ "Write button event from FlowVR message", "FlowVR_plugin.html#write_button", null ],
-        [ "Read button event from FlowVR message", "FlowVR_plugin.html#read_button", null ]
+      [ "Reading and writing mouse and button event examples", "FlowVR_plugin.html#flowvr_mouse_button_event", [
+        [ "Write mouse event from FlowVR message", "FlowVR_plugin.html#flowvr_write_mouse", null ],
+        [ "Read mouse event from FlowVR message", "FlowVR_plugin.html#flowvr_read_mouse", null ],
+        [ "Write button event from FlowVR message", "FlowVR_plugin.html#flowvr_write_button", null ],
+        [ "Read button event from FlowVR message", "FlowVR_plugin.html#flowvr_read_button", null ]
       ] ],
-      [ "FlowVR examples reworked for %PDI", "FlowVR_plugin.html#flowvr_examples", [
-        [ "Running the application", "FlowVR_plugin.html#run_app", null ],
-        [ "Tictac example", "FlowVR_plugin.html#tictac", [
-          [ "Bundle example", "FlowVR_plugin.html#bundle", null ]
+      [ "FlowVR examples reworked for %PDI", "FlowVR_plugin.html#flowvr_flowvr_examples", [
+        [ "Running the application", "FlowVR_plugin.html#flowvr_run_app", null ],
+        [ "Tictac example", "FlowVR_plugin.html#flowvr_tictac", [
+          [ "Bundle example", "FlowVR_plugin.html#flowvr_bundle", null ]
         ] ],
-        [ "Primes example", "FlowVR_plugin.html#primes", null ],
-        [ "Fluid example", "FlowVR_plugin.html#fluid", null ]
+        [ "Primes example", "FlowVR_plugin.html#flowvr_primes", null ],
+        [ "Fluid example", "FlowVR_plugin.html#flowvr_fluid", null ]
       ] ]
     ] ],
     [ "Trace plugin", "trace_plugin.html", null ],
@@ -100,7 +100,9 @@ var Plugins =
       [ "Specification tree example", "user_code_plugin.html#full_spec_tree_example_node", null ]
     ] ],
     [ "Serialize plugin", "serialize_plugin.html", [
-      [ "Configuration grammar", "serialize_plugin.html#serialize_configuration", null ]
+      [ "Configuration grammar", "serialize_plugin.html#serialize_configuration", [
+        [ "Plugin examples", "serialize_plugin.html#serialize_plugin_examples", null ]
+      ] ]
     ] ],
     [ "Set_value plugin", "set_value_plugin.html", [
       [ "Configuration grammar", "set_value_plugin.html#set_value_configuration", [
@@ -128,18 +130,19 @@ var Plugins =
         [ "Predefined descriptors", "FTI_plugin.html#autotoc_md48", null ]
       ] ],
       [ "Configuration grammar", "FTI_plugin.html#autotoc_md49", [
-        [ "checkpoint", "FTI_plugin.html#autotoc_md50", null ],
-        [ "communicator", "FTI_plugin.html#autotoc_md51", null ],
-        [ "config_file", "FTI_plugin.html#autotoc_md52", null ],
-        [ "dataset", "FTI_plugin.html#autotoc_md53", null ],
-        [ "init_on", "FTI_plugin.html#autotoc_md54", null ],
-        [ "recover_on", "FTI_plugin.html#autotoc_md55", null ],
-        [ "recover_var", "FTI_plugin.html#autotoc_md56", null ],
-        [ "send_file", "FTI_plugin.html#autotoc_md57", null ],
-        [ "snapshot_on", "FTI_plugin.html#autotoc_md58", null ],
-        [ "status", "FTI_plugin.html#autotoc_md59", null ]
+        [ "logging", "FTI_plugin.html#autotoc_md50", null ],
+        [ "checkpoint", "FTI_plugin.html#autotoc_md51", null ],
+        [ "communicator", "FTI_plugin.html#autotoc_md52", null ],
+        [ "config_file", "FTI_plugin.html#autotoc_md53", null ],
+        [ "dataset", "FTI_plugin.html#autotoc_md54", null ],
+        [ "init_on", "FTI_plugin.html#autotoc_md55", null ],
+        [ "recover_on", "FTI_plugin.html#autotoc_md56", null ],
+        [ "recover_var", "FTI_plugin.html#autotoc_md57", null ],
+        [ "send_file", "FTI_plugin.html#autotoc_md58", null ],
+        [ "snapshot_on", "FTI_plugin.html#autotoc_md59", null ],
+        [ "status", "FTI_plugin.html#autotoc_md60", null ]
       ] ],
-      [ "full configuration example", "FTI_plugin.html#autotoc_md60", null ]
+      [ "full configuration example", "FTI_plugin.html#autotoc_md61", null ]
     ] ],
     [ "Pycall plugin", "pycall_plugin.html", [
       [ "Configuration", "pycall_plugin.html#pycall_configuration", [
@@ -148,6 +151,9 @@ var Plugins =
         [ "on_data", "pycall_plugin.html#pycall_on_data", null ]
       ] ],
       [ "Examples", "pycall_plugin.html#pycall_ex", null ]
+    ] ],
+    [ "The MPI plugin", "mpi_plugin.html", [
+      [ "transtype map", "mpi_plugin.html#transtype_map_node", null ]
     ] ],
     [ "How to create a plugin", "how_to_create_plugin.html", [
       [ "Plugin class", "how_to_create_plugin.html#plugin_class", [

@@ -11,6 +11,7 @@ var namespacePDI =
     [ "Error", "classPDI_1_1Error.html", "classPDI_1_1Error" ],
     [ "Expression", "classPDI_1_1Expression.html", "classPDI_1_1Expression" ],
     [ "Impl_error", "classPDI_1_1Impl__error.html", "classPDI_1_1Impl__error" ],
+    [ "Logger", "classPDI_1_1Logger.html", "classPDI_1_1Logger" ],
     [ "Paraconf_wrapper", "structPDI_1_1Paraconf__wrapper.html", "structPDI_1_1Paraconf__wrapper" ],
     [ "Plugin", "classPDI_1_1Plugin.html", "classPDI_1_1Plugin" ],
     [ "Plugin_error", "classPDI_1_1Plugin__error.html", "classPDI_1_1Plugin__error" ],

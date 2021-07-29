@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-27.4dc9fa8</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-29.a8e61e8</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -50,6 +50,7 @@ $(document).ready(function(){initNavTree('classPDI_1_1Expression.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classPDI_1_1Expression-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PDI::Expression Class Reference</div>  </div>
@@ -124,6 +125,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c18c3cd517df995e6622120a8ee55ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#a6c18c3cd517df995e6622120a8ee55ab">to_ref</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx, const <a class="el" href="classPDI_1_1Datatype.html">Datatype</a> &amp;type) const</td></tr>
 <tr class="memdesc:a6c18c3cd517df995e6622120a8ee55ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates an expression as a data reference.  <a href="#a6c18c3cd517df995e6622120a8ee55ab">More...</a><br /></td></tr>
 <tr class="separator:a6c18c3cd517df995e6622120a8ee55ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adfbb3317127c3f1b9b7e636621646601"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; <a class="el" href="classPDI_1_1Expression.html">Expression</a>, long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Expression.html#adfbb3317127c3f1b9b7e636621646601">parse_reference</a> (const char *reference_str)</td></tr>
+<tr class="memdesc:adfbb3317127c3f1b9b7e636621646601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string that starts with <code>$</code> and represents a reference expression.  <a href="#adfbb3317127c3f1b9b7e636621646601">More...</a><br /></td></tr>
+<tr class="separator:adfbb3317127c3f1b9b7e636621646601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a293023f0af1aae062d79ec60ff08f923"></a>
@@ -684,6 +691,41 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the data reference </dd></dl>
+
+</div>
+</div>
+<a id="adfbb3317127c3f1b9b7e636621646601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbb3317127c3f1b9b7e636621646601">&#9670;&nbsp;</a></span>parse_reference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::pair&lt;<a class="el" href="classPDI_1_1Expression.html">Expression</a>, long&gt; PDI::Expression::parse_reference </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>reference_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses a string that starts with <code>$</code> and represents a reference expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reference_str</td><td>string that represents a reference expression</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>resulted reference exrpession and number of bytes read from reference_str </dd></dl>
 
 </div>
 </div>

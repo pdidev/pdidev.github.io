@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-27.4dc9fa8</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.3.0-alpha.2021-07-29.a8e61e8</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -68,6 +68,8 @@ specification tree root</h1>
 <tr>
 <td align="left"><code>"plugins"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#plugin_map_node">plugin_map</a> </td></tr>
 <tr>
+<td align="left"><code>"logging"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#logging_node">logging</a> </td></tr>
+<tr>
 <td align="left"><code>"plugin_path"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#plugin_path_map_node">plugin_path</a> </td></tr>
 <tr>
 <td align="left"><code>".*"</code> (<em>optional</em>)</td><td align="left"><em>anything</em> </td></tr>
@@ -75,7 +77,9 @@ specification tree root</h1>
 <ul>
 <li>the <code>types</code> section specifies user-defined datatypes</li>
 <li>the <code>data</code> and <code>metadata</code> sections specify the type of the data in buffers exposed by the application; for <code>metadata</code>, PDI keeps a copy while it only keeps references for <code>data</code>,</li>
-<li>the <code>plugin</code> section specifies the list of plugins to load and their configuration,</li>
+<li>the <code>plugins</code> section specifies the list of plugins to load and their configuration,</li>
+<li>the <code>plugin_path</code> section specifies the path to a directory where PDI should search for plugins</li>
+<li>the <code>logging</code> section specify logger properties</li>
 <li>additional sections are ignored.</li>
 </ul>
 <p><b>Example:</b></p>
@@ -283,7 +287,46 @@ intexpr_or_seq</h1>
 <li>a <a class="el" href="Specification_tree_ref.html#intexpr_seq_node">intexpr_seq</a>.</li>
 </ul>
 <p>In that context, a simple <a class="el" href="Specification_tree_ref.html#expression_node">$-expression</a> is interpreted as a shortcut for a sequence containing a single <a class="el" href="Specification_tree_ref.html#expression_node">$-expression</a>.</p>
-<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;$x + 2&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">[ &quot;$x + 2&quot; ]</div></div><!-- fragment --><h1><a class="anchor" id="logical_type_node"></a>
+<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;$x + 2&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">[ &quot;$x + 2&quot; ]</div></div><!-- fragment --><h1><a class="anchor" id="logging_node"></a>
+logging</h1>
+<p>A <em>logging</em> can be <b>any of</b>:</p><ul>
+<li>a <a class="el" href="Specification_tree_ref.html#logging_map_node">logging_map</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#logging_level_node">logging_level</a>,</li>
+</ul>
+<p>A <em>logging</em> is fully supported in <a class="el" href="Specification_tree_ref.html#root_node">specification tree root</a> and any <a class="el" href="Specification_tree_ref.html#plugin_map_node">plugin_map</a> .</p>
+<h1><a class="anchor" id="logging_map_node"></a>
+logging_map</h1>
+<p>A <em>logging_map</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"level"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#logging_level_node">logging_level</a> </td></tr>
+<tr>
+<td align="left"><code>"pattern"</code> (<em>optional</em>)</td><td align="left">a logger prefix pattern of spdlog </td></tr>
+<tr>
+<td align="left"><code>"output"</code> (<em>optional</em>)</td><td align="left">a <a class="el" href="Specification_tree_ref.html#logging_output_map_node">logging_output_map</a> </td></tr>
+</table>
+<ul>
+<li>spdlog pattern is a string that is parsed by spdlog library, (see more: <a href="https://github.com/gabime/spdlog/wiki/3.-Custom-formatting">https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</a>)</li>
+<li>PDI introduces new special flag <code>%{&lt;EXPR&gt;}</code>, where <code>&lt;EXPR&gt;</code> represents a <a class="el" href="Specification_tree_ref.html#expression_node">string-valued $-expression</a>|a $-expression that will be evaluated just after all plugins have been initialized,</li>
+<li><em>pattern</em> by default is set to (where n is <code><a class="el" href="namespacePDI.html">PDI</a></code> or a plugin name): <div class="fragment"><div class="line">[%T][%n] *** %^%l%$: %v</div></div><!-- fragment --> for serial execution and: <div class="fragment"><div class="line">[%T][%{MPI_COMM_WORLD.rank:06d}][%n] *** %^%l%$: %v</div></div><!-- fragment --> when running application with MPI/</li>
+</ul>
+<p>Example:</p>
+<div class="fragment"><div class="line">logging:</div><div class="line">  level: &quot;debug&quot;</div><div class="line">  pattern: &quot;[%{MPI_COMM_WORLD.rank:04d}][%n][%l]&quot;</div></div><!-- fragment --><h1><a class="anchor" id="logging_level_node"></a>
+logging_level</h1>
+<p>A <em>logging_level</em> is a scalar which determines verbosity level. It can be set to (from the most to the least verbose):</p><ul>
+<li><code>"debug"</code> - shows a log when a normal situation of the execution might be useful to understand the behavior of the library,</li>
+<li><code>"info"</code> - shows a log when a normal situation of the execution is likely useful to understand the behavior of the library,</li>
+<li><code>"warn"</code> - shows a log when a very likely invalid situation has been detected by the library (user input that is technically valid, but very unusual for example),</li>
+<li><code>"error"</code> - shows a log when an invalid situation has been detected by the library (invalid user input, invalid hardware behaviour, etc.),</li>
+<li><code>"off"</code> - logs are disabled.</li>
+</ul>
+<p>Examples:</p>
+<div class="fragment"><div class="line">logging: &quot;debug&quot;</div></div><!-- fragment --><ul>
+<li>by default <code>level</code> is set to <code>info</code></li>
+</ul>
+<h1><a class="anchor" id="logical_type_node"></a>
 logical_type</h1>
 <p>A <em>logical_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">
@@ -296,7 +339,22 @@ logical_type</h1>
 </table>
 <p>A <em>logical_type</em> represents the Fortran <code>logical</code> datatype. The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>logical(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</p>
 <p><b>Examples:</b></p>
-<div class="fragment"><div class="line">type: logical</div></div><!-- fragment --><div class="fragment"><div class="line">type: logical</div><div class="line">kind: 1</div></div><!-- fragment --><h1><a class="anchor" id="struct_member_desc_node"></a>
+<div class="fragment"><div class="line">type: logical</div></div><!-- fragment --><div class="fragment"><div class="line">type: logical</div><div class="line">kind: 1</div></div><!-- fragment --><h1><a class="anchor" id="logging_output_map_node"></a>
+logging_output_map</h1>
+<p>A <em>logging_output_map</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"file"</code> (<em>optional</em>)</td><td align="left">a path of the file where to write logs </td></tr>
+<tr>
+<td align="left"><code>"console"</code> (<em>optional</em>)</td><td align="left"><code>on</code> or <code>off</code> </td></tr>
+</table>
+<ul>
+<li>by default when <code>file</code> is defined, <code>console</code> is set to <code>off</code>.</li>
+</ul>
+<p>Example:</p>
+<div class="fragment"><div class="line">logging:</div><div class="line">  level: &quot;debug&quot;</div><div class="line">  output:</div><div class="line">    file: &quot;test.log&quot;</div><div class="line">    console: &quot;on&quot;</div></div><!-- fragment --><h1><a class="anchor" id="struct_member_desc_node"></a>
 struct_member_desc</h1>
 <p>A <em>struct_member_desc</em> is a <b>mapping</b> that contains the following keys: </p><table class="doxtable">
 <tr>
