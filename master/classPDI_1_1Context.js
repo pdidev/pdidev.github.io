@@ -12,7 +12,7 @@ var classPDI_1_1Context =
     [ "begin", "classPDI_1_1Context.html#af3cc6b4e8ecd9bc50b933527ccd5af19", null ],
     [ "end", "classPDI_1_1Context.html#ac987d27496498d563359f97ea9ec5416", null ],
     [ "event", "classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d", null ],
-    [ "logger", "classPDI_1_1Context.html#a99fd5e999858e5462c3bd1f846b35992", null ],
+    [ "logger", "classPDI_1_1Context.html#a3571c8f942b9cdfa9df0dd6c4b05e1f9", null ],
     [ "callbacks", "classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20", null ],
     [ "datatype", "classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b", null ],
     [ "add_datatype", "classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6", null ],
