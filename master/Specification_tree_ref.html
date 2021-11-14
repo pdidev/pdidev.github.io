@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-11-14.0948c2b</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-11-14.4ab4a78</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -112,7 +112,22 @@ array_type</h1>
 </ul>
 <h2><a class="anchor" id="autotoc_md9"></a>
 Example:</h2>
-<div class="fragment"><div class="line">type: array</div><div class="line">subtype: double</div><div class="line">size: 5</div></div><!-- fragment --><div class="fragment"><div class="line">type: array</div><div class="line">subtype: { type: character, kind: 4 }</div><div class="line">size: [ &#39;$size_1d&#39;, &#39;$size_2d&#39; ]</div></div><!-- fragment --><h1><a class="anchor" id="char_type_node"></a>
+<div class="fragment"><div class="line">type: array</div><div class="line">subtype: double</div><div class="line">size: 5</div></div><!-- fragment --><div class="fragment"><div class="line">type: array</div><div class="line">subtype: { type: character, kind: 4 }</div><div class="line">size: [ &#39;$size_1d&#39;, &#39;$size_2d&#39; ]</div></div><!-- fragment --><h1><a class="anchor" id="byte_type_node"></a>
+byte_type</h1>
+<p>A <em>byte_type</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"type"</code></td><td align="left"><code>"byte"</code> </td></tr>
+<tr>
+<td align="left"><code>"\+.*"</code> (<em>optional</em>)</td><td align="left">anything </td></tr>
+</table>
+<p>A <a class="el" href="Specification_tree_ref.html#byte_type_node">byte_type</a> represents the C++ <code>byte</code> type. It accepts no parameter.</p><ul>
+<li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
+</ul>
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line">type: byte</div></div><!-- fragment --><h1><a class="anchor" id="char_type_node"></a>
 char_type</h1>
 <p>A <em>char_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">
@@ -165,6 +180,7 @@ Example:</h2>
 datatype</h1>
 <p>A <em>datatype</em> can be <b>any of</b>:</p><ul>
 <li>a <a class="el" href="Specification_tree_ref.html#array_type_node">array_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#byte_type_node">byte_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#char_type_node">char_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#character_type_node">character_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#double_type_node">double_type</a>,</li>
@@ -176,9 +192,11 @@ datatype</h1>
 <li>a <a class="el" href="Specification_tree_ref.html#int8_type_node">int8_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#integer_type_node">integer_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#logical_type_node">logical_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#real_type_node">real_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#size_t_type_node">size_t_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#tuple_type_node">tuple_type</a>,</li>
 <li>any user-defined datatype name.</li>
@@ -459,7 +477,22 @@ plugin_map</h1>
 plugin_path</h1>
 <p>A path to directory where PDI should search for plugins. It can be single path:</p>
 <div class="fragment"><div class="line">plugin_path: &quot;/home/user123/plugins&quot;</div></div><!-- fragment --><p>or array of paths (PDI will take first match):</p>
-<div class="fragment"><div class="line">plugin_path: [&quot;/home/user123/plugins&quot;, &quot;/usr/lib/pdi/plugins&quot;]</div></div><!-- fragment --><h1><a class="anchor" id="real_type_node"></a>
+<div class="fragment"><div class="line">plugin_path: [&quot;/home/user123/plugins&quot;, &quot;/usr/lib/pdi/plugins&quot;]</div></div><!-- fragment --><h1><a class="anchor" id="ptrdiff_t_type_node"></a>
+ptrdiff_t_type</h1>
+<p>A <em>ptrdiff_t_type</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"type"</code></td><td align="left"><code>"ptrdiff_t"</code> </td></tr>
+<tr>
+<td align="left"><code>"\+.*"</code> (<em>optional</em>)</td><td align="left">anything </td></tr>
+</table>
+<p>A <a class="el" href="Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a> represents the C <code>ptrdiff_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
+<li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
+</ul>
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line">type: ptrdiff_t</div></div><!-- fragment --><h1><a class="anchor" id="real_type_node"></a>
 real_type</h1>
 <p>A <em>real_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="doxtable">
@@ -516,7 +549,22 @@ Examples:</h2>
 simple_datatype</h1>
 <p>A <em>simple_datatype</em> is a <b>scalar</b>.</p>
 <p>It is interpreted as a shortcut for a mapping with a single key <code>type</code> whose value is the provided scalar and therefore another <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>.</p>
-<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;my_type&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">{ type: &quot;my_type&quot; }</div></div><!-- fragment --><h1><a class="anchor" id="struct_members_omap_node"></a>
+<p>For example, the following value: </p><div class="fragment"><div class="line">&quot;my_type&quot;</div></div><!-- fragment --><p>is interpreted as if it was: </p><div class="fragment"><div class="line">{ type: &quot;my_type&quot; }</div></div><!-- fragment --><h1><a class="anchor" id="size_t_type_node"></a>
+size_t_type</h1>
+<p>A <em>size_t_type</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="doxtable">
+<tr>
+<th align="left">key</th><th align="left">value  </th></tr>
+<tr>
+<td align="left"><code>"type"</code></td><td align="left"><code>"size_t"</code> </td></tr>
+<tr>
+<td align="left"><code>"\+.*"</code> (<em>optional</em>)</td><td align="left">anything </td></tr>
+</table>
+<p>A <a class="el" href="Specification_tree_ref.html#size_t_type_node">size_t_type</a> represents the C <code>size_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
+<li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
+</ul>
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line">type: size_t</div></div><!-- fragment --><h1><a class="anchor" id="struct_members_omap_node"></a>
 struct_members_omap</h1>
 <p>A <em>struct_members_omap</em> is an <b>ordered mapping</b> that contains the following keys: </p><table class="doxtable">
 <tr>

@@ -6,6 +6,7 @@ var Specification_tree_ref =
     [ "array_type", "Specification_tree_ref.html#array_type_node", [
       [ "Example:", "Specification_tree_ref.html#autotoc_md9", null ]
     ] ],
+    [ "byte_type", "Specification_tree_ref.html#byte_type_node", null ],
     [ "char_type", "Specification_tree_ref.html#char_type_node", [
       [ "Example:", "Specification_tree_ref.html#autotoc_md10", null ]
     ] ],
@@ -61,6 +62,7 @@ var Specification_tree_ref =
     ] ],
     [ "plugin_map", "Specification_tree_ref.html#plugin_map_node", null ],
     [ "plugin_path", "Specification_tree_ref.html#plugin_path_map_node", null ],
+    [ "ptrdiff_t_type", "Specification_tree_ref.html#ptrdiff_t_type_node", null ],
     [ "real_type", "Specification_tree_ref.html#real_type_node", [
       [ "Example:", "Specification_tree_ref.html#autotoc_md26", null ]
     ] ],
@@ -69,6 +71,7 @@ var Specification_tree_ref =
       [ "Examples:", "Specification_tree_ref.html#autotoc_md27", null ]
     ] ],
     [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ],
+    [ "size_t_type", "Specification_tree_ref.html#size_t_type_node", null ],
     [ "struct_members_omap", "Specification_tree_ref.html#struct_members_omap_node", null ],
     [ "struct_type", "Specification_tree_ref.html#struct_type_node", null ],
     [ "tuple_element", "Specification_tree_ref.html#tuple_element_node", null ],
