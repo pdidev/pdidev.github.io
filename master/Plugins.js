@@ -114,7 +114,8 @@ var Plugins =
         [ "value list", "set_value_plugin.html#value_list", null ],
         [ "scalar value", "set_value_plugin.html#scalar_value", null ],
         [ "array value", "set_value_plugin.html#array_value", null ],
-        [ "record value", "set_value_plugin.html#record_value", null ]
+        [ "record value", "set_value_plugin.html#record_value", null ],
+        [ "logger map", "set_value_plugin.html#logger_map", null ]
       ] ],
       [ "full configuration example", "set_value_plugin.html#full_config", null ],
       [ "Using old values to set new", "set_value_plugin.html#old_to_new", [
