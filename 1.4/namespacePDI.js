@@ -23,7 +23,6 @@ var namespacePDI =
     [ "Scalar_datatype", "classPDI_1_1Scalar__datatype.html", "classPDI_1_1Scalar__datatype" ],
     [ "State_error", "classPDI_1_1State__error.html", "classPDI_1_1State__error" ],
     [ "System_error", "classPDI_1_1System__error.html", "classPDI_1_1System__error" ],
-    [ "Tuple_datatype", "classPDI_1_1Tuple__datatype.html", "classPDI_1_1Tuple__datatype" ],
     [ "Type_error", "classPDI_1_1Type__error.html", "classPDI_1_1Type__error" ],
     [ "Unavailable_error", "classPDI_1_1Unavailable__error.html", "classPDI_1_1Unavailable__error" ],
     [ "Value_error", "classPDI_1_1Value__error.html", "classPDI_1_1Value__error" ]
