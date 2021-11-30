@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.4.1</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-11-25.0a78b9b</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -80,6 +80,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae36e62b70bc15a68ced5228eb1cee43c"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; void *, <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#ae36e62b70bc15a68ced5228eb1cee43c">access</a> (const <a class="el" href="classPDI_1_1Record__datatype.html">Record_datatype</a> &amp;type, void *from, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_begin, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_end) const</td></tr>
 <tr class="memdesc:ae36e62b70bc15a68ced5228eb1cee43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access function for record datatype.  <a href="#ae36e62b70bc15a68ced5228eb1cee43c">More...</a><br /></td></tr>
 <tr class="separator:ae36e62b70bc15a68ced5228eb1cee43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79bb0d6dcab0aac080752a8bc73ae6c2"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; void *, <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a79bb0d6dcab0aac080752a8bc73ae6c2">access</a> (const <a class="el" href="classPDI_1_1Tuple__datatype.html">Tuple_datatype</a> &amp;type, void *from, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_begin, std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator remaining_end) const</td></tr>
+<tr class="memdesc:a79bb0d6dcab0aac080752a8bc73ae6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access function for tuple datatype.  <a href="#a79bb0d6dcab0aac080752a8bc73ae6c2">More...</a><br /></td></tr>
+<tr class="separator:a79bb0d6dcab0aac080752a8bc73ae6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b32013b5c6833635e9ffba27d435ab8"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html#a5b32013b5c6833635e9ffba27d435ab8">access_kind</a> () const =0</td></tr>
 <tr class="memdesc:a5b32013b5c6833635e9ffba27d435ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access kind as string.  <a href="#a5b32013b5c6833635e9ffba27d435ab8">More...</a><br /></td></tr>
 <tr class="separator:a5b32013b5c6833635e9ffba27d435ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +125,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a58065cbf4bf7e3f98237a6ec3708df3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58065cbf4bf7e3f98237a6ec3708df3b">&#9670;&nbsp;</a></span>access() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a58065cbf4bf7e3f98237a6ec3708df3b">&#9670;&nbsp;</a></span>access() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +187,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a0e8775e1f15b2a1244f94b136ce8a1ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e8775e1f15b2a1244f94b136ce8a1ae">&#9670;&nbsp;</a></span>access() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8775e1f15b2a1244f94b136ce8a1ae">&#9670;&nbsp;</a></span>access() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +247,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ae36e62b70bc15a68ced5228eb1cee43c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae36e62b70bc15a68ced5228eb1cee43c">&#9670;&nbsp;</a></span>access() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36e62b70bc15a68ced5228eb1cee43c">&#9670;&nbsp;</a></span>access() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,6 +303,68 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string that inform what access is made </dd></dl>
+
+</div>
+</div>
+<a id="a79bb0d6dcab0aac080752a8bc73ae6c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79bb0d6dcab0aac080752a8bc73ae6c2">&#9670;&nbsp;</a></span>access() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::pair&lt;void*, <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a>&gt; PDI::Datatype::Accessor_base::access </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPDI_1_1Tuple__datatype.html">Tuple_datatype</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator&#160;</td>
+          <td class="paramname"><em>remaining_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="structPDI_1_1Datatype_1_1Accessor__base.html">Accessor_base</a> &gt;&gt;::const_iterator&#160;</td>
+          <td class="paramname"><em>remaining_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access function for tuple datatype. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>a datatype to get access </td></tr>
+    <tr><td class="paramname">from</td><td>pointer to data of type datatype </td></tr>
+    <tr><td class="paramname">remaining_begin</td><td>iterator to the beginning of remaining accessors </td></tr>
+    <tr><td class="paramname">remaining_end</td><td>iterator to the end of remaining accessors </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string that inform what access is made </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classPDI_1_1Array__datatype_1_1Slice__accessor.html#a6dba53986137098e57373b55e03e1f70">PDI::Array_datatype::Slice_accessor</a>, and <a class="el" href="classPDI_1_1Array__datatype_1_1Index__accessor.html#a31ae9bd98d96929e815686e198d79bff">PDI::Array_datatype::Index_accessor</a>.</p>
 
 </div>
 </div>

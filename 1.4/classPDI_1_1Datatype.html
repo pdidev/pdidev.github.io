@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.4.1</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-11-25.0a78b9b</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -65,11 +65,12 @@ Inheritance diagram for PDI::Datatype:</div>
  <div class="center">
   <img src="classPDI_1_1Datatype.png" usemap="#PDI::Datatype_map" alt=""/>
   <map id="PDI::Datatype_map" name="PDI::Datatype_map">
-<area href="classPDI_1_1Datatype__template.html" alt="PDI::Datatype_template" shape="rect" coords="226,0,367,24"/>
+<area href="classPDI_1_1Datatype__template.html" alt="PDI::Datatype_template" shape="rect" coords="302,0,443,24"/>
 <area href="classPDI_1_1Array__datatype.html" title="an Array_datatype is a Datatype that represents an array: i.e storage of multiple elements of the sam..." alt="PDI::Array_datatype" shape="rect" coords="0,112,141,136"/>
 <area href="classPDI_1_1Pointer__datatype.html" alt="PDI::Pointer_datatype" shape="rect" coords="151,112,292,136"/>
 <area href="classPDI_1_1Record__datatype.html" title="A Record_datatype is a Datatype that represents a fixed number of elements of potentially different t..." alt="PDI::Record_datatype" shape="rect" coords="302,112,443,136"/>
 <area href="classPDI_1_1Scalar__datatype.html" alt="PDI::Scalar_datatype" shape="rect" coords="453,112,594,136"/>
+<area href="classPDI_1_1Tuple__datatype.html" title="A Tuple_datatype is a Datatype that represents a fixed number of elements of potentially different ty..." alt="PDI::Tuple_datatype" shape="rect" coords="604,112,745,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -86,6 +87,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a78f397bb00153aedd4823091e7403b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e19537809ba143ab9130c95b237dc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype.html#ad2e19537809ba143ab9130c95b237dc2">~Datatype</a> () override</td></tr>
 <tr class="separator:ad2e19537809ba143ab9130c95b237dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85babd946e7821d87df26ad952f865a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype.html#ae85babd946e7821d87df26ad952f865a">clone</a> () const override</td></tr>
+<tr class="memdesc:ae85babd946e7821d87df26ad952f865a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype as an exact copy of this one.  <a href="#ae85babd946e7821d87df26ad952f865a">More...</a><br /></td></tr>
+<tr class="separator:ae85babd946e7821d87df26ad952f865a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af42770105e821dea4ca30f0992f2274c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype.html#af42770105e821dea4ca30f0992f2274c">clone_type</a> () const =0</td></tr>
 <tr class="memdesc:af42770105e821dea4ca30f0992f2274c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype as an exact copy of this one.  <a href="#af42770105e821dea4ca30f0992f2274c">More...</a><br /></td></tr>
 <tr class="separator:af42770105e821dea4ca30f0992f2274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,9 +148,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8722c4b873d42931d8e159abaa62ff27 inherit pub_methods_classPDI_1_1Datatype__template"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a8722c4b873d42931d8e159abaa62ff27">~Datatype_template</a> ()</td></tr>
 <tr class="memdesc:a8722c4b873d42931d8e159abaa62ff27 inherit pub_methods_classPDI_1_1Datatype__template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the template.  <a href="classPDI_1_1Datatype__template.html#a8722c4b873d42931d8e159abaa62ff27">More...</a><br /></td></tr>
 <tr class="separator:a8722c4b873d42931d8e159abaa62ff27 inherit pub_methods_classPDI_1_1Datatype__template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c6cb02f6f9bab3e9fbf8826afae677a inherit pub_methods_classPDI_1_1Datatype__template"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a6c6cb02f6f9bab3e9fbf8826afae677a">clone</a> () const =0</td></tr>
-<tr class="memdesc:a6c6cb02f6f9bab3e9fbf8826afae677a inherit pub_methods_classPDI_1_1Datatype__template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype as an exact copy of this one.  <a href="classPDI_1_1Datatype__template.html#a6c6cb02f6f9bab3e9fbf8826afae677a">More...</a><br /></td></tr>
-<tr class="separator:a6c6cb02f6f9bab3e9fbf8826afae677a inherit pub_methods_classPDI_1_1Datatype__template"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b2c6cd579c3100c6b03bf195aa0e80 inherit pub_methods_classPDI_1_1Datatype__template"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Datatype__template.html#a31b2c6cd579c3100c6b03bf195aa0e80">evaluate</a> (<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;ctx) const =0</td></tr>
 <tr class="memdesc:a31b2c6cd579c3100c6b03bf195aa0e80 inherit pub_methods_classPDI_1_1Datatype__template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype by resolving the value of all metadata references.  <a href="classPDI_1_1Datatype__template.html#a31b2c6cd579c3100c6b03bf195aa0e80">More...</a><br /></td></tr>
 <tr class="separator:a31b2c6cd579c3100c6b03bf195aa0e80 inherit pub_methods_classPDI_1_1Datatype__template"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +230,38 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae85babd946e7821d87df26ad952f865a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae85babd946e7821d87df26ad952f865a">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a> PDI::Datatype::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new datatype as an exact copy of this one. </p>
+<dl class="section return"><dt>Returns</dt><dd>the dense type that is produced </dd></dl>
+
+<p>Implements <a class="el" href="classPDI_1_1Datatype__template.html#a6c6cb02f6f9bab3e9fbf8826afae677a">PDI::Datatype_template</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classPDI_1_1Array__datatype.html#a524b1fe42651c90a8cfb3b66eadf9fb4">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a400a1d29c9727f494a00315fe21451f4">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a8f929d17ea26d91d1de5b17aa3654b38">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#af594a11c6575131d709a7792f7c0f28e">PDI::Pointer_datatype</a>.</p>
+
+</div>
+</div>
 <a id="af42770105e821dea4ca30f0992f2274c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af42770105e821dea4ca30f0992f2274c">&#9670;&nbsp;</a></span>clone_type()</h2>
 
@@ -255,7 +288,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new datatype as an exact copy of this one. </p>
 <dl class="section return"><dt>Returns</dt><dd>the dense type that is produced </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a332187b330bb85e949fe695620c8e138">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a898b8663ac36edfb67cacb1987dfb644">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a6c851958754a3f04881f6e12b27ff019">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a4ea685b28d9be745718e1d4715a6c544">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a332187b330bb85e949fe695620c8e138">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a898b8663ac36edfb67cacb1987dfb644">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#aa6ee6c1d3eb4a33e53d1c6b78ae16fb4">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a6c851958754a3f04881f6e12b27ff019">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a4ea685b28d9be745718e1d4715a6c544">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -292,7 +325,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="classPDI_1_1Datatype.html" title="A Datatype is a Datatype_template that accepts no argument. ">Datatype</a>'s are equal </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a0ca6cf15fda5ca1406b24328e5571652">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aa70ca0cdfdad5344b7ddffb55b30acdc">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#ae68e0988a4d9718f3d75105235445421">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a7baec7ae29e45f331653b7dad44d2ba1">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a0ca6cf15fda5ca1406b24328e5571652">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aa70ca0cdfdad5344b7ddffb55b30acdc">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#aa779f7fc01f3b5409c88632c9a874b00">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#ae68e0988a4d9718f3d75105235445421">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a7baec7ae29e45f331653b7dad44d2ba1">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -349,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a new datatype as the dense copy of this one. </p>
 <dl class="section return"><dt>Returns</dt><dd>the type that is produced </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a2ab426d296ba51a2ed47c335dbd0c3da">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#abb72cae0af1e9d4923165abd7044450c">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a6cb314a53a731017de5bae2c00933761">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a52d14b97faf1ace6fda56c6763e05adc">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a2ab426d296ba51a2ed47c335dbd0c3da">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#abb72cae0af1e9d4923165abd7044450c">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#a4cc3444b301d182b252fbf6116ef62d9">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a6cb314a53a731017de5bae2c00933761">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a52d14b97faf1ace6fda56c6763e05adc">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -379,7 +412,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Indicate if the datatype is dense or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>whether the datatype is dense </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a31286281747dffd22dd10c3a929eef51">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#ab5211f58ddcfbbb88243259182db1271">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aa1e4967c4b564a06ee80d2d9f3499931">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a912fc3ae386f2e2368b39dad95b4a4d0">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a31286281747dffd22dd10c3a929eef51">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#ab5211f58ddcfbbb88243259182db1271">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#a5dd6c3d742dba27add7a470fa312ef9f">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aa1e4967c4b564a06ee80d2d9f3499931">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a912fc3ae386f2e2368b39dad95b4a4d0">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -409,7 +442,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Computes the data size of a type, excluding potentially unused memory from a sparse type. </p>
 <dl class="section return"><dt>Returns</dt><dd>the size in bytes </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a00fb46532bb0b8a63111130715a10137">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aa0e39bbe49abdbc4d6e806e148bbef30">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#ad8883c6045742e19ee34606681e2fcd4">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ae39bc5277b114f47dd98da1a3f451f2f">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a00fb46532bb0b8a63111130715a10137">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aa0e39bbe49abdbc4d6e806e148bbef30">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#aa26e3113433b64b440245018d7184e2b">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#ad8883c6045742e19ee34606681e2fcd4">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ae39bc5277b114f47dd98da1a3f451f2f">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -439,7 +472,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Computes the data size of a type, including potentially unused memory from a sparse type. </p>
 <dl class="section return"><dt>Returns</dt><dd>the size in bytes </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#adb00b9bfc6a70d320111bff1244ad979">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aed94e24402cada695d056a4aea0e258e">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a8e0bb04f38f016e1050aae8ce95aa14d">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a8251c192e15741a1a471eea11045d49d">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#adb00b9bfc6a70d320111bff1244ad979">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aed94e24402cada695d056a4aea0e258e">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#ad3676fc8a74a8745c060aabda83bc4b2">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a8e0bb04f38f016e1050aae8ce95aa14d">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a8251c192e15741a1a471eea11045d49d">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -469,7 +502,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the required alignment for a type. </p>
 <dl class="section return"><dt>Returns</dt><dd>the size in bytes </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae744734eedbb48f61e0bde159940d9ce">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a359deae4113398d9bf252b81be2fa282">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a19cafc9d088635f5826f3c2cdc9246ee">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a5850529f74a112c880b462780441ca92">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae744734eedbb48f61e0bde159940d9ce">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a359deae4113398d9bf252b81be2fa282">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#a8bb4cfa4cd3e4bfb9349f0b3c4f7fb28">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a19cafc9d088635f5826f3c2cdc9246ee">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a5850529f74a112c880b462780441ca92">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -499,7 +532,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Tells if data can be copied as bytes (if type is dense) and doesn't need a destroyer. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if data has trivial copier and destroyer, false otherwise </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a9ba8909f75de2d4f18749fe9362a28d2">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a6286765cf6a1d050603f7adaed1edc93">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#acf14074f0e2fdcec41b4f7cb7e3e27ea">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ab34ae78cae3a944fb741bf49c1538d4f">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a9ba8909f75de2d4f18749fe9362a28d2">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a6286765cf6a1d050603f7adaed1edc93">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#a3655e707231f1326a8a3c42f5bba8230">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#acf14074f0e2fdcec41b4f7cb7e3e27ea">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ab34ae78cae3a944fb741bf49c1538d4f">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -547,7 +580,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>updated `to' pointer </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#acda82205a6bd87bf953f72d0d03c2f38">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a4369630a6133e160a3c57b47cf995dad">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aeb69fdafffc82b7cd38edf2d8742d3d8">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ab5522e3a7663533a0b422a22228427f0">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#acda82205a6bd87bf953f72d0d03c2f38">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a4369630a6133e160a3c57b47cf995dad">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#a9080572e3bc6c8d6f30cccac715ff8e9">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aeb69fdafffc82b7cd38edf2d8742d3d8">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ab5522e3a7663533a0b422a22228427f0">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -595,7 +628,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>updated `to' pointer </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a03d7af4898203df8615f69f79b7e9e9e">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a39797d23185a294f08dc2ebff976affe">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aa184b8c29bc91d5a09b7713db11807d0">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ae467c732de6a9922c0a770a133ca8a37">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#a03d7af4898203df8615f69f79b7e9e9e">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a39797d23185a294f08dc2ebff976affe">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#ad9692f320d87d9c31b073182892601e7">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#aa184b8c29bc91d5a09b7713db11807d0">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#ae467c732de6a9922c0a770a133ca8a37">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -726,7 +759,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer moved by offset and new datatype </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classPDI_1_1Array__datatype.html#afb640e015cd7a2679e9354dca0444808">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a1c1aef4b83af1e30371f08a1fbcddaa1">PDI::Record_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#aac709d8a8c1a8a07d5e53402b707bdfa">PDI::Pointer_datatype</a>.</p>
+<p>Reimplemented in <a class="el" href="classPDI_1_1Array__datatype.html#afb640e015cd7a2679e9354dca0444808">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a1c1aef4b83af1e30371f08a1fbcddaa1">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#adb79706b9eb703d895c2e83a745d6c6b">PDI::Tuple_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#aac709d8a8c1a8a07d5e53402b707bdfa">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -763,7 +796,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ac4160324349cf4dd13bd36e8894a61cd">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aca8e88ed37db5f20244637e8c69d7a61">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a18fcaddec51a46921d6e4e42deee9026">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a1b1c55a87cf7f8642729751cf36d30b6">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ac4160324349cf4dd13bd36e8894a61cd">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#aca8e88ed37db5f20244637e8c69d7a61">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#adcce5216a9327f1a00fbc6b2344b719d">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a18fcaddec51a46921d6e4e42deee9026">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a1b1c55a87cf7f8642729751cf36d30b6">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
@@ -793,7 +826,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the datatype yaml representation as a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>the datatype yaml representation as a string </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae1fa60769b6a03ff0d6b5f0b82523fec">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a18daca7d61b260de5457114643e2af75">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a5fcf657a2d7957801d45e6501a8627fd">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a6aa1ae90b69129fec7e148547d262836">PDI::Pointer_datatype</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Array__datatype.html#ae1fa60769b6a03ff0d6b5f0b82523fec">PDI::Array_datatype</a>, <a class="el" href="classPDI_1_1Record__datatype.html#a18daca7d61b260de5457114643e2af75">PDI::Record_datatype</a>, <a class="el" href="classPDI_1_1Tuple__datatype.html#aac32b954eb8ce5c2691dab84275d39a8">PDI::Tuple_datatype</a>, <a class="el" href="classPDI_1_1Scalar__datatype.html#a5fcf657a2d7957801d45e6501a8627fd">PDI::Scalar_datatype</a>, and <a class="el" href="classPDI_1_1Pointer__datatype.html#a6aa1ae90b69129fec7e148547d262836">PDI::Pointer_datatype</a>.</p>
 
 </div>
 </div>
