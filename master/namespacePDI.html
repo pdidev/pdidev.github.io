@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-12-01.6fb714a</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2021-12-04.4a0ebfc</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -129,10 +129,10 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5820a66b64cfdc0830d0977117e9a4df"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a5820a66b64cfdc0830d0977117e9a4df">Attributes_map</a> = std::unordered_map&lt; std::string, <a class="el" href="classPDI_1_1Expression.html">Expression</a> &gt;</td></tr>
 <tr class="separator:a5820a66b64cfdc0830d0977117e9a4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90938550644cca0d8f3b8473267c3524"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; <a class="el" href="classPDI_1_1Datatype__template.html">Datatype_template</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">Datatype_template_uptr</a></td></tr>
-<tr class="separator:a90938550644cca0d8f3b8473267c3524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ea1e67c0a642bfc9cb3159a85c7a82"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; <a class="el" href="classPDI_1_1Datatype.html">Datatype</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">Datatype_uptr</a></td></tr>
-<tr class="separator:a72ea1e67c0a642bfc9cb3159a85c7a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01f1a8f11bed64661d4d8e076df42ad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">Datatype_template_ptr</a> = std::shared_ptr&lt; const <a class="el" href="classPDI_1_1Datatype__template.html">Datatype_template</a> &gt;</td></tr>
+<tr class="separator:af01f1a8f11bed64661d4d8e076df42ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c4c0a35d0b6a8b94643873b47b95b8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#ab9c4c0a35d0b6a8b94643873b47b95b8">Datatype_sptr</a> = std::shared_ptr&lt; const <a class="el" href="classPDI_1_1Datatype.html">Datatype</a> &gt;</td></tr>
+<tr class="separator:ab9c4c0a35d0b6a8b94643873b47b95b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc363df268e6e68e68947a4fc799ca00"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a>&lt; false, false &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a></td></tr>
 <tr class="separator:adc363df268e6e68e68947a4fc799ca00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5272dcf2920dfbe084e779e942b2e3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classPDI_1_1Ref__any.html">Ref_any</a>&lt; true, false &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a7d5272dcf2920dfbe084e779e942b2e3">Ref_r</a></td></tr>
@@ -216,8 +216,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abb344c7480f77937ef5176d6cabcaf05"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPDI_1_1Scalar__datatype.html">Scalar_datatype</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#abb344c7480f77937ef5176d6cabcaf05">UNDEF_TYPE</a> = {<a class="el" href="namespacePDI.html#aaeb021e0fbcb2477836bd770c3c473c7a696b031073e74bf2cb98e5ef201d4aa3">Scalar_kind::UNKNOWN</a>, 0}</td></tr>
-<tr class="separator:abb344c7480f77937ef5176d6cabcaf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e0f3ada707b16e357b74a97a8d43ff"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePDI.html#a23e0f3ada707b16e357b74a97a8d43ff">UNDEF_TYPE</a> = <a class="el" href="classPDI_1_1Scalar__datatype.html#ace6e755cbf320e3ca6aa4d78915a3faa">Scalar_datatype::make</a>(<a class="el" href="namespacePDI.html#aaeb021e0fbcb2477836bd770c3c473c7a696b031073e74bf2cb98e5ef201d4aa3">Scalar_kind::UNKNOWN</a>, 0)</td></tr>
+<tr class="separator:a23e0f3ada707b16e357b74a97a8d43ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5820a66b64cfdc0830d0977117e9a4df"></a>
@@ -234,28 +234,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a90938550644cca0d8f3b8473267c3524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90938550644cca0d8f3b8473267c3524">&#9670;&nbsp;</a></span>Datatype_template_uptr</h2>
+<a id="af01f1a8f11bed64661d4d8e076df42ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01f1a8f11bed64661d4d8e076df42ad">&#9670;&nbsp;</a></span>Datatype_template_ptr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unique_ptr&lt;<a class="el" href="classPDI_1_1Datatype__template.html">Datatype_template</a>&gt; <a class="el" href="namespacePDI.html#a90938550644cca0d8f3b8473267c3524">PDI::Datatype_template_uptr</a></td>
+          <td class="memname">using <a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">PDI::Datatype_template_ptr</a> = typedef std::shared_ptr&lt;const <a class="el" href="classPDI_1_1Datatype__template.html">Datatype_template</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a72ea1e67c0a642bfc9cb3159a85c7a82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ea1e67c0a642bfc9cb3159a85c7a82">&#9670;&nbsp;</a></span>Datatype_uptr</h2>
+<a id="ab9c4c0a35d0b6a8b94643873b47b95b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c4c0a35d0b6a8b94643873b47b95b8">&#9670;&nbsp;</a></span>Datatype_sptr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unique_ptr&lt;<a class="el" href="classPDI_1_1Datatype.html">Datatype</a>&gt; <a class="el" href="namespacePDI.html#a72ea1e67c0a642bfc9cb3159a85c7a82">PDI::Datatype_uptr</a></td>
+          <td class="memname">using <a class="el" href="namespacePDI.html#ab9c4c0a35d0b6a8b94643873b47b95b8">PDI::Datatype_sptr</a> = typedef std::shared_ptr&lt;const <a class="el" href="classPDI_1_1Datatype.html">Datatype</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -958,14 +958,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="abb344c7480f77937ef5176d6cabcaf05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb344c7480f77937ef5176d6cabcaf05">&#9670;&nbsp;</a></span>UNDEF_TYPE</h2>
+<a id="a23e0f3ada707b16e357b74a97a8d43ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e0f3ada707b16e357b74a97a8d43ff">&#9670;&nbsp;</a></span>UNDEF_TYPE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classPDI_1_1Scalar__datatype.html">Scalar_datatype</a> PDI::UNDEF_TYPE = {<a class="el" href="namespacePDI.html#aaeb021e0fbcb2477836bd770c3c473c7a696b031073e74bf2cb98e5ef201d4aa3">Scalar_kind::UNKNOWN</a>, 0}</td>
+          <td class="memname">const auto PDI::UNDEF_TYPE = <a class="el" href="classPDI_1_1Scalar__datatype.html#ace6e755cbf320e3ca6aa4d78915a3faa">Scalar_datatype::make</a>(<a class="el" href="namespacePDI.html#aaeb021e0fbcb2477836bd770c3c473c7a696b031073e74bf2cb98e5ef201d4aa3">Scalar_kind::UNKNOWN</a>, 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">

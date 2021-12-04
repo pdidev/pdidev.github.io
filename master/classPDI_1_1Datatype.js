@@ -1,13 +1,10 @@
 var classPDI_1_1Datatype =
 [
-    [ "Accessor_base", "structPDI_1_1Datatype_1_1Accessor__base.html", "structPDI_1_1Datatype_1_1Accessor__base" ],
     [ "Datatype", "classPDI_1_1Datatype.html#a78f397bb00153aedd4823091e7403b3e", null ],
     [ "~Datatype", "classPDI_1_1Datatype.html#ad2e19537809ba143ab9130c95b237dc2", null ],
-    [ "clone", "classPDI_1_1Datatype.html#ae85babd946e7821d87df26ad952f865a", null ],
-    [ "clone_type", "classPDI_1_1Datatype.html#af42770105e821dea4ca30f0992f2274c", null ],
     [ "operator==", "classPDI_1_1Datatype.html#a8cdf8ed0c21b40519239290171252a5b", null ],
     [ "operator!=", "classPDI_1_1Datatype.html#af80638919cb31c61451d0bc6220a69e3", null ],
-    [ "densify", "classPDI_1_1Datatype.html#a565e585893035b39f95520543cea49de", null ],
+    [ "densify", "classPDI_1_1Datatype.html#ac805f64a2f7ee4e82d723f80a952add4", null ],
     [ "dense", "classPDI_1_1Datatype.html#a15b82a52cfafc5fc1dbc21b043588693", null ],
     [ "datasize", "classPDI_1_1Datatype.html#aa5254560c8fd98403b2067091f93b3c9", null ],
     [ "buffersize", "classPDI_1_1Datatype.html#a341a15d47396f1cd9bb12e43a5cd5a40", null ],
@@ -15,9 +12,14 @@ var classPDI_1_1Datatype =
     [ "simple", "classPDI_1_1Datatype.html#ae5f85834cbae56fca2b4cf7e7fbd0df3", null ],
     [ "data_to_dense_copy", "classPDI_1_1Datatype.html#a988bab02472c4dc4206b40cd093030c3", null ],
     [ "data_from_dense_copy", "classPDI_1_1Datatype.html#a00559b1afaf47436b64a26841b486a14", null ],
-    [ "subaccess", "classPDI_1_1Datatype.html#ad4024bdf06ac96b061577e33a09f830a", null ],
-    [ "subaccess", "classPDI_1_1Datatype.html#a31158d9e5ae7ff4b1de65b4f37d092da", null ],
-    [ "subaccess_by_iterators", "classPDI_1_1Datatype.html#a3740eae7647609ba33d8a0cae065a994", null ],
+    [ "index", "classPDI_1_1Datatype.html#ad3462d1b9b794c7a7b128975598162ec", null ],
+    [ "index", "classPDI_1_1Datatype.html#a0e7f2344cb0ddbc94a8adf335dfc76d4", null ],
+    [ "slice", "classPDI_1_1Datatype.html#a458d8d3dc7235779f510185a8ea1337d", null ],
+    [ "slice", "classPDI_1_1Datatype.html#a786a3f8e73dcdc28fa0dd6fa8daa26a2", null ],
+    [ "member", "classPDI_1_1Datatype.html#a6e2bbe80efacf91e680b2f8e5f79610b", null ],
+    [ "member", "classPDI_1_1Datatype.html#ad93dc935bd5fdaf8723b37d115d0e737", null ],
+    [ "dereference", "classPDI_1_1Datatype.html#aca54ccb74b04fb348613d0ce918ede4a", null ],
+    [ "dereference", "classPDI_1_1Datatype.html#aff00560dd1f059b7870ad3e71b51c270", null ],
     [ "destroy_data", "classPDI_1_1Datatype.html#a73bcba3fb827468daeda6ab0a4fd92b5", null ],
     [ "debug_string", "classPDI_1_1Datatype.html#aff4be6868c49816ef432098357ab5789", null ]
 ];

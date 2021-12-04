@@ -1,13 +1,8 @@
 var classPDI_1_1Scalar__datatype =
 [
-    [ "Scalar_datatype", "classPDI_1_1Scalar__datatype.html#a052ef07a86cead55e2f858e997edc477", null ],
-    [ "Scalar_datatype", "classPDI_1_1Scalar__datatype.html#adcf3bbcf9803403935388b114e0e1cad", null ],
-    [ "Scalar_datatype", "classPDI_1_1Scalar__datatype.html#abb947a22f23d7ff4a852ef841d27a303", null ],
     [ "kind", "classPDI_1_1Scalar__datatype.html#a553f70f9bdc343bc96659a31cdf19529", null ],
-    [ "clone", "classPDI_1_1Scalar__datatype.html#a8f929d17ea26d91d1de5b17aa3654b38", null ],
-    [ "clone_type", "classPDI_1_1Scalar__datatype.html#a6c851958754a3f04881f6e12b27ff019", null ],
-    [ "densify", "classPDI_1_1Scalar__datatype.html#a6cb314a53a731017de5bae2c00933761", null ],
-    [ "evaluate", "classPDI_1_1Scalar__datatype.html#afffe6f77d615f1d570607758a62722bd", null ],
+    [ "densify", "classPDI_1_1Scalar__datatype.html#a02b9d948fd6d17319b89bdf81d464424", null ],
+    [ "evaluate", "classPDI_1_1Scalar__datatype.html#ae1d69637edcf11a30700c7694c9fb4d6", null ],
     [ "dense", "classPDI_1_1Scalar__datatype.html#aa1e4967c4b564a06ee80d2d9f3499931", null ],
     [ "datasize", "classPDI_1_1Scalar__datatype.html#ad8883c6045742e19ee34606681e2fcd4", null ],
     [ "buffersize", "classPDI_1_1Scalar__datatype.html#a8e0bb04f38f016e1050aae8ce95aa14d", null ],

@@ -4,9 +4,7 @@ var classPDI_1_1Ref__any =
     [ "Ref_any", "classPDI_1_1Ref__any.html#a9c7a6f95721dbc45abe421532bdcc51c", null ],
     [ "Ref_any", "classPDI_1_1Ref__any.html#a1cd0575fb982d4634d61955235085855", null ],
     [ "Ref_any", "classPDI_1_1Ref__any.html#a58af66a3ad905c93c90e645da1517683", null ],
-    [ "Ref_any", "classPDI_1_1Ref__any.html#a452ff2a3f09be920e36cb836cf941252", null ],
-    [ "Ref_any", "classPDI_1_1Ref__any.html#a5c620896459f13f11e1c66180bfc1e62", null ],
-    [ "Ref_any", "classPDI_1_1Ref__any.html#a56be798a0a5187512dc04e9eafa384b7", null ],
+    [ "Ref_any", "classPDI_1_1Ref__any.html#a02c3ad5d8c76cdd4d960bae8d99284ba", null ],
     [ "~Ref_any", "classPDI_1_1Ref__any.html#a5a218fe4417d8f0a3dbe26ced3803ac4", null ],
     [ "operator=", "classPDI_1_1Ref__any.html#a420b981a23df941ba265945fdf0ef01c", null ],
     [ "operator=", "classPDI_1_1Ref__any.html#a8ee978e5f25bf6ae3de60a2f4012fd6e", null ],
@@ -18,7 +16,7 @@ var classPDI_1_1Ref__any =
     [ "operator>=", "classPDI_1_1Ref__any.html#a902c7d2864a1323dfb804fa65503b32e", null ],
     [ "operator[]", "classPDI_1_1Ref__any.html#a5ed1b39837eed0b872d3f9cf06316e32", null ],
     [ "operator[]", "classPDI_1_1Ref__any.html#ad5aec6fb310e47832f1c29af66a33182", null ],
-    [ "operator[]", "classPDI_1_1Ref__any.html#a7fa3e799faf2c0355f5569a991a86058", null ],
+    [ "operator[]", "classPDI_1_1Ref__any.html#a9b857f8929570e18eed2d607c4f016a3", null ],
     [ "operator[]", "classPDI_1_1Ref__any.html#a62943ef0a7e5994dee5c9af408198d83", null ],
     [ "operator typename Ref_access< R, W >::type", "classPDI_1_1Ref__any.html#ad762f327bf4a69f0682927d9e19b03f1", null ],
     [ "get", "classPDI_1_1Ref__any.html#ad8d6851233a405e0e1c27d2e762c6cb9", null ],
@@ -28,5 +26,6 @@ var classPDI_1_1Ref__any =
     [ "reset", "classPDI_1_1Ref__any.html#aeffec00c8b23f6d5edadd3af1a651e5d", null ],
     [ "copy", "classPDI_1_1Ref__any.html#a92c53a0398732686e7b50480d4e2d82b", null ],
     [ "release", "classPDI_1_1Ref__any.html#a2f653ad7b6152b4c1f027ed155c12e25", null ],
-    [ "on_nullify", "classPDI_1_1Ref__any.html#ab7cdbc0c95456fbf7993bb260e908bea", null ]
+    [ "on_nullify", "classPDI_1_1Ref__any.html#ab7cdbc0c95456fbf7993bb260e908bea", null ],
+    [ "Ref_any", "classPDI_1_1Ref__any.html#a2278a373e08288294ff2f87d4d905eca", null ]
 ];

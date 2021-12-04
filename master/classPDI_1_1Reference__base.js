@@ -7,7 +7,7 @@ var classPDI_1_1Reference__base =
     [ "Reference_base", "classPDI_1_1Reference__base.html#a3c1d3117976f72d8d001ed9e59299a18", null ],
     [ "operator=", "classPDI_1_1Reference__base.html#af43d8420c97de3cf419d02e3394a06b2", null ],
     [ "operator=", "classPDI_1_1Reference__base.html#ac2a7ccba4099db8a24c6ab061c868053", null ],
-    [ "type", "classPDI_1_1Reference__base.html#a281fb6b0fae3cfb5781af75858831131", null ],
+    [ "type", "classPDI_1_1Reference__base.html#ab99b76ffb1c5696a8e016061eaee6200", null ],
     [ "hash", "classPDI_1_1Reference__base.html#a797958e702e1c0d8068b8c6a2f3a76b5", null ],
     [ "m_content", "classPDI_1_1Reference__base.html#a83bc9b650ba7604ee7aa5fa72c3a3abe", null ]
 ];

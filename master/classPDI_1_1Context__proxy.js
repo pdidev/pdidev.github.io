@@ -12,7 +12,7 @@ var classPDI_1_1Context__proxy =
     [ "event", "classPDI_1_1Context__proxy.html#a687e53457726aa6a3f3208694b9119b5", null ],
     [ "logger", "classPDI_1_1Context__proxy.html#a74ec602ad23b4c630471c198ff8c5791", null ],
     [ "pdi_core_logger", "classPDI_1_1Context__proxy.html#ae33d71bb4e7bb8afbb8d3d6bd5a77d3c", null ],
-    [ "datatype", "classPDI_1_1Context__proxy.html#ac71f62967880f5bcd0fe095f17b3de4f", null ],
+    [ "datatype", "classPDI_1_1Context__proxy.html#a97ac4737ff55337461e4c3e0b71ee0f0", null ],
     [ "add_datatype", "classPDI_1_1Context__proxy.html#ab24dac03f6faddd05bd83b734cd1ca56", null ],
     [ "callbacks", "classPDI_1_1Context__proxy.html#a9e691045f02436bfa36aeeb2b8cb7495", null ],
     [ "finalize_and_exit", "classPDI_1_1Context__proxy.html#a9c5cec5bf707ad67e38e30a4ee12329b", null ]

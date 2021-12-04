@@ -1,13 +1,9 @@
 var classPDI_1_1Record__datatype =
 [
     [ "Member", "classPDI_1_1Record__datatype_1_1Member.html", "classPDI_1_1Record__datatype_1_1Member" ],
-    [ "Member_accessor", "classPDI_1_1Record__datatype_1_1Member__accessor.html", "classPDI_1_1Record__datatype_1_1Member__accessor" ],
-    [ "Record_datatype", "classPDI_1_1Record__datatype.html#a26365b1a5a8595cb5631021e4a912c43", null ],
     [ "members", "classPDI_1_1Record__datatype.html#abc743d4a8adaeb8b630f29678f2665cf", null ],
-    [ "clone", "classPDI_1_1Record__datatype.html#a400a1d29c9727f494a00315fe21451f4", null ],
-    [ "clone_type", "classPDI_1_1Record__datatype.html#a898b8663ac36edfb67cacb1987dfb644", null ],
-    [ "densify", "classPDI_1_1Record__datatype.html#abb72cae0af1e9d4923165abd7044450c", null ],
-    [ "evaluate", "classPDI_1_1Record__datatype.html#a974a5b925407ade93a7f2b96a0ffd528", null ],
+    [ "densify", "classPDI_1_1Record__datatype.html#ab43917d5e36ea5dc181222b941190b20", null ],
+    [ "evaluate", "classPDI_1_1Record__datatype.html#aaeaed3fd8f1631f812e89526cfdebacf", null ],
     [ "dense", "classPDI_1_1Record__datatype.html#ab5211f58ddcfbbb88243259182db1271", null ],
     [ "datasize", "classPDI_1_1Record__datatype.html#aa0e39bbe49abdbc4d6e806e148bbef30", null ],
     [ "buffersize", "classPDI_1_1Record__datatype.html#aed94e24402cada695d056a4aea0e258e", null ],
@@ -15,7 +11,8 @@ var classPDI_1_1Record__datatype =
     [ "simple", "classPDI_1_1Record__datatype.html#a6286765cf6a1d050603f7adaed1edc93", null ],
     [ "data_to_dense_copy", "classPDI_1_1Record__datatype.html#a4369630a6133e160a3c57b47cf995dad", null ],
     [ "data_from_dense_copy", "classPDI_1_1Record__datatype.html#a39797d23185a294f08dc2ebff976affe", null ],
-    [ "subaccess_by_iterators", "classPDI_1_1Record__datatype.html#a1c1aef4b83af1e30371f08a1fbcddaa1", null ],
+    [ "member", "classPDI_1_1Record__datatype.html#a6634de657fc415e589c080fa0ff935d3", null ],
+    [ "member", "classPDI_1_1Record__datatype.html#a6ecedd031af71f1a984ca9d027c779c5", null ],
     [ "destroy_data", "classPDI_1_1Record__datatype.html#aca8e88ed37db5f20244637e8c69d7a61", null ],
     [ "debug_string", "classPDI_1_1Record__datatype.html#a18daca7d61b260de5457114643e2af75", null ],
     [ "operator==", "classPDI_1_1Record__datatype.html#aa70ca0cdfdad5344b7ddffb55b30acdc", null ]

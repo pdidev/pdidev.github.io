@@ -1,7 +1,7 @@
 var classPDI_1_1Context =
 [
     [ "Iterator", "classPDI_1_1Context_1_1Iterator.html", "classPDI_1_1Context_1_1Iterator" ],
-    [ "Datatype_template_parser", "classPDI_1_1Context.html#a69e61f140cdf5555c635e160f85f3c86", null ],
+    [ "Datatype_template_parser", "classPDI_1_1Context.html#a8db0274a0f20458365c819954753eb5e", null ],
     [ "~Context", "classPDI_1_1Context.html#a9a1eb26d8ff1d5b7b458b704a3cb26a8", null ],
     [ "get_iterator", "classPDI_1_1Context.html#a128400c36b4d57f4594abbf8d3aefd5e", null ],
     [ "get_iterator", "classPDI_1_1Context.html#af014d0db0aa036bdaae6aa860a3a6b0b", null ],
@@ -14,7 +14,7 @@ var classPDI_1_1Context =
     [ "event", "classPDI_1_1Context.html#afb530384d29404ab88a3c4210d03f19d", null ],
     [ "logger", "classPDI_1_1Context.html#a3571c8f942b9cdfa9df0dd6c4b05e1f9", null ],
     [ "callbacks", "classPDI_1_1Context.html#ab1739cf4e3bfde11d5271b305fa17e20", null ],
-    [ "datatype", "classPDI_1_1Context.html#af30302419766a7e4d302663c5d91636b", null ],
+    [ "datatype", "classPDI_1_1Context.html#a487adecb1c9c237d84b82788b31c1b73", null ],
     [ "add_datatype", "classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6", null ],
     [ "finalize_and_exit", "classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb", null ]
 ];
