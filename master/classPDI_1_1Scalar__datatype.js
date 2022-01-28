@@ -8,8 +8,8 @@ var classPDI_1_1Scalar__datatype =
     [ "buffersize", "classPDI_1_1Scalar__datatype.html#a8e0bb04f38f016e1050aae8ce95aa14d", null ],
     [ "alignment", "classPDI_1_1Scalar__datatype.html#a19cafc9d088635f5826f3c2cdc9246ee", null ],
     [ "simple", "classPDI_1_1Scalar__datatype.html#acf14074f0e2fdcec41b4f7cb7e3e27ea", null ],
-    [ "data_to_dense_copy", "classPDI_1_1Scalar__datatype.html#aeb69fdafffc82b7cd38edf2d8742d3d8", null ],
-    [ "data_from_dense_copy", "classPDI_1_1Scalar__datatype.html#aa184b8c29bc91d5a09b7713db11807d0", null ],
+    [ "data_to_dense_copy", "classPDI_1_1Scalar__datatype.html#a6c79e2f579e87bd8dca650b75f02e260", null ],
+    [ "data_from_dense_copy", "classPDI_1_1Scalar__datatype.html#a0f92cb5110cfe8c8337edc210a7d80e5", null ],
     [ "destroy_data", "classPDI_1_1Scalar__datatype.html#a18fcaddec51a46921d6e4e42deee9026", null ],
     [ "debug_string", "classPDI_1_1Scalar__datatype.html#a5fcf657a2d7957801d45e6501a8627fd", null ],
     [ "operator==", "classPDI_1_1Scalar__datatype.html#ae68e0988a4d9718f3d75105235445421", null ]

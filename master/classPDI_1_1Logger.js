@@ -7,7 +7,7 @@ var classPDI_1_1Logger =
     [ "setup", "classPDI_1_1Logger.html#a2ef9598254ff0a7bc8ed5851b5d053c8", null ],
     [ "pattern", "classPDI_1_1Logger.html#adae256b8522b546cef113eef4b5a21a0", null ],
     [ "default_pattern", "classPDI_1_1Logger.html#a4bf442f2e019a333919dcc32681758bf", null ],
-    [ "pattern", "classPDI_1_1Logger.html#ab27c27845c8727a8a739468bd56b71f4", null ],
+    [ "pattern", "classPDI_1_1Logger.html#a1804248e6dbf3645e2128c7df7f829df", null ],
     [ "level", "classPDI_1_1Logger.html#a3e24cb7a7c4ba7edfa443e8a75b08680", null ],
     [ "level", "classPDI_1_1Logger.html#ab294af145218b1df2a75264d5b398b98", null ],
     [ "evaluate_pattern", "classPDI_1_1Logger.html#af7d2a457cd8e1a18a9024892b537e9f1", null ],
@@ -16,5 +16,5 @@ var classPDI_1_1Logger =
     [ "info", "classPDI_1_1Logger.html#ab0f5743f4fd93c810be613530460be95", null ],
     [ "warn", "classPDI_1_1Logger.html#a7e452e859db9ed2801a6074b22a047ec", null ],
     [ "error", "classPDI_1_1Logger.html#a474fc2834ae6625d632bd7429e316533", null ],
-    [ "real_logger", "classPDI_1_1Logger.html#a8baf794124ab2961c7dc2f5c2c67a2d9", null ]
+    [ "real_logger", "classPDI_1_1Logger.html#afc659a532b67bdeb8dd0ff8381407b24", null ]
 ];

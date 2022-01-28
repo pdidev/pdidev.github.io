@@ -73,22 +73,24 @@ var Specification_tree_ref =
     [ "simple_datatype", "Specification_tree_ref.html#simple_datatype_node", null ],
     [ "size_t_type", "Specification_tree_ref.html#size_t_type_node", null ],
     [ "struct_members_omap", "Specification_tree_ref.html#struct_members_omap_node", null ],
-    [ "struct_type", "Specification_tree_ref.html#struct_type_node", null ],
+    [ "struct_type", "Specification_tree_ref.html#struct_type_node", [
+      [ "Example:", "Specification_tree_ref.html#autotoc_md28", null ]
+    ] ],
     [ "tuple_element", "Specification_tree_ref.html#tuple_element_node", null ],
     [ "tuple_elements_seq", "Specification_tree_ref.html#tuple_elements_seq_node", null ],
     [ "tuple_type", "Specification_tree_ref.html#tuple_type_node", [
-      [ "Example:", "Specification_tree_ref.html#autotoc_md28", null ]
+      [ "Example:", "Specification_tree_ref.html#autotoc_md29", null ]
     ] ],
     [ "types_map", "Specification_tree_ref.html#types_map_node", null ],
     [ "YAML", "YAML.html", [
-      [ "YAML Format", "YAML.html#autotoc_md29", [
-        [ "Scalar element", "YAML.html#autotoc_md30", null ],
-        [ "Sequence sub-tree", "YAML.html#autotoc_md31", null ],
-        [ "Mapping sub-tree", "YAML.html#autotoc_md32", null ],
-        [ "YAML advanced elements", "YAML.html#autotoc_md33", [
-          [ "Ordered mapping sub-tree", "YAML.html#autotoc_md34", null ]
+      [ "YAML Format", "YAML.html#autotoc_md30", [
+        [ "Scalar element", "YAML.html#autotoc_md31", null ],
+        [ "Sequence sub-tree", "YAML.html#autotoc_md32", null ],
+        [ "Mapping sub-tree", "YAML.html#autotoc_md33", null ],
+        [ "YAML advanced elements", "YAML.html#autotoc_md34", [
+          [ "Ordered mapping sub-tree", "YAML.html#autotoc_md35", null ]
         ] ]
       ] ],
-      [ "YAML Parsing with Paraconf", "YAML.html#autotoc_md35", null ]
+      [ "YAML Parsing with Paraconf", "YAML.html#autotoc_md36", null ]
     ] ]
 ];

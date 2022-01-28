@@ -17,7 +17,7 @@ var group__error =
       [ "PDI_ERR_RIGHT", "group__error.html#gga838ed1a4a5ca21c0d3ef790afbf61b74ae573fb10e871f40c2b37182ff415f454", null ],
       [ "PDI_ERR_TYPE", "group__error.html#gga838ed1a4a5ca21c0d3ef790afbf61b74a7eb3671f2fe468efe6b23291d3a11ade", null ]
     ] ],
-    [ "PDI_errmsg", "group__error.html#gad969c54dedc6a5e579dc8f9c894a92ff", null ],
+    [ "PDI_errmsg", "group__error.html#ga8fd5e80e0fd704121ab545d6ccb748f4", null ],
     [ "PDI_errhandler", "group__error.html#ga01fffcbd0a27c1fe0624cb8d64372a25", null ],
     [ "PDI_ASSERT_HANDLER", "group__error.html#ga071fa4de35e77bd21db91b92659c7341", null ],
     [ "PDI_WARN_HANDLER", "group__error.html#ga9807c58ccf192137c930993273a31cf9", null ],

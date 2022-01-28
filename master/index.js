@@ -4,12 +4,7 @@ var index =
     [ "Developer documentation", "index.html#autotoc_md1", null ],
     [ "Get support", "index.html#autotoc_md2", null ],
     [ "Join the team", "index.html#autotoc_md3", null ],
-    [ "Installation of PDI source distribution", "Installation.html", [
-      [ "Downloading PDI source distribution", "Installation.html#downloading_distribution", null ],
-      [ "Default installation", "Installation.html#default_installation", null ],
-      [ "Configuration", "Installation.html#cmake_config", null ],
-      [ "List of dependencies", "Installation.html#dependecies", null ]
-    ] ],
+    [ "Installation of PDI", "Installation.html", "Installation" ],
     [ "PDI usage", "PDI_usage.html", [
       [ "Preparing the environment", "PDI_usage.html#preparing_the_environment", [
         [ "PDI was installed in default location", "PDI_usage.html#pdi_in_default_location", null ],
@@ -39,33 +34,33 @@ var index =
       [ "Hello multi expose", "First_steps.html#fs_hello_multi_expose", null ]
     ] ],
     [ "Hands-on tutorial", "Hands_on.html", [
-      [ "Setup", "Hands_on.html#autotoc_md36", [
-        [ "PDI installation", "Hands_on.html#autotoc_md37", null ],
-        [ "Hands-on tutorial setup", "Hands_on.html#autotoc_md38", null ],
-        [ "Compilation", "Hands_on.html#autotoc_md39", null ],
-        [ "Execution", "Hands_on.html#autotoc_md40", null ]
+      [ "Setup", "Hands_on.html#autotoc_md37", [
+        [ "PDI installation", "Hands_on.html#autotoc_md38", null ],
+        [ "Hands-on tutorial setup", "Hands_on.html#autotoc_md39", null ],
+        [ "Compilation", "Hands_on.html#autotoc_md40", null ],
+        [ "Execution", "Hands_on.html#autotoc_md41", null ]
       ] ],
-      [ "PDI-free code", "Hands_on.html#autotoc_md41", [
-        [ "Ex1. Getting started", "Hands_on.html#autotoc_md42", null ]
+      [ "PDI-free code", "Hands_on.html#autotoc_md42", [
+        [ "Ex1. Getting started", "Hands_on.html#autotoc_md43", null ]
       ] ],
-      [ "PDI core & trace plugin", "Hands_on.html#autotoc_md43", [
-        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md44", null ]
+      [ "PDI core & trace plugin", "Hands_on.html#autotoc_md44", [
+        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md45", null ]
       ] ],
-      [ "Decl'HDF5 plugin", "Hands_on.html#autotoc_md45", [
-        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md46", null ],
-        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md47", null ],
-        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md48", null ],
-        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md49", null ],
-        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md50", null ],
-        [ "Ex8. Selecting on the dataset size", "Hands_on.html#autotoc_md51", null ]
+      [ "Decl'HDF5 plugin", "Hands_on.html#autotoc_md46", [
+        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md47", null ],
+        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md48", null ],
+        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md49", null ],
+        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md50", null ],
+        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md51", null ],
+        [ "Ex8. Selecting on the dataset size", "Hands_on.html#autotoc_md52", null ]
       ] ],
-      [ "parallel Decl'HDF5", "Hands_on.html#autotoc_md52", [
-        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md53", null ]
+      [ "parallel Decl'HDF5", "Hands_on.html#autotoc_md53", [
+        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md54", null ]
       ] ],
-      [ "Pycall", "Hands_on.html#autotoc_md54", [
-        [ "Ex10. Post-processing the data in python", "Hands_on.html#autotoc_md55", null ]
+      [ "Pycall", "Hands_on.html#autotoc_md55", [
+        [ "Ex10. Post-processing the data in python", "Hands_on.html#autotoc_md56", null ]
       ] ],
-      [ "What next ?", "Hands_on.html#autotoc_md56", null ]
+      [ "What next ?", "Hands_on.html#autotoc_md57", null ]
     ] ],
     [ "PDI examples", "PDI_example.html", [
       [ "Code algorithm", "PDI_example.html#heat_algorithm", null ],
