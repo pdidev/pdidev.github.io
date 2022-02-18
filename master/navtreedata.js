@@ -28,8 +28,7 @@ var NAVTREE =
     [ "About", "index.html", [
       [ "User documentation", "index.html#autotoc_md0", null ],
       [ "Developer documentation", "index.html#autotoc_md1", null ],
-      [ "Get support", "index.html#autotoc_md2", null ],
-      [ "Join the team", "index.html#autotoc_md3", null ]
+      [ "Get support", "index.html#autotoc_md2", null ]
     ] ],
     [ "C API Reference", "modules.html", "modules" ],
     [ "Core Concepts", "md_Concepts.html", [
@@ -41,10 +40,10 @@ var NAVTREE =
       [ "Conclusion", "md_Concepts.html#Conclusion", null ]
     ] ],
     [ "FAQ", "md_FAQ.html", [
-      [ "Compile PDI with Intel compiler", "md_FAQ.html#autotoc_md4", [
-        [ "load PDI with <tt>include</tt> instead of using the module", "md_FAQ.html#autotoc_md5", null ],
-        [ "compile PDI with GCC for C/C++, use Intel compiler for Fortran", "md_FAQ.html#autotoc_md6", null ],
-        [ "compile PDI in a fully Intel environment, with GNU C++ library only", "md_FAQ.html#autotoc_md7", null ]
+      [ "Compile PDI with Intel compiler", "md_FAQ.html#autotoc_md3", [
+        [ "load PDI with <tt>include</tt> instead of using the module", "md_FAQ.html#autotoc_md4", null ],
+        [ "compile PDI with GCC for C/C++, use Intel compiler for Fortran", "md_FAQ.html#autotoc_md5", null ],
+        [ "compile PDI in a fully Intel environment, with GNU C++ library only", "md_FAQ.html#autotoc_md6", null ]
       ] ]
     ] ],
     [ "First steps with PDI", "md_First_steps.html", [
@@ -77,94 +76,94 @@ var NAVTREE =
     [ "Plugins", "md_Plugins.html", null ],
     [ "Specification tree Reference", "md_Specification_tree_ref.html", [
       [ "specification tree root", "md_Specification_tree_ref.html#root_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md8", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md7", null ]
       ] ],
       [ "array_type", "md_Specification_tree_ref.html#array_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md9", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md8", null ]
       ] ],
       [ "byte_type", "md_Specification_tree_ref.html#byte_type_node", null ],
       [ "char_type", "md_Specification_tree_ref.html#char_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md10", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md9", null ]
       ] ],
       [ "character_type", "md_Specification_tree_ref.html#character_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md11", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md10", null ]
       ] ],
       [ "data_map", "md_Specification_tree_ref.html#data_map_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md12", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md11", null ]
       ] ],
       [ "datatype", "md_Specification_tree_ref.html#datatype_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md13", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md12", null ]
       ] ],
       [ "datatype_with_disp", "md_Specification_tree_ref.html#datatype_with_disp_node", null ],
       [ "double_type", "md_Specification_tree_ref.html#double_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md14", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md13", null ]
       ] ],
       [ "$-expression", "md_Specification_tree_ref.html#expression_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md15", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md14", null ]
       ] ],
       [ "float_type", "md_Specification_tree_ref.html#float_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md16", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md15", null ]
       ] ],
       [ "int_type", "md_Specification_tree_ref.html#int_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md17", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md16", null ]
       ] ],
       [ "int16_type", "md_Specification_tree_ref.html#int16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md18", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md17", null ]
       ] ],
       [ "int32_type", "md_Specification_tree_ref.html#int32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md19", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md18", null ]
       ] ],
       [ "int64_type", "md_Specification_tree_ref.html#int64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md20", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md19", null ]
       ] ],
       [ "int8_type", "md_Specification_tree_ref.html#int8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md21", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md20", null ]
       ] ],
       [ "integer_type", "md_Specification_tree_ref.html#integer_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md22", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md21", null ]
       ] ],
       [ "intexpr_or_seq", "md_Specification_tree_ref.html#intexpr_or_seq_node", null ],
       [ "intexpr_seq", "md_Specification_tree_ref.html#intexpr_seq_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md23", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md22", null ]
       ] ],
       [ "intfast16_type", "md_Specification_tree_ref.html#intfast16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md24", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md23", null ]
       ] ],
       [ "intfast32_type", "md_Specification_tree_ref.html#intfast32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md25", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md24", null ]
       ] ],
       [ "intfast64_type", "md_Specification_tree_ref.html#intfast64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md26", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md25", null ]
       ] ],
       [ "intfast8_type", "md_Specification_tree_ref.html#intfast8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md27", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md26", null ]
       ] ],
       [ "intleast16_type", "md_Specification_tree_ref.html#intleast16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md28", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md27", null ]
       ] ],
       [ "intleast32_type", "md_Specification_tree_ref.html#intleast32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md29", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md28", null ]
       ] ],
       [ "intleast64_type", "md_Specification_tree_ref.html#intleast64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md30", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md29", null ]
       ] ],
       [ "intleast8_type", "md_Specification_tree_ref.html#intleast8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md31", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md30", null ]
       ] ],
       [ "intmax_type_node", "md_Specification_tree_ref.html#intmax_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md32", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md31", null ]
       ] ],
       [ "intptr_type_node", "md_Specification_tree_ref.html#intptr_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md33", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md32", null ]
       ] ],
       [ "logging", "md_Specification_tree_ref.html#logging_node", null ],
       [ "logging_level", "md_Specification_tree_ref.html#logging_level_node", null ],
       [ "logging_map", "md_Specification_tree_ref.html#logging_map_node", null ],
       [ "logging_output_map", "md_Specification_tree_ref.html#logging_output_map_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md34", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md33", null ]
       ] ],
       [ "logical_type", "md_Specification_tree_ref.html#logical_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md35", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md34", null ]
       ] ],
       [ "long_type", "md_Specification_tree_ref.html#long_type_node", null ],
       [ "long_long_type", "md_Specification_tree_ref.html#long_long_type_node", null ],
@@ -172,78 +171,78 @@ var NAVTREE =
       [ "plugin_path", "md_Specification_tree_ref.html#plugin_path_map_node", null ],
       [ "ptrdiff_t_type", "md_Specification_tree_ref.html#ptrdiff_t_type_node", null ],
       [ "real_type", "md_Specification_tree_ref.html#real_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md36", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md35", null ]
       ] ],
       [ "record_members_map", "md_Specification_tree_ref.html#record_members_map_node", null ],
       [ "record_type", "md_Specification_tree_ref.html#record_type_node", [
-        [ "Examples:", "md_Specification_tree_ref.html#autotoc_md37", null ]
+        [ "Examples:", "md_Specification_tree_ref.html#autotoc_md36", null ]
       ] ],
       [ "short_type", "md_Specification_tree_ref.html#short_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md38", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md37", null ]
       ] ],
       [ "simple_datatype", "md_Specification_tree_ref.html#simple_datatype_node", null ],
       [ "size_t_type", "md_Specification_tree_ref.html#size_t_type_node", null ],
       [ "struct_members_omap", "md_Specification_tree_ref.html#struct_members_omap_node", null ],
       [ "struct_type", "md_Specification_tree_ref.html#struct_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md39", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md38", null ]
       ] ],
       [ "tuple_element", "md_Specification_tree_ref.html#tuple_element_node", null ],
       [ "tuple_elements_seq", "md_Specification_tree_ref.html#tuple_elements_seq_node", null ],
       [ "tuple_type", "md_Specification_tree_ref.html#tuple_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md40", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md39", null ]
       ] ],
       [ "types_map", "md_Specification_tree_ref.html#types_map_node", null ],
       [ "uint_type", "md_Specification_tree_ref.html#uint_type_node", null ],
       [ "uint16_type", "md_Specification_tree_ref.html#uint16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md41", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md40", null ]
       ] ],
       [ "uint32_type", "md_Specification_tree_ref.html#uint32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md42", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md41", null ]
       ] ],
       [ "uint64_type", "md_Specification_tree_ref.html#uint64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md43", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md42", null ]
       ] ],
       [ "uint8_type", "md_Specification_tree_ref.html#uint8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md44", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md43", null ]
       ] ],
       [ "uint_fast16_type", "md_Specification_tree_ref.html#uint_fast16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md45", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md44", null ]
       ] ],
       [ "uint_fast32_type", "md_Specification_tree_ref.html#uint_fast32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md46", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md45", null ]
       ] ],
       [ "uint_fast64_type", "md_Specification_tree_ref.html#uint_fast64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md47", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md46", null ]
       ] ],
       [ "uint_fast8_type", "md_Specification_tree_ref.html#uint_fast8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md48", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md47", null ]
       ] ],
       [ "uint_least16_type", "md_Specification_tree_ref.html#uint_least16_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md49", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md48", null ]
       ] ],
       [ "uint_least32_type", "md_Specification_tree_ref.html#uint_least32_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md50", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md49", null ]
       ] ],
       [ "uint_least64_type", "md_Specification_tree_ref.html#uint_least64_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md51", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md50", null ]
       ] ],
       [ "uint_least8_type", "md_Specification_tree_ref.html#uint_least8_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md52", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md51", null ]
       ] ],
       [ "uintmax_type", "md_Specification_tree_ref.html#uintmax_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md53", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md52", null ]
       ] ],
       [ "uintptr_type", "md_Specification_tree_ref.html#uintptr_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md54", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md53", null ]
       ] ],
       [ "unsigned_long_type", "md_Specification_tree_ref.html#unsigned_long_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md55", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md54", null ]
       ] ],
       [ "unsigned_long_long_type", "md_Specification_tree_ref.html#unsigned_long_long_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md56", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md55", null ]
       ] ],
       [ "unsigned_short_type", "md_Specification_tree_ref.html#unsigned_short_type_node", [
-        [ "Example:", "md_Specification_tree_ref.html#autotoc_md57", null ]
+        [ "Example:", "md_Specification_tree_ref.html#autotoc_md56", null ]
       ] ]
     ] ],
     [ "Installation of PDI source distribution", "md_Source_installation.html", [
@@ -267,58 +266,58 @@ var NAVTREE =
       [ "Running an application", "md_Using_PDI.html#running_app", null ]
     ] ],
     [ "YAML", "md_Yaml.html", [
-      [ "YAML Format", "md_Yaml.html#autotoc_md58", [
-        [ "Scalar element", "md_Yaml.html#autotoc_md59", null ],
-        [ "Sequence sub-tree", "md_Yaml.html#autotoc_md60", null ],
-        [ "Mapping sub-tree", "md_Yaml.html#autotoc_md61", null ],
-        [ "YAML advanced elements", "md_Yaml.html#autotoc_md62", [
-          [ "Ordered mapping sub-tree", "md_Yaml.html#autotoc_md63", null ]
+      [ "YAML Format", "md_Yaml.html#autotoc_md57", [
+        [ "Scalar element", "md_Yaml.html#autotoc_md58", null ],
+        [ "Sequence sub-tree", "md_Yaml.html#autotoc_md59", null ],
+        [ "Mapping sub-tree", "md_Yaml.html#autotoc_md60", null ],
+        [ "YAML advanced elements", "md_Yaml.html#autotoc_md61", [
+          [ "Ordered mapping sub-tree", "md_Yaml.html#autotoc_md62", null ]
         ] ]
       ] ],
-      [ "YAML Parsing with Paraconf", "md_Yaml.html#autotoc_md64", null ]
+      [ "YAML Parsing with Paraconf", "md_Yaml.html#autotoc_md63", null ]
     ] ],
     [ "PDI examples", "md__builds_pdidev_pdi_example_README.html", [
       [ "Code algorithm", "md__builds_pdidev_pdi_example_README.html#heat_algorithm", null ],
       [ "PDI integration", "md__builds_pdidev_pdi_example_README.html#pdi_integration", null ]
     ] ],
     [ "Hands-on tutorial", "md__builds_pdidev_pdi_tutorial_README.html", [
-      [ "Setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md65", [
-        [ "PDI installation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md66", null ],
-        [ "Hands-on tutorial setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md67", null ],
-        [ "Compilation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md68", null ],
-        [ "Execution", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md69", null ]
+      [ "Setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md64", [
+        [ "PDI installation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md65", null ],
+        [ "Hands-on tutorial setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md66", null ],
+        [ "Compilation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md67", null ],
+        [ "Execution", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md68", null ]
       ] ],
-      [ "PDI-free code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md70", [
-        [ "Ex1. Getting started", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md71", null ]
+      [ "PDI-free code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md69", [
+        [ "Ex1. Getting started", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md70", null ]
       ] ],
-      [ "PDI core & trace plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md72", [
-        [ "Ex2. Now with some PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md73", null ]
+      [ "PDI core & trace plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md71", [
+        [ "Ex2. Now with some PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md72", null ]
       ] ],
-      [ "Decl'HDF5 plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md74", [
-        [ "Ex3. HDF5 through PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md75", null ],
-        [ "Ex4. Writing some real data", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md76", null ],
-        [ "Ex5. Introducing events", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md77", null ],
-        [ "Ex6. Simplifying the code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md78", null ],
-        [ "Ex7. Writing a selection", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md79", null ],
-        [ "Ex8. Selecting on the dataset size", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md80", null ]
+      [ "Decl'HDF5 plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md73", [
+        [ "Ex3. HDF5 through PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md74", null ],
+        [ "Ex4. Writing some real data", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md75", null ],
+        [ "Ex5. Introducing events", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md76", null ],
+        [ "Ex6. Simplifying the code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md77", null ],
+        [ "Ex7. Writing a selection", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md78", null ],
+        [ "Ex8. Selecting on the dataset size", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md79", null ]
       ] ],
-      [ "parallel Decl'HDF5", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md81", [
-        [ "Ex9. Going parallel", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md82", null ]
+      [ "parallel Decl'HDF5", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md80", [
+        [ "Ex9. Going parallel", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md81", null ]
       ] ],
-      [ "Pycall", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md83", [
-        [ "Ex10. Post-processing the data in python", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md84", null ]
+      [ "Pycall", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md82", [
+        [ "Ex10. Post-processing the data in python", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md83", null ]
       ] ],
-      [ "What next ?", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md85", null ]
+      [ "What next ?", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md84", null ]
     ] ],
     [ "The Decl'HDF5 plugin", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html", [
-      [ "Configuration grammar", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md86", [
-        [ "<tt>FILE_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md87", null ],
-        [ "<tt>DATA_SECTION</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md88", null ],
-        [ "<tt>DATA_IO_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md89", null ],
-        [ "<tt>SELECTION_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md90", null ],
+      [ "Configuration grammar", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md85", [
+        [ "<tt>FILE_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md86", null ],
+        [ "<tt>DATA_SECTION</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md87", null ],
+        [ "<tt>DATA_IO_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md88", null ],
+        [ "<tt>SELECTION_DESC</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md89", null ],
         [ "<tt>COLLISION_POLICY</tt>", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#COLLISION_POLICY", null ]
       ] ],
-      [ "full configuration example", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md91", null ]
+      [ "full configuration example", "md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#autotoc_md90", null ]
     ] ],
     [ "The FlowVR plugin", "md__builds_pdidev_pdi_plugins_flowvr_README.html", [
       [ "Configuration elements", "md__builds_pdidev_pdi_plugins_flowvr_README.html#flowvr_configuration", [
@@ -371,25 +370,25 @@ var NAVTREE =
       ] ]
     ] ],
     [ "FTI plugin", "md__builds_pdidev_pdi_plugins_fti_README.html", [
-      [ "Features and requirements", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md94", [
-        [ "Dependencies", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md95", null ],
-        [ "Initialization", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md96", null ],
-        [ "Predefined descriptors", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md97", null ]
+      [ "Features and requirements", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md93", [
+        [ "Dependencies", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md94", null ],
+        [ "Initialization", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md95", null ],
+        [ "Predefined descriptors", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md96", null ]
       ] ],
-      [ "Configuration grammar", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md98", [
-        [ "logging", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md99", null ],
-        [ "checkpoint", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md100", null ],
-        [ "communicator", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md101", null ],
-        [ "config_file", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md102", null ],
-        [ "dataset", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md103", null ],
-        [ "init_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md104", null ],
-        [ "recover_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md105", null ],
-        [ "recover_var", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md106", null ],
-        [ "send_file", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md107", null ],
-        [ "snapshot_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md108", null ],
-        [ "status", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md109", null ]
+      [ "Configuration grammar", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md97", [
+        [ "logging", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md98", null ],
+        [ "checkpoint", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md99", null ],
+        [ "communicator", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md100", null ],
+        [ "config_file", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md101", null ],
+        [ "dataset", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md102", null ],
+        [ "init_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md103", null ],
+        [ "recover_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md104", null ],
+        [ "recover_var", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md105", null ],
+        [ "send_file", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md106", null ],
+        [ "snapshot_on", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md107", null ],
+        [ "status", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md108", null ]
       ] ],
-      [ "full configuration example", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md110", null ]
+      [ "full configuration example", "md__builds_pdidev_pdi_plugins_fti_README.html#autotoc_md109", null ]
     ] ],
     [ "The Decl'NetCDF plugin", "md__builds_pdidev_pdi_plugins_decl_netcdf_README.html", [
       [ "Configuration elements", "md__builds_pdidev_pdi_plugins_decl_netcdf_README.html#decl_netcdf_configuration", [
@@ -474,7 +473,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classPDI_1_1Ref__any.html#aaba9dfd510ac25c7bafd7a25d96da0c2",
-"md_Specification_tree_ref.html#logical_type_node"
+"md_Specification_tree_ref.html#long_long_type_node"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
