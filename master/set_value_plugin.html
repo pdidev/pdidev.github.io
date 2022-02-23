@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-23.a3b16ab</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-23.8223ede</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -45,7 +45,7 @@
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('md__builds_pdidev_pdi_plugins_set_value_README.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('set_value_plugin.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('md__builds_pdidev_pdi_plugins_set_valu
   <div class="headertitle"><div class="title">Set_value plugin </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="set_value_plugin"></a> The Set_value plugin allows setting values to data and metadata descriptors from the yaml file.</p>
+<div class="textblock"><p ><a class="anchor" id="md__builds_pdidev_pdi_plugins_set_value_README"></a> The Set_value plugin allows setting values to data and metadata descriptors from the yaml file.</p>
 <p >Here are main features of the plugins:</p>
 <ol type="1">
 <li>Share data - plugin will share new allocated data with given values</li>
@@ -71,17 +71,17 @@ Configuration grammar</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"logging"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#logging_node">logging</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"on_init"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"on_init"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"on_event"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">an <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#on_event_map_node">on_event</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"on_event"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">an <a class="el" href="set_value_plugin.html#on_event_map_node">on_event</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"on_data"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">an <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#on_data_map_node">on_data</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"on_data"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">an <a class="el" href="set_value_plugin.html#on_data_map_node">on_data</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"on_finalize"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>"on_finalize"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a>   </td></tr>
 </table>
 <h2><a class="anchor" id="on_init_list_node"></a>
 on_init</h2>
-<p >Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga3dc660be40c93c169337e3d2692b2ed0">PDI_init</a> function. <code>on_init</code> is a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a> s.</p>
+<p >Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga3dc660be40c93c169337e3d2692b2ed0">PDI_init</a> function. <code>on_init</code> is a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> s.</p>
 <div class="fragment"><div class="line">plugins:</div>
 <div class="line">  set_value:</div>
 <div class="line">    on_init:</div>
@@ -93,12 +93,12 @@ on_init</h2>
 <div class="line">      - logger: ... # logger_map</div>
 </div><!-- fragment --><h2><a class="anchor" id="on_event_map_node"></a>
 on_event</h2>
-<p >Specifies a map of events that will trigger the values set. <code>on_event</code> is a map with event name as a key and <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a> list as map value.</p>
+<p >Specifies a map of events that will trigger the values set. <code>on_event</code> is a map with event name as a key and <a class="el" href="set_value_plugin.html#value_operation">value operation</a> list as map value.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a>   </td></tr>
 </table>
 <div class="fragment"><div class="line">plugins:</div>
 <div class="line">  set_value:</div>
@@ -117,12 +117,12 @@ on_event</h2>
 <div class="line">        - event: ... # value</div>
 </div><!-- fragment --><h2><a class="anchor" id="on_data_map_node"></a>
 on_data</h2>
-<p >Specifies a map of data that on share will trigger the values set. <code>on_data</code> is a map with data/metadata name as a key and <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a> as map value.</p>
+<p >Specifies a map of data that on share will trigger the values set. <code>on_data</code> is a map with data/metadata name as a key and <a class="el" href="set_value_plugin.html#value_operation">value operation</a> as map value.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a>   </td></tr>
 </table>
 <div class="fragment"><div class="line">metadata:</div>
 <div class="line">  metadata_1_name: ... # metadata_type</div>
@@ -145,7 +145,7 @@ on_data</h2>
 <div class="line">        - event: ... # value</div>
 </div><!-- fragment --><h2><a class="anchor" id="on_finalize_list_node"></a>
 on_finalize</h2>
-<p >Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga7995fbda2099950ed4ffc7fd4c0bb969">PDI_finalize</a> function. <code>on_finalize</code> is a list of <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_operation">value operation</a> s.</p>
+<p >Specifies a list of operation to do in <a class="el" href="group__init__final.html#ga7995fbda2099950ed4ffc7fd4c0bb969">PDI_finalize</a> function. <code>on_finalize</code> is a list of <a class="el" href="set_value_plugin.html#value_operation">value operation</a> s.</p>
 <div class="fragment"><div class="line">plugins:</div>
 <div class="line">  set_value:</div>
 <div class="line">    on_finalize:</div>
@@ -156,22 +156,22 @@ on_finalize</h2>
 <div class="line">      - event: ... # value</div>
 </div><!-- fragment --><h2><a class="anchor" id="value_operation"></a>
 value operation</h2>
-<p >A value operation is specified as a key-value pair (a <b>mapping</b> whose content is a single key-value pair). It defines an operation to execute inside a <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_list">value list</a>.</p>
+<p >A value operation is specified as a key-value pair (a <b>mapping</b> whose content is a single key-value pair). It defines an operation to execute inside a <a class="el" href="set_value_plugin.html#value_list">value list</a>.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"set"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_list">value list</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"set"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="set_value_plugin.html#value_list">value list</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"share"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_list">value list</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"share"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="set_value_plugin.html#value_list">value list</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"expose"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#value_list">value list</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"expose"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="set_value_plugin.html#value_list">value list</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"release"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a list with data to release    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"event"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">an event name to call    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"logger"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#logger_map">logger map</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>"logger"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="set_value_plugin.html#logger_map">logger map</a>   </td></tr>
 </table>
 <p ><b>Share warning</b> <br  />
 </p>
@@ -179,9 +179,9 @@ value operation</h2>
 <h2><a class="anchor" id="value_list"></a>
 value list</h2>
 <p >Is a list of the</p><ul>
-<li><a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#scalar_value">scalar value</a>,</li>
-<li><a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#array_value">array value</a>,</li>
-<li><a class="el" href="md__builds_pdidev_pdi_plugins_set_value_README.html#record_value">record value</a> <br  />
+<li><a class="el" href="set_value_plugin.html#scalar_value">scalar value</a>,</li>
+<li><a class="el" href="set_value_plugin.html#array_value">array value</a>,</li>
+<li><a class="el" href="set_value_plugin.html#record_value">record value</a> <br  />
 </li>
 </ul>
 <p >as elements. The order of the elements is important. The descriptors will be set in the same order as given in the yaml file.</p>
