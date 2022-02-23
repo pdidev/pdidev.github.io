@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-18.fef10ca</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-23.a3b16ab</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -45,7 +45,7 @@
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('md_Specification_tree_ref.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Specification_tree_ref.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('md_Specification_tree_ref.html',''); i
   <div class="headertitle"><div class="title">Specification tree Reference </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="Specification_tree_ref"></a> The PDI specification tree is expressed in <a class="el" href="md_Yaml.html#YAML">YAML</a>.</p>
+<div class="textblock"><p ><a class="anchor" id="md_Specification_tree_ref"></a> The PDI specification tree is expressed in <a class="el" href="YAML.html">YAML</a>.</p>
 <h1><a class="anchor" id="root_node"></a>
 specification tree root</h1>
 <p >The <em>specification tree root</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -61,17 +61,17 @@ specification tree root</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"types"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#types_map_node">types_map</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"types"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#types_map_node">types_map</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"data"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#data_map_node">data_map</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"data"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#data_map_node">data_map</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"metadata"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#data_map_node">data_map</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"metadata"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#data_map_node">data_map</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"plugins"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#plugin_map_node">plugin_map</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"plugins"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#plugin_map_node">plugin_map</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"logging"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#logging_node">logging</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"logging"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#logging_node">logging</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"plugin_path"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#plugin_path_map_node">plugin_path</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"plugin_path"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#plugin_path_map_node">plugin_path</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft"><em>anything</em>   </td></tr>
 </table>
@@ -83,7 +83,7 @@ specification tree root</h1>
 <li>the <code>logging</code> section specify logger properties</li>
 <li>additional sections are ignored.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Example:</h2>
 <div class="fragment"><div class="line">metadata:</div>
 <div class="line">  my_metadata: int</div>
@@ -104,13 +104,13 @@ array_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"array"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"size"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"size"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"subtype"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"subtype"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"subsize"</code> (<em>optional, deprecated</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"subsize"</code> (<em>optional, deprecated</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"start"</code> (<em>optional, deprecated</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"start"</code> (<em>optional, deprecated</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#intexpr_or_seq_node">intexpr_or_seq</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
@@ -121,7 +121,7 @@ array_type</h1>
 <li>the value associated to the <code>start</code> key represents the index of the first element to actually use in each dimension (slicing), if specified it <b>must</b> have the same number of elements as <code>size</code>, this defaults to the first (0) element in each dimension,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: array</div>
 <div class="line">subtype: double</div>
@@ -140,7 +140,7 @@ byte_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#byte_type_node">byte_type</a> represents the C++ <code>byte</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#byte_type_node">byte_type</a> represents the C++ <code>byte</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
 <p ><b>Example:</b></p>
@@ -159,7 +159,7 @@ char_type</h1>
 <p >A <em>char_type</em> represents the C <code>char</code> datatype; it accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: char</div>
 </div><!-- fragment --><h1><a class="anchor" id="character_type_node"></a>
@@ -171,7 +171,7 @@ character_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"character"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
@@ -179,7 +179,7 @@ character_type</h1>
 <li>the value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>character(kind=...)</code>), if missing, the default kind of the Fortran implementation is used,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: character</div>
 </div><!-- fragment --><div class="fragment"><div class="line">type: character</div>
@@ -191,99 +191,97 @@ data_map</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
 </table>
 <ul>
 <li>each key identifies the name of a buffer exposed to PDI associated to its type.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Example:</h2>
 <div class="fragment"><div class="line">my_data_1: int</div>
 <div class="line">my_data_2: {type: array, subtype: double, size: 5}</div>
 </div><!-- fragment --><h1><a class="anchor" id="datatype_node"></a>
 datatype</h1>
 <p >A <em>datatype</em> can be <b>any of</b>:</p><ul>
-<li>a <a class="el" href="md_Specification_tree_ref.html#array_type_node">array_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#byte_type_node">byte_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#char_type_node">char_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#character_type_node">character_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#double_type_node">double_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#float_type_node">float_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#int_type_node">int_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#int16_type_node">int16_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#int32_type_node">int32_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#int64_type_node">int64_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#int8_type_node">int8_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#integer_type_node">integer_type</a>,</li>
-<li>a int_fast16_type_node,</li>
-<li>a int_fast32_type_node,</li>
-<li>a int_fast64_type_node,</li>
-<li>a int_fast8_type_node,</li>
-<li>a int_least16_type_node,</li>
-<li>a int_least32_type_node,</li>
-<li>a int_least64_type_node,</li>
-<li>a int_least8_type_node,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#intmax_type_node">intmax_type_node</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#intptr_type_node">intptr_type_node</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#logical_type_node">logical_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#long_type_node">long_type</a>,</li>
-<li>a long long_type_node,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#real_type_node">real_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#record_type_node">record_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#short_type_node">short_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#size_t_type_node">size_t_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#struct_type_node">struct_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#tuple_type_node">tuple_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_type_node">uint_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint16_type_node">uint16_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint32_type_node">uint32_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint64_type_node">uint64_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint8_type_node">uint8_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_fast16_type_node">uint_fast16_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_fast32_type_node">uint_fast32_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_fast64_type_node">uint_fast64_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_fast8_type_node">uint_fast8_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_least16_type_node">uint_least16_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_least32_type_node">uint_least32_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_least64_type_node">uint_least64_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uint_least8_type_node">uint_least8_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uintmax_type_node">uintmax_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#uintptr_type_node">uintptr_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#unsigned_long_type_node">unsigned_long_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#unsigned_long_long_type_node">unsigned_long_long_type</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#unsigned_short_type_node">unsigned_short_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#array_type_node">array_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#byte_type_node">byte_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#char_type_node">char_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#character_type_node">character_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#double_type_node">double_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#float_type_node">float_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_type_node">int_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int16_type_node">int16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int32_type_node">int32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int64_type_node">int64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int8_type_node">int8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#integer_type_node">integer_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_fast16_type_node">int_fast16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_fast32_type_node">int_fast32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_fast64_type_node">int_fast64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_fast8_type_node">int_fast8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_least16_type_node">int_least16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_least32_type_node">int_least32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_least64_type_node">int_least64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#int_least8_type_node">int_least8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#intmax_type_node">intmax_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#intptr_type_node">intptr_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#logical_type_node">logical_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#long_type_node">long_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#long_type_node">long_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#real_type_node">real_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#short_type_node">short_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#size_t_type_node">size_t_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#tuple_type_node">tuple_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_type_node">uint_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint16_type_node">uint16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint32_type_node">uint32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint64_type_node">uint64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint8_type_node">uint8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_fast16_type_node">uint_fast16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_fast32_type_node">uint_fast32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_fast64_type_node">uint_fast64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_fast8_type_node">uint_fast8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_least16_type_node">uint_least16_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_least32_type_node">uint_least32_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_least64_type_node">uint_least64_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uint_least8_type_node">uint_least8_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uintmax_type_node">uintmax_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#uintptr_type_node">uintptr_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#unsigned_long_type_node">unsigned_long_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#unsigned_long_long_type_node">unsigned_long_long_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#unsigned_short_type_node">unsigned_short_type</a>,</li>
 <li>any user-defined datatype name.</li>
 </ul>
-<p ><a class="el" href="md_Specification_tree_ref.html#simple_datatype_node">simple_datatype</a> is just a string that identifies the referenced type. All others cases are dictionaries whose <code>type</code> key identifies the type.</p>
-<p >A <em>datatype</em> represents the memory layout and interpretation for data exposed by the user in the <a class="el" href="md_Concepts.html#Data_store">data store</a>.</p>
+<p ><a class="el" href="Specification_tree_ref.html#simple_datatype_node">simple_datatype</a> is just a string that identifies the referenced type. All others cases are dictionaries whose <code>type</code> key identifies the type.</p>
+<p >A <em>datatype</em> represents the memory layout and interpretation for data exposed by the user in the <a class="el" href="Concepts.html#Data_store">data store</a>.</p>
 <p >Optional attributes can be added to any <em>datatype</em>. An attribute is identified by a key that starts with the <code>+</code> character. The value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</p>
 <dl class="section warning"><dt>Warning</dt><dd>Some additional types that are not listed here might be made available by plugins.</dd></dl>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Example:</h2>
-<div class="fragment"><div class="line">...</div>
-<div class="line">  data_name:</div>
-<div class="line">    type: int</div>
-<div class="line">    +first_attr: attr_value_1</div>
-<div class="line">    +second_attr: [attr, value]</div>
-<div class="line">    +third_attr: {key_0: 0, key_1: 1}</div>
-<div class="line">...</div>
+<div class="fragment"><div class="line">data_name:</div>
+<div class="line">  type: int</div>
+<div class="line">  +first_attr: attr_value_1</div>
+<div class="line">  +second_attr: [attr, value]</div>
+<div class="line">  +third_attr: {key_0: 0, key_1: 1}</div>
 </div><!-- fragment --><h1><a class="anchor" id="datatype_with_disp_node"></a>
 datatype_with_disp</h1>
-<p >A <em>datatype_with_disp</em> is a <b>mapping</b> that must be a valid <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a> with an additional <code>disp</code> key: </p><table class="markdownTable">
+<p >A <em>datatype_with_disp</em> is a <b>mapping</b> that must be a valid <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> with an additional <code>disp</code> key: </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"disp"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"disp"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft">a type identifier    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (*<a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a> *)   </td><td class="markdownTableBodyLeft">see <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (*<a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> *)   </td><td class="markdownTableBodyLeft">see <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
 </table>
 <ul>
 <li>the value associated to the <code>disp</code> key specifies the offset in bytes from the base address of the container to this specific member,</li>
-<li>the other keys and values are interpreted as for a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a> .</li>
+<li>the other keys and values are interpreted as for a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> .</li>
 </ul>
 <h1><a class="anchor" id="double_type_node"></a>
 double_type</h1>
@@ -299,7 +297,7 @@ double_type</h1>
 <p >A <em>double_type</em> represents the C <code>double</code> type; it accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: double</div>
 </div><!-- fragment --><h1><a class="anchor" id="expression_node"></a>
@@ -354,7 +352,7 @@ $-expression</h1>
 <li>true (1): <code>y</code>, <code>Y</code>, <code>yes</code>, <code>Yes</code>, <code>YES</code>, <code>true</code>, <code>True</code>, <code>TRUE</code>, <code>on</code>, <code>On</code>, <code>ON</code>.</li>
 <li>false (0): <code>n</code>, <code>N</code>, <code>no</code>, <code>No</code>, <code>NO</code>, <code>false</code>, <code>False</code>, <code>FALSE</code>, <code>Off</code>, <code>Off</code>, <code>OFF</code>.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Example:</h2>
 <div class="fragment"><div class="line"><span class="stringliteral">&#39;$my_data&#39;</span></div>
 </div><!-- fragment --><div class="fragment"><div class="line"><span class="stringliteral">&#39;($my_data + 3) % 6&#39;</span></div>
@@ -375,10 +373,10 @@ float_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#float_type_node">float_type</a> represents the C <code>float</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#float_type_node">float_type</a> represents the C <code>float</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: float</div>
 </div><!-- fragment --><h1><a class="anchor" id="int_type_node"></a>
@@ -392,10 +390,10 @@ int_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#int_type_node">int_type</a> represents the C <code>int</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_type_node">int_type</a> represents the C <code>int</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int</div>
 </div><!-- fragment --><h1><a class="anchor" id="int16_type_node"></a>
@@ -409,10 +407,10 @@ int16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#int16_type_node">int16_type</a> represents the C <code>int16_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int16_type_node">int16_type</a> represents the C <code>int16_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int16</div>
 </div><!-- fragment --><h1><a class="anchor" id="int32_type_node"></a>
@@ -426,10 +424,10 @@ int32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#int32_type_node">int32_type</a> represents the C <code>int32_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int32_type_node">int32_type</a> represents the C <code>int32_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int32</div>
 </div><!-- fragment --><h1><a class="anchor" id="int64_type_node"></a>
@@ -446,7 +444,7 @@ int64_type</h1>
 <p >A <em>int64_type</em> represents the C <code>int64_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int64</div>
 </div><!-- fragment --><h1><a class="anchor" id="int8_type_node"></a>
@@ -460,10 +458,10 @@ int8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#int8_type_node">int8_type</a> represents the C <code>int8_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int8_type_node">int8_type</a> represents the C <code>int8_t</code> type from the <code>&lt;stdtypes.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int8</div>
 </div><!-- fragment --><h1><a class="anchor" id="integer_type_node"></a>
@@ -475,7 +473,7 @@ integer_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"integer"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
@@ -483,7 +481,7 @@ integer_type</h1>
 <li>The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>integer(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: integer</div>
 </div><!-- fragment --><div class="fragment"><div class="line">type: integer</div>
@@ -491,20 +489,20 @@ Example:</h2>
 </div><!-- fragment --><h1><a class="anchor" id="intexpr_or_seq_node"></a>
 intexpr_or_seq</h1>
 <p >A <em>intexpr_or_seq</em> can be <b>any of</b>:</p><ul>
-<li>a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#intexpr_seq_node">intexpr_seq</a>.</li>
+<li>a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#intexpr_seq_node">intexpr_seq</a>.</li>
 </ul>
-<p >In that context, a simple <a class="el" href="md_Specification_tree_ref.html#expression_node">$-expression</a> is interpreted as a shortcut for a sequence containing a single <a class="el" href="md_Specification_tree_ref.html#expression_node">$-expression</a>.</p>
+<p >In that context, a simple <a class="el" href="Specification_tree_ref.html#expression_node">$-expression</a> is interpreted as a shortcut for a sequence containing a single <a class="el" href="Specification_tree_ref.html#expression_node">$-expression</a>.</p>
 <p >For example, the following value: </p><div class="fragment"><div class="line">&quot;$x + 2&quot;</div>
 </div><!-- fragment --><p >is interpreted as if it was: </p><div class="fragment"><div class="line">[ &quot;$x + 2&quot; ]</div>
 </div><!-- fragment --><h1><a class="anchor" id="intexpr_seq_node"></a>
 intexpr_seq</h1>
-<p >A <em>intexpr_seq</em> is a <b>sequence</b> where each element of the sequence is a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<p >A <em>intexpr_seq</em> is a <b>sequence</b> where each element of the sequence is a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>.</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Example:</h2>
 <div class="fragment"><div class="line">[ 1, <span class="stringliteral">&#39;2&#39;</span>, <span class="stringliteral">&#39;$size&#39;</span>, <span class="stringliteral">&#39;$other_size + 2&#39;</span> ]</div>
-</div><!-- fragment --><h1><a class="anchor" id="intfast16_type_node"></a>
-intfast16_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_fast16_type_node"></a>
+int_fast16_type</h1>
 <p >A <em>int_fast16_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -514,14 +512,14 @@ intfast16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_fast16_type_node represents the C <code>int_fast16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_fast16_type_node">int_fast16_type</a> represents the C <code>int_fast16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_fast16</div>
-</div><!-- fragment --><h1><a class="anchor" id="intfast32_type_node"></a>
-intfast32_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_fast32_type_node"></a>
+int_fast32_type</h1>
 <p >A <em>int_fast32_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -531,14 +529,14 @@ intfast32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_fast32_type_node represents the C <code>int_fast32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_fast32_type_node">int_fast32_type</a> represents the C <code>int_fast32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_fast32</div>
-</div><!-- fragment --><h1><a class="anchor" id="intfast64_type_node"></a>
-intfast64_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_fast64_type_node"></a>
+int_fast64_type</h1>
 <p >A <em>int_fast64_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -548,14 +546,14 @@ intfast64_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_fast64_type_node represents the C <code>int_fast64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_fast64_type_node">int_fast64_type</a> represents the C <code>int_fast64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_fast64</div>
-</div><!-- fragment --><h1><a class="anchor" id="intfast8_type_node"></a>
-intfast8_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_fast8_type_node"></a>
+int_fast8_type</h1>
 <p >A <em>int_fast8_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -565,14 +563,14 @@ intfast8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_fast8_type_node represents the C <code>int_fast8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_fast8_type_node">int_fast8_type</a> represents the C <code>int_fast8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_fast8</div>
-</div><!-- fragment --><h1><a class="anchor" id="intleast16_type_node"></a>
-intleast16_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_least16_type_node"></a>
+int_least16_type</h1>
 <p >A <em>int_least16_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -582,14 +580,14 @@ intleast16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_least16_type_node represents the C <code>int_least16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_least16_type_node">int_least16_type</a> represents the C <code>int_least16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_least16</div>
-</div><!-- fragment --><h1><a class="anchor" id="intleast32_type_node"></a>
-intleast32_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_least32_type_node"></a>
+int_least32_type</h1>
 <p >A <em>int_least32_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -599,14 +597,14 @@ intleast32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_least32_type_node represents the C <code>int_least32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_least32_type_node">int_least32_type</a> represents the C <code>int_least32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_least32</div>
-</div><!-- fragment --><h1><a class="anchor" id="intleast64_type_node"></a>
-intleast64_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_least64_type_node"></a>
+int_least64_type</h1>
 <p >A <em>int_least64_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -616,14 +614,14 @@ intleast64_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_least64_type_node represents the C <code>int_least64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_least64_type_node">int_least64_type</a> represents the C <code>int_least64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_least64</div>
-</div><!-- fragment --><h1><a class="anchor" id="intleast8_type_node"></a>
-intleast8_type</h1>
+</div><!-- fragment --><h1><a class="anchor" id="int_least8_type_node"></a>
+int_least8_type</h1>
 <p >A <em>int_least8_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -633,14 +631,14 @@ intleast8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A int_least8_type_node represents the C <code>int_least8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#int_least8_type_node">int_least8_type</a> represents the C <code>int_least8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: int_least8</div>
 </div><!-- fragment --><h1><a class="anchor" id="intmax_type_node"></a>
-intmax_type_node</h1>
+intmax_type</h1>
 <p >A <em>intmax_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -650,14 +648,14 @@ intmax_type_node</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#intmax_type_node">intmax_type_node</a> represents the C <code>intmax_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#intmax_type_node">intmax_type</a> represents the C <code>intmax_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md31"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: intmax</div>
 </div><!-- fragment --><h1><a class="anchor" id="intptr_type_node"></a>
-intptr_type_node</h1>
+intptr_type</h1>
 <p >A <em>intptr_type</em> is a <b>mapping</b> that contains the following keys:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -667,19 +665,19 @@ intptr_type_node</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#intptr_type_node">intptr_type_node</a> represents the C <code>intptr_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#intptr_type_node">intptr_type</a> represents the C <code>intptr_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: intptr</div>
 </div><!-- fragment --><h1><a class="anchor" id="logging_node"></a>
 logging</h1>
 <p >A <em>logging</em> can be <b>any of</b>:</p><ul>
-<li>a <a class="el" href="md_Specification_tree_ref.html#logging_map_node">logging_map</a>,</li>
-<li>a <a class="el" href="md_Specification_tree_ref.html#logging_level_node">logging_level</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#logging_map_node">logging_map</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#logging_level_node">logging_level</a>,</li>
 </ul>
-<p >A <em>logging</em> is fully supported in <a class="el" href="md_Specification_tree_ref.html#root_node">specification tree root</a> and any <a class="el" href="md_Specification_tree_ref.html#plugin_map_node">plugin_map</a> .</p>
+<p >A <em>logging</em> is fully supported in <a class="el" href="Specification_tree_ref.html#root_node">specification tree root</a> and any <a class="el" href="Specification_tree_ref.html#plugin_map_node">plugin_map</a> .</p>
 <h1><a class="anchor" id="logging_level_node"></a>
 logging_level</h1>
 <p >A <em>logging_level</em> is a scalar which determines verbosity level. It can be set to (from the most to the least verbose):</p><ul>
@@ -701,15 +699,15 @@ logging_map</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"level"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#logging_level_node">logging_level</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"level"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#logging_level_node">logging_level</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"pattern"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a logger prefix pattern of spdlog    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"output"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#logging_output_map_node">logging_output_map</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>"output"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#logging_output_map_node">logging_output_map</a>   </td></tr>
 </table>
 <ul>
 <li>spdlog pattern is a string that is parsed by spdlog library, (see more: <a href="https://github.com/gabime/spdlog/wiki/3.-Custom-formatting">https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</a>)</li>
-<li>PDI introduces new special flag <code>%{&lt;EXPR&gt;}</code>, where <code>&lt;EXPR&gt;</code> represents a <a class="el" href="md_Specification_tree_ref.html#expression_node">string-valued $-expression</a>|a $-expression that will be evaluated just after all plugins have been initialized,</li>
+<li>PDI introduces new special flag <code>%{&lt;EXPR&gt;}</code>, where <code>&lt;EXPR&gt;</code> represents a <a class="el" href="Specification_tree_ref.html#expression_node">string-valued $-expression</a>|a $-expression that will be evaluated just after all plugins have been initialized,</li>
 <li><em>pattern</em> by default is set to (where n is <code><a class="el" href="namespacePDI.html">PDI</a></code> or a plugin name): <div class="fragment"><div class="line">[%T][%n] *** %^%l%$: %v</div>
 </div><!-- fragment --> for serial execution and: <div class="fragment"><div class="line">[%T][%{MPI_COMM_WORLD.rank:06d}][%n] *** %^%l%$: %v</div>
 </div><!-- fragment --> when running application with MPI/</li>
@@ -738,7 +736,7 @@ logging_output_map</h1>
 <div class="line">  output:</div>
 <div class="line">    file: &quot;test.log&quot;</div>
 <div class="line">    console: &quot;on&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: struct</div>
 <div class="line">members:</div>
@@ -750,7 +748,7 @@ Example:</h2>
 <div class="line">      type: array</div>
 <div class="line">      subtype: int64</div>
 <div class="line">      size: [10, 10]</div>
-</div><!-- fragment --><p >See <a class="el" href="md_Specification_tree_ref.html#struct_type_node">struct_type</a> for more examples.</p>
+</div><!-- fragment --><p >See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for more examples.</p>
 <h1><a class="anchor" id="logical_type_node"></a>
 logical_type</h1>
 <p >A <em>logical_type</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -760,7 +758,7 @@ logical_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"logical"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
@@ -768,7 +766,7 @@ logical_type</h1>
 <li>The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>logical(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: logical</div>
 </div><!-- fragment --><div class="fragment"><div class="line">type: logical</div>
@@ -784,7 +782,7 @@ long_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#long_type_node">long_type</a> represents the C <code>long</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#long_type_node">long_type</a> represents the C <code>long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
 <p ><b>Example:</b></p>
@@ -800,7 +798,7 @@ long_long_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#long_long_type_node">long_long_type</a> represents the C <code>long long</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#long_long_type_node">long_long_type</a> represents the C <code>long long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
 <p ><b>Example:</b></p>
@@ -816,8 +814,8 @@ plugin_map</h1>
 <ul>
 <li>each key identifies the name of a plugin to load associated to its configuration; the content of the configuration depends on the plugin.</li>
 </ul>
-<p >Have a look at the <a class="el" href="md_Plugins.html#Plugins">plugins</a> documentation to see the specification tree they accept.</p>
-<p >See <a class="el" href="md_Specification_tree_ref.html#root_node">specification tree root</a> for an example.</p>
+<p >Have a look at the <a class="el" href="Plugins.html">plugins</a> documentation to see the specification tree they accept.</p>
+<p >See <a class="el" href="Specification_tree_ref.html#root_node">specification tree root</a> for an example.</p>
 <h1><a class="anchor" id="plugin_path_map_node"></a>
 plugin_path</h1>
 <p >A path to directory where PDI should search for plugins. It can be single path:</p>
@@ -835,7 +833,7 @@ ptrdiff_t_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a> represents the C <code>ptrdiff_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a> represents the C <code>ptrdiff_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
 <p ><b>Example:</b></p>
@@ -849,7 +847,7 @@ real_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"real"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"kind"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
@@ -857,7 +855,7 @@ real_type</h1>
 <li>The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>real(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: real</div>
 </div><!-- fragment --><div class="fragment"><div class="line">type: real</div>
@@ -868,12 +866,12 @@ record_members_map</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a>   </td></tr>
 </table>
 <ul>
 <li>each key identifies the name of a member of the record and the value associated to it describes the member itself.</li>
 </ul>
-<p >See <a class="el" href="md_Specification_tree_ref.html#record_type_node">record_type</a> for an example.</p>
+<p >See <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> for an example.</p>
 <h1><a class="anchor" id="record_type_node"></a>
 record_type</h1>
 <p >A <em>record_type</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -883,18 +881,18 @@ record_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"record"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"buffersize"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"buffersize"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"members"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#record_members_map_node">record_members_map</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"members"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#record_members_map_node">record_members_map</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#record_type_node">record_type</a> represents a "record" where:</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a> represents a "record" where:</p><ul>
 <li>the value associated to the <code>buffersize</code> key represents the overall size of the record, including potential padding,</li>
 <li>the value associated to the <code>members</code> key lists all members of the record with their offset,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Examples:</h2>
 <div class="fragment"><div class="line">type: record</div>
 <div class="line">buffersize: 8</div>
@@ -933,16 +931,16 @@ short_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#short_type_node">short_type</a> represents the C <code>short</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#short_type_node">short_type</a> represents the C <code>short</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: short</div>
 </div><!-- fragment --><h1><a class="anchor" id="simple_datatype_node"></a>
 simple_datatype</h1>
 <p >A <em>simple_datatype</em> is a <b>scalar</b>.</p>
-<p >It is interpreted as a shortcut for a mapping with a single key <code>type</code> whose value is the provided scalar and therefore another <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>.</p>
+<p >It is interpreted as a shortcut for a mapping with a single key <code>type</code> whose value is the provided scalar and therefore another <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>.</p>
 <p >For example, the following value: </p><div class="fragment"><div class="line">&quot;my_type&quot;</div>
 </div><!-- fragment --><p >is interpreted as if it was: </p><div class="fragment"><div class="line">{ type: &quot;my_type&quot; }</div>
 </div><!-- fragment --><h1><a class="anchor" id="size_t_type_node"></a>
@@ -956,7 +954,7 @@ size_t_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#size_t_type_node">size_t_type</a> represents the C <code>size_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#size_t_type_node">size_t_type</a> represents the C <code>size_t</code> type from the <code>&lt;stddef.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
 <p ><b>Example:</b></p>
@@ -967,12 +965,12 @@ struct_members_omap</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
 </table>
 <ul>
 <li>each key identifies the name of a member and the associated value specifies its type.</li>
 </ul>
-<p >See <a class="el" href="md_Specification_tree_ref.html#struct_type_node">struct_type</a> for an example.</p>
+<p >See <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> for an example.</p>
 <h1><a class="anchor" id="struct_type_node"></a>
 struct_type</h1>
 <p >A <em>struct_type</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -982,15 +980,15 @@ struct_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"struct"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"members"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#struct_members_omap_node">struct_members_omap</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"members"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#struct_members_omap_node">struct_members_omap</a>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#struct_type_node">struct_type</a> represents a C "struct" or C++ "class" using the default C memory layout, where:</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#struct_type_node">struct_type</a> represents a C "struct" or C++ "class" using the default C memory layout, where:</p><ul>
 <li>the value associated to the <code>members</code> key lists all members of the <code>struct</code> in order,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: struct</div>
 <div class="line">members:</div>
@@ -1002,13 +1000,13 @@ Example:</h2>
 <div class="line">};</div>
 </div><!-- fragment --><h1><a class="anchor" id="tuple_element_node"></a>
 tuple_element</h1>
-<p >A <em>tuple_elements_seq</em> is a <b>sequence</b> where each element of the sequence is a <a class="el" href="md_Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a> where <code>disp</code> key is optional.</p>
-<p >See <a class="el" href="md_Specification_tree_ref.html#tuple_type_node">tuple_type</a> for an example.</p>
+<p >A <em>tuple_elements_seq</em> is a <b>sequence</b> where each element of the sequence is a <a class="el" href="Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a> where <code>disp</code> key is optional.</p>
+<p >See <a class="el" href="Specification_tree_ref.html#tuple_type_node">tuple_type</a> for an example.</p>
 <h1><a class="anchor" id="tuple_elements_seq_node"></a>
 tuple_elements_seq</h1>
-<p >A <em>tuple_elements_seq</em> is a <b>sequence</b> where each element of the sequence is either a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a> or a <a class="el" href="md_Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a>.</p>
-<p >If <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatypes</a> with no explicit offset are used, the minimum offset that does not lead to overlaps is used.</p>
-<p >See <a class="el" href="md_Specification_tree_ref.html#tuple_type_node">tuple_type</a> for an example.</p>
+<p >A <em>tuple_elements_seq</em> is a <b>sequence</b> where each element of the sequence is either a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> or a <a class="el" href="Specification_tree_ref.html#datatype_with_disp_node">datatype_with_disp</a>.</p>
+<p >If <a class="el" href="Specification_tree_ref.html#datatype_node">datatypes</a> with no explicit offset are used, the minimum offset that does not lead to overlaps is used.</p>
+<p >See <a class="el" href="Specification_tree_ref.html#tuple_type_node">tuple_type</a> for an example.</p>
 <h1><a class="anchor" id="tuple_type_node"></a>
 tuple_type</h1>
 <p >A <em>tuple_type</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -1018,18 +1016,18 @@ tuple_type</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"tuple"</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>"buffersize"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"buffersize"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#expression_node">integer-valued $-expression</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>"elements"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#tuple_elements_seq_node">tuple_elements_seq</a>    </td></tr>
+<td class="markdownTableBodyLeft"><code>"elements"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#tuple_elements_seq_node">tuple_elements_seq</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#tuple_type_node">tuple_type</a> represents a "tuple", where:</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#tuple_type_node">tuple_type</a> represents a "tuple", where:</p><ul>
 <li>the value associated to the <code>buffersize</code> key represents the overall size of the tuple including potential padding, if omitted, the minimum size that fits all elements is used,</li>
 <li>the value associated to the <code>members</code> key lists all elements of the tuple,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: tuple</div>
 <div class="line">buffersize: 16</div>
@@ -1046,7 +1044,7 @@ types_map</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
+<td class="markdownTableBodyLeft"><code>".*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>   </td></tr>
 </table>
 <ul>
 <li>each key identifies the name of new user-defined datatype and the value associated to it describes the type</li>
@@ -1064,10 +1062,10 @@ uint16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint16_type_node">uint16_type</a> represents the C <code>uint16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint16_type_node">uint16_type</a> represents the C <code>uint16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint32_type_node"></a>
@@ -1081,10 +1079,10 @@ uint32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint32_type_node">uint32_type</a> represents the C <code>uint32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint32_type_node">uint32_type</a> represents the C <code>uint32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint64_type_node"></a>
@@ -1098,10 +1096,10 @@ uint64_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint64_type_node">uint64_type</a> represents the C <code>uint64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint64_type_node">uint64_type</a> represents the C <code>uint64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint8_type_node"></a>
@@ -1115,10 +1113,10 @@ uint8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint8_type_node">uint8_type</a> represents the C <code>uint8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint8_type_node">uint8_type</a> represents the C <code>uint8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast16_type_node"></a>
@@ -1132,10 +1130,10 @@ uint_fast16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_fast16_type_node">uint_fast16_type</a> represents the C <code>uint_fast16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_fast16_type_node">uint_fast16_type</a> represents the C <code>uint_fast16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast32_type_node"></a>
@@ -1149,10 +1147,10 @@ uint_fast32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_fast32_type_node">uint_fast32_type</a> represents the C <code>uint_fast32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_fast32_type_node">uint_fast32_type</a> represents the C <code>uint_fast32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast64_type_node"></a>
@@ -1166,10 +1164,10 @@ uint_fast64_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_fast64_type_node">uint_fast64_type</a> represents the C <code>uint_fast64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_fast64_type_node">uint_fast64_type</a> represents the C <code>uint_fast64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast8_type_node"></a>
@@ -1183,10 +1181,10 @@ uint_fast8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_fast8_type_node">uint_fast8_type</a> represents the C <code>uint_fast8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_fast8_type_node">uint_fast8_type</a> represents the C <code>uint_fast8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least16_type_node"></a>
@@ -1200,10 +1198,10 @@ uint_least16_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_least16_type_node">uint_least16_type</a> represents the C <code>uint_least16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_least16_type_node">uint_least16_type</a> represents the C <code>uint_least16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least32_type_node"></a>
@@ -1217,10 +1215,10 @@ uint_least32_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_least32_type_node">uint_least32_type</a> represents the C <code>uint_least32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_least32_type_node">uint_least32_type</a> represents the C <code>uint_least32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least64_type_node"></a>
@@ -1234,10 +1232,10 @@ uint_least64_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_least64_type_node">uint_least64_type</a> represents the C <code>uint_least64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_least64_type_node">uint_least64_type</a> represents the C <code>uint_least64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least8_type_node"></a>
@@ -1251,10 +1249,10 @@ uint_least8_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uint_least8_type_node">uint_least8_type</a> represents the C <code>uint_least8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uint_least8_type_node">uint_least8_type</a> represents the C <code>uint_least8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uintmax_type_node"></a>
@@ -1268,10 +1266,10 @@ uintmax_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uintmax_type_node">uintmax_type</a> represents the C <code>uintmax_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uintmax_type_node">uintmax_type</a> represents the C <code>uintmax_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md53"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uintmax</div>
 </div><!-- fragment --><h1><a class="anchor" id="uintptr_type_node"></a>
@@ -1285,10 +1283,10 @@ uintptr_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#uintptr_type_node">uintptr_type</a> represents the C <code>uintptr_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#uintptr_type_node">uintptr_type</a> represents the C <code>uintptr_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md53"></a>
+<h2><a class="anchor" id="autotoc_md54"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uintptr</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_long_type_node"></a>
@@ -1302,10 +1300,10 @@ unsigned_long_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#unsigned_long_type_node">unsigned_long_type</a> represents the C <code>unsigned long</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#unsigned_long_type_node">unsigned_long_type</a> represents the C <code>unsigned long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned long</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_long_long_type_node"></a>
@@ -1319,10 +1317,10 @@ unsigned_long_long_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#unsigned_long_long_type_node">unsigned_long_long_type</a> represents the C <code>unsigned long long</code> type. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#unsigned_long_long_type_node">unsigned_long_long_type</a> represents the C <code>unsigned long long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned long long</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_short_type_node"></a>
@@ -1336,10 +1334,10 @@ unsigned_short_type</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
 </table>
-<p >A <a class="el" href="md_Specification_tree_ref.html#unsigned_short_type_node">unsigned_short_type</a> represents the C <code>unsigned short_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
+<p >A <a class="el" href="Specification_tree_ref.html#unsigned_short_type_node">unsigned_short_type</a> represents the C <code>unsigned short_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned short</div>
 </div><!-- fragment --> </div></div><!-- contents -->

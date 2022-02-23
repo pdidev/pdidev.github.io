@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-18.fef10ca</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-02-23.a3b16ab</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -54,31 +54,31 @@ $(document).ready(function(){initNavTree('md__builds_pdidev_pdi_tutorial_README.
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p ><a class="anchor" id="Hands_on"></a> In this tutorial, you will build a PDI-enabled application step-by-step from a PDI-free base. You will end-up building the C version of the <a class="el" href="md__builds_pdidev_pdi_example_README.html#PDI_example">example provided with PDI</a> for the the <a class="el" href="md__builds_pdidev_pdi_plugins_trace_README.html#trace_plugin">Trace</a>, <a class="el" href="md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#Decl_HDF5_plugin">Decl'HDF5</a>, and <a class="el" href="md__builds_pdidev_pdi_plugins_pycall_README.html#pycall_plugin">Pycall</a> plugins. Additional <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/tree/master/example">examples are available for the other plugins</a>.</p>
-<h1><a class="anchor" id="autotoc_md64"></a>
+<h1><a class="anchor" id="autotoc_md65"></a>
 Setup</h1>
-<dl class="section attention"><dt>Attention</dt><dd>To run this hands-on tutorial, you first need to <a class="el" href="md_Installation.html#Installation">install PDI</a> and setup your environment.</dd></dl>
-<h2><a class="anchor" id="autotoc_md65"></a>
-PDI installation</h2>
-<p ><a class="el" href="md_Installation.html#Installation">PDI installation</a> is documented in a <a class="el" href="md_Installation.html#Installation">dedicated page</a>.</p>
+<dl class="section attention"><dt>Attention</dt><dd>To run this hands-on tutorial, you first need to <a class="el" href="Installation.html">install PDI</a> and setup your environment.</dd></dl>
 <h2><a class="anchor" id="autotoc_md66"></a>
+PDI installation</h2>
+<p ><a class="el" href="Installation.html">PDI installation</a> is documented in a <a class="el" href="Installation.html">dedicated page</a>.</p>
+<h2><a class="anchor" id="autotoc_md67"></a>
 Hands-on tutorial setup</h2>
 <p >Once PDI is installed, you can proceed with getting the sources for the hands-on tutorial from <a href="https://github.com/pdidev/tutorial">github</a>: </p><div class="fragment"><div class="line">git clone https://github.com/pdidev/tutorial.git</div>
 <div class="line">cd tutorial</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md68"></a>
 Compilation</h2>
 <p >Before compilation, configure the tutorial by detecting all dependencies: </p><div class="fragment"><div class="line">pdirun cmake .</div>
 </div><!-- fragment --><dl class="section attention"><dt>Attention</dt><dd>If you installed <a class="el" href="namespacePDI.html">PDI</a> in a standard path, the <code>pdirun</code> prefix is never required.</dd></dl>
 <p>Once you have correctly modified each exercise according to instructions, you can compile it by running: </p><div class="fragment"><div class="line">pdirun make ex?</div>
 </div><!-- fragment --><p> Where <code>?</code> is the number of the exercise.</p>
-<h2><a class="anchor" id="autotoc_md68"></a>
+<h2><a class="anchor" id="autotoc_md69"></a>
 Execution</h2>
 <p >You can run each exercise with the following command: </p><div class="fragment"><div class="line">pdirun mpirun -n 4 ./ex?</div>
 </div><!-- fragment --><p> Where <code>?</code> is the number of the exercise and 4 represents the number of MPI processes to use.</p>
 <p >To store the logs for later comparison, you can use the following command (for example for ex2.): </p><div class="fragment"><div class="line">pdirun mpirun -n 1 ./ex2 &gt; ex2.result.log</div>
 </div><!-- fragment --><p >Now you're ready to work, <b>good luck</b>!</p>
-<h1><a class="anchor" id="autotoc_md69"></a>
+<h1><a class="anchor" id="autotoc_md70"></a>
 PDI-free code</h1>
-<h2><a class="anchor" id="autotoc_md70"></a>
+<h2><a class="anchor" id="autotoc_md71"></a>
 Ex1. Getting started</h2>
 <p >Ex1. implements a simple heat equation solver using an explicit forward finite difference scheme parallelized with MPI. The code uses a block domain decomposition where each process holds a 2D block of data.</p>
 <div class="image">
@@ -95,15 +95,15 @@ Data domain decomposition in the example</div></div>
 <ul>
 <li>Examine the source code, compile it and run it. There is no input/output operations in the code yet, so you can not see any result.</li>
 </ul>
-<p >This example gets its configuration from a file in the <a class="el" href="md_Yaml.html#YAML">YAML format</a>: <code>ex1.yml</code> file. If you're not familiar with YAML, please have a look at our quick <a class="el" href="md_Yaml.html#YAML">YAML format documentation</a> to understand it. The example uses the <a href="https://github.com/pdidev/paraconf">paraconf library</a> to read this file.</p>
+<p >This example gets its configuration from a file in the <a class="el" href="YAML.html">YAML format</a>: <code>ex1.yml</code> file. If you're not familiar with YAML, please have a look at our quick <a class="el" href="YAML.html">YAML format documentation</a> to understand it. The example uses the <a href="https://github.com/pdidev/paraconf">paraconf library</a> to read this file.</p>
 <ul>
 <li>Play with and understand the code parameters in <code>ex1.yml</code>.</li>
 <li>Set values in <code>ex1.yml</code> to be able to run the code with 4 MPI processes.</li>
 </ul>
 <div class="fragment"><div class="line">srun -n 4 ./ex1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md71"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md72"></a>
 PDI core &amp; trace plugin</h1>
-<h2><a class="anchor" id="autotoc_md72"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 Ex2. Now with some PDI</h2>
 <p >Ex2. is the same code as that of ex1. with PDI calls added in <code>main</code> function. In our YAML file (<code>ex2.yml</code>), a new sub-tree has been added under the <code>pdi</code> key. This sub-tree is the PDI specification tree passed to PDI at initialization. Here, the PDI <a class="el" href="md__builds_pdidev_pdi_plugins_trace_README.html#trace_plugin">Trace plugin</a> is used to trace PDI calls.</p>
 <ul>
@@ -112,9 +112,9 @@ Ex2. Now with some PDI</h2>
 </div><!-- fragment --></li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>Notice that some share/reclaim pairs come one after the other while others are interlaced. Is one better than the other? If you do not know the answer to this question, just wait until Ex5. :)</dd></dl>
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="autotoc_md74"></a>
 Decl'HDF5 plugin</h1>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 Ex3. HDF5 through PDI</h2>
 <p >In this exercise, the code is the same as in ex2. No need to touch the C code here, modification of the YAML file (<code>ex3.yml</code>) should be enough.</p>
 <ul>
@@ -127,13 +127,13 @@ Ex3. HDF5 through PDI</h2>
 </ul>
 <p >To achieve this result, you will need to fill 2 sections in the YAML file.</p>
 <ol type="1">
-<li>The <code>data</code> section to indicate to PDI the <a class="el" href="md_Specification_tree_ref.html#datatype_node">datatype</a> type of the fields that are exposed.</li>
+<li>The <code>data</code> section to indicate to PDI the <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a> type of the fields that are exposed.</li>
 <li>The <code>decl_hdf5</code> section for the configuration of the <a class="el" href="md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#Decl_HDF5_plugin">Decl'HDF5 plugin</a>.</li>
 </ol>
 <dl class="section warning"><dt>Warning</dt><dd>If you relaunch the executable, remember to delete your old <code>ex3.h5</code> file before, otherwise the data will not be changed.</dd>
 <dd>
 Since we write to the same location independently of the MPI rank, this exercise will fail if more than one MPI rank is used.</dd></dl>
-<h2><a class="anchor" id="autotoc_md75"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 Ex4. Writing some real data</h2>
 <p >In this exercise each MPI process will write its local 2D array block contained in the <code>main_field</code> variable to a separate HDF5 file. Once again, this can be done by modifying the YAML file only, no nee to touch the C file.</p>
 <ul>
@@ -150,7 +150,7 @@ Ex4. Writing some real data</h2>
 <ul>
 <li>Only write <code>main_field</code> at the second iteration (when <code>ii=1</code>) and match the expected content as described in <code>ex4.h5dump</code>.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md76"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 Ex5. Introducing events</h2>
 <p >In ex4., two variables were written to <code>ex4-data*.h5</code>, but the file was opened and closed for each and every write. Since Decl'HDF5 only sees the data appear one after the other, it does not keep the file open. Since <code>ii</code> and <code>main_field</code> are shared in an interlaced way, they are both available to PDI at the same time and could be written without opening the file twice. You have to use events for that, you will modify both the C and YAML file.</p>
 <ul>
@@ -159,7 +159,7 @@ Ex5. Introducing events</h2>
 <li>Use the <code>on_event</code> mechanism to trigger the write of <code>ii</code> and <code>main_field</code>. This mechanism can be combined with a <code>when</code> directive, in that case the write is only executed when both mechanisms agree.</li>
 <li>Also notice the extended syntax that make it possible to write data to a dataset whose name differs from the PDI variable name. Use this mechanism to write <code>main_field</code> at iterations 1 and 2, in two distinct groups <code>iter1</code> and <code>iter2</code>. Your output should match the content described in <code>ex5.h5dump</code>.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md77"></a>
+<h2><a class="anchor" id="autotoc_md78"></a>
 Ex6. Simplifying the code</h2>
 <p >As you can notice, the PDI code is quite redundant. In this exercise, you will use <code><a class="el" href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI.">PDI_expose</a></code> and <code><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once.">PDI_multi_expose</a></code> to simplify the code while keeping the exact same behaviour. For once, there is no need to modify the YAML file here, you only need to modify the C file in this exercise.</p>
 <ul>
@@ -174,7 +174,7 @@ Ex6. Simplifying the code</h2>
 <li>Replace the remaining <code><a class="el" href="group__annotation.html#ga34e34cede8627c47c07e6ede997e37fe" title="Shares some data with PDI.">PDI_share</a></code>/<code><a class="el" href="group__annotation.html#gabf58b7c146cbf7e3341245f60cec0f7e" title="Reclaims ownership of a data buffer shared with PDI.">PDI_reclaim</a></code> by <code><a class="el" href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454" title="Shortly exposes some data to PDI.">PDI_expose</a></code>s and <code><a class="el" href="group__annotation.html#gae5c670b378e423e3083122f62c1f0a59" title="Performs multiple exposes at once.">PDI_multi_expose</a></code>s and ensure that your code keeps the exact same behaviour by comparing its trace to <code>ex6.log</code> (only the lines matching <code>[Trace-plugin]</code> have been kept). You can easily check if the files are the same by running: <div class="fragment"><div class="line">diff ex6.log &lt;(grep Trace-plugin ex6.result.log)</div>
 </div><!-- fragment --></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 Ex7. Writing a selection</h2>
 <p >In this exercise, you will only write a selection of the 2D array in memory excluding ghosts to the HDF5 file. Once again, you only need to modify the YAML file in this exercise, no need to touch the C file.</p>
 <ul>
@@ -190,7 +190,7 @@ Ex7. Writing a selection</h2>
 <img src="PDI_hdf5_selection.jpg" alt=""/>
 <div class="caption">
 graphical representation</div></div>
-   <h2><a class="anchor" id="autotoc_md79"></a>
+   <h2><a class="anchor" id="autotoc_md80"></a>
 Ex8. Selecting on the dataset size</h2>
 <p >In this exercise, you will once again change the YAML file to handle a selection in the dataset in addition to the selection in memory from the previous exercise. You will write the 2D array from the previous exercise as a slice of 3D dataset including a dimension for time. Once again, you only need to modify the YAML file in this exercise, no need to touch the C file.</p>
 <ul>
@@ -206,9 +206,9 @@ Ex8. Selecting on the dataset size</h2>
 <img src="PDI_hdf5_selection_advanced.jpg" alt=""/>
 <div class="caption">
 graphical representation</div></div>
-   <h1><a class="anchor" id="autotoc_md80"></a>
+   <h1><a class="anchor" id="autotoc_md81"></a>
 parallel Decl'HDF5</h1>
-<h2><a class="anchor" id="autotoc_md81"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Ex9. Going parallel</h2>
 <p >Running the code from the previous exercises in parallel should already work and yield one file per process containing the local data block. In this exercise you will write one single file with parallel HDF5 whose content should be independent from the number of processes used. Once again, you only need to modify the YAML file in this exercise, no need to touch the C file.</p>
 <ul>
@@ -225,9 +225,9 @@ Ex9. Going parallel</h2>
 <img src="PDI_hdf5_parallel.jpg" alt=""/>
 <div class="caption">
 graphical representation of the parallel I/O</div></div>
-   <h1><a class="anchor" id="autotoc_md82"></a>
+   <h1><a class="anchor" id="autotoc_md83"></a>
 Pycall</h1>
-<h2><a class="anchor" id="autotoc_md83"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 Ex10. Post-processing the data in python</h2>
 <p >In this exercise, you will once again modify the YAML file only and use python to post-process the data in situ before writing it to HDF5. Here, you will write the square root of the raw data to HDF5 instead of the data itself.</p>
 <ul>
@@ -242,10 +242,10 @@ Ex10. Post-processing the data in python</h2>
 </div><!-- fragment --></li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>In a more realistic setup, one would typically not write much code in the YAML file directly, but would instead call functions specified in a <code>.py</code> file on the side.</dd></dl>
-<h1><a class="anchor" id="autotoc_md84"></a>
+<h1><a class="anchor" id="autotoc_md85"></a>
 What next ?</h1>
 <p >In this tutorial, you used the C API of PDI and from YAML, you used the <a class="el" href="md__builds_pdidev_pdi_plugins_trace_README.html#trace_plugin">Trace</a>, <a class="el" href="md__builds_pdidev_pdi_plugins_decl_hdf5_README.html#Decl_HDF5_plugin">Decl'HDF5</a>, and <a class="el" href="md__builds_pdidev_pdi_plugins_pycall_README.html#pycall_plugin">Pycall</a> plugins.</p>
-<p >If you want to try <a class="el" href="namespacePDI.html">PDI</a> from another language (Fortran, python, ...) or if you want to experiment with other <a class="el" href="md_Plugins.html#Plugins">PDI plugins</a>, have a look at the <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/tree/master/example">examples provided with PDI</a>. </p>
+<p >If you want to try <a class="el" href="namespacePDI.html">PDI</a> from another language (Fortran, python, ...) or if you want to experiment with other <a class="el" href="Plugins.html">PDI plugins</a>, have a look at the <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/tree/master/example">examples provided with PDI</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
