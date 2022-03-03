@@ -69,34 +69,34 @@ var NAVTREE =
       [ "Code algorithm", "PDI_example.html#heat_algorithm", null ],
       [ "PDI integration", "PDI_example.html#pdi_integration", null ]
     ] ],
-    [ "Hands-on tutorial", "md__builds_pdidev_pdi_tutorial_README.html", [
-      [ "Setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md65", [
-        [ "PDI installation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md66", null ],
-        [ "Hands-on tutorial setup", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md67", null ],
-        [ "Compilation", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md68", null ],
-        [ "Execution", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md69", null ]
+    [ "Hands-on tutorial", "Hands_on.html", [
+      [ "Setup", "Hands_on.html#autotoc_md65", [
+        [ "PDI installation", "Hands_on.html#autotoc_md66", null ],
+        [ "Hands-on tutorial setup", "Hands_on.html#autotoc_md67", null ],
+        [ "Compilation", "Hands_on.html#autotoc_md68", null ],
+        [ "Execution", "Hands_on.html#autotoc_md69", null ]
       ] ],
-      [ "PDI-free code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md70", [
-        [ "Ex1. Getting started", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md71", null ]
+      [ "PDI-free code", "Hands_on.html#autotoc_md70", [
+        [ "Ex1. Getting started", "Hands_on.html#autotoc_md71", null ]
       ] ],
-      [ "PDI core & trace plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md72", [
-        [ "Ex2. Now with some PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md73", null ]
+      [ "PDI core & trace plugin", "Hands_on.html#autotoc_md72", [
+        [ "Ex2. Now with some PDI", "Hands_on.html#autotoc_md73", null ]
       ] ],
-      [ "Decl'HDF5 plugin", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md74", [
-        [ "Ex3. HDF5 through PDI", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md75", null ],
-        [ "Ex4. Writing some real data", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md76", null ],
-        [ "Ex5. Introducing events", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md77", null ],
-        [ "Ex6. Simplifying the code", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md78", null ],
-        [ "Ex7. Writing a selection", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md79", null ],
-        [ "Ex8. Selecting on the dataset size", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md80", null ]
+      [ "Decl'HDF5 plugin", "Hands_on.html#autotoc_md74", [
+        [ "Ex3. HDF5 through PDI", "Hands_on.html#autotoc_md75", null ],
+        [ "Ex4. Writing some real data", "Hands_on.html#autotoc_md76", null ],
+        [ "Ex5. Introducing events", "Hands_on.html#autotoc_md77", null ],
+        [ "Ex6. Simplifying the code", "Hands_on.html#autotoc_md78", null ],
+        [ "Ex7. Writing a selection", "Hands_on.html#autotoc_md79", null ],
+        [ "Ex8. Selecting on the dataset size", "Hands_on.html#autotoc_md80", null ]
       ] ],
-      [ "parallel Decl'HDF5", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md81", [
-        [ "Ex9. Going parallel", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md82", null ]
+      [ "parallel Decl'HDF5", "Hands_on.html#autotoc_md81", [
+        [ "Ex9. Going parallel", "Hands_on.html#autotoc_md82", null ]
       ] ],
-      [ "Pycall", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md83", [
-        [ "Ex10. Post-processing the data in python", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md84", null ]
+      [ "Pycall", "Hands_on.html#autotoc_md83", [
+        [ "Ex10. Post-processing the data in python", "Hands_on.html#autotoc_md84", null ]
       ] ],
-      [ "What next ?", "md__builds_pdidev_pdi_tutorial_README.html#autotoc_md85", null ]
+      [ "What next ?", "Hands_on.html#autotoc_md85", null ]
     ] ],
     [ "Plugin API reference", "annotated.html", "annotated" ]
   ] ]
@@ -105,8 +105,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Concepts.html",
-"annotated.html",
-"classPDI_1_1Ref__any.html#aaba9dfd510ac25c7bafd7a25d96da0c2"
+"Specification_tree_ref.html#uint_fast16_type_node",
+"classPDI_1_1Record__datatype_1_1Member.html#a7c067ee7ad87b2245c3e19b0fff2734c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
