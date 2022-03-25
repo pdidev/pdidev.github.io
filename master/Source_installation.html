@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-03-25.bad4ca4</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0-alpha.2022-03-25.efb6282</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -116,17 +116,21 @@ Configuration</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Flag   </th><th class="markdownTableHeadLeft">Default   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>BUILD_BENCHMARKING</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the benchmarks.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_FORTRAN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Fortran interface.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_DECL_HDF5_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Decl'HDF5 plug-in.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_HDF5_PARALLEL</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the parallel version of the Decl'HDF5 plugin instead of the sequential one.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_MPI_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the MPI plug-in.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_NETCDF_PARALLEL</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the parallel version of the Decl'NetCDF plugin instead of the sequential one.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_MPI_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the MPI plug-in.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>BUILD_NETCDF_PARALLEL</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the parallel version of the Decl'NetCDF plugin instead of the sequential one.    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_TEST_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Test plug-in.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>BUILD_TESTING</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the tests.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_TRACE_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Trace plug-in.    </td></tr>
 <tr class="markdownTableRowEven">
@@ -142,12 +146,10 @@ Configuration</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_PYCALL_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build Pycall plug-in.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_TESTING</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the tests.    </td></tr>
-<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_DOCUMENTATION</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the documentation website.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_INDENT</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the code auto-indentation tools.    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>BUILD_INDENT</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the code auto-indentation tools.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_CFG_VALIDATOR</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the <a class="el" href="namespacePDI.html">PDI</a> configuration validation script.   </td></tr>
 </table>
 <p >The following flags define whether to:</p><ul>
@@ -162,28 +164,30 @@ Configuration</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>USE_Astyle</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="http://astyle.sourceforge.net/">astyle</a> tool.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>USE_benchmark</code>   </td><td class="markdownTableBodyLeft"><code>EMBEDDED</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/google/benchmark">Benchmark</a> library.    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>USE_Doxygen</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="http://www.doxygen.nl/">doxygen</a> tool.    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>USE_FlowVR</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://gitlab.inria.fr/flowvr/flowvr-ex">FlowVR</a> framework.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>USE_FlowVR</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://gitlab.inria.fr/flowvr/flowvr-ex">FlowVR</a> library.    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>USE_fmt</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://fmt.dev">{fmt}</a> library.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_FTI</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/leobago/fti">FTI</a> library.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>USE_GTest</code>   </td><td class="markdownTableBodyLeft"><code>EMBEDDED</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/google/googletest">googletest</a> framework.    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_GTest</code>   </td><td class="markdownTableBodyLeft"><code>EMBEDDED</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/google/googletest">googletest</a> library.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_HDF5</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a> library.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>USE_paraconf</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/pdidev/paraconf">paraconf</a> library.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_pybind11</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://pybind11.readthedocs.io/en/stable">pybind11</a> library.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>USE_SIONlib</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the SIONlib library.    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>USE_spdlog</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/gabime/spdlog">spdlog</a> library.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>USE_yaml</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/jbigot/zpp">yaml</a> library.    </td></tr>
+<td class="markdownTableBodyLeft"><code>USE_spdlog</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/gabime/spdlog">spdlog</a> library.    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_yaml</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/jbigot/zpp">yaml</a> library.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_Zpp</code>   </td><td class="markdownTableBodyLeft"><code>EMBEDDED</code>   </td><td class="markdownTableBodyLeft">the <a href="https://github.com/jbigot/zpp">zpp</a> preprocessor.   </td></tr>
 </table>
 <p >The following flags define where to install PDI, those prefixed with <code>CMAKE_</code> are provided and documented by the <a href="https://cmake.org/cmake/help/v3.19/module/GNUInstallDirs.html">GNUInstallDirs</a> cmake module.</p>
@@ -281,7 +285,13 @@ List of dependencies</h1>
 <p >Dependencies of <b>the tests</b>:</p>
 <ul>
 <li>the <a class="el" href="namespacePDI.html">PDI</a> library,</li>
-<li>the <a href="https://github.com/google/googletest">googletest</a> framework (provided),</li>
+<li>the <a href="https://github.com/google/googletest">googletest</a> library (provided),</li>
+<li><a href="http://astyle.sourceforge.net/">astyle</a> version 3.1 or above (provided).</li>
+</ul>
+<p >Dependencies of <b>the benchmarks</b>:</p>
+<ul>
+<li>the <a class="el" href="namespacePDI.html">PDI</a> library,</li>
+<li>the <a href="https://github.com/google/benchmark">Benchmark</a> library (provided),</li>
 <li><a href="http://astyle.sourceforge.net/">astyle</a> version 3.1 or above (provided).</li>
 </ul>
 <p >Dependencies of <b>the documentation website builder</b>:</p>
