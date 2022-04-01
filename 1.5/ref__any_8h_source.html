@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.0</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.1</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -539,35 +539,37 @@ $(document).ready(function(){initNavTree('ref__any_8h_source.html',''); initResi
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        m_content = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    }</div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    <span class="keywordtype">void</span> PDI_NO_EXPORT link(Referenced_data* content) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    {</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>        assert(!m_content);</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        <span class="keywordflow">if</span> (!content || !content-&gt;m_data) <span class="keywordflow">return</span>; <span class="comment">// null ref</span></div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        <span class="keywordflow">if</span> (R &amp;&amp; content-&gt;m_buffer-&gt;m_read_locks) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keywordflow">if</span> (W &amp;&amp; content-&gt;m_buffer-&gt;m_write_locks) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        m_content = content;</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        ++m_content-&gt;m_owners;</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        <span class="keywordflow">if</span> (R || W) ++m_content-&gt;m_buffer-&gt;m_write_locks;</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        <span class="keywordflow">if</span> (W) ++m_content-&gt;m_buffer-&gt;m_read_locks;</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    }</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    </div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>};</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>} <span class="comment">// namespace PDI</span></div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a> {</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span><span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> R, <span class="keywordtype">bool</span> W&gt;</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01PDI_1_1Ref__any_3_01R_00_01W_01_4_01_4.html">  682</a></span><span class="keyword">struct </span>hash&lt;<a class="code hl_namespace" href="namespacePDI.html">PDI</a>::Ref_any&lt;R,W&gt;&gt; {</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01PDI_1_1Ref__any_3_01R_00_01W_01_4_01_4.html#afc5f2df0f563f17fbbadf292e45954e9">  683</a></span>    <span class="keywordtype">size_t</span> operator() (<span class="keyword">const</span> <a class="code hl_class" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt;R,W&gt;</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    {</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>        <span class="keywordflow">return</span> r.hash();</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>    }</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>};</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span> </div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>} <span class="comment">// namespace std</span></div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="preprocessor">#endif </span><span class="comment">//  PDI_REF_ANY_H_</span></div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <span class="keywordtype">void</span> PDI_NO_EXPORT link(Referenced_data* content) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    {</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        assert(!m_content);</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        <span class="keywordflow">if</span> (!content || !content-&gt;m_data) <span class="keywordflow">return</span>; <span class="comment">// null ref</span></div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keywordflow">if</span> (R &amp;&amp; content-&gt;m_buffer-&gt;m_read_locks || W &amp;&amp; content-&gt;m_buffer-&gt;m_write_locks) {</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>            <span class="keywordflow">if</span> (content-&gt;m_owners == 0) <span class="keyword">delete</span> content;</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        }</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        m_content = content;</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        ++m_content-&gt;m_owners;</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        <span class="keywordflow">if</span> (R || W) ++m_content-&gt;m_buffer-&gt;m_write_locks;</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>        <span class="keywordflow">if</span> (W) ++m_content-&gt;m_buffer-&gt;m_read_locks;</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    }</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    </div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>};</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>} <span class="comment">// namespace PDI</span></div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a> {</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span> </div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span><span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> R, <span class="keywordtype">bool</span> W&gt;</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01PDI_1_1Ref__any_3_01R_00_01W_01_4_01_4.html">  685</a></span><span class="keyword">struct </span>hash&lt;<a class="code hl_namespace" href="namespacePDI.html">PDI</a>::Ref_any&lt;R,W&gt;&gt; {</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01PDI_1_1Ref__any_3_01R_00_01W_01_4_01_4.html#afc5f2df0f563f17fbbadf292e45954e9">  686</a></span>    <span class="keywordtype">size_t</span> operator() (<span class="keyword">const</span> <a class="code hl_class" href="classPDI_1_1Ref__any.html">PDI::Ref_any&lt;R,W&gt;</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    {</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>        <span class="keywordflow">return</span> r.hash();</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    }</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>};</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>} <span class="comment">// namespace std</span></div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="preprocessor">#endif </span><span class="comment">//  PDI_REF_ANY_H_</span></div>
 <div class="ttc" id="aclassPDI_1_1Ref__any_html"><div class="ttname"><a href="classPDI_1_1Ref__any.html">PDI::Ref_any</a></div><div class="ttdoc">A dynamically typed reference to data with automatic memory management and read/write locking semanti...</div><div class="ttdef"><b>Definition:</b> ref_any.h:273</div></div>
 <div class="ttc" id="aclassPDI_1_1Ref__any_html_a02c3ad5d8c76cdd4d960bae8d99284ba"><div class="ttname"><a href="classPDI_1_1Ref__any.html#a02c3ad5d8c76cdd4d960bae8d99284ba">PDI::Ref_any::Ref_any</a></div><div class="ttdeci">Ref_any(void *data, std::function&lt; void(void *)&gt; freefunc, Datatype_sptr type, bool readable, bool writable)</div><div class="ttdoc">Creates a reference to currently unreferenced data.</div><div class="ttdef"><b>Definition:</b> ref_any.h:329</div></div>
 <div class="ttc" id="aclassPDI_1_1Ref__any_html_a0fd75d078f4990bc79c4eb7eaa9c6104"><div class="ttname"><a href="classPDI_1_1Ref__any.html#a0fd75d078f4990bc79c4eb7eaa9c6104">PDI::Ref_any::Ref_any</a></div><div class="ttdeci">Ref_any()=default</div><div class="ttdoc">Constructs a null reference.</div></div>
