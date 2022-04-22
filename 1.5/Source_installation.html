@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.1</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.5.2</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -64,7 +64,7 @@ $(document).ready(function(){initNavTree('Source_installation.html',''); initRes
 <h1><a class="anchor" id="downloading_distribution"></a>
 Downloading PDI source distribution</h1>
 <p >To download the sources, have a look at the list of all releases at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a></p>
-<p >For example, release 1.5.1 can be downloaded from <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.1/pdi-1.5.1.tar.bz2">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.1/pdi-1.5.1.tar.bz2</a></p>
+<p >For example, release 1.5.2 can be downloaded from <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.2/pdi-1.5.2.tar.bz2">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.2/pdi-1.5.2.tar.bz2</a></p>
 <h1><a class="anchor" id="default_installation"></a>
 Default installation</h1>
 <dl class="section attention"><dt>Attention</dt><dd>The <em>default PDI source distribution</em> consists in a subset of the PDI source distribution considered stable enough for production use.</dd></dl>
@@ -77,11 +77,11 @@ Default installation</h1>
 <li>a <a href="https://www.mpi-forum.org/">MPI</a> 2 implementation.</li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>This list of dependecies can be further reduced by limiting the set of features compiled.</dd></dl>
-<p>For example, release 1.5.1 can be installed by following these instructions (but look for the latest release at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a> ):</p>
-<div class="fragment"><div class="line">wget https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.1/pdi-1.5.1.tar.bz2</div>
-<div class="line">tar -xjf pdi-1.5.1.tar.bz2</div>
-<div class="line">mkdir pdi-1.5.1/build</div>
-<div class="line">cd pdi-1.5.1/build</div>
+<p>For example, release 1.5.2 can be installed by following these instructions (but look for the latest release at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a> ):</p>
+<div class="fragment"><div class="line">wget https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.5.2/pdi-1.5.2.tar.bz2</div>
+<div class="line">tar -xjf pdi-1.5.2.tar.bz2</div>
+<div class="line">mkdir pdi-1.5.2/build</div>
+<div class="line">cd pdi-1.5.2/build</div>
 <div class="line">cmake -DCMAKE_INSTALL_PREFIX=&quot;${HOME}/.local/&quot; ..   # configuration</div>
 <div class="line">make install   # compilation and installation</div>
 </div><!-- fragment --><dl class="section attention"><dt>Attention</dt><dd>The <code>cmake</code> command must be followed by the path to the <code>pdi</code> directory, here <code>..</code> because we have just created and moved to the <code>build</code> subdirectory.</dd>
