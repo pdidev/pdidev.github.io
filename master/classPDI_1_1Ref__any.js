@@ -21,7 +21,7 @@ var classPDI_1_1Ref__any =
     [ "operator typename Ref_access< R, W >::type", "classPDI_1_1Ref__any.html#ad762f327bf4a69f0682927d9e19b03f1", null ],
     [ "get", "classPDI_1_1Ref__any.html#a5f53f3c0f557c270773912937fa9aaaf", null ],
     [ "get", "classPDI_1_1Ref__any.html#a2e599bb6132e2b321e2d3a0987f1a309", null ],
-    [ "scalar_value", "classPDI_1_1Ref__any.html#ac1fc10e2cd338d4fba521bd5d6c4d44e", null ],
+    [ "scalar_value", "classPDI_1_1Ref__any.html#aab15ffeb13f8112d72b3451fd83e28c0", null ],
     [ "operator bool", "classPDI_1_1Ref__any.html#a28a8812a5a112ce01f0f776688d95c80", null ],
     [ "reset", "classPDI_1_1Ref__any.html#aeffec00c8b23f6d5edadd3af1a651e5d", null ],
     [ "copy", "classPDI_1_1Ref__any.html#a92c53a0398732686e7b50480d4e2d82b", null ],
