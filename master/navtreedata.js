@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "PDI", "index.html", [
-    [ "About", "index.html", null ],
+    [ "About", "index.html", "index" ],
     [ "C API Reference", "modules.html", "modules" ],
     [ "Core Concepts", "Concepts.html", [
       [ "Philosophy of PDI", "Concepts.html#pdi_philosophy", null ],
@@ -106,7 +106,8 @@ var NAVTREEINDEX =
 [
 "Concepts.html",
 "Specification_tree_ref.html#uint_fast16_type_node",
-"classPDI_1_1Record__datatype_1_1Member.html#a08d1fead3b96e498c8f2e83c9a8f0c1f"
+"classPDI_1_1Record__datatype_1_1Member.html#a08d1fead3b96e498c8f2e83c9a8f0c1f",
+"user_code_plugin.html#use_examples_node"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
