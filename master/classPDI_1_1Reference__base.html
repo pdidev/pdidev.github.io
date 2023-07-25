@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-07-18</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-07-25</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -106,17 +106,17 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a3ef4bdfd593746ada7ecdff85698461a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Reference__base.html#a3ef4bdfd593746ada7ecdff85698461a">get_content</a> (const <a class="el" href="classPDI_1_1Reference__base.html">Reference_base</a> &amp;other) noexcept</td></tr>
-<tr class="memdesc:a3ef4bdfd593746ada7ecdff85698461a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to access the content from a reference with different access right.  <br /></td></tr>
-<tr class="separator:a3ef4bdfd593746ada7ecdff85698461a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead4d5488e0785cd285dc474d2ef136d"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Reference__base.html#aead4d5488e0785cd285dc474d2ef136d">get_content</a> (const <a class="el" href="classPDI_1_1Reference__base.html">Reference_base</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:aead4d5488e0785cd285dc474d2ef136d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to access the content from a reference with different access right.  <br /></td></tr>
+<tr class="separator:aead4d5488e0785cd285dc474d2ef136d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a55c164d2f2b77c454de6c15ffff7f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Reference__base.html#a9a55c164d2f2b77c454de6c15ffff7f9">do_copy</a> (<a class="el" href="namespacePDI.html#a7d5272dcf2920dfbe084e779e942b2e3">Ref_r</a> ref)</td></tr>
 <tr class="separator:a9a55c164d2f2b77c454de6c15ffff7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a83bc9b650ba7604ee7aa5fa72c3a3abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Reference__base.html#a83bc9b650ba7604ee7aa5fa72c3a3abe">m_content</a></td></tr>
-<tr class="memdesc:a83bc9b650ba7604ee7aa5fa72c3a3abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer on the data content, can be null if the ref is null.  <br /></td></tr>
-<tr class="separator:a83bc9b650ba7604ee7aa5fa72c3a3abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035b2a240b85f5d39d7e2f1438808fd7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Reference__base.html#a035b2a240b85f5d39d7e2f1438808fd7">m_content</a></td></tr>
+<tr class="memdesc:a035b2a240b85f5d39d7e2f1438808fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer on the data content, can be null if the ref is null.  <br /></td></tr>
+<tr class="separator:a035b2a240b85f5d39d7e2f1438808fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A common base for all references, whatever their access privileges. </p>
@@ -202,8 +202,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3ef4bdfd593746ada7ecdff85698461a" name="a3ef4bdfd593746ada7ecdff85698461a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ef4bdfd593746ada7ecdff85698461a">&#9670;&#160;</a></span>get_content()</h2>
+<a id="aead4d5488e0785cd285dc474d2ef136d" name="aead4d5488e0785cd285dc474d2ef136d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead4d5488e0785cd285dc474d2ef136d">&#9670;&#160;</a></span>get_content()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +212,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> * PDI::Reference_base::get_content </td>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a> &gt; PDI::Reference_base::get_content </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classPDI_1_1Reference__base.html">Reference_base</a> &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -361,8 +361,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a83bc9b650ba7604ee7aa5fa72c3a3abe" name="a83bc9b650ba7604ee7aa5fa72c3a3abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83bc9b650ba7604ee7aa5fa72c3a3abe">&#9670;&#160;</a></span>m_content</h2>
+<a id="a035b2a240b85f5d39d7e2f1438808fd7" name="a035b2a240b85f5d39d7e2f1438808fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035b2a240b85f5d39d7e2f1438808fd7">&#9670;&#160;</a></span>m_content</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +371,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a>* PDI::Reference_base::m_content</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="structPDI_1_1Reference__base_1_1Referenced__data.html">Referenced_data</a>&gt; PDI::Reference_base::m_content</td>
         </tr>
       </table>
   </td>
