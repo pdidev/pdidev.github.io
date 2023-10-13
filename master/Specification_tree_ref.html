@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-07-27</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-09-07</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -228,6 +228,7 @@ datatype</h1>
 <li>a <a class="el" href="Specification_tree_ref.html#logical_type_node">logical_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#long_type_node">long_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#long_type_node">long_type</a>,</li>
+<li>a <a class="el" href="Specification_tree_ref.html#pointer_type_node">pointer_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#ptrdiff_t_type_node">ptrdiff_t_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#real_type_node">real_type</a>,</li>
 <li>a <a class="el" href="Specification_tree_ref.html#record_type_node">record_type</a>,</li>
@@ -822,6 +823,29 @@ plugin_path</h1>
 <div class="fragment"><div class="line">plugin_path: &quot;/home/user123/plugins&quot;</div>
 </div><!-- fragment --><p>or array of paths (PDI will take first match):</p>
 <div class="fragment"><div class="line">plugin_path: [&quot;/home/user123/plugins&quot;, &quot;/usr/lib/pdi/plugins&quot;]</div>
+</div><!-- fragment --><h1><a class="anchor" id="pointer_type_node"></a>
+pointer_type</h1>
+<p>A <em>pointer_type</em> is a <b>mapping</b> that contains the following keys:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">key   </th><th class="markdownTableHeadLeft">value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>"type"</code>   </td><td class="markdownTableBodyLeft"><code>"pointer"</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>"subtype"</code>   </td><td class="markdownTableBodyLeft">a <a class="el" href="Specification_tree_ref.html#datatype_node">datatype</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>"\+.*"</code> (<em>optional</em>)   </td><td class="markdownTableBodyLeft">anything   </td></tr>
+</table>
+<p>A <a class="el" href="Specification_tree_ref.html#pointer_type_node">pointer_type</a> represents a memory address where data is actually stored (a pointer) where:</p><ul>
+<li>the value associated to the <code>subtype</code> key represents the type of the referenced elements,</li>
+<li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md36"></a>
+Example:</h2>
+<div class="fragment"><div class="line">type: pointer</div>
+<div class="line">subtype: double</div>
+</div><!-- fragment --><div class="fragment"><div class="line">type: pointer</div>
+<div class="line">subtype: { type: pointer, subtype: int }</div>
 </div><!-- fragment --><h1><a class="anchor" id="ptrdiff_t_type_node"></a>
 ptrdiff_t_type</h1>
 <p>A <em>ptrdiff_t_type</em> is a <b>mapping</b> that contains the following keys:</p>
@@ -855,7 +879,7 @@ real_type</h1>
 <li>The value associated to the <code>kind</code> key corresponds to the Fortran <em>kind</em> parameter (<code>real(kind=...)</code>). If missing, the default kind of the Fortran implementation is used.</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: real</div>
 </div><!-- fragment --><div class="fragment"><div class="line">type: real</div>
@@ -892,7 +916,7 @@ record_type</h1>
 <li>the value associated to the <code>members</code> key lists all members of the record with their offset,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Examples:</h2>
 <div class="fragment"><div class="line">type: record</div>
 <div class="line">buffersize: 8</div>
@@ -934,7 +958,7 @@ short_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#short_type_node">short_type</a> represents the C <code>short</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: short</div>
 </div><!-- fragment --><h1><a class="anchor" id="simple_datatype_node"></a>
@@ -988,7 +1012,7 @@ struct_type</h1>
 <li>the value associated to the <code>members</code> key lists all members of the <code>struct</code> in order,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: struct</div>
 <div class="line">members:</div>
@@ -1027,7 +1051,7 @@ tuple_type</h1>
 <li>the value associated to the <code>members</code> key lists all elements of the tuple,</li>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: tuple</div>
 <div class="line">buffersize: 16</div>
@@ -1065,7 +1089,7 @@ uint16_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint16_type_node">uint16_type</a> represents the C <code>uint16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint32_type_node"></a>
@@ -1082,7 +1106,7 @@ uint32_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint32_type_node">uint32_type</a> represents the C <code>uint32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint64_type_node"></a>
@@ -1099,7 +1123,7 @@ uint64_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint64_type_node">uint64_type</a> represents the C <code>uint64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint8_type_node"></a>
@@ -1116,7 +1140,7 @@ uint8_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint8_type_node">uint8_type</a> represents the C <code>uint8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast16_type_node"></a>
@@ -1133,7 +1157,7 @@ uint_fast16_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_fast16_type_node">uint_fast16_type</a> represents the C <code>uint_fast16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast32_type_node"></a>
@@ -1150,7 +1174,7 @@ uint_fast32_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_fast32_type_node">uint_fast32_type</a> represents the C <code>uint_fast32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast64_type_node"></a>
@@ -1167,7 +1191,7 @@ uint_fast64_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_fast64_type_node">uint_fast64_type</a> represents the C <code>uint_fast64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_fast8_type_node"></a>
@@ -1184,7 +1208,7 @@ uint_fast8_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_fast8_type_node">uint_fast8_type</a> represents the C <code>uint_fast8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_fast8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least16_type_node"></a>
@@ -1201,7 +1225,7 @@ uint_least16_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_least16_type_node">uint_least16_type</a> represents the C <code>uint_least16_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least16</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least32_type_node"></a>
@@ -1218,7 +1242,7 @@ uint_least32_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_least32_type_node">uint_least32_type</a> represents the C <code>uint_least32_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least32</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least64_type_node"></a>
@@ -1235,7 +1259,7 @@ uint_least64_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_least64_type_node">uint_least64_type</a> represents the C <code>uint_least64_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least64</div>
 </div><!-- fragment --><h1><a class="anchor" id="uint_least8_type_node"></a>
@@ -1252,7 +1276,7 @@ uint_least8_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uint_least8_type_node">uint_least8_type</a> represents the C <code>uint_least8_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md53"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uint_least8</div>
 </div><!-- fragment --><h1><a class="anchor" id="uintmax_type_node"></a>
@@ -1269,7 +1293,7 @@ uintmax_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uintmax_type_node">uintmax_type</a> represents the C <code>uintmax_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md53"></a>
+<h2><a class="anchor" id="autotoc_md54"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uintmax</div>
 </div><!-- fragment --><h1><a class="anchor" id="uintptr_type_node"></a>
@@ -1286,7 +1310,7 @@ uintptr_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#uintptr_type_node">uintptr_type</a> represents the C <code>uintptr_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: uintptr</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_long_type_node"></a>
@@ -1303,7 +1327,7 @@ unsigned_long_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#unsigned_long_type_node">unsigned_long_type</a> represents the C <code>unsigned long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned long</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_long_long_type_node"></a>
@@ -1320,7 +1344,7 @@ unsigned_long_long_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#unsigned_long_long_type_node">unsigned_long_long_type</a> represents the C <code>unsigned long long</code> type. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned long long</div>
 </div><!-- fragment --><h1><a class="anchor" id="unsigned_short_type_node"></a>
@@ -1337,7 +1361,7 @@ unsigned_short_type</h1>
 <p>A <a class="el" href="Specification_tree_ref.html#unsigned_short_type_node">unsigned_short_type</a> represents the C <code>unsigned short_t</code> type from the <code>&lt;stdint.h&gt;</code> header. It accepts no parameter.</p><ul>
 <li>keys that start with <code>+</code> represent attributes, the associated value can be anything (<b>scalar</b>, <b>sequence</b> or <b>mapping</b>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 Example:</h2>
 <div class="fragment"><div class="line">type: unsigned short</div>
 </div><!-- fragment --> </div></div><!-- contents -->

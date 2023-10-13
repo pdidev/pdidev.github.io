@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-07-27</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-09-07</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -80,8 +80,8 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef PDI_LOGGER_H_</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define PDI_LOGGER_H_</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;spdlog/logger.h&gt;</span></div>
@@ -139,44 +139,43 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#a8437c7bce626ab0da4c35adaa2094cf7">  168</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#a8437c7bce626ab0da4c35adaa2094cf7">evaluate_global_pattern</a>(<a class="code hl_class" href="classPDI_1_1Context.html">Context</a>&amp; ctx) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#a93829efe0880ff584063aa2159078b91">  175</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#a93829efe0880ff584063aa2159078b91">trace</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, Args&amp;&amp; ... args)</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        m_logger-&gt;trace(fmt, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#a513cda342e150580b2181abc1eab9c45">  185</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#a513cda342e150580b2181abc1eab9c45">debug</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, Args&amp;&amp; ... args)</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        m_logger-&gt;debug(fmt, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#ab0f5743f4fd93c810be613530460be95">  195</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#ab0f5743f4fd93c810be613530460be95">info</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, Args&amp;&amp; ... args)</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        m_logger-&gt;info(fmt, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#a7e452e859db9ed2801a6074b22a047ec">  205</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#a7e452e859db9ed2801a6074b22a047ec">warn</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, Args&amp;&amp; ... args)</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    {</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        m_logger-&gt;warn(fmt, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#a474fc2834ae6625d632bd7429e316533">  215</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPDI_1_1Logger.html#a474fc2834ae6625d632bd7429e316533">error</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, Args&amp;&amp; ... args)</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        m_logger-&gt;error(fmt, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    }</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classPDI_1_1Logger.html#afc659a532b67bdeb8dd0ff8381407b24">  223</a></span>    std::shared_ptr&lt;spdlog::logger&gt; <a class="code hl_function" href="classPDI_1_1Logger.html#afc659a532b67bdeb8dd0ff8381407b24">real_logger</a>();</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>};</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>} <span class="comment">// namespace PDI</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#endif </span><span class="comment">// PDI_LOGGER_H_</span></div>
-<div class="ttc" id="aclassPDI_1_1Context_html"><div class="ttname"><a href="classPDI_1_1Context.html">PDI::Context</a></div><div class="ttdef"><b>Definition:</b> context.h:45</div></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>};</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>} <span class="comment">// namespace PDI</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">#endif </span><span class="comment">// PDI_LOGGER_H_</span></div>
+<div class="ttc" id="aclassPDI_1_1Context_html"><div class="ttname"><a href="classPDI_1_1Context.html">PDI::Context</a></div><div class="ttdef"><b>Definition:</b> context.h:44</div></div>
 <div class="ttc" id="aclassPDI_1_1Logger_html"><div class="ttname"><a href="classPDI_1_1Logger.html">PDI::Logger</a></div><div class="ttdoc">Wrapper for spdlog::logger with additional pattern getter method.</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
 <div class="ttc" id="aclassPDI_1_1Logger_html_a1804248e6dbf3645e2128c7df7f829df"><div class="ttname"><a href="classPDI_1_1Logger.html#a1804248e6dbf3645e2128c7df7f829df">PDI::Logger::pattern</a></div><div class="ttdeci">const std::string &amp; pattern() const</div><div class="ttdoc">Returns pattern of the logger.</div></div>
 <div class="ttc" id="aclassPDI_1_1Logger_html_a2897e69ab0909461b1037ec4739b7046"><div class="ttname"><a href="classPDI_1_1Logger.html#a2897e69ab0909461b1037ec4739b7046">PDI::Logger::Logger</a></div><div class="ttdeci">Logger()=default</div><div class="ttdoc">Creates new empty logger.</div></div>

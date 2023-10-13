@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-07-27</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-09-07</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -77,7 +77,7 @@ Example plugin</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">PDI_PLUGIN(example)</div>
-<div class="ttc" id="aclassPDI_1_1Context_html"><div class="ttname"><a href="classPDI_1_1Context.html">PDI::Context</a></div><div class="ttdef"><b>Definition:</b> context.h:45</div></div>
+<div class="ttc" id="aclassPDI_1_1Context_html"><div class="ttname"><a href="classPDI_1_1Context.html">PDI::Context</a></div><div class="ttdef"><b>Definition:</b> context.h:44</div></div>
 <div class="ttc" id="aclassPDI_1_1Plugin_html"><div class="ttname"><a href="classPDI_1_1Plugin.html">PDI::Plugin</a></div><div class="ttdoc">The class PDI plugins should implement.</div><div class="ttdef"><b>Definition:</b> plugin.h:43</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="adding_callback"></a>
 Adding a callback</h2>
@@ -103,7 +103,7 @@ Adding a callback</h2>
 <div class="line">PDI_PLUGIN(example)</div>
 <div class="ttc" id="aclassPDI_1_1Callbacks_html_a31a3d898a9b45363c41ab2ba56b07efe"><div class="ttname"><a href="classPDI_1_1Callbacks.html#a31a3d898a9b45363c41ab2ba56b07efe">PDI::Callbacks::add_data_callback</a></div><div class="ttdeci">std::function&lt; void()&gt; add_data_callback(const std::function&lt; void(const std::string &amp;, Ref)&gt; &amp;callback, const std::string &amp;name={})</div><div class="ttdoc">Adds new data callback to context.</div></div>
 <div class="ttc" id="aclassPDI_1_1Context_html_aff84092dd133069e6045bc7388f0d31b"><div class="ttname"><a href="classPDI_1_1Context.html#aff84092dd133069e6045bc7388f0d31b">PDI::Context::callbacks</a></div><div class="ttdeci">virtual Callbacks &amp; callbacks()=0</div><div class="ttdoc">Callbacks of the context.</div></div>
-<div class="ttc" id="aclassPDI_1_1Ref__any_html"><div class="ttname"><a href="classPDI_1_1Ref__any.html">PDI::Ref_any</a></div><div class="ttdoc">A dynamically typed reference to data with automatic memory management and read/write locking semanti...</div><div class="ttdef"><b>Definition:</b> ref_any.h:252</div></div>
+<div class="ttc" id="aclassPDI_1_1Ref__any_html"><div class="ttname"><a href="classPDI_1_1Ref__any.html">PDI::Ref_any</a></div><div class="ttdoc">A dynamically typed reference to data with automatic memory management and read/write locking semanti...</div><div class="ttdef"><b>Definition:</b> ref_any.h:248</div></div>
 </div><!-- fragment --><p> If user create specification tree: </p><div class="fragment"><div class="line">data:</div>
 <div class="line">    some_integer: int</div>
 <div class="line"> </div>
@@ -120,7 +120,7 @@ Adding a callback</h2>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__annotation_html_gabf3f81774644eff9a3cf511e57273454"><div class="ttname"><a href="group__annotation.html#gabf3f81774644eff9a3cf511e57273454">PDI_expose</a></div><div class="ttdeci">PDI_status_t PDI_expose(const char *name, void *data, PDI_inout_t access)</div><div class="ttdoc">Shortly exposes some data to PDI.</div></div>
-<div class="ttc" id="agroup__annotation_html_gga7c857647f7a8077648c28db634eeb805a49ed5399cbc2fca8085867ea04d01b6e"><div class="ttname"><a href="group__annotation.html#gga7c857647f7a8077648c28db634eeb805a49ed5399cbc2fca8085867ea04d01b6e">PDI_OUT</a></div><div class="ttdeci">@ PDI_OUT</div><div class="ttdoc">data transfer from the main code to PDI</div><div class="ttdef"><b>Definition:</b> pdi.h:189</div></div>
+<div class="ttc" id="agroup__annotation_html_gga7c857647f7a8077648c28db634eeb805a49ed5399cbc2fca8085867ea04d01b6e"><div class="ttname"><a href="group__annotation.html#gga7c857647f7a8077648c28db634eeb805a49ed5399cbc2fca8085867ea04d01b6e">PDI_OUT</a></div><div class="ttdeci">@ PDI_OUT</div><div class="ttdoc">data transfer from the main code to PDI</div><div class="ttdef"><b>Definition:</b> pdi.h:187</div></div>
 <div class="ttc" id="agroup__init__final_html_ga3dc660be40c93c169337e3d2692b2ed0"><div class="ttname"><a href="group__init__final.html#ga3dc660be40c93c169337e3d2692b2ed0">PDI_init</a></div><div class="ttdeci">PDI_status_t PDI_init(PC_tree_t conf)</div><div class="ttdoc">Initializes PDI.</div></div>
 <div class="ttc" id="agroup__init__final_html_ga7995fbda2099950ed4ffc7fd4c0bb969"><div class="ttname"><a href="group__init__final.html#ga7995fbda2099950ed4ffc7fd4c0bb969">PDI_finalize</a></div><div class="ttdeci">PDI_status_t PDI_finalize(void)</div><div class="ttdoc">Finalizes PDI.</div></div>
 </div><!-- fragment --><p> The console will display: </p><div class="fragment"><div class="line">[PDI][13:42:41] *** info: Initialization successful</div>
@@ -336,8 +336,8 @@ Step 3: Write your plugin.</h2>
 <div class="line">        <span class="keywordflow">throw</span> <a class="code hl_class" href="classPDI_1_1Error.html">PDI::Error</a> {<a class="code hl_enumvalue" href="group__error.html#gga838ed1a4a5ca21c0d3ef790afbf61b74a9b282d8284fbacc7a4fd81e81964260b">PDI_ERR_SYSTEM</a>, <span class="stringliteral">&quot;Data write not complete&quot;</span>};</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPDI_1_1Error_html"><div class="ttname"><a href="classPDI_1_1Error.html">PDI::Error</a></div><div class="ttdef"><b>Definition:</b> error.h:43</div></div>
-<div class="ttc" id="aclassPDI_1_1Ref__any_html_a764aed7b8359498487ba79da3863ac8f"><div class="ttname"><a href="classPDI_1_1Ref__any.html#a764aed7b8359498487ba79da3863ac8f">PDI::Ref_any::get</a></div><div class="ttdeci">ref_access_t&lt; R, W &gt; get() const</div><div class="ttdoc">Offers access to the referenced raw data, throws on null references.</div><div class="ttdef"><b>Definition:</b> ref_any.h:470</div></div>
+<div class="ttc" id="aclassPDI_1_1Error_html"><div class="ttname"><a href="classPDI_1_1Error.html">PDI::Error</a></div><div class="ttdef"><b>Definition:</b> error.h:42</div></div>
+<div class="ttc" id="aclassPDI_1_1Ref__any_html_a764aed7b8359498487ba79da3863ac8f"><div class="ttname"><a href="classPDI_1_1Ref__any.html#a764aed7b8359498487ba79da3863ac8f">PDI::Ref_any::get</a></div><div class="ttdeci">ref_access_t&lt; R, W &gt; get() const</div><div class="ttdoc">Offers access to the referenced raw data, throws on null references.</div><div class="ttdef"><b>Definition:</b> ref_any.h:457</div></div>
 <div class="ttc" id="aclassPDI_1_1Reference__base_html_ab99b76ffb1c5696a8e016061eaee6200"><div class="ttname"><a href="classPDI_1_1Reference__base.html#ab99b76ffb1c5696a8e016061eaee6200">PDI::Reference_base::type</a></div><div class="ttdeci">Datatype_sptr type() const noexcept</div><div class="ttdoc">accesses the type of the referenced raw data</div></div>
 <div class="ttc" id="agroup__error_html_gga838ed1a4a5ca21c0d3ef790afbf61b74a9b282d8284fbacc7a4fd81e81964260b"><div class="ttname"><a href="group__error.html#gga838ed1a4a5ca21c0d3ef790afbf61b74a9b282d8284fbacc7a4fd81e81964260b">PDI_ERR_SYSTEM</a></div><div class="ttdeci">@ PDI_ERR_SYSTEM</div><div class="ttdoc">A system error occured (OS, etc.)</div><div class="ttdef"><b>Definition:</b> pdi.h:87</div></div>
 </div><!-- fragment --><p>Create a function that reads data from file: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> read_data(<span class="keyword">const</span> std::string&amp; data_name, <a class="code hl_class" href="classPDI_1_1Ref__any.html">PDI::Ref_w</a> ref_w) {</div>
