@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-10-16</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.7.0-alpha.2023-10-26</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -120,6 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62943ef0a7e5994dee5c9af408198d83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#a62943ef0a7e5994dee5c9af408198d83">operator[]</a> (std::pair&lt; std::size_t, std::size_t &gt; slice) const</td></tr>
 <tr class="memdesc:a62943ef0a7e5994dee5c9af408198d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a sub-reference to the content at a given slice in case the content behind the ref is an array.  <br /></td></tr>
 <tr class="separator:a62943ef0a7e5994dee5c9af408198d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab030bcd1aaf00fa961d8d03352aac7e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#ab030bcd1aaf00fa961d8d03352aac7e4">dereference</a> () const</td></tr>
+<tr class="memdesc:ab030bcd1aaf00fa961d8d03352aac7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a reference to the pointed content in case the ref type is a reference.  <br /></td></tr>
+<tr class="separator:ab030bcd1aaf00fa961d8d03352aac7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac22a26bc53c177587828b3f2357c057b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Ref__any.html#ac22a26bc53c177587828b3f2357c057b">operator ref_access_t&lt; R, W &gt;</a> () const</td></tr>
 <tr class="memdesc:ac22a26bc53c177587828b3f2357c057b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offers access to the referenced raw data.  <br /></td></tr>
 <tr class="separator:ac22a26bc53c177587828b3f2357c057b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -807,6 +810,36 @@ template&lt;bool R, bool W&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>created subreference </dd></dl>
+
+</div>
+</div>
+<a id="ab030bcd1aaf00fa961d8d03352aac7e4" name="ab030bcd1aaf00fa961d8d03352aac7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab030bcd1aaf00fa961d8d03352aac7e4">&#9670;&#160;</a></span>dereference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool R, bool W&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacePDI.html#adc363df268e6e68e68947a4fc799ca00">Ref</a> <a class="el" href="classPDI_1_1Ref__any.html">PDI::Ref_any</a>&lt; R, W &gt;::dereference </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a reference to the pointed content in case the ref type is a reference. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the dereferenced data </dd></dl>
 
 </div>
 </div>

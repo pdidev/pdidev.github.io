@@ -106,7 +106,8 @@ var NAVTREEINDEX =
 [
 "Concepts.html",
 "Specification_tree_ref.html#uint64_type_node",
-"classPDI_1_1Record__datatype.html#afe9e1993d6aa45334faa72337aeb25ba"
+"classPDI_1_1Record__datatype.html#afe9e1993d6aa45334faa72337aeb25ba",
+"user_code_plugin.html#use_examples_node"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

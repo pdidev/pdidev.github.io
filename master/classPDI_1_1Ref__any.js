@@ -18,6 +18,7 @@ var classPDI_1_1Ref__any =
     [ "operator[]", "classPDI_1_1Ref__any.html#ad5aec6fb310e47832f1c29af66a33182", null ],
     [ "operator[]", "classPDI_1_1Ref__any.html#a303d2f3a3cfa62a097f8390116ccd26d", null ],
     [ "operator[]", "classPDI_1_1Ref__any.html#a62943ef0a7e5994dee5c9af408198d83", null ],
+    [ "dereference", "classPDI_1_1Ref__any.html#ab030bcd1aaf00fa961d8d03352aac7e4", null ],
     [ "operator ref_access_t< R, W >", "classPDI_1_1Ref__any.html#ac22a26bc53c177587828b3f2357c057b", null ],
     [ "get", "classPDI_1_1Ref__any.html#a764aed7b8359498487ba79da3863ac8f", null ],
     [ "get", "classPDI_1_1Ref__any.html#aa88e3e5b258c7137752f869834c9c0a8", null ],
