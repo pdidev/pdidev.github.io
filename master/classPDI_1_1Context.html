@@ -15,7 +15,7 @@
 <div>
 <header id="titlearea">
 	<div id="projectlogo"><a href="index.html"><img alt="Logo" src="logo.png"/></a></div>
-	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.8.0-alpha.2024-07-21</span></h1>
+	<h1 id="projectname">PDI&nbsp;<span id="projectnumber">1.8.0-alpha.2024-07-31</span></h1>
 	<h2 id="projectbrief">the <span class="acronym">P</span>DI <span class="acronym">d</span>ata <span class="acronym">i</span>nterface</h2>
 </header>
 <nav id="tabs"><ul>
@@ -77,9 +77,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8db0274a0f20458365c819954753eb5e"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">Datatype_template_ptr</a>(<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;, PC_tree_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a8db0274a0f20458365c819954753eb5e">Datatype_template_parser</a></td></tr>
-<tr class="memdesc:a8db0274a0f20458365c819954753eb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that parses a PC_tree_t to create a datatype_template.  <br /></td></tr>
-<tr class="separator:a8db0274a0f20458365c819954753eb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d929f5955093bd92622258cad86d84"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="namespacePDI.html#a25bb62b6b8031d7f7b16e60ba988c902">Datatype_template_sptr</a>(<a class="el" href="classPDI_1_1Context.html">Context</a> &amp;, PC_tree_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a78d929f5955093bd92622258cad86d84">Datatype_template_parser</a></td></tr>
+<tr class="memdesc:a78d929f5955093bd92622258cad86d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that parses a PC_tree_t to create a datatype_template.  <br /></td></tr>
+<tr class="separator:a78d929f5955093bd92622258cad86d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff84092dd133069e6045bc7388f0d31b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#aff84092dd133069e6045bc7388f0d31b">callbacks</a> ()=0</td></tr>
 <tr class="memdesc:aff84092dd133069e6045bc7388f0d31b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPDI_1_1Callbacks.html">Callbacks</a> of the context.  <br /></td></tr>
 <tr class="separator:aff84092dd133069e6045bc7388f0d31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a487adecb1c9c237d84b82788b31c1b73"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">Datatype_template_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a487adecb1c9c237d84b82788b31c1b73">datatype</a> (PC_tree_t node)=0</td></tr>
-<tr class="memdesc:a487adecb1c9c237d84b82788b31c1b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype template from a paraconf-style config.  <br /></td></tr>
-<tr class="separator:a487adecb1c9c237d84b82788b31c1b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6">add_datatype</a> (const std::string &amp;name, <a class="el" href="classPDI_1_1Context.html#a8db0274a0f20458365c819954753eb5e">Datatype_template_parser</a> parser)=0</td></tr>
+<tr class="memitem:a3268bb9024405f2f68ab50fbdb053b9d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePDI.html#a25bb62b6b8031d7f7b16e60ba988c902">Datatype_template_sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a3268bb9024405f2f68ab50fbdb053b9d">datatype</a> (PC_tree_t node)=0</td></tr>
+<tr class="memdesc:a3268bb9024405f2f68ab50fbdb053b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datatype template from a paraconf-style config.  <br /></td></tr>
+<tr class="separator:a3268bb9024405f2f68ab50fbdb053b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6">add_datatype</a> (const std::string &amp;name, <a class="el" href="classPDI_1_1Context.html#a78d929f5955093bd92622258cad86d84">Datatype_template_parser</a> parser)=0</td></tr>
 <tr class="memdesc:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new datatype parser to the context.  <br /></td></tr>
 <tr class="separator:a49ae5a3b3cb8d97b0f61e6a3dd9b0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad376dfd90c9699fe8513b3bab0765ebb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPDI_1_1Context.html#ad376dfd90c9699fe8513b3bab0765ebb">finalize_and_exit</a> ()=0</td></tr>
@@ -130,14 +130,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a1d9b83fcb6d9a95ebb7afe6252b9449f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8db0274a0f20458365c819954753eb5e" name="a8db0274a0f20458365c819954753eb5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db0274a0f20458365c819954753eb5e">&#9670;&#160;</a></span>Datatype_template_parser</h2>
+<a id="a78d929f5955093bd92622258cad86d84" name="a78d929f5955093bd92622258cad86d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d929f5955093bd92622258cad86d84">&#9670;&#160;</a></span>Datatype_template_parser</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;<a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">Datatype_template_ptr</a>(<a class="el" href="classPDI_1_1Context.html">Context</a>&amp;, PC_tree_t)&gt; <a class="el" href="classPDI_1_1Context.html#a8db0274a0f20458365c819954753eb5e">PDI::Context::Datatype_template_parser</a></td>
+          <td class="memname">typedef std::function&lt;<a class="el" href="namespacePDI.html#a25bb62b6b8031d7f7b16e60ba988c902">Datatype_template_sptr</a>(<a class="el" href="classPDI_1_1Context.html">Context</a>&amp;, PC_tree_t)&gt; <a class="el" href="classPDI_1_1Context.html#a78d929f5955093bd92622258cad86d84">PDI::Context::Datatype_template_parser</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -503,8 +503,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a487adecb1c9c237d84b82788b31c1b73" name="a487adecb1c9c237d84b82788b31c1b73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a487adecb1c9c237d84b82788b31c1b73">&#9670;&#160;</a></span>datatype()</h2>
+<a id="a3268bb9024405f2f68ab50fbdb053b9d" name="a3268bb9024405f2f68ab50fbdb053b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3268bb9024405f2f68ab50fbdb053b9d">&#9670;&#160;</a></span>datatype()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +513,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacePDI.html#af01f1a8f11bed64661d4d8e076df42ad">Datatype_template_ptr</a> PDI::Context::datatype </td>
+          <td class="memname">virtual <a class="el" href="namespacePDI.html#a25bb62b6b8031d7f7b16e60ba988c902">Datatype_template_sptr</a> PDI::Context::datatype </td>
           <td>(</td>
           <td class="paramtype">PC_tree_t&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
@@ -536,7 +536,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the type generated </dd></dl>
 
-<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#a97ac4737ff55337461e4c3e0b71ee0f0">PDI::Context_proxy</a>.</p>
+<p>Implemented in <a class="el" href="classPDI_1_1Context__proxy.html#aed256b74a398c5f9c956c5579927479d">PDI::Context_proxy</a>.</p>
 
 </div>
 </div>
@@ -558,7 +558,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classPDI_1_1Context.html#a8db0274a0f20458365c819954753eb5e">Datatype_template_parser</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classPDI_1_1Context.html#a78d929f5955093bd92622258cad86d84">Datatype_template_parser</a>&#160;</td>
           <td class="paramname"><em>parser</em>&#160;</td>
         </tr>
         <tr>
