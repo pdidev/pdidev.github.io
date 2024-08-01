@@ -71,12 +71,16 @@ Default installation</h1>
 <p>Installing the default PDI source distribution is fairly easy. Most dependencies are embedded in the distribution and the only required external dependencies are:</p><ul>
 <li>a POSIX compatible OS such as GNU/linux,</li>
 <li><a href="https://cmake.org/">cmake</a> version 3.5 or above,</li>
-<li>a C 99, C++ 17 and Fortran 03 compiler such as <a href="https://gcc.gnu.org/">gcc</a> 5.4 or above,</li>
+<li>a C 99, C++ 17 and Fortran 03 compiler such as<ul>
+<li><a href="https://gcc.gnu.org/">gcc</a> 7.5 or above,</li>
+<li><a href="https://clang.llvm.org/">clang</a> 9.0 or above,</li>
+</ul>
+</li>
 <li>a <a href="https://www.python.org/">python</a> interpreter (with venv), version 3.6 or above,</li>
 <li>a <a href="https://www.gnu.org/software/bash/">bash</a> interpreter,</li>
 <li>a <a href="https://www.mpi-forum.org/">MPI</a> 2 implementation.</li>
 </ul>
-<dl class="section attention"><dt>Attention</dt><dd>This list of dependencies can be further reduced by limiting the set of features compiled.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>This list of dependencies can be further reduced or extended by changing the set of features compiled.</dd></dl>
 <p>For example, release 1.7.1 can be installed by following these instructions (but look for the latest release at <a href="https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases">https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/releases</a> ):</p>
 <div class="fragment"><div class="line">wget https://gitlab.maisondelasimulation.fr/pdidev/pdi/-/archive/1.7.1/pdi-1.7.1.tar.bz2</div>
 <div class="line">tar -xjf pdi-1.7.1.tar.bz2</div>
@@ -105,10 +109,12 @@ Configuration</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_DEFAULT</code>   </td><td class="markdownTableBodyLeft"><code>AUTO</code>   </td><td class="markdownTableBodyLeft">Whether to compile the embedded versions of the dependencies. The possible values are <code>SYSTEM</code> to use the system versions, <code>EMBEDDED</code> to compile the version provided in the distribution and <code>AUTO</code> to prefer a system version but fall-back on the embedded version if unavailable.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_UNSTABLE</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Whether to build the unstable parts of the distribution, either <code>ON</code> or <code>OFF</code>.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_DEPRECATED</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Whether to build the deprecated, unmaintained and unsupported plugins, either <code>ON</code> or <code>OFF</code>.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>CMAKE_BUILD_TYPE</code>   </td><td class="markdownTableBodyLeft"><code>Release</code>   </td><td class="markdownTableBodyLeft">Optimization level and debug verbosity. The possible values are <code>Release</code> and <code>Debug</code>.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_UNSTABLE</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Whether to build the unstable parts of the distribution, either <code>ON</code> or <code>OFF</code>.    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>CMAKE_BUILD_TYPE</code>   </td><td class="markdownTableBodyLeft"><code>Release</code>   </td><td class="markdownTableBodyLeft">Optimization level and debug verbosity. The possible values are <code>Release</code> and <code>Debug</code>.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>PDI_PLUGIN_PATH</code>   </td><td class="markdownTableBodyLeft">same as <a class="el" href="namespacePDI.html">PDI</a>   </td><td class="markdownTableBodyLeft">Path where to install all plugins. If not defined, will install relative to <a class="el" href="namespacePDI.html">PDI</a>.   </td></tr>
 </table>
 <p>The following flags define which features of the distribution to enable or not.</p>
@@ -118,39 +124,41 @@ Configuration</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_BENCHMARKING</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the benchmarks.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>BUILD_DECL_HDF5_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Decl'HDF5 plug-in.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>BUILD_DECL_NETCDF_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Decl'NetCDF plug-in.    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_FORTRAN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Fortran interface.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_DECL_HDF5_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Decl'HDF5 plug-in.    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_HDF5_PARALLEL</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the parallel version of the Decl'HDF5 plugin instead of the sequential one.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_MPI_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the MPI plug-in.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_NETCDF_PARALLEL</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the parallel version of the Decl'NetCDF plugin instead of the sequential one.    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_TEST_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Test plug-in.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>BUILD_TEST_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the Test plug-in. (deprecated)    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_TESTING</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the tests.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>BUILD_TRACE_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the Trace plug-in.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>BUILD_USER_CODE_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>ON</code>   </td><td class="markdownTableBodyLeft">Build the User-code plug-in.    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_PYTHON</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the Python interface.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_DECL_SION_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the decl'SION plug-in.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_CFG_VALIDATOR</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the <a class="el" href="namespacePDI.html">PDI</a> configuration validation script. (deprecated)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_FLOWVR_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the FlowVR plug-in.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_DECL_SION_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the decl'SION plug-in. (deprecated)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_FTI_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the FTI plug-in.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_DOCUMENTATION</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the documentation website. (devel profile)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_PYCALL_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build Pycall plug-in.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_FLOWVR_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the FlowVR plug-in. (deprecated)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_DOCUMENTATION</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the documentation website.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_FTI_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the FTI plug-in. (deprecated)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>BUILD_INDENT</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the code auto-indentation tools.    </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_INDENT</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the code auto-indentation tools. (devel profile)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code>BUILD_CFG_VALIDATOR</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the <a class="el" href="namespacePDI.html">PDI</a> configuration validation script.   </td></tr>
+<td class="markdownTableBodyLeft"><code>BUILD_PYCALL_PLUGIN</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build Pycall plug-in. (unstable)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>BUILD_PYTHON</code>   </td><td class="markdownTableBodyLeft"><code>OFF</code>   </td><td class="markdownTableBodyLeft">Build the Python interface. (unstable)   </td></tr>
 </table>
 <p>The following flags define whether to:</p><ul>
 <li>use the preinstalled version of a dependency (<code>SYSTEM</code>), it will be looked for in the system directories and those specified by the <code>CMAKE_PREFIX_PATH</code> list,</li>
@@ -274,7 +282,7 @@ List of dependencies</h1>
 <p>Dependencies of <b>the FlowVR plugin</b>:</p>
 <ul>
 <li>the <a class="el" href="namespacePDI.html">PDI</a> library,</li>
-<li><b>the <a href="https://pyyaml.org/">python YAML</a> module version 3.12.1 or above (not provided)</b>.</li>
+<li>the <a href="https://pyyaml.org/">python YAML</a> module version 3.12.1 or above (provided).</li>
 <li><a href="https://gitlab.inria.fr/flowvr/flowvr-ex">FlowVR</a> version 2.3.2 or above (provided).</li>
 </ul>
 <p>Dependencies of <b>the FTI plugin</b>:</p>
@@ -305,7 +313,7 @@ List of dependencies</h1>
 <p>Dependencies of <b>the <a class="el" href="namespacePDI.html">PDI</a> configuration validation tool</b>:</p>
 <ul>
 <li><b>a <a href="https://www.python.org/">python</a> interpreter version 3.6 or above (not provided)</b>,</li>
-<li><b>the <a href="https://pyyaml.org/">python YAML</a> module version 3.12.1 or above (not provided)</b>. </li>
+<li>the <a href="https://pyyaml.org/">python YAML</a> module version 3.12.1 or above (provided). </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
