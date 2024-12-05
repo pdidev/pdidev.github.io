@@ -97,7 +97,7 @@ fi
 ##	GITHUB
 ########################
 curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://api.github.com/repos/${GH_PROJECT_NAME}/actions/artifacts \
-| jq --raw-output0 '.artifacts
+| jq -cr '.artifacts
     | map(select(.name == "pages" and (.workflow_run.head_branch
     | test("^v[0-9]+\\.[0-9]+$"))))
     | group_by(.workflow_run.head_branch)
@@ -105,7 +105,7 @@ curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://api.github.com/re
     | map(last)
     | map({url:.archive_download_url,branch:.workflow_run.head_branch})
     | .[]' \
-| while read -d $'\0' TAG_INFO
+| while read TAG_INFO
 do
     DOWNLOAD_URL="$(jq -r .url <<< "$TAG_INFO")"
     TAG="$(jq -r .branch <<< "$TAG_INFO" | sed 's/^v//')"
