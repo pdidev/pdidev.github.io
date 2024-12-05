@@ -118,7 +118,7 @@ do
     while [ 1 -eq "$(find . -mindepth 1 -maxdepth 1|wc -l)" ]
     do
         SUBDIR="$(find . -mindepth 1 -maxdepth 1)"
-        find "$SUBDIR" -mindepth 1 -maxdepth 1 -exec mv '{}' .
+        find "$SUBDIR" -mindepth 1 -maxdepth 1 -exec mv '{}' . ';'
         rmdir "$SUBDIR"
     done
     echo "<li><a href='${TAG}/'>version ${TAG}</a>" >> "${WORK_DIR}/public/index.html"
