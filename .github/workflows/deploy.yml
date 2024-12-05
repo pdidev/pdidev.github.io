@@ -15,7 +15,7 @@ jobs:
       env: 
         CI_PAGES_TOKEN: ${{secrets.CI_PAGES_TOKEN}}
       run: |
-        ./generate _site https://gitlab.maisondelasimulation.fr pdidev%2Fpdi
+        ./generate _site https://gitlab.maisondelasimulation.fr pdidev%2Fpdi pdidev/pdi
         find data -mindepth 1 -maxdepth 1 -exec cp -r '{}' _site ';'
         ./gen_sitemap _site
     - name: Upload page artifact
