@@ -6,32 +6,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
     - name: Checkout master
       uses: actions/checkout@v4
-      with: { fetch-depth: 0 }
-    - name: Checkout gh-pages
-      run: git worktree add -B gh-pages public remotes/origin/gh-pages
-    - name: Clean previous
-      run: |
-        find public -mindepth 1 -maxdepth 1 '!' -name .git -exec rm -rf '{}' '+'
     - name: Build site
-      uses: pdidev/pdidev.github.io/.github/actions/deploy@main
-      with:
-        output-directory: public
-        gitlab-url:  https://gitlab.maisondelasimulation.fr
-        project-name:  pdidev%2Fpdi
-    - name: Add static data
+      env: 
+        CI_PAGES_TOKEN: ${{secrets.CI_PAGES_TOKEN}}
       run: |
-        find data -mindepth 1 -maxdepth 1 -exec cp -r '{}' public ';'
-    - name: Add sitemap
-      run: |
-        ./gen_sitemap public
-    - name: Push
-      run: |
-        cd public
-        git config user.name "${GITHUB_ACTOR}"
-        git config user.email "${GITHUB_ACTOR}@noreply.example.com"
-        git add -A .
-        git commit -a -m "Update to match ${GITHUB_SHA} by ${GITHUB_EVENT_NAME} ${GITHUB_RUN_NUMBER}"
-        git push -f
+        ./generate _site https://gitlab.maisondelasimulation.fr pdidev%2Fpdi
+        find data -mindepth 1 -maxdepth 1 -exec cp -r '{}' _site ';'
+        ./gen_sitemap _site
+    - name: Upload page artifact
+      uses: actions/upload-pages-artifact@v3
+  publish:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
