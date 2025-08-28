@@ -17,13 +17,13 @@ GITLAB_URL="$2"
 PROJECT_NAME="$3"
 GH_PROJECT_NAME="$4"
 
-#set +x
-# if [ -z ${CI_PAGES_TOKEN} ]
-# then
-# 	echo "CI_PAGES_TOKEN is unset"
-# 	exit 1
-# fi
-#set -ex
+set +x
+if [ -z ${CI_PAGES_TOKEN} ]
+then
+	echo "CI_PAGES_TOKEN is unset"
+	exit 1
+fi
+set -ex
 
 cd "$(mktemp -t -d WEB_DEPLOY.tmdir.XXXXXXXXXXXX || exit 1)"
 WORK_DIR="${PWD}"
