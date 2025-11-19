@@ -53,6 +53,7 @@ DOWNLOAD_URL=$(curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://ap
     | last
     | .archive_download_url')
 mkdir -p "${WORK_DIR}/public/main"
+
 cd "${WORK_DIR}/public/main"
 curl -H "Authorization: Bearer ${CI_PAGES_TOKEN}" -LfsSo artifacts.zip "${DOWNLOAD_URL}"
 unzip -o -d public artifacts.zip
@@ -65,37 +66,54 @@ do
 done
 echo "<li><a href='main/'>latest version from GIT</a></li>" >> "${WORK_DIR}/public/index.html"
 
+ALLTAGS="$(curl -v "https://api.github.com/repos/${GH_PROJECT_NAME}/releases" | jq -cr  ' .[] | to_entries[] | select(.key == "tag_name") | .value ')"
+## example:
+## ALLTAGS=$'1.9.2\n1.9.1-fixed1.9.0\n1.8.1\n1.8.2\n1.8.1\n1.8.0'
+## TAG = 1.9.1-fixed (correspond to the tag on pdidev/pdi)
+## EX_TAG_BASE=1.9.
+## STAG=1.9
 
+##hypothesis: TAG = [0-9].[0-9].[0-9]-fixed[0-9]
+##        or TAG = [0-9].[0-9].[0-9]-fixed
+##        or TAG = [0-9].[0-9].[0-9]
+##        where [0-9] is an integer
 
-
-curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://api.github.com/repos/${GH_PROJECT_NAME}/actions/artifacts \
-| jq -cr '.artifacts
-    | map(select(.name == "pages" and (.workflow_run.head_branch
-    | test("^v[0-9]+\\.[0-9]+$"))))
-    | group_by(.workflow_run.head_branch)
-    | map(sort_by(.created_at))
-    | map(last)
-    | map({url:.archive_download_url,branch:.workflow_run.head_branch})
-    | .[]' \
-| while read TAG_INFO
+for TAG_BASE in "$(echo "${ALLTAGS}" | tr '"' ' ' | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*-fixed[0-9]*$/\1/g' | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/g'| sort -rVu)"
 do
-    DOWNLOAD_URL="$(jq -r .url <<< "$TAG_INFO")"
-    TAG="$(jq -r .branch <<< "$TAG_INFO" | sed 's/^v//')"
-    mkdir -p "${WORK_DIR}/public/${TAG}"
-    cd "${WORK_DIR}/public/${TAG}"
-    curl -H "Authorization: Bearer ${CI_PAGES_TOKEN}" -LfsSo artifacts.zip "${DOWNLOAD_URL}"
-    unzip -o -d public artifacts.zip
-    rm artifacts.zip
-    while [ 1 -eq "$(find . -mindepth 1 -maxdepth 1|wc -l)" ]
+    list_tag_base=($TAG_BASE) ## get the list of string of TAG_BASE in a array
+    for EX_TAG_BASE in "${list_tag_base[@]}"
     do
-        SUBDIR="$(find . -mindepth 1 -maxdepth 1)"
-        find "$SUBDIR" -mindepth 1 -maxdepth 1 -exec mv '{}' . ';'
-        rmdir "$SUBDIR"
+        for TAG in $(echo "${ALLTAGS}" | fgrep "${EX_TAG_BASE}" | sort -rVu)
+        do
+            # remove "." (last character of EX_TAG_BASE)
+            STAG="$(echo "${EX_TAG_BASE}" | sed 's/\.$//')"
+
+            DOWNLOAD_URL="https://github.com/${GH_PROJECT_NAME}/releases/download/${TAG}/pages.zip"
+            mkdir -p "${WORK_DIR}/public/${STAG}"
+            cd "${WORK_DIR}/public/${STAG}"
+            if curl -LfsSo artifacts.zip "${DOWNLOAD_URL}"
+            then
+                echo "unzip asset for release: ${TAG} and STAG=${STAG}"
+                echo "dowload_url=${DOWNLOAD_URL}"
+                unzip -o -d public artifacts.zip
+                rm artifacts.zip
+                while [ 1 -eq "$(find . -mindepth 1 -maxdepth 1|wc -l)" ]
+                do
+                    SUBDIR="$(find . -mindepth 1 -maxdepth 1)"
+                    find "$SUBDIR" -mindepth 1 -maxdepth 1 -exec mv '{}' . ';'
+                    rmdir "$SUBDIR"
+                done
+                echo "<li><a href='${STAG}/'>version ${STAG}</a></li>" >> "${WORK_DIR}/public/index.html"
+                echo "<li><a href='${STAG}/'>version ${STAG}</a></li>"
+                break
+            else
+                echo "error in downloading asset for release: ${TAG} and STAG=${STAG}"
+                echo "dowload_url=${DOWNLOAD_URL}"
+                exit 1
+            fi
+        done
     done
-    echo "<li><a href='${TAG}/'>version ${TAG}</a></li>" >> "${WORK_DIR}/public/index.html"
 done
-
-
 
 
 ########################
