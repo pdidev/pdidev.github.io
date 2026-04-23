@@ -66,7 +66,8 @@ do
 done
 echo "<li><a href='main/'>latest version from GIT</a></li>" >> "${WORK_DIR}/public/index.html"
 
-ALLTAGS="$(curl -v "https://api.github.com/repos/${GH_PROJECT_NAME}/releases" | jq -cr  ' .[] | to_entries[] | select(.key == "tag_name") | .value ')"
+JSON="$(curl -v "https://api.github.com/repos/${GH_PROJECT_NAME}/releases")"
+ALLTAGS="$(jq -cr ' .[] | to_entries[] | select(.key == "tag_name") | .value ' <<< "${JSON}")"
 ## example:
 ## ALLTAGS=$'1.9.2\n1.9.1-fixed1.9.0\n1.8.1\n1.8.2\n1.8.1\n1.8.0'
 ## TAG = 1.9.1-fixed (correspond to the tag on pdidev/pdi)
@@ -88,7 +89,7 @@ do
             # remove "." (last character of EX_TAG_BASE)
             STAG="$(echo "${EX_TAG_BASE}" | sed 's/\.$//')"
 
-            DOWNLOAD_URL="https://github.com/${GH_PROJECT_NAME}/releases/download/${TAG}/pages.zip"
+            DOWNLOAD_URL="$(jq --arg TAG "${TAG}" -cr ' .[] | select(.tag_name == $TAG ) | .zipball_url' <<< "${JSON}")"
             mkdir -p "${WORK_DIR}/public/${STAG}"
             cd "${WORK_DIR}/public/${STAG}"
             if curl -LfsSo artifacts.zip "${DOWNLOAD_URL}"
