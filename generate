@@ -89,7 +89,7 @@ do
             # remove "." (last character of EX_TAG_BASE)
             STAG="$(echo "${EX_TAG_BASE}" | sed 's/\.$//')"
 
-            DOWNLOAD_URL="$(jq --arg TAG "${TAG}" -cr ' .[] | select(.tag_name == $TAG ) | .assets[] | select(.name == "pages.zip") | .url ' <<< "${JSON}")"
+            DOWNLOAD_URL="$(jq --arg TAG "${TAG}" -cr ' .[] | select(.tag_name == $TAG ) | .assets[] | select(.name == "pages.zip") | .browser_download_url ' <<< "${JSON}")"
             mkdir -p "${WORK_DIR}/public/${STAG}"
             cd "${WORK_DIR}/public/${STAG}"
             if curl -LfsSo artifacts.zip "${DOWNLOAD_URL}"
