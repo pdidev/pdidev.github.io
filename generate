@@ -18,10 +18,17 @@ PROJECT_NAME="$3"
 GH_PROJECT_NAME="$4"
 
 set +x
-if [ -z ${CI_PAGES_TOKEN} ]
+if [ -z "${CI_PAGES_TOKEN}" ]
 then
 	echo "CI_PAGES_TOKEN is unset"
 	exit 1
+fi
+GITLAB_AUTH=()
+if [ -n "${GITLAB_TOKEN}" ]
+then
+    GITLAB_AUTH=(-H "PRIVATE-TOKEN: ${GITLAB_TOKEN}")
+else
+    echo "WARNING: GITLAB_TOKEN is unset. Making unauthenticated calls to GitLab."
 fi
 set -ex
 
@@ -52,6 +59,12 @@ DOWNLOAD_URL=$(curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://ap
     | sort_by(.created_at)
     | last
     | .archive_download_url')
+
+if [ -z "${DOWNLOAD_URL}" ] || [ "${DOWNLOAD_URL}" = "null" ]; then
+    echo "Error: Could not resolve a valid artifact download URL from GitHub." >&2
+    exit 1
+fi
+
 mkdir -p "${WORK_DIR}/public/main"
 
 cd "${WORK_DIR}/public/main"
@@ -66,7 +79,7 @@ do
 done
 echo "<li><a href='main/'>latest version from GIT</a></li>" >> "${WORK_DIR}/public/index.html"
 
-JSON="$(curl -v "https://api.github.com/repos/${GH_PROJECT_NAME}/releases")"
+JSON="$(curl -vfsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" "https://api.github.com/repos/${GH_PROJECT_NAME}/releases")"
 ALLTAGS="$(jq -cr ' .[] | to_entries[] | select(.key == "tag_name") | .value ' <<< "${JSON}")"
 ## example:
 ## ALLTAGS=$'1.9.2\n1.9.1-fixed1.9.0\n1.8.1\n1.8.2\n1.8.1\n1.8.0'
@@ -92,7 +105,7 @@ do
             DOWNLOAD_URL="$(jq --arg TAG "${TAG}" -cr ' .[] | select(.tag_name == $TAG ) | .assets[] | select(.name == "pages.zip") | .browser_download_url ' <<< "${JSON}")"
             mkdir -p "${WORK_DIR}/public/${STAG}"
             cd "${WORK_DIR}/public/${STAG}"
-            if curl -LfsSo artifacts.zip "${DOWNLOAD_URL}"
+            if curl -H "Authorization: Bearer ${CI_PAGES_TOKEN}" -LfsSo artifacts.zip "${DOWNLOAD_URL}"
             then
                 echo "unzip asset for release: ${TAG} and STAG=${STAG}"
                 echo "dowload_url=${DOWNLOAD_URL}"
@@ -121,7 +134,7 @@ done
 ##	GITLAB
 ########################
 INERROR=true
-ALLTAGS="$(curl -fsS "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
+ALLTAGS="$(curl -fsS "${GITLAB_AUTH[@]}" "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
 for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
 do
     for TAG in $(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu)
@@ -129,7 +142,7 @@ do
         cd "${WORK_DIR}"
         mkdir -p "${TAG}"
         cd "${TAG}"
-        if curl -fsSo artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
+        if curl -fsS "${GITLAB_AUTH[@]}" -o artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
         then
             INERROR=false
             STAG="$(echo "${TAG}" | sed 's/\.[0-9]*$//')"
