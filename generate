@@ -3,7 +3,7 @@ set -ex
 
 if [ $# -ne 4 ]
 then
-    echo "Usage: $0 <directory> <gitlab URL> <project NAME> <GitHub project NAME>" >&2
+    echo "Usage: $0 <directory> <GitHub project NAME>" >&2
     exit 1
 fi
 
@@ -12,10 +12,7 @@ mkdir -p "${DEPLOY_DIR}"
 cd "${DEPLOY_DIR}"
 DEPLOY_DIR="${PWD}"
 
-GITLAB_URL="$2"
-
-PROJECT_NAME="$3"
-GH_PROJECT_NAME="$4"
+GH_PROJECT_NAME="$2"
 
 set +x
 if [ -z ${CI_PAGES_TOKEN} ]
