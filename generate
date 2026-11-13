@@ -42,10 +42,6 @@ cat << EOF > "${WORK_DIR}/public/index.html"
 <ul>
 EOF
 
-
-########################
-##	GITHUB
-########################
 DOWNLOAD_URL=$(curl -fsS -H "Authorization: Bearer ${CI_PAGES_TOKEN}" https://api.github.com/repos/${GH_PROJECT_NAME}/actions/artifacts \
 | jq -r '.artifacts
     | map(select(.workflow_run.head_branch=="main" and .name == "pages"))
@@ -115,56 +111,6 @@ do
         done
     done
 done
-
-
-########################
-##	GITLAB
-########################
-INERROR=true
-ALLTAGS="$(curl -fsS "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/repository/tags" | tr ',' '\n' | grep '"name"' | tr '"' ' ' | awk '{print $4}' | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | sort -rVu)"
-for TAG_BASE in $(echo "${ALLTAGS}" | sed 's/^\([0-9]*\.[0-9]*\.\)[0-9]*$/\1/' | sort -rVu)
-do
-    for TAG in $(echo "${ALLTAGS}" | fgrep "${TAG_BASE}" | sort -rVu)
-    do
-        cd "${WORK_DIR}"
-        mkdir -p "${TAG}"
-        cd "${TAG}"
-        if curl -fsSo artifacts.zip "${GITLAB_URL}/api/v4/projects/${PROJECT_NAME}/jobs/artifacts/${TAG}/download?job=pages"
-        then
-            INERROR=false
-            STAG="$(echo "${TAG}" | sed 's/\.[0-9]*$//')"
-            unzip -o artifacts.zip
-            rm artifacts.zip
-            if [ -d "public/${TAG}" ]
-            then
-                mv "public/${TAG}" "${WORK_DIR}/public/${STAG}"
-            elif [ -d "${TAG}" ]
-            then
-                mv "${TAG}" "${WORK_DIR}/public/${STAG}"
-            elif [ -d "public" ]
-            then
-                mv public "${WORK_DIR}/public/${STAG}"
-            fi
-            echo "<li><a href='${STAG}/'>version ${STAG}</a></li>" >> "${WORK_DIR}/public/index.html"
-            cd "${WORK_DIR}"
-            rm -rf "${WORK_DIR}/${TAG}"
-            break
-        fi
-        cd "${WORK_DIR}"
-        rm -rf "${WORK_DIR}/${TAG}"
-    done
-done
-
-
-
-if [ true = "${INERROR}" ]
-then
-    rm -rf "${WORK_DIR}"
-    exit 1
-fi
-
-
-
 
 cat << EOF >> "${WORK_DIR}/public/index.html"
 </ul>
